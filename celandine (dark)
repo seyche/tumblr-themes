@@ -306,6 +306,8 @@ input:-ms-input-placeholder {color: {color:link};}
     border-radius: 50%;
     position: absolute;
     margin: 5px 0 0 -75px;
+    height: 48px;
+    width: 48px;
 }
 
 .smallicon {
