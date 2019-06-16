@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<head>
+<title>{Title}</title>
+
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta charset="utf-8">
+
+<!---
+    
+    THEME BY SEYCHE.TUMBLR.COM
+    terms: don't steal this shit
+    
+    CREDITS:
+    -carousel tutorial by yeoli
+    -icons from fontawesome
+    
+--->
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/6ac5c36b23.js"></script>
+
+<style type="text/css">
+
+@keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-o-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    color: #7c7c7c; /* font colour */
+    background-color: #f7f7f7; /*background colour */
+    line-height: 160%;
+    letter-spacing: 0.2px;
+    word-wrap: break-word;
+    -webkit-animation: lazyload 2s; 
+    -moz-animation: lazyload 2s; 
+    -o-animation: lazyload 2s; 
+    animation: lazyload 2s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #555; /* link colour */
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: #bdccc4; /* link hover colour */
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+p a {border-bottom: 2px solid #bdccc4;} /* link hover colour */
+p a:hover {border-bottom: 2px solid transparent;}
+
+ul, ol {margin: 1em 0 1em 1.25em;}
+li {margin-left: 1.25em;}
+p {margin-top: 1.75em;}
+
+small {font-size: 0.9em;}
+big {font-size: 1.1em;}
+b, bold, strong {color: #212121;} /* bold colour */
+
+blockquote {
+    padding: 0 0 0 1em;
+    border-left: 1px solid #dcdcdc; /* blockquote border colour */
+    margin: 1em 0 1em 1em;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Bitter', serif;
+    color: #212121; /* title colour */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {margin-bottom: 0.75em; font-size: 1.2em;}
+h2 {font-size: 1.1em; margin-bottom: 0.75em;}
+h3 {font-size: 1em; margin-bottom: 0.75em;}
+
+h4 {
+    display: inline;
+    margin-right: 1em;
+    border-bottom: 4px solid #bdccc4; /* accent colour */
+    font-size: 0.9em;
+}
+
+::-webkit-scrollbar {
+    width: 17px; 
+    height: 17px;
+    background-color: #fff;  /* scrollbar background colour */
+}
+
+::-webkit-scrollbar-track {
+    border: 8px solid #fff; /* scrollbar background colour */ 
+    background-color: #dcdcdc; /* scrollbar track colour */
+}
+ 
+::-webkit-scrollbar-thumb {
+   border: 6px solid #fff; /* scrollbar background colour */
+   background-color: #dcdcdc; /* scrollbar colour */
+   min-height: 24px;
+   min-width: 24px;
+}
+
+.tmblr-iframe-compact .tmblr-iframe--unified-controls {
+    z-index: 999999999!important;
+    opacity: 0.6;
+    position: absolute;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.tmblr-iframe-compact .tmblr-iframe--unified-controls:hover {
+    opacity: 1.0;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+/*----- TOP NAVIGATION -----*/
+
+header {
+    position: fixed;
+    background-color: #fff; /* container background colour */
+    border-bottom: 1px solid #dcdcdc; /* border colour */
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.topnav {
+    text-align: center;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+
+.topnav a {
+    border-bottom: 4px solid transparent;
+    padding: 15px 3px;
+    margin: 0 8px;
+}
+
+.topnav a:hover {border-bottom: 4px solid #bdccc4;} /* top nav hover colour */
+
+.icon {
+    border-radius: 50%;
+    position: absolute;
+    margin: 0 auto 0 -30px;
+    background-color: #fff; /* container background colour */
+    padding: 5px;
+    border: 1px solid #dcdcdc; /* border colour */
+    width: 60px;
+    height: 60px;
+}
+
+.left {margin-right: 45px;}
+.right {margin-left: 45px;}
+
+/*----- CAROUSEL -----*/
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+            
+#carousel, #navigation {
+    flex: initial;
+    display: block;
+    background-color: #fff; /* container background colour */
+    margin-top: calc(1em + 30px);
+}
+            
+#carousel {
+    overflow: hidden;
+    width: 700px;
+    height: 530px;
+    border: 1px solid #dcdcdc; /* border colour */
+    order: 1;
+}
+
+#navigation {
+    margin-top: 0;
+    border-right: 1px solid #dcdcdc; /* border colour */
+    border-left: 1px solid #dcdcdc; /* border colour */
+    border-bottom: 1px solid #dcdcdc; /* border colour */
+    order: 2;
+    width: 700px;
+    padding: 0 45px;
+    text-align: center;
+} 
+            
+.carouselwrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: transform 0.4s ease-in-out;
+    -moz-transition: transform 0.4s ease-in-out;
+    -ms-transition: transform 0.4s ease-in-out;
+    -o-transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+}
+            
+#button_about:checked ~ #carousel .carouselwrapper {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); 
+}
+            
+#button_update:checked ~ #carousel .carouselwrapper {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); 
+}
+
+#button_ask:checked ~ #carousel .carouselwrapper {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%); 
+}
+
+#button_nav:checked ~ #carousel .carouselwrapper {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%); 
+}
+
+#button_broll:checked ~ #carousel .carouselwrapper {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%); 
+}
+            
+[class^="panel_"] {
+    overflow: auto;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    padding: 45px;
+}
+
+[class^="label_"] {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    color: #555; /* bottom nav link colour */
+    border-bottom: 4px solid transparent;
+    padding: 15px 3px;
+    margin: 0 8px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+            
+[class^="label_"]:hover {
+    border-bottom: 4px solid #bdccc4; /* bottom nav hover colour */
+    color: #bdccc4; /* bottom nav hover colour */
+}
+            
+#button_about:checked ~ #navigation .label_about,
+#button_update:checked ~ #navigation .label_update,
+#button_ask:checked ~ #navigation .label_ask,
+#button_nav:checked ~ #navigation .label_nav,
+#button_broll:checked ~ #navigation .label_broll {
+    cursor: default;
+    border-bottom: 4px solid #bdccc4; /* nav hover border colour */
+    color: #bdccc4; /* nav hover colour */
+}
+
+/*----- COMMON STYLES -----*/
+
+.upper {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+.title {
+    color: #212121; /* title colour */
+    font-family: 'Bitter', serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding-bottom: 1.75em;
+    border-bottom: 1px solid #dcdcdc; /* border colour */
+}
+
+.numbers {
+    float: right;
+    background-color: #bdccc4; /* number background colour */
+    color: #212121; /* number colour */
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.content {
+    margin-top: 1.75em;
+    border-bottom: 1px solid #dcdcdc; /* border colour */
+    padding-bottom: 1.75em;
+}
+
+.content:last-of-type {border-bottom: transparent; padding-bottom: 0;}
+.stats {display: inline-block; width: 49%;}
+
+/*----- ABOUT -----*/
+
+#abtinfo {
+    border-bottom: 1px solid #dcdcdc; /* border colour */
+    margin-top: 1.75em;
+    padding-bottom: 1.75em;
+}
+
+/*----- UPDATES -----*/
+
+.date {
+    font-weight: bold;
+    color: #212121; /* title colour */
+    width: 80px;
+    float: left;
+    padding-top: 0.5em;
+}
+
+.updates {display: inline-block; margin-top: -0.5em;}
+
+.updatetxt {
+    border-left: 1px solid #dcdcdc; /* timeline border colour */
+    padding: 0.5em 0 0.5em 30px;
+    width: 490px;
+    float: right;
+}
+
+.updatetxt::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #bdccc4; /* timeline marker colour */
+    margin-left: -34px;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-top: 0.5em;
+    z-index: 5;
+}
+
+.stats2 {
+    display: inline-block;
+    width: 32%;
+}
+
+.stats2 .fab {
+    color: #bdccc4; /* social media icon colour */
+    vertical-align: middle;
+    font-size: 1.2em;
+    margin-right: 1em;
+}
+
+.social::before {
+    content: '@';
+    color: #bdccc4; /* @ sign colour */
+}
+
+/*----- CONTACT AND FAQ -----*/
+
+.q {
+    color: #212121; /* question colour */
+    font-weight: bold;
+}
+
+.a {font-style: italic;}
+
+.letter {
+    font-weight: bold;
+    font-family: 'Bitter', serif;
+    color: #bdccc4; /* faq letter colour */
+    text-transform: uppercase;
+    font-size: 1.1em;
+    float: left;
+    width: 20px;
+}
+
+.q, .a {margin-left: calc(20px + 1em);}
+
+/*----- NAVIGATION -----*/
+
+.find {
+    display: inline-block; 
+    bordeR: 1px solid #dcdcdc; /* searck box border colour */
+    background-color: #f7f7f7; /* srach box background colour */
+    margin-top: 1.75em;
+    padding: 10px;
+}
+
+.find input {
+    border: 0;
+    outline: none;
+    display: inline;
+    background: inherit;
+    margin: 0;
+    padding: 0;
+    color: #7c7c7c; /* search text colour */
+    width: 560px;
+    font-family: inherit;
+    font-size: inherit;
+}
+ 
+.find input[type=text] {color: #7c7c7c;} /* search text colour */  
+input::-webkit-input-placeholder {color: #7c7c7c;} /* search text colour */
+input::-moz-placeholder {color: #7c7c7c;} /* search text colour */
+input:-moz-placeholder {color: #7c7c7c;} /* search text colour */
+input:-ms-input-placeholder {color: #7c7c7c;} /* search text colour */
+
+.find .fas {
+    color: #212121; /* search icon colour */
+    float: right;
+    margin-top: 0.25em;
+}
+
+.links a::after {
+    content: '';
+    margin: 0 0.75em;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 1.5px;
+    background-color: #bdccc4; /* link square divider colour */
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+.links a:last-of-type::after {display: none;}
+
+/*----- BLOGROLL -----*/
+
+.blog {
+    display: inline-block;
+    width: 49.5%;
+    border-bottom: 1px solid #dcdcdc; /* blogroll border colour */
+    padding: 1em 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.blog:hover {
+    border-bottom: 1px solid #bdccc4; /* blogroll hover colour */
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.blogicon {
+    border-radius: 50%;
+    vertical-align: top;
+    float: left;
+    width: 35px;
+    height: 35px;
+}
+
+.blogtext {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 60px);
+    margin-left: 10px;
+    white-space: nowrap;
+    line-height: 130%;
+}
+
+#blogname {
+    display: inline;
+    font-weight: bold;
+    color: #212121; /* blogname colour */
+}
+
+#blogname, #blogtitle {margin-left: 10px;}
+#blogtitle {display: block; font-size: 0.8em;}
+    
+</style>    
+</head>
+<body>
+
+<!----- HEADER NAVIGATION ----->
+
+<header> 
+    <nav class="upper topnav">
+        <span class="left">
+            <a href="/">return</a>
+            <a href="/archive">archive</a>
+        </span>
+        <img src="{PortraitURL-64}" class="icon"> <!--- to replace blog icon with another image, replace {PortraitURL-64} with the url of the image --->
+        <span class="right">
+            <a href="https://tumblr.com/dashboard">dashboard</a>
+            <a href="https://seyche.tumblr.com">theme</a>
+        </span>
+    </nav>
+</header>
+
+<!----- CAROUSEL ----->
+
+<section id="container">
+    
+<input hidden type="radio" name="carousel-control" id="button_about" checked/>
+<input hidden type="radio" name="carousel-control" id="button_update"/>
+<input hidden type="radio" name="carousel-control" id="button_ask"/>
+<input hidden type="radio" name="carousel-control" id="button_nav"/> 
+<input hidden type="radio" name="carousel-control" id="button_broll"/>  
+   
+    
+<div id="carousel">
+    <div class="carouselwrapper">
+        
+    <!----- ABOUT ----->
+                    
+    <section class="panel_about">
+        <div class="title">
+            about me
+            <span class="numbers">01</span>
+        </div>
+        
+        <!--- some statistics about you. to add more stats, copy and paste as many times as you want. make sure to wrap your text in <div class="stats"></div> and use <h4><h4> for the subject --->
+        <div id="abtinfo"> 
+            <div class="stats">
+                <h4>name</h4>hamlet 
+            </div>
+            <div class="stats">
+                <h4>age</h4>20
+            </div>
+            <div class="stats">
+                <h4>pronouns</h4>he/him
+            </div>
+            <div class="stats">
+                <h4>location</h4>denmark
+            </div>
+            <div class="stats">
+                <h4>star sign</h4>scorpio
+            </div>
+            <div class="stats">
+                <h4>studying</h4>history
+            </div>
+        </div>
+        <!--- end of stats about you>
+        
+        <!--- write about yourself here. use <p></p> to separate paragraphs, <b></b> for bold, <u></u> for underline, <i></i> for italic, <li></li> for list items, <h1></h1> for headings --->
+        <p> 
+            O, that this too <b>too</b> solid flesh would <i>melt</i>, thaw and <u>resolve</u> itself into a dew! Or that the <a href="/">Everlasting</a> had not fix'd His canon 'gainst self-slaughter! O God! God! 
+            <blockquote>How weary, stale, flat and unprofitable seem to me all the uses of this world!</blockquote> 
+            Fie on't! ah fie! 'tis an unweeded garden that grows to seed.
+        </p>
+        
+        <p>
+        <h1>heading</h1>
+            O, what a rogue and peasant slave am I! Is it not monstrous that this player here, but in a fiction, in a dream of passion,
+            <ul>
+                <li>could force his soul so to his own conceit</li>
+                <li>that from her working all his visage wann'd,</li> 
+                <li>tears in his eyes, distraction in's aspect,</li>
+                <li>a broken voice, and his whole function suiting</li>
+            </ul>
+            with forms to his conceit? and all for nothing! For Hecuba! What's Hecuba to him, or he to Hecuba, that he should weep for her? What would he do had he the motive and the cue for passion that I have?
+        </p>
+        <!--- end of text about yourself --->
+        
+    </section>
+    
+    <!----- UPDATES ----->
+    
+    <section class="panel_update">
+        <div class="title">
+            updates
+            <span class="numbers">02</span>
+        </div>
+        
+        <!--- updates timeline --->
+        <div class="content">
+        
+        <!--- to add more updates, copy and paste as many times as needed. make sure to wrap your dates with <span class="date"></span> and your update text with <span class="updatetxt"></span> and the css will add it to the timeline --->
+        
+            <div class="updates">
+                <span class="date">06/08</span> 
+                <span class="updatetxt">There's fennel for you, and columbines: there's rue for you; and here's some for me: we may call it herb-grace o' Sundays.</span>
+            </div>
+            <div class="updates">
+                <span class="date">05/14</span>
+                <span class="updatetxt">O you must wear your rue with
+    a difference.</span>
+            </div>
+            <div class="updates">
+                <span class="date">04/23</span>
+                <span class="updatetxt">There's a daisy: I would give you some violets, but they withered all when my father died.</span>
+            </div>
+        </div>
+        <!--- end of updates timeline --->
+        
+        <!--- update statistics --->
+        <div class="content">
+            <h1>currently</h1>
+            
+            <div class="stats">
+                <h4>reading</h4>words, words, words
+            </div>
+            <div class="stats">
+                <h4>watching</h4>the murder of gonzago
+            </div>
+            <div class="stats">
+                <h4>listening</h4>hey non nonny
+            </div>
+            <div class="stats">
+                <h4>working on</h4>killing my uncle
+            </div>
+        </div>
+        <!--- end of update statistics --->
+        
+        <!--- social media --->
+        <div class="content">
+            <h1>find me at</h1>
+            
+        <!--- to change the social media icons, go to https://fontawesome.com/icons?d=gallery&s=brands, click on the one you want and copy and paste the code below. if you don't want the icons, delete the <i class="iconname"></i> parts --->
+        
+            <div class="stats2">
+            <!--- don't forget to add https:// in the social media links --->
+                <i class="fab fa-twitter"></i>
+                <a href="https://YOURLINK" class="social">username</a> <!--- add your social media link and username here --->
+            </div>
+            <div class="stats2">
+                <i class="fab fa-instagram"></i>
+                <a href="https://YOURLINK" class="social">username</a>
+            </div>
+            <div class="stats2">
+                <i class="fab fa-snapchat-ghost"></i>
+                <a href="https://YOURLINK" class="social">username</a>
+            </div>
+            <div class="stats2">
+                <i class="fab fa-discord"></i>
+                <a href="https://YOURLINK" class="social">username</a>
+            </div>
+            <div class="stats2">
+                <i class="fab fa-pinterest-p"></i>
+                <a href="https://YOURLINK" class="social">username</a>
+            </div>
+            <div class="stats2">
+                <i class="fab fa-tumblr"></i>
+                <a href="https://YOURLINK" class="social">sideblog</a>
+            </div>
+            <!--- end of social media section --->
+            
+        </div>
+    </section>
+    
+    <!----- FAQ AND ASK SECTION ----->
+                    
+    <section class="panel_ask">
+        <div class="title">
+            frequently asked questions
+            <span class="numbers">03</span>
+        </div>
+        
+        <!--- faq section --->
+        <!--- to add more faqs, copy and paste as many times as you want everything in <div class="content"></div> i.e from here --->
+        <div class="content">
+            <span class="letter">q:</span>
+            <div class="q"> <!--- question --->
+                O, what a noble mind is here o'erthrown!
+            </div>
+            <span class="letter">a:</span>
+            <div class="a"> <!--- answer --->
+                The courtier's, soldier's, scholar's, eye, tongue, sword.
+            </div>
+        </div><!--- to here --->
+        
+        <div class="content">
+            <span class="letter">q:</span>
+            <div class="q">
+                The expectancy and rose of the fair state, the glass of fashion and the mould of form; the observed of all observers, quite, quite down!
+            </div>
+            <span class="letter">a:</span>
+            <div class="a">
+                And I, of ladies most deject and wretched that suck'd the honey of his music vows
+            </div>
+        </div>
+        
+        <div class="content">
+            <span class="letter">q:</span>
+            <div class="q">
+                Now see that noble and most sovereign reason, like sweet bells jangled, out of tune and harsh
+            </div>
+            <span class="letter">a:</span>
+            <div class="a">
+                That unmatch'd form and feature of blown youth, blasted with ecstasy: O, woe is me, to have seen what I have seen, see what I see!
+            </div>
+        </div>
+        <!--- end of faq section --->
+        
+        <!--- this is your askbox --->
+        <iframe frameborder="0" border="0" scrolling="no" width="600px" height="200px" allowtransparency="true" src="http://www.tumblr.com/ask_form/{Name}.tumblr.com" style="background-color: transparent; overflow: hidden; margin-top: 3em;"></iframe>
+    
+    </section>
+    
+    <!----- NAVIGATION SECTION ----->
+            
+    <section class="panel_nav">
+        <div class="title">
+            navigation and tags
+            <span class="numbers">04</span>
+        </div>
+        
+        <!--- search bar; no need to edit this --->
+        <form action="/search" method="get" class="find" name="sform">
+            <input type="text" name="q" placeholder="search this blog..." value="{SearchQuery}"/>
+            <i class="fas fa-search"></i>
+        </form>
+        
+        <!--- to add more link sections, copy and paste everything in <nav></nav> i.e. from here --->
+        <nav class="content links">
+            <h3>heading</h3>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+        </nav>
+        <!--- to here --->
+        
+        <nav class="content links">
+            <h3>heading</h3>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+            <a href="/">link</a>
+        </nav>
+        
+        <nav class="content links">
+            <h3>heading</h3>
+            <a href="/">#tag</a>
+            <a href="/">#tag</a>
+            <a href="/">#tag</a>
+            <a href="/">#tag</a>
+            <a href="/">#tag</a>
+            <a href="/">#tag</a>
+            <a href="/">#tag</a>
+            <a href="/">#tag</a>
+            <a href="/">#tag</a>
+            <a href="/">#tag</a>
+            <a href="/">#tag</a>
+        </nav>
+        
+    </section>
+    
+    <!----- BLOGROLL ----->
+    <!--- no need to edit anything in this section; your blogroll will show up automatically AS LONG AS YOU HAVE "share the tumblrs you're following" turned on in your settings. also blogrolls won't display on sideblogs --->
+                    
+    <section class="panel_broll">
+        <div class="title">
+            blogs i follow
+            <span class="numbers">05</span>
+        </div>
+        
+        <p>
+        {block:Following}
+            {block:Followed}
+                <div class="blog"><a href="{FollowedURL}">
+                    <img src="{FollowedPortraitURL-40}" class="blogicon">
+                    <div class="blogtext">
+                        <div id="blogname">@{FollowedName}</div><br>
+                        <div id="blogtitle" class="upper">{FollowedTitle}<br></div>
+                    </div>
+                </a></div>
+            {/block:Followed}
+        {/block:Following}
+        </p>
+    </section>
+                    
+    </div> 
+</div>
+
+<!----- CAROUSEL NAVIGATION ----->
+    
+<div id="navigation" class="upper">
+    <label for="button_about" class="label_about"> <span>about</span> </label>
+    <label for="button_update" class="label_update"> <span>updates</span> </label>
+    <label for="button_ask" class="label_ask"> <span>contact</span> </label>
+    <label for="button_nav" class="label_nav"> <span>navigation</span> </label>
+    <label for="button_broll" class="label_broll"> <span>blogroll</span> </label>
+</div> 
+            
+    
+</section> 
+
+    
+</body>
+</html>
