@@ -757,7 +757,7 @@ ol.notes li.note img.avatar {display: none;}
 <aside class="sidebar">
     {block:ifSidebarImage}<a href="/"><img src="{image:Sidebar}" id="sideimg"/></a>{/block:ifSidebarImage}
     <a href="/" id="stitle" class="title">{Title}</a>
-    {block:ifShowBlogURL}<div id="blogurl">@username</div>{/block:ifShowBlogURL}
+    {block:ifShowBlogURL}<div id="blogurl">@{Name}</div>{/block:ifShowBlogURL}
     <div id="description">{Description}</div>
     {block:ifSearchBar}
     <form action="/search" method="get" class="find" name="sform">
