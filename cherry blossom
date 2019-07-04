@@ -329,7 +329,7 @@ article {
     margin: 175px auto;
 }
 
-.tumblr_video_container {max-height: 540px!important; overflow: hidden!important;} /*check*/
+.tumblr_video_container {max-height: 540px!important; overflow: hidden!important;} 
 .posts li, .posts blockquote, .posts img {max-width: 100%;}
 .postsource {display: none;}
 
@@ -752,7 +752,7 @@ ol.notes li.note img.avatar {display: none;}
 <aside class="sidebar">
     {block:ifSidebarImage}<a href="/"><img src="{image:Sidebar}" id="sideimg"/></a>{/block:ifSidebarImage}
     <a href="/" id="stitle" class="title">{Title}</a>
-    {block:ifShowBlogURL}<div id="blogurl">@{Name}</div>{/block:ifShowBlogURL}
+    {block:ifShowBlogURL}<div id="blogurl">@username</div>{/block:ifShowBlogURL}
     <div id="description">{Description}</div>
     {block:ifSearchBar}
     <form action="/search" method="get" class="find" name="sform">
@@ -991,6 +991,7 @@ ol.notes li.note img.avatar {display: none;}
 </article>
 {/block:Posts}
 
+<a href="https://seyche.tumblr.com" title="theme by seyche" id="k">&.</a>
 
 <!----- PAGINATION ----->
 
