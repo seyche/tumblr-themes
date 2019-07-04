@@ -58,6 +58,7 @@
 
 <meta name="if:Search Bar" content="1"/>
 <meta name="if:Show Blog URL" content="1"/>
+<meta name="if:Hover Tags" content="0"/>
 
 <meta name="text:Home Link" content="home"/>
 <meta name="text:Ask Link" content="ask"/>
@@ -109,7 +110,6 @@ $(document).ready(function(){
 <!----- VIDEO RESIZING ----->
 
 <script src="https://static.tumblr.com/fwgzvyf/Oj1o08f6h/shythemes.vr.js"></script>
-
 
 <style type="text/css">
 
@@ -578,12 +578,6 @@ p.npf_chat {font-family: inherit;}
     position: absolute;
     margin: 27px 0 0 0;
     border-radius: 50%;
-    opacity: 0.8;
-    -webkit-transition: all 0.7s;
-    -moz-transition: all 0.7s;
-    -ms-transition: all 0.7s;
-    -o-transition: all 0.7s;
-    transition: all 0.7s;
 }
  
 .audioinfo {
@@ -595,15 +589,6 @@ p.npf_chat {font-family: inherit;}
 }
  
 .track {font-size: 1.2em;}
- 
-.audiopost:hover .audiobox {
-    opacity: 1.0;
-    -webkit-transition: all 0.7s;
-    -moz-transition: all 0.7s;
-    -ms-transition: all 0.7s;
-    -o-transition: all 0.7s;
-    transition: all 0.7s;
-}
 
 /*----- INFO -----*/
 
@@ -661,8 +646,17 @@ p.npf_chat {font-family: inherit;}
 .likeb .liked + .lb {color: {color:accent};}
 .likeb .liked + .lb:after {content: 'd';}
 
-.tags {font-style: italic;}
-.tags a {margin-right: 7px;}
+.tags {
+    font-style: italic;
+    {block:IndexPage}{block:ifHoverTags}
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    {/block:ifHoverTags}{/block:IndexPage}
+}
 
 .tags a::before {
     content: '#';
@@ -674,11 +668,22 @@ p.npf_chat {font-family: inherit;}
     margin-right: 2px;
 }
 
+.tags a {margin-right: 7px;}
 #ptags a::after {content: ',';}
 #ptags a:last-of-type::after {display: none;}
-
 #taghead {text-align: center;}
 .tagname {color: {color:accent}; font-style: italic;}
+
+{block:ifHoverTags}
+.posts:hover .tags {
+    opacity: 1.0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+{/block:ifHoverTags}
 
 /*----- POST NOTES -----*/
 
