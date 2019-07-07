@@ -339,7 +339,7 @@ article {
 .caption {margin: 20px 0 0 0;}
 .caption p {margin: 0.5em 0 0 0;}
 .body:first-of-type {margin-top: 0;}
-.caption p img {margin: 1.25em 0; max-width: 100%;}
+.caption img {margin: 1.25em 0; max-width: 100%;}
 
 .username::before {
     content: '';
