@@ -391,7 +391,7 @@ article {
 .caption {margin: 25px 0 0 0;}
 .caption p {margin: 0.75em 0 0 0;}
 .body:first-of-type {margin-top: 0;}
-.caption img {margin-top: 10px;}
+.caption p img {margin: 1.25em 0; max-width: 100%;}
 
 {block:ifHideCaption}
 .hidecap {display: none;}
