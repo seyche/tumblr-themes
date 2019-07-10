@@ -329,7 +329,8 @@ article {
     margin: 175px auto;
 }
 
-.tumblr_video_container {max-height: 540px!important; overflow: hidden!important;} 
+.tumblr_video_container {max-height: 540px!important; overflow: hidden!important; max-width: 100%;} 
+figure, video {max-width: 100%;}
 .posts li, .posts blockquote, .posts img {max-width: 100%;}
 .postsource {display: none;}
 
