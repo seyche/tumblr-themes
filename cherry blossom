@@ -266,7 +266,7 @@ b a:hover, strong a:hover {color: {color:accent};}
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    margin: auto 8px auto 5px;
+    margin: auto 8px;
 }
 
 /*----- SIDEBAR -----*/
@@ -621,12 +621,12 @@ p.npf_chat {font-family: inherit;}
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    margin: auto 6px 3px 8px;
+    margin: auto 8px 3px 8px;
 }
 
 .likeb {
   position: relative;
-  display: inline-block;
+  display: inline;
   height: 1em;
   line-height: 1em;
   overflow: hidden;
@@ -643,7 +643,7 @@ p.npf_chat {font-family: inherit;}
    opacity: 0;
 }
 
-.lirb {float: right; text-align: right;}
+.lirb {float: right; text-align: right; display: inline-block;}
 .likeb .liked + .lb {color: {color:accent};}
 .likeb .liked + .lb:after {content: 'd';}
 
@@ -766,11 +766,7 @@ ol.notes li.note img.avatar {display: none;}
     </form>
     {/block:ifSearchBar}
     <nav class="bullet">
-        {block:ifHomeLink}<a href="/">{text:Home Link}</a>{/block:ifHomeLink}
-        {block:ifAskLink}<a href="/ask">{text:Ask Link}</a>{/block:ifAskLink}
-        {block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}
-        {block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}
-        {block:ifLink3}<a href="{text:Link 3 URL}">{text:Link 3}</a>{/block:ifLink3}
+        {block:ifHomeLink}<a href="/">{text:Home Link}</a>{/block:ifHomeLink}{block:ifAskLink}<a href="/ask">{text:Ask Link}</a>{/block:ifAskLink}{block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}{block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}{block:ifLink3}<a href="{text:Link 3 URL}">{text:Link 3}</a>{/block:ifLink3}
     </nav>
 </aside>
 
@@ -951,11 +947,9 @@ ol.notes li.note img.avatar {display: none;}
 <div class="info">
     {block:IndexPage}
         <div class="upper">
-            <a href="{Permalink}" {block:NoteCount}class="ibullet"{/block:NoteCount} title="{TimeAgo}">{DayOfWeek}</a>
-            {block:NoteCount}<a href="{Permalink}" class="notecount">{NoteCount}</a>{/block:NoteCount}
+            <a href="{Permalink}" {block:NoteCount}class="ibullet"{/block:NoteCount} title="{TimeAgo}">{DayOfWeek}</a>{block:NoteCount}<a href="{Permalink}" class="notecount">{NoteCount}</a>{/block:NoteCount}
         <span class="lirb">
-            <a href="{ReblogURL}" target="_blank" class="ibullet">reblog</a>
-            <a class="likeb" href="#">{LikeButton}<span class="lb">like</span></a>
+            <a href="{ReblogURL}" target="_blank" class="ibullet">reblog</a><a class="likeb" href="#">{LikeButton}<span class="lb">like</span></a>
         </span>
     </div>
     {/block:IndexPage}
