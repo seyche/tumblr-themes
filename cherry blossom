@@ -626,7 +626,7 @@ p.npf_chat {font-family: inherit;}
 
 .likeb {
   position: relative;
-  display: inline;
+  display: inline-block;
   height: 1em;
   line-height: 1em;
   overflow: hidden;
@@ -949,7 +949,7 @@ ol.notes li.note img.avatar {display: none;}
         <div class="upper">
             <a href="{Permalink}" {block:NoteCount}class="ibullet"{/block:NoteCount} title="{TimeAgo}">{DayOfWeek}</a>{block:NoteCount}<a href="{Permalink}" class="notecount">{NoteCount}</a>{/block:NoteCount}
         <span class="lirb">
-            <a href="{ReblogURL}" target="_blank" class="ibullet">reblog</a><a class="likeb" href="#">{LikeButton}<span class="lb">like</span></a>
+            <a href="{ReblogURL}" target="_blank" class="ibullet">reblog</a><a class="likeb" href="#" style="display:inline-block;">{LikeButton}<span class="lb">like</span></a>
         </span>
     </div>
     {/block:IndexPage}
