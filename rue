@@ -518,6 +518,16 @@ input:-ms-input-placeholder {color: #7c7c7c;} /* search text colour */
 
 #blogname, #blogtitle {margin-left: 10px;}
 #blogtitle {display: block; font-size: 0.8em;}
+
+/*----- RESPONSIVE -----*/
+
+@media only screen and (max-height: 600px) {
+    #carousel {height: 380px;}
+}
+
+@media only screen and (max-height: 768px) and (min-height: 601px) {
+    #carousel {height: 430px;}
+}
     
 </style>    
 </head>
