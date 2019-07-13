@@ -738,11 +738,27 @@ ol.notes li.note img.avatar {display: none;}
 
 /*----- RESPONSIVE -----*/
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1023px) and (min-width: 601px) {
     .sidebar {
         margin: 175px auto;
         position: static;
         width: {select:post width};
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        width: 70vw;
+        display: block;
+        position: static;
+        margin: 125px auto;
+        padding: 10vw;
+    }
+    
+    .posts {
+        padding: 0 10vw;
+        width: 70vw;
+        margin: 15vw auto;
     }
 }
 
