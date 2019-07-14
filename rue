@@ -5,11 +5,11 @@
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!---
     
     THEME BY SEYCHE.TUMBLR.COM
-    terms: don't steal this shit
     
     CREDITS:
     -carousel tutorial by yeoli
@@ -439,7 +439,7 @@ header {
     margin: 0;
     padding: 0;
     color: #7c7c7c; /* search text colour */
-    width: 560px;
+    width: 555px;
     font-family: inherit;
     font-size: inherit;
 }
@@ -527,6 +527,23 @@ input:-ms-input-placeholder {color: #7c7c7c;} /* search text colour */
 
 @media only screen and (max-height: 768px) and (min-height: 601px) {
     #carousel {height: 430px;}
+}
+
+@media only screen and (max-width: 768px) and (min-width: 501px) {
+    #carousel, #navigation {width: 450px;}
+    .updatetxt {width: 250px;}
+    .panel_ask iframe {width: 360px;}
+    .find input {width: 300px;}
+    .stats2 {display: inline-block; width: 49%;}
+}
+
+@media only screen and (max-width: 500px) {
+    #carousel, #navigation {width: 80vw;}
+    .stats, .stats2 {display: inline-block; width: 100%;}
+    .updatetxt {width: calc(80vw - 200px);}
+    .panel_ask iframe {width: calc(80vw - 90px);}
+    .find input {width: calc(80vw - 150px);}
+    .blog {width: 100%;}
 }
     
 </style>    
