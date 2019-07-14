@@ -759,7 +759,7 @@ input:-ms-input-placeholder {color: #7c7c7c;} /* search text colour */
         
         <!--- search bar; no need to edit this --->
         <form action="/search" method="get" class="find" name="sform">
-            <input type="text" name="q" placeholder="search this blog..." value="{SearchQuery}"/>
+            <input type="text" name="q" placeholder="search this blog..." value="{SearchQuery}" value autocomplete="off"/>
             <i class="fas fa-search"></i>
         </form>
         
