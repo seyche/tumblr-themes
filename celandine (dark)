@@ -16,7 +16,7 @@
     -feather icons by Cole Bemis
     -pxu photosets by pixel union / with modifications by bychloethemes
     -style my tooltips by malihu
-    -video resizing by shythemes
+    -video resizing by nouvae
     -masonry by david desandro
     -scroll to top
     -remove redirects by magnusthemes
@@ -1106,6 +1106,21 @@ $(document).ready(function(){
 
 <script>
       feather.replace()
+</script>
+
+<!----- VIDEO RESIZING ----->
+
+<script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+
+<script>
+    function flexFrame() {
+   $(".caption").each(function() {
+        $(this).find("iframe").wrap("<div class='capframe'></div>"); 
+        flexibleFrames($(".capframe"));
+    });
+    flexibleFrames($(".video"));
+}
+$(document).ready(flexFrame);
 </script>
 
 </body>
