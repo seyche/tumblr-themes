@@ -1029,10 +1029,6 @@ $(document).ready(function(){
 });
 </script>
 
-<!----- VIDEO RESIZING ----->
-
-<script src ="//static.tumblr.com/fwgzvyf/Oj1o08f6h/shythemes.vr.js"></script>
-
 <!----- FADE IN NAV ----->
 
 <script>
