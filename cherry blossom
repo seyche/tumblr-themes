@@ -316,7 +316,7 @@ nav a:first-of-type::before {display: none;}
 /*----- POSTS -----*/
 
 .container {
-    margin: auto; 
+    margin: auto;
     width: {select:post width};
     position: relative;
 }
@@ -706,7 +706,7 @@ ol.notes li.note img.avatar {display: none;}
 /*----- PAGINATION -----*/
 
 .pg {
-    margin: auto auto 200px auto; 
+    margin: auto auto 200px auto;
     text-align: center;
     color: {color:title};
 }
@@ -736,28 +736,52 @@ ol.notes li.note img.avatar {display: none;}
 
 /*----- RESPONSIVE -----*/
 
-@media only screen and (max-width: 1023px) and (min-width: 601px) {
-    .sidebar {
-        margin: 175px auto;
-        position: static;
+@media only screen and (max-width: 1400px) and (min-width: 1024px) {
+    .container {
+        margin: auto;
+        width: calc({select:post width} + 385px);
+    }
+
+    article, .pg {
         width: {select:post width};
+        margin: 175px 0;
     }
 }
 
+@media only screen and (max-width: 1023px) and (min-width: 601px) {
+    .sidebar {
+        margin: 110px auto;
+        position: static;
+        width: {select:post width};
+    }
+    
+    .container {width: {select:post width};}
+    article {margin: 110px auto;}
+}
+
 @media only screen and (max-width: 600px) {
+    .container {
+        width: 80vw;
+        padding: 0 10vw;
+    }
+    
     .sidebar {
         width: 70vw;
         display: block;
         position: static;
-        margin: 125px auto;
+        margin: 110px auto;
         padding: 10vw;
     }
     
-    .posts {
-        padding: 0 10vw;
+    article {
         width: 70vw;
-        margin: 15vw auto;
+        margin: 110px auto;
     }
+}
+
+@media only screen and (max-height: 800px) {
+    article {margin: 110px 0;}
+    .sidebar {top: 110px;}
 }
 
 </style>
@@ -1020,7 +1044,6 @@ ol.notes li.note img.avatar {display: none;}
     {/block:NextPage}
 </article>
 {/block:Pagination}
-
 
 </section>
 
