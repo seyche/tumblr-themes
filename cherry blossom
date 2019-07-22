@@ -528,7 +528,7 @@ p.npf_quote {font-family: inherit; margin-bottom: 1em;}
 
 .chat {padding: 0; margin: 0;}
 .chat li {list-style-type: none;}
-.line, p.npf_chat {padding-top: 20px;}
+.line {padding-top: 20px;}
 .line:first-of-type, p.npf_chat:first-of-type {padding-top: 0;}
 .chat svg {margin-right: 10px;}
 p.npf_chat {font-family: inherit;}
