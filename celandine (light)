@@ -392,7 +392,9 @@ figure, video {max-width: 100%;}
 .caption {margin: 25px 0 0 0;}
 .caption p {margin: 0.75em 0 0 0;}
 .body:first-of-type {margin-top: 0;}
-.caption img {margin: 1.25em 0; max-width: 100%;}
+.caption img {max-width: 100%; margin: 0.25em 0;}
+.caption img:first-of-type {margin-top: 1.25em;}
+.caption img:first-of-type {margin-bottom: 1.25em;}
 
 {block:ifHideCaption}
 .hidecap {display: none;}
