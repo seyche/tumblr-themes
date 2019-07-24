@@ -394,7 +394,7 @@ figure, video {max-width: 100%;}
 .body:first-of-type {margin-top: 0;}
 .caption img {max-width: 100%; margin: 0.25em 0;}
 .caption img:first-of-type {margin-top: 1.25em;}
-.caption img:first-of-type {margin-bottom: 1.25em;}
+.caption img:last-of-type {margin-bottom: 1.25em;}
 
 {block:ifHideCaption}
 .hidecap {display: none;}
