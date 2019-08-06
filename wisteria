@@ -396,7 +396,6 @@ figure, video {max-width: 100%;}
 .caption:last-of-type {border-bottom: none;}
 .caption p {margin: 0;}
 .caption p img, .captext img {margin-top: 0.25em; max-width: 100%;}
-.captext img:first-of-type {margin-top: 1.25em;}
 .captop:first-of-type {border-top: 1px solid {color:borders};}
 
 .capicon {
