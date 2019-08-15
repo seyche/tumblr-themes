@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<head>
+<title>{Title} / navigation</title>
+
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta charset="utf-8">
+
+<!---
+    
+    THEME BY SEYCHE.TUMBLR.COM
+    
+    CREDITS:
+    -feather icons by Cole Bemis
+    -search tags by shythemes
+    -full list at seyche.tumblr.com/credits
+    
+--->
+
+<link href="https://fonts.googleapis.com/css?family=Overpass:400,400i,700,700i&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/feather-icons"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<style type="text/css">
+
+/*----- LAZYLOAD -----*/
+
+@keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+ 
+@-webkit-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+ 
+@-moz-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+ 
+@-o-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/*----- BASIC DISPLAY OPTIONS 
+
+for a longer explanation on how to add/change emojis, scroll to the html 
+
+-----*/
+
+/* change this to "visibility: hidden;" to hide the emojis in the tag boxes */
+.emoji {visibility: visible;} 
+
+/* change this to "visibility: hidden;" to hide the emoji in the sidebar */
+.titleemoji {visibility: visible;}
+
+/*----- COLOURS -----*/
+
+body {
+    font-family: 'Overpass', sans-serif;
+    font-size: 13px;
+    color: #4f4f4f; /* text colour */
+    background-color: #fafafa; /* background colour */
+    line-height: 160%;
+    letter-spacing: 0.2px;
+    word-wrap: break-word;
+    -webkit-animation: lazyload 2s;
+    -moz-animation: lazyload 2s;
+    -o-animation: lazyload 2s;
+    animation: lazyload 2s;
+}
+
+/* link colour */
+a {color: #9e9e9e;}
+
+/* link hover colour */
+a:hover {color: #212121;}
+
+/* tag hover colour */
+.links a::after {background-color: #212121;}
+
+/* search text colour */
+.find input, .find input[type=text], input::-webkit-input-placeholder, input::-moz-placeholder, input:-moz-placeholder, input:-ms-input-placeholder {
+    color: #4f4f4f;
+} 
+
+/* title colour */
+title, .title {color: #212121;} 
+
+/* border colour */
+#search, .links a, .dropdown {border-top: 1px solid #e0e0e0;}
+article {border: 1px solid #e0e0e0;}
+.emoji {border-left: 1px solid #e0e0e0;}
+
+/* tags box background colour */
+article {background-color: #fafafa;}
+
+/* tag box heading and dropdown box background colour */
+.title, .dropdown {background-color: #f5f5f5;}
+
+/* emoji background colour */
+.emoji {background-color: #fafafa;}
+
+/*----- RAINBOW TAG HOVER COLOURS: 
+
+    this section gives each tag box a unique emoji background colour and tag hover colour. change the hex colours below to whichever shades and colours you want. 
+    
+    for an explanation of how to edit the colours (i.e. if you wanted to have the boxes alternate pink and blue, and get rid of the rest of the colours), scroll down to the html. 
+    
+    if you only want one link hover colour across all the tag boxes, delete everything in the section below.
+    
+    -----*/
+
+.yellow .emoji {background-color: #fffced;} /* emoji background colour */
+.yellow .links a:hover {color: #f0c000;} /* tag hover colour */
+.yellow .links a::after {background-color: #f0c000;} /* tag hover colour */
+
+.pink .emoji {background-color: #ffe8ed;}
+.pink .links a:hover {color: #f21b46;}
+.pink .links a::after {background-color: #f21b46;}
+
+.red .emoji {background-color: #ffebeb;}
+.red .links a:hover {color: #f44336;}
+.red .links a::after {background-color: #f44336;}
+
+.purple .emoji {background-color: #f7f0ff;}
+.purple .links a:hover {color: #5d00ba;}
+.purple .links a::after {background-color: #5d00ba;}
+
+.green .emoji {background-color: #ecf5e1;}
+.green .links a:hover {color: #8bc34a;}
+.green .links a::after {background-color: #8bc34a;}
+
+.orange .emoji {background-color: #fff3e8;}
+.orange .links a:hover {color: #ed7300;}
+.orange .links a::after {background-color: #ed7300;}
+
+.white .emoji {background-color: #fafafa;}
+.white .links a:hover {color: #dcdcdc;}
+.white .links a::after {background-color: #dcdcdc;}
+
+.blue .emoji {background-color: #e6f7ff;}
+.blue .links a:hover {color: #20b3f7;}
+.blue .links a::after {background-color: #20b3f7;}
+
+/*----- END OF RAINBOW TAG HOVER COLOURS -----*/
+
+
+
+/*----- BASICS -----*/
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a:hover {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+title, .title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+::-webkit-scrollbar {
+    width: 17px; 
+    height: 17px;
+    background-color: inherit;
+}
+
+::-webkit-scrollbar-track {
+    border: 8px solid #fafafa; /* background colour */
+    background-color: #e0e0e0; /* scrollbar track colour */
+}
+ 
+::-webkit-scrollbar-thumb {
+   border: 6px solid #fafafa; /* background colour */
+   background-color: #e0e0e0; /* scrollbar colour */
+   min-height: 24px;
+   min-width: 24px;
+}
+
+.tmblr-iframe-compact .tmblr-iframe--unified-controls {display: none;}
+
+#k {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+/*----- CONTENT CONTAINER: don't edit this please -----*/
+
+#container {margin: 100px auto; width: calc(840px + 225px);}
+
+/*----- SIDEBAR -----*/
+
+#sidebar {width: 150px; position: fixed;}
+
+#sidebar img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    margin: -15px 0 0 -65px;
+}
+
+.titleemoji {
+    font-size: 2em;
+    position: absolute;
+    margin-left: -2em;
+}
+
+title {display: inline-block;}
+
+#mainlinks {margin-top: 0.25em;}
+nav a {display: block;}
+
+#search {margin-top: 1.5em; padding-top: 1.5em;}
+.find {display: inline-block; width: 150px;}
+
+#search .feather {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.find input {
+    border: 0;
+    outline: none;
+    display: inline;
+    background: inherit;
+    margin: 0 0 0 1em;
+    padding: 0;
+    font-family: inherit;
+    width: calc(150px - 2em - 14px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+/*----- TAGS BOXES -----*/
+
+#columns {
+    margin-left: 225px;
+    width: 840px;
+    column-count: 3;
+    column-gap: 75px;
+}
+
+article {
+    width: 230px;
+    display: inline-block;
+    break-inside: avoid;
+    margin-bottom: 75px;
+}
+
+.title {font-size: 0.9em;}
+
+.tagheading {padding: 15px; display: inline-block;}
+.emoji {float: right; padding: 15px;}
+
+.links a {
+    display: block; 
+    padding: 12px 15px;
+    text-transform: lowercase;
+}
+
+.links a::after {
+    content: '';
+    position: relative;
+    display: block;
+    height: 1px;
+    width: 0;
+    bottom: -13px;
+    left: -15px;
+    z-index: 5;
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.links a:hover::after {
+    width: calc(100% + 30px);
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.dropbutton {cursor: help;}
+.dropdown {display: none; padding: 15px;}
+.dropdown a::after {display: none;}
+
+.dropdown a {
+    border-top: none;
+    padding: 0;
+    font-style: italic;
+}
+
+.dropbutton .feather {
+    float: right;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-top: 0.25em;
+    vertical-align: middle;
+}
+
+/*----- RESPONSIVE -----*/
+
+@media only screen and (max-width: 1279px) {
+    
+    #container {width: calc(535px + 225px);}
+    #columns {column-count: 2; width: 535px;}
+} 
+
+@media only screen and (max-width: 899px) {
+    #container {width: calc(230px + 225px);}
+    #columns {column-count: 1; width: 230px;}
+}
+
+@media only screen and (max-width: 599px) {
+    #container {width: 230px;}
+    #columns {margin: auto;}
+    
+    #sidebar {
+        position: relative;
+        width: 230px;
+        margin-bottom: 75px;
+    }
+    
+    nav a {display: inline; margin-right: 0.5em;}
+    
+    #k {
+        position: relative;
+        margin: auto;
+        text-align: center;
+        left: calc(50vw - 0.5em);
+        bottom: 50px;
+    }
+}
+    
+</style>    
+</head>
+<body>
+
+<section id="container">
+
+    <!----- SIDEBAR ----->
+
+    <aside id="sidebar">
+        <span class="titleemoji">🍓</span> <!-- change the emoji to whatever you want -->
+        <title>navigation</title>
+        
+        <nav id="mainlinks"> <!-- add more links here if you want to -->
+            <a href="/">home</a>
+            <a href="/ask">message</a>
+            <a href="https://tumblr.com/dashboard">dashboard</a>
+        </nav>
+        
+        <!----- SEARCH BAR ----->
+        
+        <nav id="search">
+            <form action="/search" method="javascript:return false" class="find" name="sform">
+                <i data-feather="search"></i></a>
+                <input type="text" class="query" name="q" placeholder="search tags" value="{SearchQuery}" value autocomplete="off"/>
+            </form>
+        </nav>
+        
+    </aside>
+    
+    <!----- TAGS CONTAINER ----->
+    
+    <section id="columns">
+    
+    <!----- TAGS START HERE. INSTRUCTIONS ON EDITING THE HTML FOLLOW:
+    
+    the basic structure for each box looks like this:
+    
+    <article>
+    
+        <div class="title">
+            <div class="tagheading">heading</div>
+            <span class="emoji">🍍</span>
+        </div>
+        
+        <div class="links">
+            <a href="/tagged/name">tag name</a>
+            <a href="/tagged/name">tag name</a>
+            <a href="/tagged/name">tag name</a>
+            <a href="/tagged/name">tag name</a>
+        </div>
+        
+    </article>
+    
+    
+    ----- CHANGING/REMOVING EMOJIS: -----
+    
+    to change the emojis, copy and paste the one you want into the code. just make sure that the one in the sidebar is wrapped with <div class="titleemoji"></div> and that the ones in the tag boxes are wrapped with <span class="emoji"></span>. 
+    
+    if you don't want the emojis, you can delete all the lines that look like "<span class="emoji">🍍</span>"
+    
+    
+    ----- ADDING DROPDOWNS: -----
+    
+    the basic structure of a dropdown looks like: 
+    
+    <a class="dropbutton">dropdown title <i data-feather="chevron-down"></i></a>
+                <div class="dropdown">
+                    <a href="/">sub tag</a>
+                    <a href="/">sub tag</a>
+                    <a href="/">sub tag</a>
+                </div>
+                
+    so the basic structure of a box with dropdown tags looks like:
+    
+    <article>
+    
+        <div class="title">
+            <div class="tagheading">heading</div>
+            <span class="emoji">🍍</span>
+        </div>
+        
+        <div class="links">
+            <a href="/tagged/name">tag name</a>
+            <a href="/tagged/name">tag name</a>
+            <a href="/tagged/name">tag name</a>
+            
+            <a class="dropbutton">dropdown title <i data-feather="chevron-down"></i></a>
+                <div class="dropdown">
+                    <a href="/">sub tag</a>
+                    <a href="/">sub tag</a>
+                    <a href="/">sub tag</a>
+                </div>
+                
+            <a href="/tagged/name">tag name</a>
+        </div>
+        
+    </article>
+    
+    you can add dropdowns anywhere you want, just make sure that the dropdown title is wrapped with <a class="dropbutton><i data-feather="chevron-down"></i></a> and that the dropdown comes immediately after it and is wrapped with <div class="dropdown"></div>
+    
+    
+    ----- GIVING EACH BOX A UNIQUE HOVER COLOUR AND EMOJI BACKGROUND COLOUR:
+    
+    you just need to add "class="COLOURNAME" to <article></article> with whichever colour you choose so that it looks like:
+    
+    <article class="pink">
+        etc. etc....
+    </article>
+    
+    if you don't want this, you can remove all of the parts that say "class="COLOURNAME" from <article></article> or you can scroll up and delete the section i marked in the css.
+    
+    ----->
+    
+    
+    <!----- tags box one ----->
+    
+    <article class="yellow">
+    
+        <div class="title">
+            <div class="tagheading">heading</div>
+            <span class="emoji">🍍</span>
+        </div>
+        
+        <div class="links">
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+        </div>
+        
+    </article>
+    
+    
+    <!----- tags box two ----->
+    
+    <article class="pink">
+    
+        <div class="title">
+            <div class="tagheading">heading</div>
+            <span class="emoji">🍉</span>
+        </div>
+        
+        <div class="links">
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+        </div>
+        
+    </article>
+    
+    
+    <!----- tags box three ----->
+    
+    <article class="red">
+    
+        <div class="title">
+            <div class="tagheading">heading</div>
+            <span class="emoji">🍒</span>
+        </div>
+        
+        <div class="links">
+            <a href="/tagged/NAME">tag name</a>
+            
+            <a class="dropbutton">dropdown title <i data-feather="chevron-down"></i></a>
+                <div class="dropdown">
+                    <a href="/tagged/NAME">sub tag</a>
+                    <a href="/tagged/NAME">sub tag</a>
+                    <a href="/tagged/NAME">sub tag</a>
+                </div>
+                
+            <a href="/tagged/NAME">tag name</a>
+        </div>
+        
+    </article>
+    
+    
+    <!----- tags box four ----->
+    
+    <article class="purple">
+    
+        <div class="title">
+            <div class="tagheading">heading</div>
+            <span class="emoji">🍇</span>
+        </div>
+        
+        <div class="links">
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+        </div>
+        
+    </article>
+    
+    
+    <!----- tags box five ----->
+    
+    <article class="green">
+    
+        <div class="title">
+            <div class="tagheading">heading</div>
+            <span class="emoji">🥝</span>
+        </div>
+        
+        <div class="links">
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+            
+            <a class="dropbutton">dropdown title <i data-feather="chevron-down"></i></a>
+                <div class="dropdown">
+                    <a href="/tagged/NAME">sub tag</a>
+                    <a href="/tagged/NAME">sub tag</a>
+                </div>
+                
+        </div>
+    </article>
+    
+    
+    <!----- tags box six ----->
+    
+    <article class="orange">
+    
+        <div class="title">
+            <div class="tagheading">heading</div>
+            <span class="emoji">🍊</span>
+        </div>
+        
+        <div class="links">
+        
+            <a class="dropbutton">dropdown title <i data-feather="chevron-down"></i></a>
+                <div class="dropdown">
+                    <a href="/tagged/NAME">sub tag</a>
+                    <a href="/tagged/NAME">sub tag</a>
+                </div>
+                
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+        </div>
+        
+    </article>
+    
+    
+    <!----- tags box seven ----->
+    
+    <article class="white">
+    
+        <div class="title">
+            <div class="tagheading">heading</div>
+            <span class="emoji">🥥</span>
+        </div>
+        
+        <div class="links">
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+        </div>
+        
+    </article>
+    
+    
+    <!----- tags box eight ----->
+    
+    <article class="blue">
+    
+        <div class="title">
+            <div class="tagheading">heading</div>
+            <span class="emoji">🔵</span>
+        </div>
+        
+        <div class="links">
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+            <a href="/tagged/NAME">tag name</a>
+        </div>
+        
+    </article>
+    
+     <!----- DO NOT EDIT ANYTHING AFTER HERE ----->
+     
+    </section>
+
+</section>
+
+<a href="https://seyche.tumblr.com" title="theme by seyche" id="k">&.</a>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+    jQuery(".dropdown").hide();
+    jQuery(".dropbutton").click(function()
+    {
+    jQuery(this).next(".dropdown").slideToggle(450);
+    });});
+
+      feather.replace()
+      
+      $(document).ready(function(){
+   $('.find').submit(function(event){
+       var value = $('input:first').val();
+       location.replace('http://{Name}.tumblr.com/tagged/' + value);
+   });
+});
+</script>
+    
+</body>
+</html>
