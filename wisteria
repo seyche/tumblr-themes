@@ -427,7 +427,7 @@ figure, video {max-width: 100%;}
 
 /*----- TEXT -----*/
 
-.posts .title {padding: 25px 25px 0 25px;}
+.posts .title {padding: 25px; border-bottom: 1px solid {color:borders};}
 .title {font-size: 1.25em; font-weight: bold;}
 
 pre {
