@@ -1007,7 +1007,7 @@ ol.notes a, ol.notes a:hover {border-bottom: none;}
 {block:RebloggedFrom}{block:Reblogs}
     <li class="caption">
         <img src="{PortraitURL-64}" class="capicon">
-        <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+        <div class="username upper {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
         <div class="captext">{Body}</div>
     </li>
 {/block:Reblogs}{/block:RebloggedFrom}
