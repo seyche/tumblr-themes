@@ -586,7 +586,7 @@ p.npf_chat {font-family: inherit;}
     position: relative;
     left: 75px;
     top: 28px;
-    max-width: calc({select:post width} - 175px); 
+    max-width: calc({select:post width} - 215px); 
 }
  
 .track {font-size: 1.2em;}
