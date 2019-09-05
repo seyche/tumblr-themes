@@ -89,6 +89,7 @@
 <meta name="if:Search Bar" content="1"/>
 <meta name="if:Square Icons" content="0"/>
 <meta name="if:Hide Tags" content="0"/>
+<meta name="if:Hide Caption" content="0"/>
 
 <meta name="text:Home Title" content="home"/>
 <meta name="text:Ask Title" content="ask"/>
@@ -397,6 +398,12 @@ figure, video {max-width: 100%;}
 .caption p {margin: 0;}
 .caption p img, .captext img {margin-top: 0.25em; max-width: 100%;}
 .captop:first-of-type {border-top: 1px solid {color:borders};}
+
+{block:ifHideCaption}
+{block:IndexPage}
+.captop {display: none;}
+{/block:IndexPage}
+{/block:ifHideCaption}
 
 .capicon {
     width: 25px;
