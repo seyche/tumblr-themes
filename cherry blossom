@@ -205,6 +205,11 @@ b a:hover, strong a:hover {color: {color:accent};}
 .tmblr-iframe-compact .tmblr-iframe--unified-controls {
     z-index: 999999999!important;
     opacity: 0.6;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
 }
 
 .tmblr-iframe-compact .tmblr-iframe--unified-controls:hover {
