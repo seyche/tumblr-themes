@@ -345,7 +345,7 @@ nav a {
     margin: auto;
     width: {select:post width};
     position: relative;
-    padding: 100px 0;
+    padding: 70px 0;
 }
 
 #timeline {
@@ -366,7 +366,7 @@ article {
     border: 1px solid {color:borders};
 }
 
-.posts {margin: 120px 0; z-index: 2;}
+.posts {margin: 180px 0; z-index: 2;}
 
 {block:IndexPage}
 .posts:nth-child(odd) {margin-left: calc(-{select:post width} / 2 - 100px);}
