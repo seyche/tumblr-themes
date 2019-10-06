@@ -1249,7 +1249,7 @@ footer {
             {block:IndexPage}{block:NoteCount}<span class="mdate"> with <span class="notecount">{NoteCount} notes</span></span>{/block:NoteCount}{/block:IndexPage}
         </a>
         <div class="lirb upper">
-            <a href="{ReblogURL}" target="_blank">reblog</a> <span class="and">&</span>
+            <a href="{ReblogURL}" target="_blank">reblog</a> <span class="and">& </span>
             <a class="like-b" href="#">{LikeButton}<span class="b">like</span></a>
             {block:PermalinkPage}{block:RebloggedFrom}
                 <div class="source"><a href="{ReblogRootURL}" title="{ReblogRootName}">source</a></div>
