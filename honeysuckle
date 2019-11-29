@@ -798,6 +798,7 @@ p.npf_chat b {
     word-wrap: break-word;
     font-style: italic;
     margin-top: 0.25em;
+    text-transform: lowercase;
 }
 
 .show_tags {display: block;}
