@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>{Title}</title>
+<title>{Title} {block:TagPage}/ #{Tag}{/block:TagPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
  
 <link rel="shortcut icon" href="{Favicon}">
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
@@ -348,7 +348,7 @@ article {
 .posts li, .posts blockquote, .posts img {max-width: 100%;}
 .postsource {display: none;}
 .tumblr_video_container {max-height: 540px!important; overflow: hidden!important; max-width: 100%;} 
-figure, video {max-width: 100%;}
+figure, video, .video, .video iframe {max-width: 100%;}
 
 /*----- COMMON STYLES -----*/
 
