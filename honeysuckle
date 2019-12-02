@@ -490,7 +490,7 @@ nav a:hover {color: {color:link};}
 
 .tumblr_video_container {max-height: {select:post width}!important; overflow: hidden!important;
 }
-.posts li, .posts blockquote, .posts img, figure, video, .video {max-width: 100%;}
+.posts li, .posts blockquote, .posts img, figure, video, .video, .video iframe {max-width: 100%;}
 .postsource {display: none;}
 
 /*----- CAPTION -----*/
