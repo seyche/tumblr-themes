@@ -378,7 +378,7 @@ article {
 {/block:PermalinkPage}
 
 .tumblr_video_container {max-height: 500px!important; overflow: hidden!important;}
-.posts li, .posts blockquote, .posts img, figure, video, .video {max-width: 100%;}
+.posts li, .posts blockquote, .posts img, figure, video, .video, .video iframe {max-width: 100%;}
 .postsource {display: none;}
 
 /*----- COMMON -----*/
@@ -442,6 +442,7 @@ footer::after {bottom: 0;}
 .captop:first-of-type {border-top: 1px solid {color:borders};}
 .captext figure {margin-top: 2px;}
 .captext figure:first-of-type {margin-top: 1em;}
+.captext iframe {max-width: 100%;}
 
 {block:ifHideCaption}
 {block:IndexPage}
@@ -618,6 +619,8 @@ img {
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
+
+.tmblr-full img {width: 100%; height: 100%;}
 
 /*----- QUOTE -----*/
 
