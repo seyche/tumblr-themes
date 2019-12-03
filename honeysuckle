@@ -510,6 +510,7 @@ nav a:hover {color: {color:link};}
 
 .captext figure {margin-top: 4px;}
 .captext figure:first-of-type {margin-top: 1em;}
+.caption iframe {max-width: 100%;}
 
 .capicon {
     display: inline-block;
