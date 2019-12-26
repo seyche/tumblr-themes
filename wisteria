@@ -696,6 +696,7 @@ p.npf_chat b {color: {color:accent}; font-family: {select:title font}, serif;}
     width: 15px;
     height: 15px;
     cursor: pointer;
+    margin-bottom: 1px;
 }
  
 .like_button {
