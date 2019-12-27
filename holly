@@ -783,6 +783,7 @@ p.npf_chat b {
     margin-top: 1em;
     padding: 0 20px;
     {/block:ifSolidPosts}
+    {block:ifNotSolidPosts}margin-top: 0.25em;{/block:ifNotSolidPosts}
     text-transform: lowercase;
 }
 
