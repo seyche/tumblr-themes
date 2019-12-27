@@ -209,11 +209,11 @@ ol {list-style-type: decimal;}
 li {max-width: 100%;}
 
 #s-m-t-tooltip {
-    max-width: 300px;
+    max-width: 400px;
     margin: 15px 15px 15px 20px;
     padding: 6px 9px;
     background: {color:title};
-    color: {color:background};
+    color: {color:posts};
     z-index: 999999;
     font-family: inherit;
     border-radius: 0;
