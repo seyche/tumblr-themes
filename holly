@@ -319,6 +319,7 @@ nav a {margin: 0 0.5em;}
         {block:ifSolidPosts}padding: 20px;{/block:ifSolidPosts}
         {block:ifNotSolidPosts}padding: 0 20px;{/block:ifNotSolidPosts}
         margin: 0;
+        border-bottom: none;
     }
     
     aside .icon {
