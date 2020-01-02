@@ -138,7 +138,7 @@
 }
 
 body {
-    font-family: {select:font};, sans-serif;
+    font-family: {select:font}, serif;
     font-size: {select:font size};
     color: {color:text};
     background-color: {color:background};
