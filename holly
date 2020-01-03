@@ -670,6 +670,7 @@ p.npf_chat b {
  
 #audiopost {
     text-align: right;
+    min-height: 50px;
     {block:ifNotSolidPosts}
     border-top: 1px solid {color:borders};
     padding-top: 20px;
