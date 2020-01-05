@@ -27,9 +27,6 @@
 
 <link href="https://fonts.googleapis.com/css?family=ABeeZee:400,400i|Karla:400,400i,700,700i|Lato:400,400i,700,700i|Literata:400,400i,700,700i|Lora:400,400i,700,700i|Maven+Pro:400,700|Nunito+Sans:400,400i,700,700i|Open+Sans:400,400i,700,700i|PT+Serif:400,400i,700,700i|Poppins:400,400i,700,700i|Roboto:400,400i,700,700i&display=swap" rel="stylesheet">
 
-<script src="https://unpkg.com/feather-icons"></script>
-
-
 <!----- VARIABLES ----->
 
 <meta name="color:Background" content="#f8f8f8"/>
@@ -1312,8 +1309,6 @@ $(document).ready(function(){
     });
  
 });
-
-feather.replace()
 
 </script> 
 
