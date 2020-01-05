@@ -1161,8 +1161,8 @@ ol.notes li.note img.avatar {display: none;}
     
     {block:IndexPage}
         <span class="lirb">
-            <a href="{ReblogURL}" title="reblog" target="_blank"><i data-feather="refresh-cw"></i></a>
-            <a class="like-b" href="#" title="like">{LikeButton}<span class="b"><i data-feather="heart"></i></span></a>
+            <a href="{ReblogURL}" title="reblog" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></a>
+            <a class="like-b" href="#" title="like">{LikeButton}<span class="b"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span></a>
         </span>
     {/block:IndexPage}
 </div>
