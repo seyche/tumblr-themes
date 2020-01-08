@@ -416,7 +416,7 @@ article {
 
 .tumblr_video_container {max-height: {select:post width}!important; overflow: hidden!important;
 }
-.posts li, .posts blockquote, .posts img, figure, video, .video {max-width: 100%;}
+.posts li, .posts blockquote, .posts img, figure, video, .video, .video iframe {max-width: 100%;}
 .postsource {display: none;}
 
 .clearfix:before, .clearfix:after{content: ''; display: table;}
@@ -468,6 +468,7 @@ article {
 .caption p {margin: 1em 0 0 0;}
 .ogcap p:first-of-type {margin-top: 0;}
 .body:first-of-type {margin: 0; {block:ifNotSolidPosts}padding-top: 0;{/block:ifNotSolidPosts}}
+.caption iframe {max-width: 100%;}
 .username {display: inline-block; margin-left: 0.75em;}
 
 .capicon {
