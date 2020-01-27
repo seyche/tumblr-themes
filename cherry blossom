@@ -429,7 +429,8 @@ article {
 /*----- CAPTION -----*/
 
 .caption {margin: 20px 0 0 0; list-style-type: none;}
-.caption p {margin: 0.75em 0 0 0;}
+.caption p {margin: 0.75em 0;}
+.caption p:last-of-type {margin: 0.75em 0 0 0;}
 .ogcap p:first-of-type {margin-top: 0;}
 .body:first-of-type {margin-top: 0;}
 
