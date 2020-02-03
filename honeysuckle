@@ -791,7 +791,8 @@ p.npf_chat b {
     z-index: 2;
     opacity: 0;
 }
- 
+
+.like_button iframe {width: 100% !important; height: 100% !important;}
 .like-b .liked + .b {color: {color:accent};}
 .like-b .liked + .b:after {content: 'd';}
 
@@ -1006,7 +1007,7 @@ header .secondtitle {
 {/block:TagPage}
 
 {block:Posts}
-<article class="posts">
+<article class="posts" id="{PostID}">
 
 {block:Text}
 {block:Title}<h1 class="posttitle aborder"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
