@@ -750,6 +750,7 @@ p.npf_chat b {color: {color:title};}
 }
 
 .lirb {float: right; text-align: right; display: inline-block;}
+.like_button iframe {width: 100% !important; height: 100% !important;}
 .likeb .liked + .lb {color: {color:accent};}
 .likeb .liked + .lb:after {content: 'd';}
 
@@ -936,7 +937,7 @@ ol.notes li.note img.avatar {display: none;}
 {/block:TagPage}
 
 {block:Posts}
-<article class="posts">
+<article class="posts" id="{PostID}">
 
 {block:Text}
 {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
