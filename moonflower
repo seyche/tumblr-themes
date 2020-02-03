@@ -827,6 +827,7 @@ p.npf_chat b {
     opacity: 0;
 }
 
+.like_button iframe {width: 100% !important; height: 100% !important;}
 .like-b .liked + .b {color: {color:accent};}
 .like-b .liked + .b:after {content: 'd';}
 
@@ -1048,7 +1049,7 @@ footer {
 <div id="timeline"></div>
 
 {block:Posts}
-<article class="posts">
+<article class="posts" id="{PostID}">
 
 <!----- POSTS ----->
 
