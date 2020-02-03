@@ -316,7 +316,7 @@ nav a {margin: 0 0.5em;}
         {block:ifSolidPosts}padding: 20px;{/block:ifSolidPosts}
         {block:ifNotSolidPosts}padding: 0 20px;{/block:ifNotSolidPosts}
         margin: 0;
-        border-bottom: none;
+		border-bottom: none;
     }
     
     aside .icon {
@@ -668,7 +668,7 @@ p.npf_chat b {
  
 #audiopost {
     text-align: right;
-    min-height: 50px;
+	min-height: 50px;
     {block:ifNotSolidPosts}
     border-top: 1px solid {color:borders};
     padding-top: 20px;
@@ -762,6 +762,7 @@ p.npf_chat b {
   display: inline-block;
   height: 1em;
   margin-bottom: -1px;
+  cursor: pointer;
 }
  
 .like-b .like_button iframe {
@@ -773,7 +774,8 @@ p.npf_chat b {
    z-index: 2;
    opacity: 0.000001;
 }
- 
+
+.like_button iframe {width: 100% !important; height: 100% !important;}
 .like-b:hover {color: {color:accent};}
 .like-b .liked + .b {color: #d50000;}
 
@@ -783,7 +785,7 @@ p.npf_chat b {
     margin-top: 1em;
     padding: 0 20px;
     {/block:ifSolidPosts}
-    {block:ifNotSolidPosts}margin-top: 0.25em;{/block:ifNotSolidPosts}
+	{block:ifNotSolidPosts}margin-top: 0.25em;{/block:ifNotSolidPosts}
     text-transform: lowercase;
 }
 
@@ -951,7 +953,7 @@ ol.notes li.note img.avatar {display: none;}
 <div id="container">
 
 {block:Posts}
-<article class="posts">
+<article class="posts" id="{PostID}">
 <div class="main">
 
 {block:Text}
