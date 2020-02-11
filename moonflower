@@ -803,6 +803,7 @@ p.npf_chat b {
 
 .date {font-weight: bold; color: {color:title};}
 .lirb a, .and {display: inline-block; vertical-align: middle; line-height: 1em;}
+.and {margin: 0 0.15em;}
 
 {block:PermalinkPage}
 .lirb {float: right; text-align: right; display: inline-block;}
@@ -1253,7 +1254,8 @@ footer {
             {block:IndexPage}{block:NoteCount}<span class="mdate"> with <span class="notecount">{NoteCount} notes</span></span>{/block:NoteCount}{/block:IndexPage}
         </a>
         <div class="lirb upper">
-            <a href="{ReblogURL}" target="_blank">reblog</a> <span class="and">& </span>
+            <a href="{ReblogURL}" target="_blank">reblog</a>
+            <span class="and">&</span>
             <a class="like-b" href="#">{LikeButton}<span class="b">like</span></a>
             {block:PermalinkPage}{block:RebloggedFrom}
                 <div class="source"><a href="{ReblogRootURL}" title="{ReblogRootName}">source</a></div>
