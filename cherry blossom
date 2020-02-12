@@ -19,7 +19,6 @@
     -notecount shortening by shythemes
     -responsive videos by nouvae
     -remove redirects by magnusthemes
-    -gifv to gif by felicitysmoak
     -npf photosets by codematurgy
     (full list of credits @ seyche.tumblr.com/credits
     
@@ -1191,16 +1190,6 @@ $(document).ready(function(){
        photoWrap: '.photo-data',
        photo: '.pxu-photo'
    });
-});
-
-$('img').each(function() {
- var newsrc = $(this).attr('src').replace('gifv','gif');
- $(this).attr('src', newsrc);
-});
- 
-$('a').each(function() {
- var newhref = $(this).attr('href').replace('gifv','gif');
- $(this).attr('href', newhref);
 });
 
 npfPhotosets("article", {
