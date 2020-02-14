@@ -496,6 +496,7 @@ svg {
 
 .blue a {color: rgba({RGBcolor:background}, 0.9);}
 .blue a:hover {color: rgba({RGBcolor:background}, 1.0);}
+.posts .blue h1 a {opacity: 1.0;}
 
 /*----- POSTS -----*/
 
