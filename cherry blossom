@@ -318,6 +318,7 @@ li {max-width: 100%;}
     position: fixed;
     width: 250px;
     height: auto;
+    top: 100px;
 }
 
 .right .sidebar {margin-left: calc({select:post width} + 150px);}
