@@ -1103,6 +1103,21 @@ ol.notes li.note img.avatar {
     #k, #btop {display: none;}
 }
 
+@-moz-document url-prefix() { 
+  #pop-right {
+     margin-left: 820px;
+  }
+  
+  #pop-left {
+      margin-left: -820px;
+  }
+  
+  @media only screen and (max-width: 1100px) {
+      #pop-left {margin-left: -775px;}
+      #pop-right {margin-left: 775px;}
+  }
+}
+
 {CustomCSS}
 
 </style>
