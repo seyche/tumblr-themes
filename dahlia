@@ -969,7 +969,13 @@ p.npf_chat b {
     margin: 0 0.8em 0.15em 0.75em;
 }
 
-.top-info svg, .info svg, #pg svg {
+.top-info svg {
+    width: 1.25em;
+    height: 1.25em;
+    margin-right: 0.5em;
+}
+ 
+.info svg, #pg svg {
     width: 1.25em;
     height: 1.25em;
     margin-right: 0.25em;
