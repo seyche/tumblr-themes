@@ -1118,17 +1118,17 @@ ol.notes li.note img.avatar {
             {block:ifSideblog1Title}<li>
                 {block:ifSideblog1ImageURL}<img src="{text:Sideblog 1 Image URL}" class="icon"/>{/block:ifSideblog1ImageURL}
                 <div class="subtitle"><a href="{text:Sideblog 1 URL}">{text:Sideblog 1 Title}</a></div>
-                <div class="sideblog-desc">{text:Sideblog 1 Description}</div>
+                <div class="sideblog-desc">{text:Sideblog 1 Description}&nbsp;</div>
             </li>{/block:ifSideblog1Title}
             {block:ifSideblog2Title}<li>
                 {block:ifSideblog2ImageURL}<img src="{text:Sideblog 2 Image URL}" class="icon"/>{/block:ifSideblog2ImageURL}
                 <div class="subtitle"><a href="{text:Sideblog 2 URL}">{text:Sideblog 2 Title}</a></div>
-                <div class="sideblog-desc">{text:Sideblog 2 Description}</div>
+                <div class="sideblog-desc">{text:Sideblog 2 Description}&nbsp;</div>
             </li>{/block:ifSideblog2Title}
             {block:ifSideblog3Title}<li>
                 {block:ifSideblog3ImageURL}<img src="{text:Sideblog 3 Image URL}" class="icon"/>{block:ifSideblog3ImageURL}
                 <div class="subtitle"><a href="{text:Sideblog 3 URL}">{text:Sideblog 3 Title}</a></div>
-                <div class="sideblog-desc">{text:Sideblog 3 Description}</div>
+                <div class="sideblog-desc">{text:Sideblog 3 Description}&nbsp;</div>
             </li>{/block:ifSideblog3Title}
         </div>
         {/block:ifSideblogSectionTitle}
