@@ -816,7 +816,6 @@ img {
 
 .captext figure {margin: 1em 0;}
 .captext figure .tmblr-full {margin-top: {select:photoset gutter}px;}
-.captext figure:first-of-type {margin-top: 1.5em;}
 .npf_photoset {border-radius: 6px; overflow: hidden;}
 .tmblr-full:hover {cursor: pointer;}
 .npf_image, .tmblr-full {border: none; outline: none;}
