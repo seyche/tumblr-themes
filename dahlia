@@ -665,6 +665,7 @@ svg {
 .caption p:last-of-type, .ogcap p:last-of-type {margin-bottom: 0;}
 .body:first-of-type {margin-top: 0;}
 .caption blockquote p:first-of-type {margin-top: 0;}
+.caption blockquote p:last-of-type {margin-bottom: 0;}
 .caption iframe, .caption img {max-width: 100%;}
 
 {block:ifHideFirstCaptionUsername}
@@ -1268,7 +1269,7 @@ ol.notes li.note img.avatar {
     </li>
 {/block:NotReblog}
 {block:RebloggedFrom}{block:Reblogs}
-    <li class="caption rbcap body">
+    <li class="caption rbcap body twit-cap">
         <img src="{PortraitURL-64}" class="capicon icon">
         <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
         <div class="captext">{Body}</div>
