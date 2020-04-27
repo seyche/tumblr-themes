@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<head>
+<title>{Name} / works in progress</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!---
+    
+    THEME BY SEYCHE.TUMBLR.COM
+    
+    CREDITS:
+    -feather icons by Cole Bemis
+    -tippy.js by atomiks
+    (full list of credits @ seyche.tumblr.com/credits)
+    
+--->
+
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&display=swap" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://unpkg.com/feather-icons"></script>
+
+<!----- TOOLTIPS ----->
+ 
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+
+<style type="text/css">
+
+/*----- VARIABLES: EDIT THIS SECTION!!!! -----*/
+
+:root {
+    
+    /* ----- colours -----*/
+    
+    --background: #ffffff;
+    --text: #5a5a5a;
+    --links: #919191;
+    --accent: #adc0c7;
+    --title: #212121;
+    --borders: #e0e0e0;
+    --header-background: #212121;
+    --header-text: #fafafa;
+    --header-links: #919191;
+    --cover-background: #f2f2f2;
+    
+    /* ----- font styling -----*/
+    
+    --font-size: 14px;
+    --body-font: 'Roboto', sans-serif;
+    --title-font: 'Playfair Display', serif;
+    
+}
+
+/*----- END VARIABLES: you don't need to edit the css after here -----*/
+
+@keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+ 
+@-webkit-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+ 
+@-moz-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+ 
+@-o-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--font-size);
+    color: var(--text);
+    background-color: var(--background);
+    text-align: left;
+    line-height: 160%;
+    word-wrap: break-word;
+    letter-spacing: 0.2px;
+    margin: 0;
+    overflow-x: hidden;
+    -webkit-animation: lazyload 2s;
+    -moz-animation: lazyload 2s;
+    -o-animation: lazyload 2s;
+    animation: lazyload 2s;
+}
+
+a {
+    color: var(--links); 
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: var(--accent);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--title-font);
+    color: var(--title);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: normal;
+    line-height: 140%;
+}
+
+h1 {font-size: 1.5em;}
+h2 {font-size: 1.3em;}
+h3 {font-size: 1.25em;}
+h4 {font-size: 1em;}
+h5 {font-size: 0.9em;}
+
+small {font-size: 0.9em;}
+big {font-size: 1.1em;}
+b, bold, strong {color: var(--title);}
+
+ul {list-style-type: circle;}
+ol {list-style-type: decimal;}
+
+::-webkit-scrollbar {
+    width: 17px; 
+    height: 17px;
+    background-color: var(--background);
+}
+
+::-webkit-scrollbar-track {border: 8px solid var(--background); background-color: var(--borders);}
+ 
+::-webkit-scrollbar-thumb {
+   border: 6px solid var(--background);
+   background-color: var(--title);
+   min-height: 24px;
+   min-width: 24px;
+}
+
+.tmblr-iframe-compact .tmblr-iframe--unified-controls {
+    display: none;
+}
+
+.tippy-tooltip.custom-theme {
+    background-color: var(--background);
+    color: var(--title);
+    text-align: center;
+    font-family: var(--body-font);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
+    font-style: normal;
+    padding: 0.25em 0.5em;
+    margin: 15px auto auto 10px;
+    font-size: 0.9em;
+    border: 1px solid var(--borders);
+}
+ 
+.title {
+    font-family: var(--title-font);
+    color: var(--title);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 140%;
+}
+
+.title::first-letter, .subtitle::first-letter {color: var(--accent);}
+
+.subtitle {
+    font-family: var(--title-font);
+    color: var(--title);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    line-height: 140%;
+}
+
+.upper, #stats b {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+/*----- CONTAINER -----*/
+
+#content-wrap {
+    margin: 6.75em auto auto auto;
+    width: 99vw;
+    position: relative;
+}
+
+/*----- HEADER -----*/
+
+header {
+    background-color: var(--header-background);
+    color: var(--header-text);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5em 2em 0 2em;
+    z-index: 99999;
+    border-bottom: 1px solid var(--borders);
+}
+
+header .title {color: var(--header-text);}
+
+header nav {
+    float: right;
+    position: absolute;
+    right: calc(5em + 1.75em);
+    bottom: 2.25em;
+}
+
+nav svg {
+    width: 1.75em;
+    height: 1.75em;
+    display: inline-block;
+    color: var(--header-links);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+nav a {margin-left: 1em;}
+
+nav a:hover svg {
+    color: var(--accent);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*----- TABS -----*/
+
+#tabs {
+    margin: 1em 0 0 0;
+    padding-bottom: 1.5em;
+}
+
+#tabs li {
+    display: inline-block; 
+    list-style-type: none; 
+    outline: none;
+}
+
+#tabs li a {
+   color: var(--accent);
+   font-weight: bold;
+   margin: 0 1.5em 0 0;
+   border-bottom: 2px solid var(--accent);
+   padding-bottom: calc(2px + 1.5em);
+}
+
+#tabs li a.inactive {
+    color: var(--header-links);
+    font-weight: normal;
+    border-bottom: 2px solid transparent;
+}
+
+#tabs li a:hover, #tabs li a.inactive:hover {
+    color: var(--accent);
+}
+
+.container {
+    clear: both;           
+    background-color: var(--background);
+}
+
+/*----- COVER -----*/
+
+.cover-wrap {
+    width: 49vw;
+    border-right: 1px solid var(--borders);
+    height: calc(100% - 6.75em);
+    background-color: var(--cover-background);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover img {
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.wip-box {
+    flex: initial;
+    background-color: var(--title);
+    color: var(--background);
+    width: 225px;
+    height: auto;
+    padding: 30px 20px;
+    text-align: center;
+    z-index: 100;
+    position: absolute;
+}
+
+.wip-box .title {color: var(--background);}
+.genre {font-style: italic; margin-top: 0.5em;}
+
+/*----- WIP CONTENT -----*/
+
+.wip-wrap {
+    position: relative;
+    width: 50vw;
+    margin-left: 49vw;
+    padding: 70px;
+    box-sizing: border-box;
+}
+
+.wip-content {
+    border-bottom: 1px solid var(--borders);
+    padding: 3em 0;
+}
+
+.wip-content:first-of-type {padding-top: 0;}
+.wip-content:last-of-type {border-bottom: none; padding-bottom: 0;}
+
+/*----- DETAILS BOX -----*/
+
+.stats li {
+    display: inline-block;
+    width: 49%;
+    list-style-type: none;
+}
+
+.stats b {
+    margin-right: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    color: var(--accent);
+}
+
+/*----- SUMMARY -----*/
+
+.summary p:first-of-type {margin-top: 0;}
+
+/*----- THEMES -----*/
+
+.themes li {list-style-type: none; display: inline-block;}
+
+.themes li::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin: 0 0.75em 0.15em 0.75em;
+}
+
+.themes li:first-of-type::before {display: none;}
+.themes li:hover {color: var(--accent);}
+
+/*----- LINKS -----*/
+
+.links {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+}
+
+.links a {
+    background-color: var(--accent);
+    color: var(--background);
+    display: inline-block;
+    padding: 0.5em 0.85em;
+    box-sizing: border-box;
+    margin: 0 0.5em 0.5em 0;
+    border-radius: 4px;
+}
+
+.links a:hover {background-color: var(--title);}
+
+/*----- CHARACTERS -----*/
+
+.character {border: 1px solid var(--borders); margin-top: 1.5em;}
+.character:first-of-type {margin-top: 0;}
+.character p:first-of-type {margin-top: 0;}
+.character p:last-of-type {margin-bottom: 0;}
+
+.char-wrap {
+    background-color: var(--header-background);
+    color: var(--header-text);
+    min-height: 70px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.character img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    float: left;
+    margin: auto 1em 0.5em auto;
+}
+
+.character .char-name {font-family: var(--title-font); font-size: 20px;}
+.character .upper {margin-top: 0.5em;}
+.char-text {padding: 20px;}
+
+/*----- RELATIONSHIPS -----*/
+
+.relationships li {list-style-type: none; margin-top: 1em;}
+.relationships li:first-of-type {margin-top: 0;}
+
+.relationships svg {
+    width: 1.25em;
+    height: 1.25em;
+    color: var(--accent);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+.ship {
+    font-family: var(--title-font);
+    color: var(--title);
+    display: inline-block;
+}
+
+.relationships .upper {margin-left: 2.75em;}
+
+/*----- QUOTE -----*/
+
+.quote {
+    padding-left: 20px; 
+    font-family: var(--title-font);
+    font-size: 1.25em;
+    line-height: 160%;
+}
+
+.quote::before {
+    content: '❝';
+    font-size: 30px;
+    color: var(--title);
+    float: left;
+    margin-left: -20px;
+}
+
+.source {margin-top: 1em; text-align: right;}
+
+.source::before, .relationships .upper::before {
+    content: '';
+    width: 1.5em;
+    height: 1px;
+    background-color: var(--borders);
+    display: inline-block;
+    margin: 0 0.5em 0.35em 0;
+}
+
+/*----- MOBILE FOOTER NAVIGATION -----*/
+
+footer {
+    background-color: var(--header-background);
+    color: var(--header-text);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    border-top: 1px solid var(--borders);
+    text-align: center;
+    padding: 1.5em 2em;
+    display: none;
+}
+
+footer nav a {margin: 0 1em;}
+
+/*----- RESPONSIVENESS -----*/
+
+@media only screen and (max-width: 1100px) {
+    .cover, .cover img {width: 300px; height: 450px;}
+    .wip-box {width: 200px;}
+}
+
+@media only screen and (max-height: 767px) {
+    .cover, .cover img {width: 300px; height: 450px;}
+    .wip-box {width: 200px;}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 801px) {
+    .stats li {display: block; width: 100%;}
+}
+
+@media only screen and (max-width: 800px) {
+    .cover-wrap {
+        width: 100vw;
+        height: auto;
+        padding: 50px 0;
+        position: relative;
+    }
+    
+    .wip-wrap {
+        width: 100vw;
+        margin: auto;
+        position: relative;
+    }
+    
+    header nav {display: none;}
+    footer {display: block;}
+    .wip-content:last-of-type {padding-bottom: 6em;}
+    
+    #tabs li a, #tabs li a.inactive {border-bottom: none;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!----- HEADER ----->
+    
+<header>
+
+<!----- START EDITING HERE: fill in your page title and project titles here ----->
+
+    <div class="title">works in progress</div>
+    
+    <!----- ADDING TAB TITLES: the basic structure of a tab looks like this:
+    
+            <li><a id="tab1">wip title one</a></li>
+            
+            -Copy and paste this and change the "1" in <a id="tab1"></a> to the number of the tab you're creating. so for the second tab, it would be "tab2", "tab3" for the third tab, etc, etc. Make sure you don't deviate from this naming convention.
+            
+    ----->
+        
+    <div id="tabs" class="upper">
+    
+        <li><a id="tab1">wip title one</a></li>
+        <li><a id="tab2">wip title two</a></li>
+        
+    </div>
+    
+    <!----- end editing tabs here ----->
+    
+<!----- HEADER NAV: you don't need to edit this ----->
+        
+    <nav>
+        <a href="/" title="return home"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></a>
+        <a href="/ask" title="message"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+        <a href="/archive" title="archive"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></a>
+        <a href="https://tumblr.com/dashboard" title="dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-compass"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></a>
+        <a href="https://seyche.tumblr.com" title="tansy page by seyche">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></a>
+    </nav>
+</header>
+
+<!----- CONTENT WRAP: don't touch! ----->
+
+<section id="content-wrap">
+
+    <!----- INSTRUCTIONS FOR ADDING TABS:
+            
+            1. copy and paste EVERYTHING WITHIN AND INCLUDING <div class="container" id="tab1C"></div>. I've marked those lines with a "🌈" emoji. 
+            
+            2. change the number in id="tab1C" to the number of the tab. so, for the first tab, it would be "tab1C", the second tab would be "tab2C", and so on. do NOT deviate from this naming convention or else everything will get screwed up.
+            
+            3. you're done. make sure you've added the tab title in the header section above so you can click on it and switch between tabs.
+            
+            4. if something looks screwed up, it's probably because you changed the naming convention in the tab id, or you didn't copy the tab divs correctly and now you have stray divs. if your divs are screwed up, you can delete it and recopy again, or go to http://www.tormus.com/tools/div_checker and figure out which divs are missing. if you don't see two little 🌈 rainbow emojis at the beginning and end of your divs, you definitely didn't copy it correctly.
+            
+    ----->
+    
+    <!----- START TAB ONE ----->
+    
+    <div class="container" id="tab1C"> <!-- 🌈 -->
+    
+        <!----- project cover ----->
+    
+        <div class="cover-wrap">
+            <div class="cover">
+                
+                <!----- put the image url for your project below ----->
+                
+                <img src="https://via.placeholder.com/400x600.png">
+            
+                <div class="wip-box">
+                    <div class="title">wip title</div>
+                    <div class="genre">genre</div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!----- end project cover ----->
+        
+        <div class="wip-wrap">
+        
+            <!----- start details ----->
+            
+            <div class="wip-content stats">
+            
+                <div class="subtitle">details</div>
+                
+                <li><b>statistic</b> detail</li>
+                <li><b>statistic</b> detail</li>
+                <li><b>statistic</b> detail</li>
+                <li><b>statistic</b> detail</li>
+                <li><b>statistic</b> detail</li>
+                <li><b>statistic</b> detail</li>
+                
+            </div>
+            
+            <!----- end details ----->
+            
+            <!----- start summary ----->
+                
+            <div class="wip-content summary">
+            
+                <div class="subtitle">summary</div>
+                
+                <p>You can write a summary of your project here. Don't forget to use < p> < /p> (without the spaces obviously) to separate paragraphs. Here's what <b>bold</b>, <i>italicized</i>, and <u>underlined</u> text looks like.</p>
+                
+                <ul>
+                    <li>This is an unordered list.</li>
+                    <li>And this is another unordered list item.</li>
+                </ul>
+                
+                <p>How about an ordered list?</p>
+                
+                <ol>
+                    <li>This is an ordered list item.</li>
+                    <li>And another one.</li>
+                </ol>
+                
+            </div>
+            
+            <!----- end summary ----->
+            
+            <!----- start themes ----->
+                
+            <div class="wip-content themes">
+            
+                <div class="subtitle">themes and tropes</div>
+                
+                <li>theme one</li>
+                <li>theme two</li>
+                <li>theme three</li>
+                <li>theme four</li>
+                <li>theme five</li>
+                
+            </div>
+            
+            <!----- end themes ----->
+            
+            <!----- start links ----->
+                
+            <div class="wip-content links">
+            
+                <div class="subtitle">links</div>
+                
+                <a href="/">link one</a>
+                <a href="/">link two</a>
+                <a href="/">link three</a>
+                
+            </div>
+            
+            <!----- end links ----->
+            
+            <!----- start characters ----->
+            
+            <div class="wip-content">
+            
+                <div class="subtitle">characters</div>
+                
+                <!----- the basic template for a character looks like this:
+                
+                <div class="character">
+                    <div class="char-wrap">
+                        <img src="IMAGE-URL-HERE">
+                        <div class="char-name">Character Name</div>
+                        <div class="upper">statistic. statistic. statistic.</div>
+                    </div>
+                    <div class="char-text">    
+                        <p>Add a biography here.</p>
+                    </div>
+                </div>
+            
+                copy and paste it below as many times as you need.
+            
+                ----->
+                
+                <!----- character one ----->
+                
+                <div class="character">
+                    <div class="char-wrap">
+                        <img src="https://via.placeholder.com/60x60.png">
+                        <div class="char-name">Character Name</div>
+                        <div class="upper">age. gender. sexual orientation.</div>
+                    </div>
+                    <div class="char-text">    
+                        <p>Write your character's biography here. You can write as much text as you want here. Each character icon is 60px x 60px. If you don't want to display the icon, you can delete it above. </p>
+                        <p>You can even write multiple paragraphs, if you want.</p>
+                    </div>
+                </div>
+                
+                <!----- character two ----->
+                
+                <div class="character">
+                    <div class="char-wrap">
+                        <img src="https://via.placeholder.com/60x60.png">
+                        <div class="char-name">Character Name</div>
+                        <div class="upper">statistic. statistic. statistic.</div>
+                    </div>
+                    <div class="char-text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!----- end characters ----->
+            
+            <!----- start relationships ----->
+            
+            <div class="wip-content relationships">
+                
+                <div class="subtitle">relationships</div>
+                
+                <li>
+                    <i data-feather="heart"></i>
+                    <div class="ship">character one and character two</div>
+                    <div class="upper">romantic</div>
+                </li>
+                
+                <li>
+                    <i data-feather="user"></i>
+                    <div class="ship">character three and character four</div>
+                    <div class="upper">platonic</div>
+                </li>
+                
+                <li>
+                    <i data-feather="users"></i>
+                    <div class="ship">character three and character four</div>
+                    <div class="upper">familial</div>
+                </li>
+                
+            </div>
+            
+            <!----- end relationships ----->
+            
+            <!----- start quote ----->
+            
+            <div class="wip-content">
+            
+                <div class="subtitle">quote</div>
+                
+                <div class="quote">
+                    Put a quote from your wip here. It can be a long quote, or a short quote; whatever you want.
+                </div>
+                
+                <div class="source upper">
+                    by Character Name
+                </div>
+                
+            </div>
+            
+            <!----- end quote ----->
+                
+        </div>
+        
+    </div><!-- 🌈 -->
+    
+    <!----- END TAB ONE ----->
+    
+    <!----- START TAB TWO ----->
+    
+    <div class="container" id="tab2C"><!-- 🌈 -->
+        
+        <!----- project cover ----->
+    
+        <div class="cover-wrap">
+            <div class="cover">
+                
+                <!----- put the image url for your project below ----->
+                
+                <img src="https://via.placeholder.com/400x600.png">
+            
+                <div class="wip-box">
+                    <div class="title">wip title</div>
+                    <div class="genre">genre</div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!----- end project cover ----->
+        
+        <div class="wip-wrap">
+        
+            <!----- start details ----->
+            
+            <div class="wip-content stats">
+            
+                <div class="subtitle">details</div>
+                
+                <li><b>statistic</b> detail</li>
+                <li><b>statistic</b> detail</li>
+                <li><b>statistic</b> detail</li>
+                <li><b>statistic</b> detail</li>
+                
+            </div>
+            
+            <!----- end details ----->
+            
+            <!----- start summary ----->
+                
+            <div class="wip-content summary">
+            
+                <div class="subtitle">summary</div>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+            </div>
+            
+            <!----- end summary ----->
+            
+            <!----- start themes ----->
+                
+            <div class="wip-content themes">
+            
+                <div class="subtitle">themes and tropes</div>
+                
+                <li>theme one</li>
+                <li>theme two</li>
+                <li>theme three</li>
+                <li>theme four</li>
+                <li>theme five</li>
+                
+            </div>
+            
+            <!----- end themes ----->
+            
+            <!----- start links ----->
+                
+            <div class="wip-content links">
+            
+                <div class="subtitle">links</div>
+                
+                <a href="/">link one</a>
+                <a href="/">link two</a>
+                <a href="/">link three</a>
+                
+            </div>
+            
+            <!----- end links ----->
+            
+            <!----- start characters ----->
+            
+            <div class="wip-content">
+            
+                <div class="subtitle">characters</div>
+                
+                <!----- character one ----->
+                
+                <div class="character">
+                    <div class="char-wrap">
+                        <img src="https://via.placeholder.com/60x60.png">
+                        <div class="char-name">Character Name</div>
+                        <div class="upper">statistic. statistic. statistic.</div>
+                    </div>
+                    <div class="char-text">    
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!----- end characters ----->
+            
+            <!----- start relationships ----->
+            
+            <div class="wip-content relationships">
+                
+                <div class="subtitle">relationships</div>
+                
+                <li>
+                    <i data-feather="heart"></i>
+                    <div class="ship">character one and character two</div>
+                    <div class="upper">romantic</div>
+                </li>
+                
+                <li>
+                    <i data-feather="user"></i>
+                    <div class="ship">character three and character four</div>
+                    <div class="upper">platonic</div>
+                </li>
+                
+            </div>
+            
+            <!----- end relationships ----->
+            
+            <!----- start quote ----->
+            
+            <div class="wip-content">
+            
+                <div class="subtitle">quote</div>
+                
+                <div class="quote">
+                    Rutrum tellus pellentesque eu tincidunt tortor. Iaculis nunc sed augue lacus viverra vitae. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat.
+                </div>
+                
+                <div class="source upper">
+                    by Lorem Ipsum
+                </div>
+                
+            </div>
+            
+            <!----- end quote ----->
+                
+        </div>
+        
+    </div><!-- 🌈 -->
+    
+    <!----- END TAB TWO ----->
+    
+    <!----- STOP EDITING HERE. do not touch anything after here. ----->
+    
+</section>
+
+<!----- MOBILE NAVIGATION ----->
+
+<footer>
+    <nav>
+        <a href="/" title="return home"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></a>
+        <a href="/ask" title="message"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+        <a href="/archive" title="archive"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></a>
+        <a href="https://tumblr.com/dashboard" title="dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-compass"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></a>
+        <a href="https://seyche.tumblr.com" title="tansy page by seyche">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></a>
+    </nav>
+</footer>
+
+<script>
+
+/// TOOLTIPS
+
+tippy('[title]', {
+    theme: 'custom',
+    arrow: false,
+    followCursor: true,
+    delay: 200,
+    placement: 'bottom-start',
+    zIndex: 9999999999,
+    maxWidth: 400,
+
+    content(reference) {
+      const title = reference.getAttribute('title');
+      reference.removeAttribute('title');
+      return title;
+    },
+  });
+  
+$(document).ready(function() {    
+
+$('#tabs li a:not(:first)').addClass('inactive');
+$('.container').hide();
+$('.container:first').show();
+    
+$('#tabs li a').click(function(){
+    var t = $(this).attr('id');
+  if($(this).hasClass('inactive')){ 
+    $('#tabs li a').addClass('inactive');           
+    $(this).removeClass('inactive');
+    
+    $('.container').hide();
+    $('#'+ t + 'C').fadeIn('slow');
+    }
+    });
+});
+
+feather.replace()
+
+</script>
+
+</body>
+</html>
