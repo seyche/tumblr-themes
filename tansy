@@ -55,8 +55,18 @@
     --font-size: 14px;
     --body-font: 'Roboto', sans-serif;
     --title-font: 'Playfair Display', serif;
+	--summary-text-align: left;
+    --character-text-align: left;
     
 }
+
+/*--- 
+
+IF YOU HAVE LOTS OF WORKS THAT ARE WRAPPING ONTO A SECOND LINE: remove the ASTERISKS (*), DASHES (---), AND SLASHES (/) from the line of code below. This will remove the border from the active tab and will make it look cleaner if you have a lot of works.
+
+---*/
+
+/*--- #tabs li a, #tabs li a.inactive {border-bottom: none !important;} ---*/
 
 /*----- END VARIABLES: you don't need to edit the css after here -----*/
 
@@ -231,12 +241,12 @@ header nav {
     float: right;
     position: absolute;
     right: calc(5em + 1.75em);
-    bottom: 2.25em;
+    top: 1.5em;
 }
 
 nav svg {
-    width: 1.75em;
-    height: 1.75em;
+    width: 1.5em;
+    height: 1.5em;
     display: inline-block;
     color: var(--header-links);
     -webkit-transition: all 0.3s;
@@ -372,6 +382,7 @@ nav a:hover svg {
 
 /*----- SUMMARY -----*/
 
+.summary {text-align: var(--summary-text-align);}
 .summary p:first-of-type {margin-top: 0;}
 
 /*----- THEMES -----*/
@@ -437,7 +448,7 @@ nav a:hover svg {
 
 .character .char-name {font-family: var(--title-font); font-size: 20px;}
 .character .upper {margin-top: 0.5em;}
-.char-text {padding: 20px;}
+.char-text {padding: 20px; text-align: var(--character-text-align);}
 
 /*----- RELATIONSHIPS -----*/
 
