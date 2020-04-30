@@ -241,7 +241,7 @@ header nav {
     float: right;
     position: absolute;
     right: calc(5em + 1.75em);
-    top: 1.5em;
+    top: 1.75em;
 }
 
 nav svg {
