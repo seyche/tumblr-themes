@@ -1266,6 +1266,7 @@ ol.notes li.note img.avatar {
 
 <!----- TOP POST INFO ----->
 
+{block:Date}
 <div class="top-info">
     {block:RebloggedFrom}
         <a href="{ReblogRootURL}" title="{ReblogRootTitle}"><img src="{ReblogRootPortraitURL-64}" class="sourceicon icon"/></a>
@@ -1289,6 +1290,7 @@ ol.notes li.note img.avatar {
         <a href="{Permalink}" title="permalink">original post</a>
     {/block:NotReblog}
 </div>
+{/block:Date}
 
 <!----- TEXT POSTS ----->
 
