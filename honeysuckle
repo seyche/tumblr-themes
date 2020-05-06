@@ -14,17 +14,23 @@
    
     CREDITS:
     -outicons by Anton Saputro
-    -pxu photosets by pixel union / with modifications by bychloethemes
-    -style my tooltips by malihu
+    -css photosets by annasthms and espoirthemes
+    -npf photosets by codematurgy
+    -npf photoset conversion by annasthms
+    -tippy.js tooltips by atomiks
     -responsive video resizing by nouvae
     -remove redirects by magnusthemes
     (full list of credits @ seyche.tumblr.com/credits
    
 --->
 
-<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Literata:400,400i,700,700i|Lora:400,400i,700,700i|Merriweather:400,400i,700,700i|PT+Serif:400,400i,700,700i|Playfair+Display:400,400i,700,700i|Source+Serif+Pro:400,700|Vollkorn:400,400i,700,700i&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Literata:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Spectral:ital,wght@0,400;0,700;1,400;1,700&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i|Lato:400,400i,700,700i|Montserrat:400,400i,700,700i|Open+Sans:400,400i,700,700i|PT+Sans:400,400i,700,700i|Raleway:400,400i,700,700i&display=swap" rel="stylesheet">
+<!----- PHOTOSETS ----->
+
+<link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
+ 
+<link href="https://static.tumblr.com/0podkko/xIbplezmo/modified_photosets.css" rel="stylesheet">
  
 <!---- VARIABLES ----->
 
@@ -36,24 +42,36 @@
 <meta name="color:Accent" content="#b5d1cf"/>
 <meta name="color:Title"content="#111111"/>
 <meta name="color:Borders" content="#dcdcdc"/>
+<meta name="color:Bold" content="#111111"/>
+<meta name="color:Italic" content="#4a4a4a"/>
+<meta name="color:Underline" content="#4a4a4a"/>
 
 <meta name="select:Body Font" content="Literata" title="Literata"/>
 <meta name="select:Body Font" content="Libre Baskerville" title="Libre Baskerville"/>
 <meta name="select:Body Font" content="Lora" title="Lora"/>
+<meta name="select:Body Font" content="Spectral" title="Spectral"/>
 <meta name="select:Body Font" content="Georgia" title="Georgia"/>
-<meta name="select:Body Font" content="Merriweather" title="Merriweather"/>
+<meta name="select:Body Font" content="Volkhov" title="Volkhov"/>
+<meta name="select:Body Font" content="PT Sans" title="PT Sans"/>
 <meta name="select:Body Font" content="PT Serif" title="PT Serif"/>
-<meta name="select:Body Font" content="Source Serif Pro" title="Source Serif Pro"/>
 <meta name="select:Body Font" content="Vollkorn" title="Vollkorn"/>
 <meta name="select:Body Font" content="Lato" title="Lato"/>
-<meta name="select:Body Font" content="PT Sans" title="PT Sans"/>
 <meta name="select:Body Font" content="Fira Sans" title="Fira Sans"/>
 <meta name="select:Body Font" content="Open Sans" title="Open Sans"/>
+<meta name="select:Body Font" content="Source Sans Pro" title="Source Sans Pro"/>
 
 <meta name="select:Title Font" content="Montserrat" title="Montserrat"/>
 <meta name="select:Title Font" content="Lato" title="Lato"/>
 <meta name="select:Title Font" content="Raleway" title="Raleway"/>
 <meta name="select:Title Font" content="Playfair Display" title="Playfair Display"/>
+<meta name="select:Title Font" content="PT Sans" title="PT Sans"/>
+<meta name="select:Title Font" content="PT Serif" title="PT Serif"/>
+<meta name="select:Title Font" content="Open Sans" title="Open Sans"/>
+<meta name="select:Title Font" content="Spectral" title="Spectral"/>
+<meta name="select:Title Font" content="Literata" title="Literata"/>
+<meta name="select:Title Font" content="Libre Baskerville" title="Libre Baskerville"/>
+<meta name="select:Title Font" content="Lora" title="Lora"/>
+<meta name="select:Title Font" content="Source Sans Pro" title="Source Sans Pro"/>
 
 <meta name="select:Font Size" content="14px" title="14px"/>
 <meta name="select:Font Size" content="12px" title="12px"/>
@@ -61,18 +79,30 @@
 <meta name="select:Font Size" content="15px" title="15px"/>
 <meta name="select:Font Size" content="16px" title="16px"/>
 
-<meta name="select:Post width" content="540px" title="540px"/>
-<meta name="select:Post width" content="450px" title="450px"/>
-<meta name="select:Post width" content="500px" title="500px"/>
-<meta name="select:Post width" content="600px" title="600px"/>
-<meta name="select:Post width" content="650px" title="650px"/>
+<meta name="select:Post Width" content="450px" title="450px"/>
+<meta name="select:Post Width" content="500px" title="500px"/>
+<meta name="select:Post Width" content="540px" title="540px"/>
+<meta name="select:Post Width" content="600px" title="600px"/>
+<meta name="select:Post Width" content="650px" title="650px"/>
+
+<meta name="select:Photoset Gutter" content="1" title="1px"/>
+<meta name="select:Photoset Gutter" content="2" title="2px"/>
+<meta name="select:Photoset Gutter" content="3" title="3px"/>
+<meta name="select:Photoset Gutter" content="4" title="4px"/>
 
 <meta name="select:Tags" content="show_tags" title="Show tags"/>
 <meta name="select:Tags" content="hide_tags" title="Hide tags"/>
 <meta name="select:Tags" content="hover_tags" title="Hover tags"/>
 
+<meta name="text:Post Margin" content="140"/>
+<meta name="text:Line Height" content="180%"/>
+
 <meta name="if:Search" content="1"/>
 <meta name="if:Show Note Count" content="1"/>
+<meta name="if:Justified Text" content="0"/>
+<meta name="if:Bolded Titles" content="0"/>
+
+<meta name="text:Subtitle" content=""/>
 
 <meta name="text:Home Link" content="home"/>
 <meta name="text:Ask Link" content="message"/>
@@ -87,27 +117,13 @@
 <meta name="text:Link 4" content="" />
 <meta name="text:Link 5 URL" content="" />
 <meta name="text:Link 5" content="" />
-
-<meta name="text:Subtitle" content=""/>
  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <!----- TOOLTIPS ----->
 
-<link href="https://static.tumblr.com/5omyijl/bzrn2yg7i/style-my-tooltips.css" rel="stylesheet" type="text/css" />
-<script src="https://static.tumblr.com/5omyijl/RZtn2yg9v/jquery.style-my-tooltips.js"></script>
-
-<script>
-    (function($){
-    $(document).ready(function(){
-    $("[title]").style_my_tooltips({
-    tip_follows_cursor:true,
-    tip_delay_time:200,
-    tip_fade_speed:200
-      });
-    });
-})(jQuery);
-</script>
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
  
 <style type="text/css">
 
@@ -132,20 +148,23 @@
 }
 
 body {
-    font-family: {select:body font}, serif;
+    font-family: '{select:body font}', serif;
     color: {color:text};
     background-color: {color:background};
     text-align: left;
     font-size: {select:font size};
-    line-height: 180%;
+    line-height: {text:line height};
     word-wrap: break-word;
     letter-spacing: 0.2px;
     margin: 0;
     padding: 0;
-    -webkit-animation: lazyload 2s;
-    -moz-animation: lazyload 2s;
-    -o-animation: lazyload 2s;
-    animation: lazyload 2s;
+    overflow-x: hidden;
+    {block:ifJustifiedText}text-align: justify;{/block:ifJustifiedText}
+    {block:ifNotJustifiedText}text-align: left;{/block:ifNotJustifiedText}
+    -webkit-animation: lazyload 3s;
+    -moz-animation: lazyload 3s;
+    -o-animation: lazyload 3s;
+    animation: lazyload 3s;
 }
 
 a {
@@ -173,11 +192,11 @@ p a {
     position: relative;
     padding: 2px 2px 0 2px;
     z-index: 1;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 p a::before {
@@ -193,19 +212,24 @@ p a::before {
     z-index: -1;
     transform: scaleX(0) scaleY(1);
     transform-origin: left center;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 p a:hover::before {transform: scaleX(1) scaleY(1);}
-p a:hover {color: {color:link}; border-bottom: 2px solid rgba({RGBcolor:accent}, 1.0);}
+p a:hover {color: {color:title}; border-bottom: 2px solid rgba({RGBcolor:accent}, 1.0);}
 
 h1, h2, h3, h4, h5 {
+    {block:ifBoldedTitles}
+    font-weight: bold;
+    {/block:ifBoldedTitles}
+    {block:ifNotBoldedTitles}
     font-weight: normal;
-    line-height: 160%;
+    {/block:ifNotBoldedTitles}
+    line-height: {text:line height};
     color: {color:title};
 }
 
@@ -219,8 +243,10 @@ h5 {font-size: 1.1em;}
 
 small {font-size: 0.9em;}
 big {font-size: 1.1em;}
-b, strong {color: {color:title};}
-b a, strong a {color: {color:link};}
+b, bold, strong {color: {color:bold};}
+b a, bold a, strong a {color: {color:link};}
+i, italic {color: {color:italic};}
+u, underline {color: {color:underline};}
 
 blockquote {
     padding: 0 0 0 1.25em;
@@ -232,22 +258,20 @@ ul {list-style-type: circle;}
 ol {list-style-type: decimal;}
 li {max-width: 100%;}
 
-#s-m-t-tooltip {
-    max-width: 400px;
-    margin: 15px 15px 15px 20px;
-    padding: 6px 9px;
-    background: {color:background};
+.tippy-tooltip.custom-theme {
+    background-color: {color:background};
     color: {color:title};
-    bordeR:1px solid {color:borders};
-    z-index: 999999;
-    font-family: inherit;
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 0.75em;
+    text-align: center;
+    font-family: '{select:title font}', serif;
+    font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: normal;
-    font-family: {select:title font}, sans-serif;
+    border-radius: 0;
+    font-style: normal;
+    padding: 0.25em;
+    margin: 20px auto auto 10px;
+    font-size: 0.8em;
+    border: 1px solid {color:borders};
 }
 
 ::-webkit-scrollbar {
@@ -259,7 +283,7 @@ li {max-width: 100%;}
 ::-webkit-scrollbar-track {border: 8px solid {color:background}; background-color: {color:borders};}
  
 ::-webkit-scrollbar-thumb {
-   border: 6px solid {color:background};
+   border: 5px solid {color:background};
    background-color: {color:accent};
    min-height: 24px;
    min-width: 24px;
@@ -301,14 +325,20 @@ li {max-width: 100%;}
 .title {
     color: {color:title}; 
     font-size: 1.75em;
-    line-height: 160%;
+    line-height: {text:line height};
+    {block:ifBoldedTitles}
+    font-weight: bold;
+    {/block:ifBoldedTitles}
+    {block:ifNotBoldedTitles}
+    font-weight: normal;
+    {/block:ifNotBoldedTitles}
 }
 
 .title a {color: {color:title};}
 .title a:hover {color: {color:accent};}
 
 .secondtitle {
-    font-family: {select:title font}, sans-serif;
+    font-family: '{select:title font}', sans-serif;
     text-transform: uppercase;
     font-size: 0.9em;
     letter-spacing: 1px;
@@ -317,7 +347,7 @@ li {max-width: 100%;}
 .accent {
     font-weight: bold;
     color: {color:title};
-    font-family: {select:title font}, sans-serif;
+    font-family: '{select:title font}', sans-serif;
     text-transform: uppercase;
     font-size: 0.9em;
     letter-spacing: 1px;
@@ -340,31 +370,35 @@ li {max-width: 100%;}
 
 .sidebar {
     position: fixed;
-    height: 100%;
-    width: 30%;
+    height: 100vh;
+    width: 30vw;
+    max-width: 100%;
     left: 0;
     top: 0;
     bottom: 0;
     background-color: {color:background};
-    padding: 70px 0 70px 100px;
+    padding: 70px 30px 0 80px;
     box-sizing: border-box;
-    display: block;
-    -webkit-transition: all 0.6s;
-    -moz-transition: all 0.6s;
-    -ms-transition: all 0.6s;
-    -o-transition: all 0.6s;
-    transition: all 0.6s;
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
 }
 
 .sidebar img {
     border-radius: 4px;
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 70px;
+    max-height: 70px;
     margin-bottom: 1.5em;
 }
 
-#stitle {font-size: 1.75em; line-height: 140%;}
-#subtitle {margin-top: 0.5em;}
+#subtitle {margin-top: 0.5em; text-align: left;}
 
 #description::before {
     content: '';
@@ -379,8 +413,8 @@ li {max-width: 100%;}
 .find {margin-top: 1.25em;}
 
 .find svg {
-    width: 16px;
-    height: 16px;
+    width: 1.25em;
+    height: 1.25em;
     fill: {color:title};
     display: inline-block;
     vertical-align: middle;
@@ -396,8 +430,8 @@ li {max-width: 100%;}
     padding: 0;
     color: {color:link};
     text-align: left;
-    font-family: {select:title font}, sans-serif;
-    width: calc(100% - 16px - 1.5em);
+    font-family: '{select:title font}', sans-serif;
+    width: calc(100% - 1.25em - 1.5em);
 }
 
 .find input[type=text] {color: {color:text};}    
@@ -406,11 +440,15 @@ input::-moz-placeholder {color: {color:text};}
 input:-moz-placeholder {color: {color:text};}
 input:-ms-input-placeholder {color: {color:text};}
 
+#flex-wrap {width: 100%;}
+.break {flex-basis: 100%; height: 0;}
+
 nav {
-    font-family: {select:title font}, sans-serif;
-    position: absolute;
-    bottom: 70px;
+    font-family: '{select:title font}', sans-serif;
     line-height: 200%;
+    margin-top: 2em;
+    min-height: 0;
+    width: 100%;
 }
 
 nav a {
@@ -425,7 +463,7 @@ nav a {
 .numbers {
     font-weight: bold;
     margin-right: 12px;
-    font-family: {select:body font}, serif;
+    font-family: '{select:body font}', serif;
     font-size: 1.2em;
     color: {color:title};
     -webkit-transition: all 0.3s;
@@ -473,19 +511,19 @@ nav a:hover {color: {color:link};}
 /*----- POSTS -----*/
 
 .container {
-    margin: auto auto auto 37%;
-    width: {select:post width};
+    margin: auto auto auto calc(30vw - 30px);
+    width: 70vw;
 }
 
 .posts {
     position: relative;
     width: {select:post width};
     margin: auto;
-    padding: 140px 0;
+    padding: {text:post margin}px 0;
     border-bottom: 1px solid {color:borders};
 }
 
-.posts:first-of-type {padding: 70px 0 140px 0;}
+.posts:first-of-type {padding: 75px 0 {text:post margin}px 0;}
 
 .tumblr_video_container {max-height: {select:post width}!important; overflow: hidden!important;
 }
@@ -529,7 +567,7 @@ nav a:hover {color: {color:link};}
 
 .username {
     margin-left: 10px;
-    line-height: 100%;
+    line-height: 1em;
     display: inline-block;
 }
 
@@ -579,12 +617,6 @@ p.npf_quirky {font-family: Fairwater; font-size: 1.75em;}
 .npf_color_chandler {color: #9575cd;}
 .npf_color_niles {color: #f06292;}
 
-#k {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-}
-
 /*----- LINK -----*/
 
 .linkp {
@@ -609,9 +641,9 @@ p.npf_quirky {font-family: Fairwater; font-size: 1.75em;}
 }
 
 .thumbnail {max-width: 100%; border-bottom: 1px solid {color:borders};}
-#link {padding: 30px;}
-#linkhost {color: {color:title}; margin-top: 1.5em;}
-#linktxt {color: {color:text}; margin-top: 1.5em;}
+.link {padding: 30px;}
+.linkhost {color: {color:title}; margin-top: 1.5em;}
+.linktxt {color: {color:text}; margin-top: 1.5em;}
 
 .npf-link-block {
     margin-top: 1.25em;
@@ -632,7 +664,7 @@ p.npf_quirky {font-family: Fairwater; font-size: 1.75em;}
     color: {color:text};
     font-weight: normal;
     letter-spacing: 1px;
-    font-family: {select:title font}, sans-serif;
+    font-family: '{select:title font}', sans-serif;
 }
 
 /*----- PHOTO -----*/
@@ -653,27 +685,52 @@ img {
     max-width: none;
 }
 
+/*----- PHOTOSET -----*/
+
+[photoset-layout] {
+    grid-gap: {select:photoset gutter}px; 
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+[photoset-layout] div {
+    padding: 0;
+    border: none; 
+    cursor: pointer;
+}
+
+[photoset-layout] img {
+    border: none; 
+    border-radius: 0;
+}
+
 .post-content div.npf_row, .post div.npf_row, body div.npf_row {
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
 
-.tmblr-full img {width: 100%; height: 100%;}
+.captext figure {margin: 1em 0;}
+.captext figure .tmblr-full {margin-top: {select:photoset gutter}px;}
+.npf_photoset {border-radius: 4px; overflow: hidden;}
+.tmblr-full:hover {cursor: pointer;}
+.npf_image, .tmblr-full {border: none; outline: none;}
+
+.text-post [photoset-layout] {margin-bottom: 2.5em;}
 
 /*----- QUOTE -----*/
 
-#quote, p.npf_quote {
+.quote, p.npf_quote {
     font-size: 1.25em;
-    line-height: 180%;
+    line-height: {text:line height};
     color: {color:title};
     font-style: italic;
 }
 
-#quote p:first-of-type {margin-top: 0;}
-#quote p:last-of-type {margin-bottom: 0;}
+.quote p:first-of-type {margin-top: 0;}
+.quote p:last-of-type {margin-bottom: 0;}
 p.npf_quote {font-family: inherit; margin-bottom: 1em;}
 
-#source {margin-top: 30px;}
+.source {margin-top: 30px;}
 
 /*----- CHAT -----*/
 
@@ -682,7 +739,7 @@ p.npf_quote {font-family: inherit; margin-bottom: 1em;}
 .line {padding: 1em 0;}
 .line:first-of-type {padding: 0 0 1em 0;}
 .line:last-of-type {padding: 1em 0 0 0;}
-#chattxt {margin-top: 0.2em;}
+.chattxt {margin-top: 0.2em;}
 
 p.npf_chat {font-family: inherit; margin-top: 1em;}
  
@@ -690,14 +747,16 @@ p.npf_chat b {
     color: {color:title};
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: {select:title font}, sans-serif;
+    font-family: '{select:title font}', sans-serif;
     font-size: 0.9em;
 }
 
 /*----- ANSWER -----*/
 
-#question {font-size: 1.25em; color: {color:title};}
-#asker {margin-top: 30px;}
+.askpost p:first-of-type {margin-top: 0;}
+.askpost p:last-of-type {margin-bottom: 0;}
+.question {font-size: 1.25em; color: {color:title};}
+.askpost .secondtitle {margin-top: 30px;}
 
 /*----- AUDIO -----*/
 
@@ -763,7 +822,7 @@ p.npf_chat b {
 
 /*----- INFO -----*/
 
-.info {margin-top: 30px;}
+.info {margin-top: 30px; text-align: left;}
 .info a {display: inline-block; margin-right: 1em;}
 
 .date {
@@ -790,7 +849,7 @@ p.npf_chat b {
     z-index: 2;
     opacity: 0;
 }
-
+ 
 .like_button iframe {width: 100% !important; height: 100% !important;}
 .like-b .liked + .b {color: {color:accent};}
 .like-b .liked + .b:after {content: 'd';}
@@ -800,6 +859,7 @@ p.npf_chat b {
     font-style: italic;
     margin-top: 0.25em;
     text-transform: lowercase;
+    text-align: left;
 }
 
 .show_tags {display: block;}
@@ -851,7 +911,7 @@ ol.notes li.note img.avatar {
 
 /*---- PAGINATION -----*/
 
-#pg {text-align: center; margin: 140px auto 180px auto;}
+#pg {text-align: center; margin: {text:post margin}px auto calc({text:post margin}px + 50px) auto;}
 #pg a {margin: 0 0.5em; color: {color:title};}
 #pg a:hover {color: {color:accent};}
 
@@ -862,6 +922,22 @@ ol.notes li.note img.avatar {
 }
 
 .jumppg {font-weight: bold;}
+
+#k {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 14px;
+    background-color: {color:background};
+    padding: 5px 9px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#pg a#k:hover {
+    background-color: {color:accent}; 
+    color: {color:background};
+}
 
 /*----- MOBILE HEADER -----*/
 
@@ -878,13 +954,30 @@ header {
     display: none;
 }
 
+.menu-button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 header svg {
     width: 34px;
     height: 34px;
     fill: {color:title};
     cursor: help;
-    display: inline-block;
-    vertical-align: middle;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+header svg:hover, a.close:hover svg {
+    fill: {color:accent};
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 header .secondtitle {
@@ -907,13 +1000,26 @@ header .secondtitle {
     display: inline-block;
     vertical-align: middle;
     margin-left: 0.5em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 /*----- RESPONSIVE -----*/
 
+@media only screen and (min-width: 1600px) {
+    .container {margin: auto auto auto 20vw;}
+}
+
+@media only screen and (min-height: 900px) {
+    nav {margin-top: 5em;}
+}
+
 @media only screen and (max-height: 768px) {
-    .sidebar {padding: 50px 0 50px 70px;}
-    .posts:first-of-type {padding: 50px 0 140px 0;}
+    .sidebar {padding: 50px 30px 50px 70px;}
+    .posts:first-of-type {padding: 50px 0 {text:post margin}px 0;}
 }
 
 @media only screen and (min-width: 1100px) {
@@ -923,7 +1029,6 @@ header .secondtitle {
     .sidebar {
         width: 30%;
         left: 0;
-        display: block;
     }
 }
 
@@ -932,8 +1037,8 @@ header .secondtitle {
     .close {display: block; margin-bottom: 1.5em;}
     
     .sidebar {
-        width: 70%;
-        left: -70%;
+        width: 80vw;
+        left: -80vw;
         z-index: 9999;
         background-color: {color:background};
         border-right: 1px solid {color:borders};
@@ -941,16 +1046,16 @@ header .secondtitle {
         overflow-y: auto;
     }
     
-    nav {position: static; margin-top: 30px;}
+    .sidebar.show {left: 0;}
     
     .container {margin: auto;}
     
-    .posts:first-of-type {padding: 140px 0;}
+    .posts:first-of-type {margin-top: 160px; padding: 0 auto {text:post margin}px auto;}
 }
 
 @media only screen and (max-width: 670px) {
     .container {width: 100vw;}
-    .posts {width: 85vw;}
+    .posts {width: 75vw;}
     
     #k {position: static;}
 }
@@ -962,27 +1067,32 @@ header .secondtitle {
  
 <body>
 
-<!----- HEADER ----->
+<!----- MOBILE HEADER ----->
 
 <header>
-    <span onclick="openNav()"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M45,72h128c3.3,0,6-2.7,6-6s-2.7-6-6-6H45c-3.3,0-6,2.7-6,6S41.7,72,45,72z"/><path d="M45,117h128c3.3,0,6-2.7,6-6s-2.7-6-6-6H45c-3.3,0-6,2.7-6,6S41.7,117,45,117z"/><path d="M45,162h128c3.3,0,6-2.7,6-6s-2.7-6-6-6H45c-3.3,0-6,2.7-6,6S41.7,162,45,162z"/></svg></span>
+    <div class="menu-button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M45,72h128c3.3,0,6-2.7,6-6s-2.7-6-6-6H45c-3.3,0-6,2.7-6,6S41.7,72,45,72z"/><path d="M45,117h128c3.3,0,6-2.7,6-6s-2.7-6-6-6H45c-3.3,0-6,2.7-6,6S41.7,117,45,117z"/><path d="M45,162h128c3.3,0,6-2.7,6-6s-2.7-6-6-6H45c-3.3,0-6,2.7-6,6S41.7,162,45,162z"/></svg></div>
     <div class="secondtitle">navigation</div>
 </header>
 
 <!----- SIDEBAR ----->
 
-<aside id="slide" class="sidebar">
-    <a class="close secondtitle" onclick="closeNav()">close<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M67,149c1.2,1.2,2.7,1.8,4.2,1.8c1.5,0,3.1-0.6,4.2-1.8l32.6-32.6l32.6,32.6c1.2,1.2,2.7,1.8,4.2,1.8s3.1-0.6,4.2-1.8c2.3-2.3,2.3-6.1,0-8.5L116.5,108L149,75.4c2.3-2.3,2.3-6.1,0-8.5s-6.1-2.3-8.5,0L108,99.5L75.4,67c-2.3-2.3-6.1-2.3-8.5,0c-2.3,2.3-2.3,6.1,0,8.5L99.5,108L67,140.6C64.6,142.9,64.6,146.7,67,149z"/><path d="M108,196.1c48.6,0,88.1-39.5,88.1-88.1S156.6,19.9,108,19.9S19.9,59.4,19.9,108S59.4,196.1,108,196.1z M108,31.9c42,0,76.1,34.1,76.1,76.1S150,184.1,108,184.1S31.9,150,31.9,108S66,31.9,108,31.9z"/></svg></a>
-    {block:ifIconImage}<a href="/"><img src="{image:Icon}"/></a>{/block:ifIconImage}
-    <a href="/" id="stitle" class="title">{Title}</a>
-    <div id="subtitle" class="secondtitle">{text:Subtitle}</div>
-    <div id="description">{Description}</div>
-    {block:ifSearch}
-    <form action="/search" method="get" class="find" name="sform">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M140,134.2c10.9-11.8,17.7-27.6,17.7-45c0-36.5-29.7-66.3-66.3-66.3S25.1,52.7,25.1,89.2s29.7,66.3,66.3,66.3c14.9,0,28.6-4.9,39.7-13.2l49.3,49.3c1.2,1.2,2.7,1.8,4.2,1.8c1.5,0,3.1-0.6,4.2-1.8c2.3-2.3,2.3-6.1,0-8.5L140,134.2z M37.1,89.2c0-29.9,24.3-54.3,54.3-54.3c29.9,0,54.3,24.3,54.3,54.3s-24.3,54.3-54.3,54.3C61.4,143.5,37.1,119.1,37.1,89.2z"/></svg>
-        <input type="text" name="q" placeholder="search" value="{SearchQuery}" class="secondtitle" value autocomplete="off"/>
-    </form>
-    {/block:ifSearch}
+<aside class="sidebar">
+    <div id="flex-wrap">
+        <a class="close secondtitle">close<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M67,149c1.2,1.2,2.7,1.8,4.2,1.8c1.5,0,3.1-0.6,4.2-1.8l32.6-32.6l32.6,32.6c1.2,1.2,2.7,1.8,4.2,1.8s3.1-0.6,4.2-1.8c2.3-2.3,2.3-6.1,0-8.5L116.5,108L149,75.4c2.3-2.3,2.3-6.1,0-8.5s-6.1-2.3-8.5,0L108,99.5L75.4,67c-2.3-2.3-6.1-2.3-8.5,0c-2.3,2.3-2.3,6.1,0,8.5L99.5,108L67,140.6C64.6,142.9,64.6,146.7,67,149z"/><path d="M108,196.1c48.6,0,88.1-39.5,88.1-88.1S156.6,19.9,108,19.9S19.9,59.4,19.9,108S59.4,196.1,108,196.1z M108,31.9c42,0,76.1,34.1,76.1,76.1S150,184.1,108,184.1S31.9,150,31.9,108S66,31.9,108,31.9z"/></svg></a>
+        {block:ifIconImage}<a href="/"><img src="{image:Icon}"/></a>{/block:ifIconImage}
+        <a href="/" id="stitle" class="title">{Title}</a>
+        <div id="subtitle" class="secondtitle">{text:Subtitle}</div>
+        <div id="description">{Description}</div>
+        {block:ifSearch}
+        <form action="/search" method="get" class="find" name="sform">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M140,134.2c10.9-11.8,17.7-27.6,17.7-45c0-36.5-29.7-66.3-66.3-66.3S25.1,52.7,25.1,89.2s29.7,66.3,66.3,66.3c14.9,0,28.6-4.9,39.7-13.2l49.3,49.3c1.2,1.2,2.7,1.8,4.2,1.8c1.5,0,3.1-0.6,4.2-1.8c2.3-2.3,2.3-6.1,0-8.5L140,134.2z M37.1,89.2c0-29.9,24.3-54.3,54.3-54.3c29.9,0,54.3,24.3,54.3,54.3s-24.3,54.3-54.3,54.3C61.4,143.5,37.1,119.1,37.1,89.2z"/></svg>
+            <input type="text" name="q" placeholder="search" value="{SearchQuery}" class="secondtitle" value autocomplete="off"/>
+        </form>
+        {/block:ifSearch}
+    </div>
+    
+    <div class="break"></div>
+    
     <nav>
         {block:ifHomeLink}<a href="/"><span class="numbers">01</span>{text:Home Link}</a><br>{/block:ifHomeLink}
         {block:ifAskLink}<a href="/ask"><span class="numbers">02</span>{text:Ask Link}</a><br>{/block:ifAskLink}
@@ -1009,6 +1119,7 @@ header .secondtitle {
 <article class="posts" id="{PostID}">
 
 {block:Text}
+<div class="text-post" id="{PostID}">
 {block:Title}<h1 class="posttitle aborder"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
 {block:NotReblog}
     <li class="caption ogcap body">
@@ -1022,15 +1133,16 @@ header .secondtitle {
         <div class="captext">{Body}</div>
     </li>
 {/block:Reblogs}{/block:RebloggedFrom}
+</div>
 {/block:Text}
 
 {block:Link}
 <a href="{URL}"><div class="linkp">
     {block:Thumbnail}<img src="{Thumbnail-HighRes}" class="thumbnail">{/block:Thumbnail}
-    <div id="link">
+    <div class="link">
         <div class="title">{Name}</div>
-        {block:Excerpt}<div id="linktxt">{Excerpt}</div>{/block:Excerpt}
-        {block:Host}<div id="linkhost" class="secondtitle">by {Host}</div>{/block:Host}
+        {block:Excerpt}<div class="linktxt">{Excerpt}</div>{/block:Excerpt}
+        {block:Host}<div class="linkhost secondtitle">by {Host}</div>{/block:Host}
     </div>
 </div></a>
 {block:Description}
@@ -1071,7 +1183,7 @@ header .secondtitle {
 {/block:Photo}
 
 {block:Photoset}
-<div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>
+<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div>{/block:Photos}</div>
 {block:Caption}
     {block:NotReblog}
         <li class="caption ogcap">
@@ -1107,23 +1219,24 @@ header .secondtitle {
 {/block:Video}
 
 {block:Quote}
-<div id="quote" class="aborder">{Quote}</div>
-{block:Source}<div id="source" class="secondtitle">{Source}</div>{/block:Source}
+<div class="quote aborder">{Quote}</div>
+{block:Source}<div class="source secondtitle">{Source}</div>{/block:Source}
 {/block:Quote}
 
 {block:Chat}
 {block:Title}<h1 class="posttitle aborder"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
 <ul class="chat">{block:Lines}
     <li class="line">
-        {block:Label}<span class="accent chatter">{Label}</span>{/block:Label}                <div id="chattxt">{Line}</div>
+        {block:Label}<span class="accent chatter">{Label}</span>{/block:Label} 
+        <div class="chattxt">{Line}</div>
     </li>
 {/block:Lines}</ul>
 {/block:Chat}
 
 {block:Answer}
-<div id="askpost">
-    <div id="question" class="aborder">{Question}</div>
-    <div id="asker" class="secondtitle">{Asker} inquired</div>
+<div class="askpost">
+    <div class="aborder question">{Question}</div>
+    <div class="secondtitle">{Asker} inquired</div>
 </div>
 {block:Answerer}
     <li class="caption rbcap">
@@ -1240,16 +1353,18 @@ header .secondtitle {
     {block:NextPage}<a href="{NextPage}" class="secondtitle">next</a>{/block:NextPage}<br>
 {/block:Pagination}
 
-<a href="https://seyche.tumblr.com" title="theme by seyche" id="k">&.</a>
+<a href="https://seyche.tumblr.com" title="honeysuckle theme by seyche" id="k">&.</a>
 </footer>
 
 </section>
 
 <!----- PHOTOSETS ----->
 
-<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
+<script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
+
+<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 
 <!----- VIDEO RESIZING ----->
  
@@ -1262,17 +1377,45 @@ header .secondtitle {
 /// PHOTOSETS 
 
 $(document).ready(function(){
-   $('.photo-slideshow').pxuPhotoset({
-       lightbox: true,
-       rounded: false,
-       gutter: '4px',
-       rounded: 'corners',
-       borderRadius: '4px',
-       photoset: '.photo-slideshow',
-       photoWrap: '.photo-data',
-       photo: '.pxu-photo'
-   });
+    undoPhotoset({
+        'posts': '.text-post', 
+        'text class': '', 
+        'photoset class': '' 
+    },false); 
+    
+   initPhotosets();
+   
+    npfPhotosets(".posts", {
+       rowClass:"npf_row",
+       imageContainerClass:"tmblr-full",
+       generatedPhotosetContainerClass:"npf_photoset",
+       imageClass:"npf_image",
+       includeCommonPhotosets: false,
+       useTumblrLightbox: true,
+       insertGalleryIndicator: false,
+       galleryIndicatorClass: "npf_gallery_indicator",
+       galleryIndicatorContent: "<img src='image_url'>",
+       photosetMargins:"{select:photoset gutter}"
+    });
 });
+
+/// TOOLTIPS
+
+tippy('[title]', {
+    theme: 'custom',
+    arrow: false,
+    followCursor: true,
+    delay: 100,
+    placement: 'bottom-start',
+    zIndex: 9999999999,
+    maxWidth: 400,
+
+    content(reference) {
+      const title = reference.getAttribute('title');
+      reference.removeAttribute('title');
+      return title;
+    },
+ });
 
 /// VIDEO RESIZING
  
@@ -1297,13 +1440,15 @@ $(document).ready(function(){
 
 /// SLIDE MOBILE NAV
 
-function openNav() {
-    document.getElementById("slide").style.left = "0";
-}
- 
-function closeNav() {
-    document.getElementById("slide").style.left = "-70%";
-}
+$(document).ready(function() {
+    $('.menu-button').click(function(){
+        $('.sidebar').addClass('show', 1000);
+    });
+    
+    $('.close').click(function(){
+        $('.sidebar').removeClass('show', 1000);
+    });
+});
 
 </script>
 
