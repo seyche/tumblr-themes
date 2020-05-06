@@ -14,18 +14,25 @@
     
     CREDITS:
     -feather icons by Cole Bemis
-    -pxu photosets by pixel union / with modifications by bychloethemes
-    -style my tooltips by malihu
+    -css photosets by annasthms and espoirthemes
+    -tippy.js tooltips by atomiks
     -notecount shortening by shythemes
     -responsive videos by nouvae
     -remove redirects by magnusthemes
     -npf photosets by codematurgy
+    -npf photoset conversion by annasthms
     -popups tutorial by odeysseus
     (full list of credits @ seyche.tumblr.com/credits)
     
 --->
 
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,700,700i|Lato:300,300i,700,700i|Libre+Franklin:300,300i,700,700i|Muli:300,300i,700,700i|Nunito+Sans:300,300i,700,700i|Open+Sans:300,300i,700,700i|Overpass:300,300i,700,700i|Public+Sans:300,300i,700,700i|Roboto:300,300i,700,700i&display=swap" rel="stylesheet">
+
+<!----- PHOTOSETS ----->
+ 
+<link href="https://static.tumblr.com/0podkko/xIbplezmo/modified_photosets.css" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
 
 <!----- VARIABLES ----->
 
@@ -130,32 +137,14 @@
 <meta name="text:Updates Title 3" content=""/>
 <meta name="text:Updates Content 3" content=""/>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script src="https://unpkg.com/feather-icons"></script>
 
 <!----- TOOLTIPS ----->
 
-<link href="https://static.tumblr.com/5omyijl/bzrn2yg7i/style-my-tooltips.css" rel="stylesheet" type="text/css" />
-<script src="https://static.tumblr.com/5omyijl/RZtn2yg9v/jquery.style-my-tooltips.js"></script>
- 
-<script>
-    (function($){
-    $(document).ready(function(){
-    $("[title]").style_my_tooltips({
-    tip_follows_cursor:true,
-    tip_delay_time:100,
-    tip_fade_speed:200
-      });
-    });
-})(jQuery);
-
-$(document).ready(function(){
-    $('.click,.fade').click(function() {
-    $('#pop').fadeToggle();
-    });
-});
-</script>
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
 
 <style type="text/css">
 
@@ -251,20 +240,19 @@ ul {list-style-type: circle;}
 ol {list-style-type: decimal;}
 li {max-width: 100%;}
 
-#s-m-t-tooltip {
-    max-width: 500px;
-    margin: 17px;
-    padding: 0.75em 1em;
-    background: {color:posts};
-    color: {color:text};
-    z-index: 999999;
-    font-size: 0.75em;
+.tippy-tooltip.custom-theme {
+    background-color: {color:background};
+    color: {color:title};
+    text-align: center;
+    font-family: '{select:font}', serif;
+    font-weight: normal;
     text-transform: uppercase;
-    font-family: inherit;
     letter-spacing: 1px;
     border-radius: 4px;
-    box-shadow: none;
-    font-weight: normal;
+    font-style: normal;
+    padding: 0.25em;
+    margin: 15px auto auto 10px;
+    font-size: 0.8em;
     border: 1px solid {color:borders};
 }
 
@@ -732,8 +720,14 @@ p.npf_quirky {font-family: Fairwater; font-size: 1.75em;}
 #k {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 20px;
+    font-size: 14px;
+    background-color: {color:background};
+    padding: 5px 9px;
+    border-radius: 3px;
 }
+
+#k:hover {background-color: {color:accent}; color: {color:background};}
 
 /*----- LINK -----*/
 
@@ -810,6 +804,25 @@ img {
     max-width: none;
 }
 
+/*----- PHOTOSET -----*/
+
+[photoset-layout] {
+    grid-gap: {select:photoset gutter}px; 
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+[photoset-layout] div {
+    padding: 0;
+    border: none; 
+    cursor: pointer;
+}
+
+[photoset-layout] img {
+    border: none; 
+    border-radius: 0;
+}
+
 .post-content div.npf_row, .post div.npf_row, body div.npf_row {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -820,6 +833,8 @@ img {
 .npf_photoset {border-radius: 6px; overflow: hidden;}
 .tmblr-full:hover {cursor: pointer;}
 .npf_image, .tmblr-full {border: none; outline: none;}
+
+.text-post [photoset-layout] {margin-bottom: 2.5em;}
 
 /*----- QUOTE -----*/
 
@@ -970,11 +985,11 @@ p.npf_chat b {
 }
 
 .top-info svg {
-    width: 1.25em;
+	width: 1.25em;
     height: 1.25em;
     margin-right: 0.5em;
 }
- 
+
 .info svg, #pg svg {
     width: 1.25em;
     height: 1.25em;
@@ -1077,11 +1092,28 @@ ol.notes li.note img.avatar {
 
 #btop {
     position: fixed;
-    right: 16px;
-    bottom: 50px;
+    right: 26px;
+    bottom: 70px;
 }
 
-#btop svg {width: 2em; height: 2em;}
+#btop svg {
+    width: 24px; 
+    height: 24px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#btop:hover svg {
+    color: {color:title};
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
 
 /*---- RESPONSIVENESS -----*/
 
@@ -1102,7 +1134,6 @@ ol.notes li.note img.avatar {
     }
     
     #pg a {display: block;}
-    #k, #btop {display: none;}
 }
 
 {CustomCSS}
@@ -1262,6 +1293,7 @@ ol.notes li.note img.avatar {
 <!----- TEXT POSTS ----->
 
 {block:Text}
+<div class="text-post">
 {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
 {block:NotReblog}
     <li class="caption ogcap body">
@@ -1275,6 +1307,7 @@ ol.notes li.note img.avatar {
         <div class="captext">{Body}</div>
     </li>
 {/block:Reblogs}{/block:RebloggedFrom}
+</div>
 {/block:Text}
 
 <!----- LINK POSTS ----->
@@ -1390,7 +1423,7 @@ ol.notes li.note img.avatar {
     {/block:Caption}
 {/block:ifCaptionsOnTop}
 
-<div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" alt="{PhotoAlt}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>
+<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" /></div>{/block:Photos}</div>
 
 {block:ifNotCaptionsOnTop}
     {block:Caption}
@@ -1609,6 +1642,10 @@ ol.notes li.note img.avatar {
     {block:NextPage}&nbsp;<a href="{NextPage}" class="next">see more<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>{/block:NextPage}
 {/block:Pagination}
 
+</section>
+
+</section>
+
 <div id="btop">
     <a href="#top" title="back to top" target="_self"><i data-feather="chevron-up"></i></a>
 </div>
@@ -1616,16 +1653,13 @@ ol.notes li.note img.avatar {
 <a href="https://seyche.tumblr.com" title="dahlia theme by seyche" id="k">&.</a>
 </article>
 
-</section>
-
-</section>
-
 <!----- PHOTOSETS ----->
 
-<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css"/>
-<script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
+<script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
+ 
+<script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
 
-<script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script><link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
+<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 
 <!----- VIDEO RESIZING ----->
 
@@ -1636,40 +1670,64 @@ ol.notes li.note img.avatar {
 /// PHOTOSETS
 
 $(document).ready(function(){
-   $('.photo-slideshow').pxuPhotoset({
-       lightbox: true,
-       rounded: false,
-       gutter: '{select:photoset gutter}px',
-       borderRadius: '6px',
-       rounded: 'corners',
-       photoset: '.photo-slideshow',
-       photoWrap: '.photo-data',
-       photo: '.pxu-photo'
-   });
-});
- 
-npfPhotosets("article", {
-   rowClass:"npf_row",
-   imageContainerClass:"tmblr-full",
-   generatedPhotosetContainerClass:"npf_photoset",
-   imageClass:"npf_image",
-   includeCommonPhotosets: false,
-   useTumblrLightbox: true,
-   insertGalleryIndicator: false,
-   galleryIndicatorClass: "npf_gallery_indicator",
-   galleryIndicatorContent: "<img src='image_url'>",
-   photosetMargins:"{select:photoset gutter}"
-});
+    undoPhotoset({
+        'posts': '.text-post', 
+        'text class': '', 
+        'photoset class': '' 
+    },false); 
+    
+   initPhotosets();
+   
+    npfPhotosets(".posts", {
+       rowClass:"npf_row",
+       imageContainerClass:"tmblr-full",
+       generatedPhotosetContainerClass:"npf_photoset",
+       imageClass:"npf_image",
+       includeCommonPhotosets: false,
+       useTumblrLightbox: true,
+       insertGalleryIndicator: false,
+       galleryIndicatorClass: "npf_gallery_indicator",
+       galleryIndicatorContent: "<img src='image_url'>",
+       photosetMargins:"{select:photoset gutter}"
+    });
+    
+    /// NOTECOUNT 
 
-/// NOTECOUNT 
-
-$('article').find('.notecount').each(function(){
+    $('article').find('.notecount').each(function(){
        var n = $(this).html().split(' ')[0].replace(/,/g, '');
        if (n > 999) {
            n = Math.floor(n / 100) / 10;
            $(this).text(n + 'K');
        }
    });
+});
+
+/// POPUP
+
+$(document).ready(function(){
+    $('.click,.fade').click(function() {
+    $('#pop').fadeToggle(500);
+    });
+    
+/// TOOLTIPS
+
+tippy('[title]', {
+    theme: 'custom',
+    arrow: false,
+    followCursor: true,
+    delay: 100,
+    placement: 'bottom-start',
+    zIndex: 9999999999,
+    maxWidth: 400,
+
+    content(reference) {
+      const title = reference.getAttribute('title');
+      reference.removeAttribute('title');
+      return title;
+    },
+ });
+ 
+});
 
 /// REMOVE REDIRECTS
 
