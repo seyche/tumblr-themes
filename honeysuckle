@@ -592,6 +592,15 @@ pre {
     word-wrap: break-word;
 }
 
+a.read_more {
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-family: '{select:title font}', serif;
+   font-weight: bold;
+}
+
+p.read_more_container {text-align: center;}
+
 @font-face {
     font-family: Calluna;
     src: url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.eot?3=&v=f685dc881c60c298ea22a73fe505b88a");
