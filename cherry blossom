@@ -21,7 +21,7 @@
     -remove redirects by magnusthemes
     -npf photosets by codematurgy
     -npf photoset conversion by annasthms
-    (full list of credits @ seyche.tumblr.com/credits
+    (full list of credits @ seyche.tumblr.com/credits)
     
 --->
 
@@ -757,7 +757,7 @@ p.npf_chat b {color: {color:title};}
 
 /*----- INFO -----*/
 
-.info::before, .pinfo::before {
+.info-left::before, .lirb::before, .pinfo::before {
     content: '';
     display: block;
     height: 1px;
@@ -766,16 +766,15 @@ p.npf_chat b {color: {color:title};}
     margin: 2.25em 0 2em 0;
 }
 
-.lirb {display: inline;}
+.lirb::before {margin: 2.25em 0 2em 5em;}
 
-.lirb::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 50px;
-    background: {color:borders};
-    margin: -2em 0 2em 45px;
+{block:IndexPage}
+.flexing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+{/block:IndexPage}
 
 .ibullet::after {
     content: '';
@@ -806,22 +805,12 @@ p.npf_chat b {color: {color:title};}
    opacity: 0;
 }
 
-.lirb {float: right; text-align: right; display: inline-block;}
+.lirb {text-align: right;}
 .like_button iframe {width: 100% !important; height: 100% !important;}
 .likeb .liked + .lb {color: {color:accent};}
 .likeb .liked + .lb:after {content: 'd';}
 
-.tags {
-    font-style: italic;
-    {block:IndexPage}{block:ifHoverTags}
-    opacity: 0;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    {/block:ifHoverTags}{/block:IndexPage}
-}
+.tags {font-style: italic;}
 
 .tags a::before {
     content: '#';
@@ -948,6 +937,7 @@ ol.notes li.note img.avatar {display: none;}
     .right article:first-of-type, .left article:first-of-type {margin: 150px auto;}
     
     .albumart {display: none;}
+    .audioinfo {text-align: right; padding: 0;}
     #k {display: none;}
     #m {display: block;}
 }
@@ -1168,22 +1158,25 @@ ol.notes li.note img.avatar {display: none;}
 <!----- INFO ----->
 
 {block:Date}
-<div class="info">
+<div class="info flexing">
     {block:IndexPage}
-        <div class="upper">
+        <div class="info-left upper">
             <a href="{Permalink}" {block:NoteCount}class="ibullet"{/block:NoteCount} title="{TimeAgo}">{DayOfWeek}</a>{block:NoteCount}<a href="{Permalink}" class="notecount">{NoteCount}</a>{/block:NoteCount}
-            <span class="lirb">
-                <a href="{ReblogURL}" target="_blank" class="ibullet">reblog</a><a class="likeb" href="#">{LikeButton}<span class="lb">like</span></a>
-            </span>
+        </div>
+        <div class="lirb upper">
+            <a href="{ReblogURL}" target="_blank" class="ibullet">reblog</a><a class="likeb" href="#">{LikeButton}<span class="lb">like</span></a>
         </div>
     {/block:IndexPage}
 </div>
+
 {block:PermalinkPage}
+<div class="pinfo">
     {TimeAgo} on {DayOfWeek}, {DayOfMonth} {Month} {Year}<br>
     {block:RebloggedFrom}
         reblogged via <a href="{ReblogParentURL}" title="{ReblogParentTitle}">{ReblogParentName}</a><br>
         original post by <a href="{ReblogRootURL}" title="{ReblogRootTitle}">{ReblogRootName}</a>
     {/block:RebloggedFrom}
+</div>
 {/block:PermalinkPage}
 
 {block:HasTags}
