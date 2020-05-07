@@ -139,6 +139,8 @@
     100% {opacity: 1;}
 }
 
+html {opacity: 0;}
+
 body {
     font-family: '{select:font}', sans-serif;
     font-size: {select:font size};
@@ -149,10 +151,11 @@ body {
     word-wrap: break-word;
     letter-spacing: 0.2px;
     margin: 0;
-    -webkit-animation: lazyload 3s;
-    -moz-animation: lazyload 3s;
-    -o-animation: lazyload 3s;
-    animation: lazyload 3s;
+    -webkit-animation: lazyload 2s;
+    -moz-animation: lazyload 2s;
+    -o-animation: lazyload 2s;
+    -ms-animation: lazyload 2s;
+    animation: lazyload 2s;
 }
 
 a {
@@ -1242,6 +1245,9 @@ ol.notes li.note img.avatar {display: none;}
 /// PHOTOSETS 
 
 $(document).ready(function(){
+	
+$('html').animate({opacity: '1'}, 2000);
+	
     undoPhotoset({
         'posts': '.text-post', 
         'text class': '', 
