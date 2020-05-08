@@ -241,7 +241,7 @@ ol {list-style-type: decimal;}
 li {max-width: 100%;}
 
 .tippy-tooltip.custom-theme {
-    background-color: {color:background};
+    background-color: {color:posts};
     color: {color:title};
     text-align: center;
     font-family: '{select:font}', serif;
