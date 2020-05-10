@@ -432,7 +432,7 @@ li {max-width: 100%;}
     color: {color:link};
     text-align: left;
     font-family: '{select:title font}', sans-serif;
-    width: calc(100% - 1.25em - 1.5em);
+    width: calc(100% - 1.25em - 2.25em);
 }
 
 .find input[type=text] {color: {color:text};}    
