@@ -995,7 +995,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 {/block:TagPage}
 
 {block:Posts}
-<article class="posts">
+<article class="posts" id="{PostID}">
 
 <div class="infobg top-info">
 
