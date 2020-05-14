@@ -14,16 +14,23 @@
     
     CREDITS:
     -outicons by Anton Saputro
-    -pxu photosets by pixel union / with modifications by shythemes and bychloethemes
-    -style my tooltips by malihu
+    -css photosets by annasthms and espoirthemes
+    -tippy.js tooltips by atomiks
     -responsive videos by nouvae
     -remove redirects by magnusthemes
     -npf photosets by codematurgy
+    -npf photoset conversion by annasthms
     (full list of credits @ seyche.tumblr.com/credits)
     
 --->
 
 <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Karla:400,400i,700,700i|Lato:400,400i,700,700i|Muli:400,400i,700,700i|Nunito:400,400i,700,700i|Open+Sans:400,400i,700,700i|PT+Sans:400,400i,700,700i|Public+Sans:400,400i,700,700i|Roboto:400,400i,700,700i&display=swap" rel="stylesheet">
+
+<!----- PHOTOSETS ----->
+
+<link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
+ 
+<link href="https://static.tumblr.com/0podkko/xIbplezmo/modified_photosets.css" rel="stylesheet">
 
 <!---- VARIABLES ----->
 
@@ -101,46 +108,19 @@
 <meta name="text:Reading" content=""/>
 <meta name="text:Listening To" content=""/>
  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<!----- TOOLTIPS ----->
-
-<link href="https://static.tumblr.com/5omyijl/bzrn2yg7i/style-my-tooltips.css" rel="stylesheet" type="text/css" />
-<script src="https://static.tumblr.com/5omyijl/RZtn2yg9v/jquery.style-my-tooltips.js"></script>
+<!----- LOAD IN ----->
  
 <script>
-    (function($){
-    $(document).ready(function(){
-    $("[title]").style_my_tooltips({
-    tip_follows_cursor:true,
-    tip_delay_time:200,
-    tip_fade_speed:200
-      });
+$(document).ready(function(){
+    $(function() {
+        $('body').removeClass('load-in');
     });
-})(jQuery);
+});
 </script>
  
 <style type="text/css">
-
-@keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
- 
-@-webkit-keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
- 
-@-moz-keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
- 
-@-o-keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
 
 body {
     font-family: '{select:font}', sans-serif;
@@ -152,10 +132,21 @@ body {
     word-wrap: break-word;
     letter-spacing: 0.2px;
     margin: 0;
-    -webkit-animation: lazyload 2s;
-    -moz-animation: lazyload 2s;
-    -o-animation: lazyload 2s;
-    animation: lazyload 2s;
+    opacity: 1.0;
+    -webkit-transition: 2s opacity;
+    -moz-transition: 2s opacity;
+    -ms-transition: 2s opacity;
+    -o-transition: 2s opacity;
+    transition: 2s opacity;
+}
+
+body.load-in {
+    opacity: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 
 body::before {
@@ -199,20 +190,20 @@ p a::after, li a::after {
     display: block;
     bottom: -2px;
     background: {color:accent};
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
  
 p a:hover::after, li a:hover::after {
     width: 100%;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 h1, h2, h3, h4, h5, .title {
@@ -246,20 +237,19 @@ ul {list-style-type: circle;}
 ol {list-style-type: decimal;}
 li {max-width: 100%;}
 
-#s-m-t-tooltip {
-    max-width: 400px;
-    margin: 20px 15px 20px 20px;
-    padding: 8px 11px;
-    background: {color:title};
-    color: {color:background};
-    z-index: 999999;
+.tippy-tooltip.custom-theme {
+    background-color: {color:title};
+    color: {color:posts};
+    text-align: center;
     font-family: inherit;
-    border-radius: 4px;
-    box-shadow: none;
-    font-size: 0.8em;
+    font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: normal;
+    border-radius: 3px;
+    font-style: normal;
+    padding: 0.25em;
+    margin: 20px auto auto 10px;
+    font-size: 0.8em;
 }
 
 ::-webkit-scrollbar {
@@ -496,7 +486,8 @@ svg {
 
 .blue a {color: rgba({RGBcolor:background}, 0.9);}
 .blue a:hover {color: rgba({RGBcolor:background}, 1.0);}
-.posts .blue h1 a {opacity: 1.0;}
+.posts h1.blue a {color: rgba({RGBcolor:background}, 1.0);}
+.posts h1.blue {margin-top: 0;}
 
 /*----- POSTS -----*/
 
@@ -532,6 +523,7 @@ article {position: relative; width: {select:post width};}
 .caption iframe, .caption img {max-width: 100%;}
 
 .username {display: inline-block}
+.caption .username a::after {display: none;}
 
 .username::before {
     content: '';
@@ -610,8 +602,20 @@ p.npf_quirky {font-family: Fairwater; font-size: 1.75em;}
 
 #k {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 15px;
+    right: 15px;
+    font-size: 15px;
+    background-color: {color:background};
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+
+#k:hover {background-color: {color:accent}; color: {color:background};}
+
+#m {
+    text-align: center;
+    display: none;
+    margin-bottom: 50px;
 }
 
 /*----- LINK -----*/
@@ -720,15 +724,37 @@ img {
     max-width: none;
 }
 
+/*----- PHOTOSET -----*/
+
+[photoset-layout] {
+    grid-gap: {select:photoset gutter}px; 
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+[photoset-layout] div {
+    padding: 0;
+    border: none; 
+    cursor: pointer;
+}
+
+[photoset-layout] img {
+    border: none; 
+    border-radius: 0;
+}
+
 .post-content div.npf_row, .post div.npf_row, body div.npf_row {
     margin-left: 0 !important;
     margin-right: 0 !important;
 }
 
+.npf_photoset {border-radius: 5px; overflow: hidden;}
 .captext figure {margin: 1em 0;}
 .captext figure .tmblr-full {margin-top: {select:photoset gutter}px;}
 .tmblr-full:hover {cursor: pointer;}
 .npf_image, .tmblr-full {border: none; outline: none;}
+
+.text-post [photoset-layout] {margin-bottom: 1.5em;}
 
 /*----- QUOTE -----*/
 
@@ -848,11 +874,15 @@ p.npf_chat:last-of-type {border-bottom: none; padding-bottom: 0;}
 .audioinfo {
     list-style-type: none;
     text-align: right;
-    max-width: calc({select:post width} - 150px);
-    float: right;
-    padding: 50px 30px 30px 30px;
-    display: inline-block;
+    max-width: calc({select:post width} - 151px);
+    position: relative;
     box-sizing: border-box;
+    margin-left: 151px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 30px;
 }
 
 .track {font-size: 1.25em;}
@@ -896,8 +926,8 @@ p.npf_chat:last-of-type {border-bottom: none; padding-bottom: 0;}
 
 .lirb a svg {
     margin: 0 0 0 2px;
-    width: 16px;
-    height: 16px;
+    width: 1.25em;
+    height: 1.25em;
 }
 
 .lirb svg:hover {
@@ -913,10 +943,9 @@ p.npf_chat:last-of-type {border-bottom: none; padding-bottom: 0;}
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    width: 18px;
-    height: 18px;
+    width: 1.25em;
+    height: 1.25em;
     cursor: pointer;
-    line-height: 1em;
 }
  
 .like_button {
@@ -1043,6 +1072,38 @@ ol.notes li.note img.avatar {display: none;}
     border-radius: 4px;
 }
 
+/*----- MOBILE CONTROLS -----*/
+ 
+.mobile-controls {
+    top: 20px;
+    right: 20px;
+    z-index: 9999999;
+    position: fixed;
+    display: none;
+}
+ 
+.mobile-controls a {margin-left: 8px;}
+ 
+.mobile-controls a svg {
+    width: 24px;
+    height: 24px;
+    fill: {color:link};
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+ 
+.mobile-controls a:hover svg {
+    fill: {color:accent};
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
 /*----- RESPONSIVE -----*/
 
 @media only screen and (max-width: 1023px) and (min-width: 601px) {
@@ -1056,6 +1117,12 @@ ol.notes li.note img.avatar {display: none;}
     .left article, .left article:first-of-type {margin: {text:post margin}px 0;}
     .top-info {display: none;}
     
+}
+
+@media only screen and (max-width: 1023px) {
+    #k {display: none;}
+    #m {display: block;}
+    .mobile-controls {display: block;}
 }
 
 @media only screen and (max-width: 600px) {
@@ -1083,7 +1150,6 @@ ol.notes li.note img.avatar {display: none;}
     .albumart {display: none;}
     .audiobox {float: left; position: static; opacity: 1.0;}
     .audioinfo {max-width: calc(100% - 90px); padding: 10px 0 0 0;}
-    #k {position: static; text-align: center;}
     .top-info {display: none;}
 }
  
@@ -1096,7 +1162,15 @@ ol.notes li.note img.avatar {display: none;}
 </style>
 </head>
  
-<body>
+<body class="load-in">
+
+<!----- MOBILE CONTROLS ----->
+
+<div class="mobile-controls">
+    <a href="https://www.tumblr.com/follow/{Name}" title="follow"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M57,114h45v45c0,3.3,2.7,6,6,6s6-2.7,6-6v-45h45c3.3,0,6-2.7,6-6s-2.7-6-6-6h-45V57c0-3.3-2.7-6-6-6s-6,2.7-6,6v45H57c-3.3,0-6,2.7-6,6S53.7,114,57,114z"/><path d="M108,196.1c48.6,0,88.1-39.5,88.1-88.1S156.6,19.9,108,19.9S19.9,59.4,19.9,108S59.4,196.1,108,196.1z M108,31.9c42,0,76.1,34.1,76.1,76.1S150,184.1,108,184.1S31.9,150,31.9,108S66,31.9,108,31.9z"/></svg></a>
+    <a href="https://www.tumblr.com/message/{Name}" title="message"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M51.6,144.6l-6,34.1c-0.4,2.3,0.5,4.6,2.4,5.9c1,0.8,2.3,1.1,3.5,1.1c1,0,2-0.2,2.8-0.7l44.3-23.8c3.2,0.3,6.3,0.4,9.4,0.4c46.3,0,83.9-29.5,83.9-65.7c0-36.2-37.6-65.7-83.9-65.7S24.1,59.7,24.1,95.9C24.1,114.6,34.1,132.2,51.6,144.6z M108,42.3c39.6,0,71.9,24.1,71.9,53.7c0,29.6-32.3,53.7-71.9,53.7c-3.2,0-6.6-0.2-10-0.5c-1.2-0.1-2.4,0.1-3.5,0.7l-35,18.8l4.5-25.7c0.4-2.4-0.6-4.8-2.7-6.1c-16.1-10.3-25.3-25.1-25.3-40.8C36.1,66.4,68.4,42.3,108,42.3z"/></svg></a>
+    <a href="https://www.tumblr.com/dashboard" title="dashboard"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M113.7,20.4c-2.3,0.9-3.7,3.1-3.7,5.6v39.1c-6.2,0.3-16.3,1.2-27.1,3.7c-20.4,4.9-34.6,13.6-42.3,26c-8.7,14.1-1.3,35.4,22.2,63.5c16.4,19.6,34.7,35.5,35.4,36.2c1.1,1,2.5,1.5,3.9,1.5c0,0,0,0,0,0c3.3,0,6-2.7,6-6c0-1.2-0.4-2.3-1-3.3c-1.2-2.1-7-13-12.4-25.3c-10.5-23.9-10.6-32.7-10.1-35.3c1-5.6,11.1-6.5,17.1-6.5c3.6,0,7.1,0.3,9.7,0.6l2,36.1c0.1,2.3,1.5,4.3,3.6,5.2c2.1,0.9,4.5,0.5,6.3-1l67.2-58c1.3-1.1,2-2.6,2.1-4.3s-0.6-3.3-1.7-4.5l-70.7-72C118.6,20.1,116,19.5,113.7,20.4z M122,40.7l55.9,57l-53.2,45.9l-1.6-28.8c-0.2-2.7-2.1-5-4.8-5.5c-0.3-0.1-7.9-1.5-16.6-1.5c-21.5,0-27.6,8.9-28.9,16.4c-1.4,7.7,1.6,20.2,9.1,37.9c-3.3-3.6-6.7-7.4-10-11.3c-19.2-23-26.7-40.5-21.1-49.4C65.4,77.7,110.2,77,115.3,77c0.3,0,0.5,0,0.6,0c1.6,0,3.2-0.6,4.3-1.7c1.2-1.1,1.8-2.7,1.8-4.3V40.7z"/></svg></a>
+</div>
 
 <section id="container" class="{select:sidebar position}">
 
@@ -1171,6 +1245,7 @@ ol.notes li.note img.avatar {display: none;}
 <!----- POSTS ----->
 
 {block:Text}
+<div class="text-post">
 {block:Title}<h1 class="blue"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
 {block:NotReblog}
     <li class="caption ogcap body">
@@ -1183,6 +1258,7 @@ ol.notes li.note img.avatar {display: none;}
         <div class="captext">{Body}</div>
     </li>
 {/block:Reblogs}{/block:RebloggedFrom}
+</div>
 {/block:Text}
 
 {block:Link}
@@ -1229,7 +1305,7 @@ ol.notes li.note img.avatar {display: none;}
 {/block:Photo}
 
 {block:Photoset}
-<div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" alt="{PhotoAlt}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>
+<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" /></div>{/block:Photos}</div>
 {block:Caption}
     {block:NotReblog}
         <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
@@ -1407,74 +1483,91 @@ ol.notes li.note img.avatar {display: none;}
 
 <a href="https://seyche.tumblr.com" title="bluebell theme by seyche" id="k">&.</a>
 
+<a href="https://seyche.tumblr.com" id="m">bluebell theme by seyche</a>
+
 </section>
+
+<!----- TOOLTIPS ----->
+
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
 
 <!----- VIDEO RESIZING ----->
 
 <script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
  
 <!----- PHOTOSETS ----->
- 
-<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css"/>
-<script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
- 
-<script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script><link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
+
+<script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
+
+<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 
 <script>
 
-npfPhotosets(".posts", {
-   rowClass:"npf_row",
-   imageContainerClass:"tmblr-full",
-   generatedPhotosetContainerClass:"npf_photoset",
-   imageClass:"npf_image",
-   includeCommonPhotosets: false,
-   useTumblrLightbox: true,
-   insertGalleryIndicator: false,
-   galleryIndicatorClass: "npf_gallery_indicator",
-   galleryIndicatorContent: "<img src='image_url'>",
-   photosetMargins:"{select:photoset gutter}"
+/// PHOTOSETS
+
+$(document).ready(function(){
+    undoPhotoset({
+        'posts': '.text-post', 
+        'text class': '', 
+        'photoset class': '' 
+    },false); 
+    
+   initPhotosets();
+   
+    npfPhotosets(".posts", {
+       rowClass:"npf_row",
+       imageContainerClass:"tmblr-full",
+       generatedPhotosetContainerClass:"npf_photoset",
+       imageClass:"npf_image",
+       includeCommonPhotosets: false,
+       useTumblrLightbox: true,
+       insertGalleryIndicator: false,
+       galleryIndicatorClass: "npf_gallery_indicator",
+       galleryIndicatorContent: "<img src='image_url'>",
+       photosetMargins:"{select:photoset gutter}"
+    });
+   
+   /// TOOLTIPS
+
+    tippy('[title]', {
+        theme: 'custom',
+        arrow: false,
+        followCursor: true,
+        delay: 100,
+        placement: 'bottom-start',
+        zIndex: 9999999999,
+        maxWidth: 400,
+    
+        content(reference) {
+          const title = reference.getAttribute('title');
+          reference.removeAttribute('title');
+          return title;
+        },
+    });
 });
 
 /// DROPDOWNS
 
 $(document).ready(function(){
     {block:ifSearchBar}
-    $(".drop-search").hide();
-    $(".search-button").show();$('.search-button').toggle(function(){
-    $(".drop-search").slideDown(function(){});
-    },function(){
-    $(".drop-search").slideUp(function(){});
+    $('.drop-search').hide();
+    $('.search-button').click(function(){
+        $('.drop-search').slideToggle(500);
     });
     {/block:ifSearchBar}
-        
-    $("#extra-links").hide();
-    $(".links-button").show();$('.links-button').toggle(function(){
-    $("#extra-links").slideDown(function(){});
-    },function(){
-    $("#extra-links").slideUp(function(){});
+    
+    $('#extra-links').hide();
+    $('.links-button').click(function(){
+        $('#extra-links').slideToggle(500);
     });
     
-    $("#updates").hide();
-    $(".updates-button").show();$('.updates-button').toggle(function(){
-    $("#updates").slideDown(function(){});
-    },function(){
-    $("#updates").slideUp(function(){});
+    $('#updates').hide();
+    $('.updates-button').click(function(){
+        $('#updates').slideToggle(500);
     });
-});
-
-/// PHOTOSETS
-
-$(document).ready(function(){
-   $('.photo-slideshow').pxuPhotoset({
-       lightbox: true,
-       rounded: false,
-       gutter: '{select:photoset gutter}px',
-       borderRadius: '5px',
-       rounded: 'corners',
-       photoset: '.photo-slideshow',
-       photoWrap: '.photo-data',
-       photo: '.pxu-photo'
-   });
 });
 
 /// REMOVE REDIRECTS
@@ -1490,7 +1583,7 @@ $(document).ready(function(){
 
 /// VIDEO RESIZING
 
-    function flexFrame() {
+function flexFrame() {
    $(".caption").each(function() {
         $(this).find("iframe").wrap("<div class='capframe'></div>"); 
         flexibleFrames($(".capframe"));
