@@ -146,27 +146,17 @@
 <script src="https://unpkg.com/popper.js@1"></script>
 <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
 
-<style type="text/css">
+<!----- LOAD IN ----->
+ 
+<script>
+$(document).ready(function(){
+    $(function() {
+        $('body').removeClass('load-in');
+    });
+});
+</script>
 
-@keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
- 
-@-webkit-keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
- 
-@-moz-keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
- 
-@-o-keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
+<style type="text/css">
 
 body {
     font-family: '{select:font}', sans-serif;
@@ -180,10 +170,21 @@ body {
     margin: 0;
     padding: 0;
     font-weight: 300;
-    -webkit-animation: lazyload 2s;
-    -moz-animation: lazyload 2s;
-    -o-animation: lazyload 2s;
-    animation: lazyload 2s;
+    opacity: 1.0;
+    -webkit-transition: 2s opacity;
+    -moz-transition: 2s opacity;
+    -ms-transition: 2s opacity;
+    -o-transition: 2s opacity;
+    transition: 2s opacity;
+}
+
+body.load-in {
+    opacity: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 
 a {
@@ -1146,7 +1147,7 @@ ol.notes li.note img.avatar {
 </style>
 </head>
 
-<body>
+<body class="load-in">
 
 <!----- POPUP ----->
 
