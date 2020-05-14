@@ -80,7 +80,7 @@
 
 <meta name="if:Show Icon" content="1"/>
 <meta name="if:Search Bar" content="1"/>
-<meta name="if:Updates Tab" content="1"/>
+<meta name="if:Updates Tab" content="0"/>
 <meta name="if:Hide Caption" content="0"/>
 <meta name="if:Show Post Source Icon" content="0"/>
 
