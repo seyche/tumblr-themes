@@ -397,7 +397,7 @@ input:-ms-input-placeholder {color: {color:text};}
 
 #header-img {
     object-fit: cover;
-    max-width: 100%;
+    width: 100%;
     min-height: 100px;
     position: relative;
 }
