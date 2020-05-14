@@ -941,13 +941,18 @@ p.npf_chat b {
  
 .audioinfo {
     list-style-type: none;
+    position: relative;
     max-width: calc({select:post width} - 155px);
-    padding: 50px 30px 25px 30px;
-    display: inline-block;
+    height: 150px;
     box-sizing: border-box;
     line-height: 180%;
+    margin-left: 155px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
- 
+
+.flexy {padding-left: 1.5em;}
 .track {font-size: 1.25em;}
 .audioinfo svg {margin: 0 0.5em 0.15em 0; width: 1.25em; height: 1.25em;}
  
@@ -1557,15 +1562,19 @@ ol.notes li.note img.avatar {
 {/block:ifCaptionsOnTop}
 
 <div class="audiopost">
-    <div class="audiobox"><div class="button">
-        {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
-    </div></div>
-    {block:AlbumArt}
-        <img src="{AlbumArtURL}" class="albumart">
-    {/block:AlbumArt}
+    <div class="audio-right">
+        <div class="audiobox"><div class="button">
+            {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
+        </div></div>
+        {block:AlbumArt}
+            <img src="{AlbumArtURL}" class="albumart">
+        {/block:AlbumArt}
+    </div>
     <div class="audioinfo">
-        {block:TrackName}<li class="subtitle track">{TrackName}</li>{/block:TrackName}
-        {block:Artist}<li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-1"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>by {Artist}</li>{/block:Artist}
+        <div class="flexy">
+            {block:TrackName}<li class="subtitle track">{TrackName}</li>{/block:TrackName}
+            {block:Artist}<li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-volume-1"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>by {Artist}</li>{/block:Artist}
+        </div>
     </div>
 </div>
 
