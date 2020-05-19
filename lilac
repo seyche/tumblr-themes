@@ -605,7 +605,13 @@ a:hover .feather {
 {/block:IndexPage}{/block:ifHideCaption}
 
 {block:ifHideFirstCaptionUsername}
-.twit-cap:first-of-type .username, .twit-cap:first-of-type .capicon {display: none;}
+.twit-cap:first-of-type .username, 
+.twit-cap:first-of-type .capicon,
+.twit-cap:first-of-type .comment-icon,
+.twit-cap:first-of-type .icon-gradient {
+    display: none;
+}
+
 .twit-cap:first-of-type p {margin: 0 0 1em 0;}
 {/block:ifHideFirstCaptionUsername}
 
@@ -1365,7 +1371,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
     
     .info-dropdown {margin-left: calc(90vw - 250px);}
     
-    #k, #btop {display: none;}
+    #k {display: none;}
     #m {display: block;}
 }
 
