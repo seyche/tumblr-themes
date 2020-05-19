@@ -1365,7 +1365,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
     
     .info-dropdown {margin-left: calc(90vw - 250px);}
     
-    #k {display: none;}
+    #k, #btop {display: none;}
     #m {display: block;}
 }
 
