@@ -447,7 +447,7 @@ input:-ms-input-placeholder {color: {color:text};}
 nav {
     font-family: '{select:title font}', sans-serif;
     line-height: 200%;
-    margin-top: 2em;
+    margin-top: 8em;
     min-height: 0;
     width: 100%;
 }
@@ -1045,7 +1045,7 @@ header .secondtitle {
 }
 
 @media only screen and (min-height: 900px) {
-    nav {margin-top: 5em;}
+    nav {margin-top: 14em;}
 }
 
 @media only screen and (max-height: 768px) {
