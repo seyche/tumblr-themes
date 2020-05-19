@@ -352,13 +352,20 @@ li {max-width: 100%; line-height: 160%;}
 #description {margin-top: 1.5em;}
 
 #side-nav {margin-top: 2.25em; text-align: left;}
-#side-nav li {list-style-type: none; margin-bottom: 0.75em;}
-.nav-txt {float: right;}
+
+#side-nav li {
+    list-style-type: none; 
+    margin-bottom: 0.75em;
+    display: block;
+}
+
 #side-nav li a, #side-nav li a:hover {border-bottom: none;}
 
 #side-nav a {
     width: 100%;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: middle;
     border-radius: 2em;
     padding: 0.75em 1em;
     box-sizing: border-box;
