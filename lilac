@@ -767,6 +767,7 @@ img {
     grid-gap: {select:photoset gutter}px; 
     {block:ifRoundedPhotoCorners}border-radius: 10px;{/block:ifRoundedPhotoCorners}
     overflow: hidden;
+    grid-template-columns: repeat(6, auto);
 }
 
 [photoset-layout] div {
