@@ -393,6 +393,7 @@ input:-ms-input-placeholder {color: {color:text};}
     margin: {text:post margin}px auto;
     text-align: center;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 #header-img {
