@@ -564,7 +564,11 @@ footer nav a {margin: 0 1em;}
     
 <header>
 
-<!----- START EDITING HERE: fill in your page title and project titles here ----->
+<!----- ================================
+    
+         START EDITING HERE: fill in your page title and project titles here
+            
+====================================== ----->
 
     <div class="title">works in progress</div>
     
@@ -583,7 +587,11 @@ footer nav a {margin: 0 1em;}
         
     </div>
     
-    <!----- end editing tabs here ----->
+ <!----- ================================
+    
+         END EDITING TABS HERE
+            
+====================================== ----->
     
 <!----- HEADER NAV: you don't need to edit this ----->
         
@@ -609,11 +617,15 @@ footer nav a {margin: 0 1em;}
             
             3. you're done. make sure you've added the tab title in the header section above so you can click on it and switch between tabs.
             
-            4. if something looks screwed up, it's probably because you changed the naming convention in the tab id, or you didn't copy the tab divs correctly and now you have stray divs. if your divs are screwed up, you can delete it and recopy again, or go to http://www.tormus.com/tools/div_checker and figure out which divs are missing. if you don't see two little 🌈 rainbow emojis at the beginning and end of your divs, you definitely didn't copy it correctly.
+            4. if something looks screwed up, it's probably because you changed the naming convention in the tab id, or you didn't copy the tab divs correctly and now you have stray divs. or, you might have pasted the tab inside another tab, in which case it won't show up. if your divs are screwed up, you can delete it and recopy again, or go to http://www.tormus.com/tools/div_checker and figure out which divs are missing. if you don't see two little 🌈 rainbow emojis at the beginning and end of your divs, you definitely didn't copy it correctly.
             
     ----->
     
-    <!----- START TAB ONE ----->
+    <!----- ================================
+    
+         BEGINNING OF TAB ONE
+            
+		====================================== ----->
     
     <div class="container" id="tab1C"> <!-- 🌈 -->
     
@@ -813,9 +825,17 @@ footer nav a {margin: 0 1em;}
         
     </div><!-- 🌈 -->
     
-    <!----- END TAB ONE ----->
+    <!----- ================================
     
-    <!----- START TAB TWO ----->
+         END TAB ONE
+            
+		====================================== ----->
+    
+    <!----- ================================
+    
+         BEGINNING OF TAB TWO
+            
+		====================================== ----->
     
     <div class="container" id="tab2C"><!-- 🌈 -->
         
@@ -964,7 +984,13 @@ footer nav a {margin: 0 1em;}
         
     </div><!-- 🌈 -->
     
-    <!----- END TAB TWO ----->
+    <!----- ================================
+    
+         END OF TAB TWO
+            
+		====================================== ----->
+		
+		<!----- put any additional tabs AFTER THIS MESSAGE and above the STOP EDITING message. DO NOT PUT YOUR TABS INSIDE THE PRE-EXISTING TABS. ----->
     
     <!----- STOP EDITING HERE. do not touch anything after here. ----->
     
