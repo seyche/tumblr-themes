@@ -605,7 +605,7 @@ a:hover .feather {
     color: {color:text};
 }
 
-.tmblr-attribution {margin-top: 1em;}
+p.tmblr-attribution {margin-top: 1em;}
 
 {block:ifHideCaption}{block:IndexPage}
 .hide-cap {display: none;}
