@@ -448,7 +448,7 @@ article:first-of-type {margin-top: 0;}
  
 .find {
     background-color: inherit;
-    width: calc(100% - 6.5em);
+    width: calc(100% - 6.75em);
     margin: auto auto auto 2em;
     border: 1px solid {color:borders};
     background-color: {color:sidebar link background};
