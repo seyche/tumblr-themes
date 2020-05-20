@@ -1022,6 +1022,9 @@ p.npf_chat b {
     box-shadow: 1px 1px 3px {color:borders},
                 -1px 1px 3px {color:borders};
     {/block:ifDropShadows}
+    {block:ifNotDropShadows}
+    border: 1px solid {color:borders};
+    {/block:ifNotDropShadows}
 }
 
 .info-dropdown a {
