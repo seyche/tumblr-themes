@@ -663,6 +663,8 @@ svg {
 {block:ifHideFirstCaptionUsername}
 .twit-cap:first-of-type .username, .twit-cap:first-of-type .capicon {display: none;}
 .twit-cap:first-of-type p {margin: 0 0 1em 0;}
+.twit-cap blockquote p:first-of-type {margin-top: 0;}
+.twit-cap blockquote p:last-of-type {margin-bottom: 0;}
 {/block:ifHideFirstCaptionUsername}
 
 .capicon {width: 25px; height: 25px;}
