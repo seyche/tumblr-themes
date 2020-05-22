@@ -319,29 +319,32 @@ li {max-width: 100%;}
 #search-wrap {
     width: calc({select:post width} + 150px);
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
 #search-wrap .icon {
-    float: left;
     width: 46px;
     height: 46px;
     display: inline-block;
 }
 
 .find svg {
-    width: calc(1.25 * 14px);
-    height: calc(1.25 * 14px);
-    margin-right: 8px;
+    width: 1.25em;
+    height: 1.25em;
+    margin-right: 0.75em;
 }
 
 .find {
     background-color: inherit;
     {block:ifPopup}width: calc(100% - 150px);{/block:ifPopup}
     {block:ifNotPopup}width: calc(100% - 95px);{/block:ifNotPopup}
-    margin: 1px auto auto 30px;
+    margin: auto auto auto 30px;
     border: 1px solid {color:borders};
     background-color: {color:search background};
-    border-radius: 25px;
+    border-radius: 2em;
     padding: 10px 10px 10px 15px;
     box-sizing: border-box;
     vertical-align: middle;
@@ -356,9 +359,9 @@ li {max-width: 100%;}
     margin: 0;
     padding: 0;
     color: {color:text};
-    width: calc(100% - 30px);
+    width: calc(100% - 3em);
     font-family: inherit;
-    font-size: 14px;
+    font-size: inherit;
     font-weight: 300;
 }
  
