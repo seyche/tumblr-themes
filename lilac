@@ -986,7 +986,7 @@ p.npf_chat b {
 
 .top-details {
     display: inline-block; 
-    margin-left: 1.25em; 
+    margin-left: 18px; 
     vertical-align: middle;
     width: calc(100% - 1.5em - 56px - 44px);
     white-space: nowrap;
