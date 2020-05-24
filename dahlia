@@ -497,7 +497,7 @@ input:-ms-input-placeholder {color: {color:text};}
 
 #pop-centre nav a:hover {
     background-color: {color:accent}; 
-    color: {color:background};
+    color: {color:posts};
     border: 1px solid {color:accent};
 }
 
