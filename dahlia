@@ -680,7 +680,7 @@ svg {
     color: {color:text};
 }
 
-.tmblr-attribution {margin-top: 0.75em;}
+p.tmblr-attribution {margin-top: 1em;}
 
 {block:ifHideCaption}{block:IndexPage}
 .hide-cap {display: none;}
