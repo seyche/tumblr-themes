@@ -767,7 +767,7 @@ img {
     grid-gap: {select:photoset gutter}px; 
     {block:ifRoundedPhotoCorners}border-radius: 10px;{/block:ifRoundedPhotoCorners}
     overflow: hidden;
-    grid-template-columns: repeat(6, auto);
+	grid-template-columns: repeat(6, auto);
 }
 
 [photoset-layout] div {
@@ -1023,9 +1023,9 @@ p.npf_chat b {
     box-shadow: 1px 1px 3px {color:borders},
                 -1px 1px 3px {color:borders};
     {/block:ifDropShadows}
-    {block:ifNotDropShadows}
-    border: 1px solid {color:borders};
-    {/block:ifNotDropShadows}
+	{block:ifNotDropShadows}
+	border: 1px solid {color:borders};
+	{/block:ifNotDropShadows}
 }
 
 .info-dropdown a {
@@ -1082,6 +1082,16 @@ p.npf_chat b {
 .info .dec-icon .feather, .tags .dec-icon {margin-right: 0.75em; display: inline-block;}
 .info .subtitle {display: inline-block;}
 {/block:PermalinkPage}
+
+.pin-post {margin-left: 0.75em;}
+
+.pin-post .feather {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    color: {color:accent};
+}
 
 .lirb {vertical-align: middle; text-align: right;}
 
@@ -1771,7 +1781,10 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 {block:Date}
 <div class="info">
 
-        {block:IndexPage}<div class="upper"><a href="{Permalink}" class="notecount">{NoteCount} notes</a></div>{/block:IndexPage}
+    {block:IndexPage}<div class="info-flexy upper">
+        <a href="{Permalink}" class="notecount">{NoteCount} notes</a>
+        {block:PinnedPostLabel}<a href="{Permalink}" class="pin-post"><i data-feather="map-pin" aria-hidden="true"></i>{PinnedPostLabel}</a>{/block:PinnedPostLabel}
+    </div>{/block:IndexPage}
         
         {block:PermalinkPage}
         <div class="dec-icon">
