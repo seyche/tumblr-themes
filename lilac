@@ -855,6 +855,7 @@ p.npf_chat b {
 /*----- ANSWER -----*/
 
 .askpost {text-align: center;}
+.askpost p:last-of-type {margin-bottom: 0;}
 
 .question-wrap {
     border: 1px solid {color:borders};
