@@ -393,7 +393,6 @@ input:-ms-input-placeholder {color: {color:text};}
     margin: {text:post margin}px auto;
     text-align: center;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 #header-img {
@@ -401,6 +400,7 @@ input:-ms-input-placeholder {color: {color:text};}
     width: 100%;
     min-height: 100px;
     position: relative;
+    border-radius: 8px 8px 0 0;
 }
 
 #mainheader .icon {
