@@ -400,7 +400,9 @@ input:-ms-input-placeholder {color: {color:text};}
     width: 100%;
     min-height: 100px;
     position: relative;
+    {block:ifRoundedPostCorners}
     border-radius: 8px 8px 0 0;
+    {/block:ifRoundedPostCorners}
 }
 
 #mainheader .icon {
