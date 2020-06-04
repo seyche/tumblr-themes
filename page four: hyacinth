@@ -447,9 +447,10 @@ article .title {
     color: var(--accent);
     font-size: 1.5em;
     display: inline-block;
+    position: absolute;
 }
 
-#quote b::before { margin-right: 0.25em;}
+#quote b::before {margin-left: -0.75em;}
 
 #quote b::after {
     -webkit-transform: rotate(180deg);
@@ -458,7 +459,6 @@ article .title {
     -o-transition: rotate(180deg);
     transform: rotate(180deg);
     margin: -0.35em auto auto 0.25em;
-    position: absolute;
 }
 
 /*----- BOTTOM BOXES -----*/
