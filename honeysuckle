@@ -248,6 +248,7 @@ b, bold, strong {color: {color:bold};}
 b a, bold a, strong a {color: {color:link};}
 i, italic {color: {color:italic};}
 u, underline {color: {color:underline};}
+hr {background-color: {color:borders}; height: 1px; border-width: 0;}
 
 blockquote {
     padding: 0 0 0 1.25em;
