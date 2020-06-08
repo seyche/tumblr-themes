@@ -487,7 +487,14 @@ article .title {
 
 #social-wrap a:hover {color: var(--title);}
 
-.sideblog {margin-top: 1.25em;}
+.sideblog {
+    margin-top: 1.25em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
 .sideblog img {width: 2em; height: 2em;}
 
 .sideblog-desc {
