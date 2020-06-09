@@ -10,7 +10,7 @@
 
 <!---
     
-    THEME BY SEYCHE.TUMBLR.COM
+    DAHLIA THEME BY SEYCHE.TUMBLR.COM
     
     CREDITS:
     -feather icons by Cole Bemis
@@ -1031,10 +1031,10 @@ p.npf_chat b {
     transition: all 0.3s;
 }
 
-.likeb {position: relative; display: inline-block;}
-.likeb:hover {cursor: pointer;}
+.like-wrap {position: relative; display: inline-block;}
+.like-wrap:hover {cursor: pointer;}
  
-.likeb .like_button iframe {
+.like-wrap .like_button iframe {
    position: absolute;
    top: 0;
    left: 0;
@@ -1045,13 +1045,15 @@ p.npf_chat b {
 }
  
 .like_button iframe {width: 100% !important; height: 100% !important;}
-.likeb .liked + .lb {color: {color:accent};}
-.likeb .liked + .lb::after {content: 'd';}
+.like-wrap .liked + .lb {color: {color:accent};}
+.like-wrap .liked + .lb::after {content: 'd';}
 
 .tags {margin-top: 0.25em;}
 .tags a {margin-right: 1em;}
 .tags a::before {content: '#'; color: {color:accent};}
 {block:ifHideTags}{block:IndexPage}.tags {display: none;}{/block:IndexPage}{/block:ifHideTags}
+
+.pin-post {margin-bottom: 1em;}
 
 #perma-date {font-size: 1.15em; margin: auto auto 0.25em 7px;}
 #perma-date li {list-style-type: none; display: inline-block;}
@@ -1279,6 +1281,10 @@ ol.notes li.note img.avatar {
 
 {block:Date}
 <div class="top-info">
+    {block:IndexPage}
+    {block:PinnedPostLabel}<div class="pin-post"><a href="{Permalink}"><i data-feather="map-pin" aria-hidden="true"></i>{PinnedPostLabel}</a></div>{/block:PinnedPostLabel}
+    {/block:IndexPage}
+
     {block:RebloggedFrom}
         <a href="{ReblogRootURL}" title="{ReblogRootTitle}"><img src="{ReblogRootPortraitURL-64}" class="sourceicon icon"/></a>
         <a href="{ReblogRootURL}" title="{ReblogRootTitle}" class="subtitle">{ReblogRootName}</a>
@@ -1620,7 +1626,7 @@ ol.notes li.note img.avatar {
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
         reblog
     </a>
-    <a class="likeb">{LikeButton}<span class="lb"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>like</span></a>
+    <a class="like-wrap">{LikeButton}<span class="lb"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>like</span></a>
 </div>
 {/block:Date}
 
