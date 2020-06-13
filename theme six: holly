@@ -270,7 +270,7 @@ li {max-width: 100%;}
 aside .icon {border: 8px solid {color:accent};}
 aside .title {letter-spacing: 3px;}
 
-aside .title::after, #source::before {
+aside .title::after, .source::before {
     content: '';
     width: 3em;
     height: 4px;
