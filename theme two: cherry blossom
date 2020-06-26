@@ -638,6 +638,7 @@ img {
     border-radius: 5px;
     {/block:ifRoundedPhotoCorners}
     overflow: hidden;
+    grid-template-columns: repeat(6, auto);
 }
 
 [photoset-layout] div {
