@@ -10,7 +10,7 @@
 
 <!---
     
-    THEME BY SEYCHE.TUMBLR.COM
+    CHERRY BLOSSOM THEME BY SEYCHE.TUMBLR.COM
     
     CREDITS:
     -outicons by Anton Saputro
@@ -638,7 +638,7 @@ img {
     border-radius: 5px;
     {/block:ifRoundedPhotoCorners}
     overflow: hidden;
-    grid-template-columns: repeat(6, auto);
+	grid-template-columns: repeat(6, auto);
 }
 
 [photoset-layout] div {
@@ -720,6 +720,10 @@ p.npf_chat b {color: {color:title};}
     align-items: center;
     justify-content: space-between;
 }
+
+.player-wrap, .albumart, .audioinfo {flex: initial;}
+.player-wrap {width: 60px;}
+.albumart {width: 100px;}
  
 .albumart img {
     width: 100px;
@@ -753,6 +757,8 @@ p.npf_chat b {color: {color:title};}
     padding: 0 2em;
     display: inline-block;
     text-align: center;
+    max-width: calc(100% - 4em - 205px);
+    flex: initial;
 }
  
 .track {font-size: 1.2em; font-weight: bold;}
@@ -1189,9 +1195,11 @@ ol.notes li.note img.avatar {display: none;}
 
 {block:Audio}
 <div class="audiopost">
-    <div class="audiobox"><div class="button">
-        {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
-    </div></div>
+    <div class="player-wrap">
+        <div class="audiobox"><div class="button">
+            {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
+        </div></div>
+    </div>
     <div class="audioinfo">
         {block:TrackName}<div class="subtitle track">{TrackName}</div>{/block:TrackName}
         {block:Artist}<div class="upper">by {Artist}</div>{/block:Artist}
