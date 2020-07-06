@@ -701,7 +701,7 @@ img {
     grid-gap: {select:photoset gutter}px; 
     border-radius: 4px;
     overflow: hidden;
-    grid-template-columns: repeat(6, auto);
+	grid-template-columns: repeat(6, auto);
 }
 
 [photoset-layout] div {
@@ -1219,7 +1219,7 @@ header .secondtitle {
 
 {block:Photo}
 <div class="photo">
-    {LinkOpenTag}<a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}"></a>{LinkCloseTag}
+    {LinkOpenTag}<a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>{LinkCloseTag}
 </div>
 {block:Caption}
     {block:NotReblog}
@@ -1238,7 +1238,7 @@ header .secondtitle {
 {/block:Photo}
 
 {block:Photoset}
-<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div>{/block:Photos}</div>
+<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" /></div>{/block:Photos}</div>
 {block:Caption}
     {block:NotReblog}
         <li class="caption ogcap">
