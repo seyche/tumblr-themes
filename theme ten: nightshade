@@ -1,0 +1,2411 @@
+<!DOCTYPE html>
+<head>
+<title>{Title} {block:TagPage}/ #{Tag}{/block:TagPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!---
+    
+    NIGHTSHADE THEME BY SEYCHE.TUMBLR.COM
+    
+    CREDITS:
+    -Pxu photosets by Pixelunion / modified by bychloethemes
+    -npf photosets by codematurgy
+    -npf photoset fix by annasthms
+    -Tippy.js tooltips by atomiks
+    -responsive videos by nouvae
+    -remove redirects by magnusthemes
+    -Outicons by Anton Saputro
+    (full list of credits @ seyche.tumblr.com/credits)
+    
+--->
+
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<!----- PHOTOSETS ----->
+
+<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
+
+<!----- VARIABLES ----->
+
+<meta name="image:Header" content=""/>
+<meta name="image:Sidebar" content=""/>
+
+<meta name="color:Background" content="#ffffff"/>
+<meta name="color:Header" content="#ffffff"/>
+<meta name="color:Banner Title" content="#ffffff"/>
+<meta name="color:Banner Subtitle" content="#ffffff"/>
+<meta name="color:Banner Subtitle Background" content="#212121"/>
+<meta name="color:Text" content="#5a5a5a"/>
+<meta name="color:Link" content="#8c8c8c"/>
+<meta name="color:Accent" content="#c12b4c"/>
+<meta name="color:Borders" content="#e0e0e0"/>
+<meta name="color:Title" content="#212121"/>
+<meta name="color:Blog Details Background" content="#212121"/>
+<meta name="color:Blog Details Text" content="#ffffff"/>
+<meta name="color:Footer Background" content="#212121"/>
+<meta name="color:Footer Title" content="#ffffff"/>
+<meta name="color:Footer Text" content="#eeeeee"/>
+<meta name="color:Footer Link" content="#c9c9c9"/>
+<meta name="color:Footer Borders" content="#7b7b7b"/>
+
+<meta name="select:Body Font" content="Karla" title="Karla"/>
+<meta name="select:Body Font" content="Lato" title="Lato"/>
+<meta name="select:Body Font" content="Nunito" title="Nunito"/>
+<meta name="select:Body Font" content="Open Sans" title="Open Sans"/>
+<meta name="select:Body Font" content="PT Sans" title="PT Sans"/>
+<meta name="select:Body Font" content="Roboto" title="Roboto"/>
+
+<meta name="select:Title Font" content="Lora" title="Lora"/>
+<meta name="select:Title Font" content="Playfair Display" title="Playfair Display"/>
+<meta name="select:Title Font" content="Libre Baskerville" title="Libre Baskerville"/>
+<meta name="select:Title Font" content="Montserrat" title="Montserrat"/>
+<meta name="select:Title Font" content="Lato" title="Lato"/>
+<meta name="select:Title Font" content="Open Sans" title="Open Sans"/>
+
+<meta name="select:Font Size" content="15px" title="15px"/>
+<meta name="select:Font Size" content="12px" title="12px"/>
+<meta name="select:Font Size" content="13px" title="13px"/>
+<meta name="select:Font Size" content="14px" title="14px"/>
+<meta name="select:Font Size" content="16px" title="16px"/>
+<meta name="select:Font Size" content="17px" title="17px"/>
+<meta name="select:Font Size" content="18px" title="18px"/>
+
+<meta name="select:Post Width" content="540px" title="540px"/>
+<meta name="select:Post Width" content="400px" title="400px"/>
+<meta name="select:Post Width" content="450px" title="450px"/>
+<meta name="select:Post Width" content="500px" title="500px"/>
+
+<meta name="select:Photoset Gutter" content="4" title="4px"/>
+<meta name="select:Photoset Gutter" content="3" title="3px"/>
+<meta name="select:Photoset Gutter" content="2" title="2px"/>
+<meta name="select:Photoset Gutter" content="1" title="1px"/>
+
+<meta name="if:Full Width Banner" content="1"/>
+<meta name="if:Show Blog Title" content="1"/>
+<meta name="if:Show Blog Details Bar" content="1"/>
+<meta name="if:Blog URL" content="1"/>
+<meta name="if:Blog Icon" content="1"/>
+<meta name="if:Search Bar" content="1"/>
+
+<meta name="if:About Box" content="1"/>
+<meta name="if:Navigation Box" content="1"/>
+<meta name="if:Updates Box" content="1"/>
+<meta name="if:Projects Box" content="1"/>
+<meta name="if:Members Box" content="1"/>
+<meta name="if:Affiliates Box" content="1"/>
+<meta name="if:Statistics Box" content="1"/>
+<meta name="if:Blog Status Box" content="1"/>
+
+<meta name="if:Reblog Info On Click" content="1"/>
+<meta name="if:Tags On Click" content="1"/>
+<meta name="if:Hide Caption" content="0"/>
+
+<meta name="if:Footer Content" content="1"/>
+<meta name="if:Social Media Links" content="1"/>
+
+<meta name="text:Blog Subtitle" content=""/>
+<meta name="text:Banner Height" content="450"/>
+<meta name="text:Post Margin" content="150"/>
+
+<meta name="text:Home Link" content="home"/>
+<meta name="text:Ask Link" content="message"/>
+<meta name="text:Archive Link" content="archive"/>
+<meta name="text:Header Link 1 URL" content=""/>
+<meta name="text:Header Link 1" content=""/>
+<meta name="text:Header Link 2 URL" content=""/>
+<meta name="text:Header Link 2" content=""/>
+<meta name="text:Header Link 3 URL" content=""/>
+<meta name="text:Header Link 3" content=""/>
+<meta name="text:Header Link 4 URL" content=""/>
+<meta name="text:Header Link 4" content=""/>
+
+<meta name="text:Side Link 1 URL" content=""/>
+<meta name="text:Side Link 1" content=""/>
+<meta name="text:Side Link 2 URL" content=""/>
+<meta name="text:Side Link 2" content=""/>
+<meta name="text:Side Link 3 URL" content=""/>
+<meta name="text:Side Link 3" content=""/>
+<meta name="text:Side Link 4 URL" content=""/>
+<meta name="text:Side Link 4" content=""/>
+<meta name="text:Side Link 5 URL" content=""/>
+<meta name="text:Side Link 5" content=""/>
+<meta name="text:Side Link 6 URL" content=""/>
+<meta name="text:Side Link 6" content=""/>
+<meta name="text:Side Link 7 URL" content=""/>
+<meta name="text:Side Link 7" content=""/>
+<meta name="text:Side Link 8 URL" content=""/>
+<meta name="text:Side Link 8" content=""/>
+
+<meta name="text:Disclaimer Title" content="Disclaimer"/>
+<meta name="text:Disclaimer" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://unpkg.com/feather-icons"></script>
+
+<script src="https://kit.fontawesome.com/6ac5c36b23.js"></script>
+
+<!----- LOAD IN ----->
+ 
+<script>
+$(document).ready(function(){
+    $(function() {
+        $('body').removeClass('load-in');
+    });
+});
+</script>
+
+<style type="text/css">
+
+body {
+    font-family: '{select:body font}', sans-serif;
+    font-size: {select:font size};
+    color: {color:text};
+    background-color: {color:background};
+    text-align: left;
+    line-height: 160%;
+    word-wrap: break-word;
+    letter-spacing: 0.3px;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 2s opacity;
+    -moz-transition: 2s opacity;
+    -ms-transition: 2s opacity;
+    -o-transition: 2s opacity;
+    transition: 2s opacity;
+}
+
+body.load-in {
+    opacity: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+a {
+    color: {color:link}; 
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+a:hover {
+    color: {color:accent};
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+p a {box-shadow: inset 0 -2px 0 {color:accent};}
+p a:hover {box-shadow: inset 0 -1.25em 0 {color:accent}; color: {color:background};}
+
+blockquote {
+    padding: 0 0 0 1.25em;
+    border-left: 1px solid {color:borders};
+    margin: 1.25em 0 1.25em 1.25em;
+}
+
+h1, h2, h3, h4, h5, .title {
+    color: {color:title};
+    letter-spacing: 2px;
+    line-height: 160%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: '{select:title font}', serif;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, .title a {color: {color:title};}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, .title a:hover {color: {color:accent}}
+h1, .title {font-size: 1.5em;}
+h2 {font-size: 1.3em;}
+h3 {font-size: 1.25em;}
+h4 {font-size: 1.1em;}
+h5 {font-size: 1em;}
+
+small {font-size: 0.9em;}
+big {font-size: 1.1em;}
+b, bold, strong {color: {color:title};}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: {color:borders};
+}
+
+ul {list-style-type: circle;}
+ol {list-style-type: decimal;}
+li {max-width: 100%;}
+
+.tippy-tooltip.custom-theme {
+    background-color: {color:title};
+    color: {color:background};
+    border-radius: 3px;
+    text-align: center;
+    font-family: inherit;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-style: normal;
+    padding: 0.25em;
+    margin: 20px auto auto 10px;
+    font-size: 0.8em;
+}
+
+::-webkit-scrollbar {
+    width: 17px; 
+    height: 17px;
+    background-color: {color:background};
+}
+
+::-webkit-scrollbar-track {border: 8px solid {color:background}; background-color: {color:borders};}
+ 
+::-webkit-scrollbar-thumb {
+   border: 6px solid {color:background};
+   background-color: {color:title};
+   min-height: 24px;
+   min-width: 24px;
+}
+
+.tmblr-iframe-compact .tmblr-iframe--unified-controls {
+    z-index: 999999999!important;
+    opacity: 0.6;
+    transform: scale(0.8);
+    transform-origin: 100% 0;
+    -webkit-transform: scale(0.8);
+    -webkit-transform-origin: 100% 0;
+    -o-transform: scale(0.8);
+    -o-transform-origin: 100% 0;
+    -moz-transform: scale(0.8);
+    -moz-transform-origin: 100% 0;
+    -ms-transform: scale(0.8);
+    -ms-transform-origin: 100% 0;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+ 
+.tmblr-iframe-compact .tmblr-iframe--unified-controls:hover {
+    opacity: 1.0;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+ 
+.tmblr-iframe--app-cta-button {display: none !important;}
+
+/*----- HEADER NAVIGATION -----*/
+
+#top-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid {color:borders};
+    padding: 1.25em;
+    text-align: center;
+    z-index: 100;
+    background-color: {color:header};
+}
+
+#top-bar nav {font-size: 1em;}
+#top-bar nav li {display: inline-block; list-style-type: none;}
+
+#top-bar nav li::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: {color:accent};
+    display: inline-block;
+    vertical-align: middle;
+    margin: auto 1.5em 0.15em 1.5em;
+}
+
+#top-bar nav li:last-of-type::after {display: none;}
+#top-bar li a {border-bottom: 4px solid transparent; padding-bottom: calc(1.25em - 1px);}
+#top-bar li a:hover {border-bottom: 4px solid {color:accent};}
+
+/*----- BANNER -----*/
+
+#banner {
+    position: relative;
+    {block:ifFullWidthBanner}width: 100%;{/block:ifFullWidthBanner}
+    {block:ifNotFullWidthBanner}
+    width: calc({select:post width} + 275px + 275px + 150px);
+    margin: auto;
+    {/block:ifNotFullWidthBanner}
+    height: {text:banner height}px;
+    top: 4.1em;
+    color: {color:banner title};
+    overflow: hidden;
+    {block:ifHeaderImage}
+    background-image: url('{image:Header}');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    {/block:ifHeaderImage}
+}
+
+#banner-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 75%;
+    margin: auto;
+}
+
+#banner-title {
+    font-family: '{select:title font}', serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    line-height: 160%;
+    text-transform: uppercase;
+    flex: initial;
+}
+
+#banner-subtitle {
+    background-color: {color:banner subtitle background};
+    color: {color:banner subtitle};
+    padding: 0.25em 0.75em;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-top: 0.75em;
+    flex: initial;
+}
+
+/*----- BLOG DETAILS HEADER BAR -----*/
+
+#secondary-bar {
+    position: relative;
+    {block:ifHeaderImage}margin: 3em auto auto auto;{/block:ifHeaderImage}
+    {block:ifNotHeaderImage}margin: 4.1em auto auto auto;{/block:ifNotHeaderImage}
+    z-index: 2;
+    background-color: {color:blog details background};
+    width: calc({select:post width} + 275px + 275px + 150px);
+    border-radius: 3px;
+    padding: 1em 1.5em;
+    box-sizing: border-box;
+}
+
+#secondary-bar .icon {
+    width: 2.5em; 
+    height: 2.5em;
+    border: 1px solid {color:footer borders};
+}
+
+#secondary-bar .subtitle {display: inline-block; margin-left: 1em; font-size: 1.15em;}
+#secondary-bar .subtitle a {color: {color:blog details text};}
+#secondary-bar .subtitle a:hover {color: {color:accent};}
+
+#blog-details, #search {flex: initial;}
+
+.find svg {
+    width: 1.25em;
+    height: 1.25em;
+    fill: {color:blog details text};
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+ 
+.find input {
+    border: 0;
+    outline: none;
+    display: inline-block;
+    background: inherit;
+    margin: 0;
+    padding: 0;
+    color: {color:blog details text};
+    text-align: left;
+    font-family: inherit;
+    width: 225px;
+}
+ 
+.find input[type=text] {color: {color:blog details text};}    
+input::-webkit-input-placeholder {color: {color:blog details text};}
+input::-moz-placeholder {color: {color:blog details text};}
+input:-moz-placeholder {color: {color:blog details text};}
+input:-ms-input-placeholder {color: {color:blog details text};}
+
+/*----- MAIN CONTAINERS -----*/
+
+#container {
+    width: calc({select:post width} + 275px + 275px + 150px);
+    {block:ifShowBlogDetailsBar}margin: 75px auto auto auto;{/block:ifShowBlogDetailsBar}
+    {block:ifNotShowBlogDetailsBar}margin: calc(4.1em + 50px) auto auto auto;{/block:ifNotShowBlogDetailsBar}
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+aside {
+    position: relative;
+    width: 275px;
+    height: auto;
+    flex: initial;
+    display: block;
+}
+
+/*----- SIDE BOXES -----*/
+
+.side-box {
+    box-sizing: border-box;
+    background-color: {color:background};
+    margin-bottom: 75px;
+    border: 1px solid {color:borders};
+    padding: 1.5em;
+    text-align: center;
+}
+
+.side-box .title {
+    font-size: 1em;
+    color: {color:title};
+    text-align: center;
+    margin-top: -2.25em;
+}
+
+.side-box .title span, .askpost .title span {
+    background-color: {color:background};
+    padding: 0.25em 1.25em;
+}
+
+.side-box .title::after {
+    content: '';
+    width: 25px;
+    margin: 0.5em auto auto auto;
+    display: block;
+    border-bottom: 5px dotted {color:accent};
+}
+
+.side-box img {max-width: 100%;}
+
+.side-content {box-sizing: border-box;  margin-top: 1em;}
+
+#side-img {max-width: 100%; margin-bottom: 2em;}
+
+/*----- NAVIGATION BOX -----*/
+
+#nav-box .side-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#nav-box li {
+    list-style-type: none;
+    width: 48%;
+    margin-bottom: 0.5em;
+}
+
+#nav-box li a {padding: 0.15em 0.25em;}
+#nav-box li a, #nav-box li a:hover {border-bottom: none;}
+
+#nav-box li a .numbers {
+    color: {color:title};
+    font-family: '{select:title font}', serif;
+    font-weight: bold;
+    margin-right: 0.5em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#nav-box li a:hover {color: {color:background}; box-shadow: inset 0 -1.5em 0 {color:accent};}
+
+#nav-box li a:hover .numbers {
+    color: {color:background};
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*----- UPDATES -----*/
+
+#updates-box .side-content li {
+    list-style-type: none; 
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#updates-box .side-content .subtitle {
+    float: left;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+#updates-box .side-content .subtitle span {
+    font-size: 1.5em;
+    display: block;
+    font-family: '{select:title font}', serif;
+    font-weight: bold;
+}
+
+#updates-box .upd-text {
+    text-align: left;
+    padding-left: 1em;
+    width: 75%;
+}
+
+/*----- PROJECTS BOX -----*/
+
+#project-box .project {
+    text-align: left;
+    background-color: {color:title};
+    border-radius: 3px;
+    overflow: hidden;
+    color: {color:background};
+    margin-top: 1em;
+}
+
+#project-box .project img {width: 100%;}
+#project-box .project-text {padding: 1.5em;}
+#project-box .project-text li {list-style-type: none; color: rgba({RGBcolor:background}, 0.9);}
+#project-box .subtitle {color: {color:background}; font-size: 1.15em;}
+#project-box .project .upper {color: {color:background}; margin-right: 0.5em;}
+
+#project-box .project a {
+    background-color: {color:accent};
+    color: {color:background};
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    padding: 0.25em 0.75em;
+    border-radius: 3px;
+    margin-top: 0.5em;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+}
+
+#project-box .project a:hover {background-color: {color:background}; color: {color:title};}
+
+/*----- MEMBERS BOX -----*/
+
+#members-box li.blog-member {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 0.75em;
+}
+
+#members-box li.blog-member:first-of-type {margin-top: 0;}
+
+#members-box .blog-member .icon {
+    width: 3em;
+    height: 3em;
+    margin-right: 1em;
+}
+
+#members-box .blog-member a {color: {color:title}; font-weight: bold;}
+#members-box .blog-member a:hover {color: {color:accent};}
+#members-box li.blog-member a, #members-box li.blog-member a:hover {border-bottom: none;}
+
+/*----- AFFILIATES BOX -----*/
+
+#affiliates-box .side-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#affiliates-box a {
+    border: 1px solid {color:borders};
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 10px;
+    margin: 4px auto;
+    overflow: hidden;
+}
+
+#affiliates-box a:hover {border: 1px solid {color:accent};}
+
+#affiliates-box a svg {
+    box-sizing: border-box;
+    width: 42px;
+    height: 42px;
+    fill: {color:background};
+    padding: 10px;
+    background-color: {color:accent};
+    border-radius: 50%;
+}
+
+#affiliates-box img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#affiliates-box img:hover {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.6;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/*----- STATSTICS BOX -----*/
+
+#stats-box li {list-style-type: none; text-align: left;} 
+
+#stats-box .upper {color: {color:title}; margin-right: 0.5em;}
+
+/*----- STATUS BOX -----*/
+
+#status-box .status-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin-top: 0.25em;
+}
+
+.status-item:first-of-type {margin-top: 1em;}
+
+.toggle-on, .toggle-off {
+    width: 2em;
+    height: 1em;
+    border-radius: 1em;
+}
+
+.toggle-on {background-color: {color:accent};}
+.toggle-off {background-color: {color:title};}
+
+.toggle-on::before, .toggle-off::before {
+    content: '';
+    display: inline-block;
+    border: 1px solid {color:borders};
+    width: 1.15em;
+    height: 1.15em;
+    border-radius: 50%;
+    background-color: {color:background};
+    box-sizing: border-box;
+}
+
+.toggle-on::before {margin: -0.25em auto 0.05em 1.1em;}
+.toggle-off::before {margin: -0.25em auto 0.05em -1.1em;}
+
+/*----- POSTS -----*/
+
+#posts-wrap {
+    flex: initial;
+    height: auto;
+    width: {select:post width};
+    display: block;
+}
+
+article {
+    width: {select:post width};
+    position: relative;
+    margin: {text:post margin}px auto;
+}
+
+article:first-of-type {margin-top: 0;}
+
+.tumblr_video_container {max-height: {select:post width}!important; overflow: hidden!important;
+}
+.posts li, .posts blockquote, .posts img, figure, video, iframe, .video, .video iframe {max-width: 100%;}
+.video iframe {width: 100%;}
+.postsource {display: none;}
+
+/*----- COMMON STYLES -----*/
+
+.subtitle {
+    color: {color:title};
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.subtitle a {color: {color:title};}
+.subtitle a:hover {color: {color:accent};}
+
+.upper {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.icon {
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid {color:borders};
+    padding: 3px;
+    box-sizing: border-box;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#secondary-bar:hover .icon, .blog-member:hover .icon, .bottom-info-left:hover .icon, .info-fade .icon:hover {
+    border: 1px solid {color:accent};
+}
+
+.align-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+svg {display: inline-block; vertical-align: middle;}
+
+.blackbox {
+    background-color: {color:blog details background};
+    color: {color:blog details text};
+    box-sizing: border-box;
+    padding: 1.5em;
+    border-radius: 3px;
+    width: {select:post width};
+    position: relative;
+    margin: 0 auto 20px auto;
+}
+
+.blackbox .title {
+    color: {color:accent}; 
+    font-size: 1.15em;
+    text-transform: lowercase;
+    letter-spacing: 0.2px;
+    font-style: italic;
+}
+
+/*----- CAPTION -----*/
+
+.caption {
+    margin: 0; 
+    list-style-type: none;
+    padding: 2em 0;
+    border-bottom: 1px solid {color:borders};
+}
+
+.caption:last-of-type {margin-bottom: 1.5em;}
+
+.caption p {margin: 1em 0;}
+.caption p:last-of-type {margin-bottom: 0;}
+.ogcap p:first-of-type {margin-top: 0;}
+
+.body:first-of-type {margin-top: 0; padding-top: 0;}
+.body:last-of-type {border-bottom: none; padding-bottom: 0;}
+.caption iframe, .caption img {max-width: 100%;}
+
+.capicon {width: 2em; height: 2em;}
+
+.username {display: inline-block; margin-left: 1em;}
+.username a, .username a:hover {border-bottom: none;}
+
+.caption:hover .icon {
+    border: 1px solid {color:accent};
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.deactive::after {
+    content: '(deactivated)';
+    margin-left: 1em;
+    opacity: 0.8;
+    color: {color:text};
+}
+
+p.tmblr-attribution {margin-top: 1em !important;}
+
+{block:ifHideCaption}{block:IndexPage}
+.hide-cap {display: none;}
+{/block:IndexPage}{/block:ifHideCaption}
+
+/*----- TEXT -----*/
+
+pre {
+    line-height: inherit;
+    font-size: inherit;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+@font-face {
+    font-family: Calluna;
+    src: url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.eot?3=&v=f685dc881c60c298ea22a73fe505b88a");
+    src: url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.eot?3%3F=&v=f685dc881c60c298ea22a73fe505b88a#iefix") format("embedded-opentype"),url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.woff?3=&v=760a50f4d098e59aebaf0f0e58ae2cc8") format("woff"),url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.ttf?3=&v=5ace789439bff3b27f8d4112725531da") format("truetype"),url("https://assets.tumblr.com/fonts/calluna/Calluna-BoldIt-webfont.svg?3=&v=5b95c481dd7411c6e112143d6646bd9b#_.regular") format("svg");
+    font-weight: 700;
+    font-style: italic
+}
+
+@font-face {
+    font-family: Fairwater;
+    src: url("https://assets.tumblr.com/fonts/fairwater/fairwater_script_regular-webfont.woff2?v=b7ab7a58cded3365889a447bfd9e9c45") format("woff2"),url("https://assets.tumblr.com/fonts/fairwater/fairwater_script_regular-webfont.woff?v=96e975b7468359e6f67086305577e43e") format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+p.npf_quirky {font-family: Fairwater; font-size: 1.75em;}
+
+.npf_color_joey {color: #e57373;}
+.npf_color_monica {color: #ff8a65;}
+.npf_color_phoebe {color: #ffee58;}
+.npf_color_ross {color: #81c784;}
+.npf_color_rachel {color: #4fc3f7;}
+.npf_color_chandler {color: #9575cd;}
+.npf_color_niles {color: #f06292;}
+
+a.read_more {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: {color:title};
+    color: {color:background};
+    padding: 0.5em 0.75em;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+ 
+a.read_more:hover {background-color: {color:accent};}
+a.read_more, a.read_more:hover {box-shadow: none;}
+ 
+p.read_more_container {margin: 2em 0; text-align: center;}
+
+/*----- LINK -----*/
+
+.linkp {
+    color: {color:text};
+    border: 1px solid {color:borders};
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.linkp:hover {
+    border: 1px solid {color:blog details background};
+    color: {color:blog details text};
+    background-color: {color:blog details background};
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.linkp .title {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.linkp:hover .title {
+    color: {color:blog details text};
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.thumbnail {max-width: 100%; border-bottom: 1px solid {color:borders};}
+.link {padding: 30px;}
+.link-host, .link-txt {margin-top: 1.5em;}
+
+.npf-link-block {
+    margin-top: 1.25em;
+    border-radius: 3px;
+    border: 1px solid {color:borders};
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.npf-link-block:hover {
+    border: 1px solid {color:accent};
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+ 
+.npf-link-block .poster .title {background-color: initial; padding: 30px;}
+.npf-link-block .title {font-size: 1.25em; border-bottom: none;}
+.npf-link-block .bottom {padding: 30px !important; color: {color:text};}
+ 
+.npf-link-block .bottom .site-name {
+    font-size: 0.9em;
+    color: {color:text};
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+/*----- PHOTO -----*/
+ 
+img {
+    margin: 0;
+    display: block;
+    height: auto;
+}
+ 
+.photo img {width: 100%;}
+.vignette, #vignette {opacity: 0;}
+.tmblr-lightbox, #tumblr_lightbox {background-color: rgba(60, 60, 60, .8) !important;}
+ 
+.lightbox-image, #tumblr_lightbox img {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: none;
+}
+
+/*----- PHOTOSET -----*/
+
+.post-content div.npf_row, .post div.npf_row, body div.npf_row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.captext figure {margin: 1em 0;}
+.captext figure .tmblr-full {margin-top: {select:photoset gutter}px;}
+.tmblr-full:hover {cursor: pointer;}
+.npf_image, .tmblr-full {border: none; outline: none;}
+
+.text-post .photo-slideshow.processed {padding-bottom: 2em;}
+
+/*----- QUOTE -----*/
+
+.quote, p.npf_quote {
+    color: {color:title};
+    font-family: '{select:title font}', serif;
+    font-style: italic;
+    font-size: 1.25em;
+    line-height: 160%;
+}
+
+.quote p:first-of-type {margin-top: 0;}
+.quote p:last-of-type {margin-bottom: 0;}
+
+.quote-mark {
+    font-size: 3em;
+    color: {color:title};
+    margin-top: 0.5em;
+}
+
+.quote-mark::after {
+    content: '';
+    width: 100px;
+    height: 0.1em;
+    background-color: {color:accent};
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 0.25em;
+}
+
+p.npf_quote {font-family: inherit; margin-bottom: 1em;}
+
+.source {margin-top: 0.5em;}
+
+/*----- CHAT -----*/
+
+.chat {padding: 0; margin: 0;}
+.chat li {list-style-type: none;}
+.line {padding: 1.5em 0; border-bottom: 1px solid {color:borders};}
+.line:first-of-type {padding: 0 0 1.5em 0;}
+.line:last-of-type {padding: 1.5em 0 0.5em 0; border-bottom: none;}
+
+.line:nth-of-type(even) .subtitle {color: {color:accent};}
+
+p.npf_chat {font-family: inherit; margin-top: 1em;}
+ 
+p.npf_chat b {
+    color: {color:title};
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: '{select:title font}', serif;
+    font-size: 0.9em;
+}
+
+/*----- ANSWER -----*/
+
+.askpost {
+    border: 1px solid {color:borders}; 
+    padding: 2em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.askpost .title {margin-bottom: -2.5em; font-size: 1em;}
+.askpost .icon {width: 1.5em; height: 1.5em; margin-right: 0.5em;}
+
+.question {padding-bottom: 1.5em;}
+.question p:first-of-type {margin-top: 0;}
+.question p:last-of-type {margin-bottom: 0;}
+
+/*----- AUDIO -----*/
+ 
+.audiopost {padding: 1.5em; border: 1px solid {color:borders};}
+ 
+.albumart {
+    z-index: 1;
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+ 
+.button {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    margin: 8px 7px 6px 7px;
+}
+ 
+.audiobox {
+    background-color: #f2f2f2;
+    z-index: 50;
+    position: absolute;
+    margin: 28px 0 0 28px;
+    border-radius: 50%;
+    opacity: 0.5;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+ 
+.audioinfo {
+    position: relative;
+    height: 100px;
+    width: calc(100% - 102px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 2em;
+}
+ 
+.audioinfo li {list-style-type: none;}
+.track {font-size: 1.15em;}
+ 
+.audiopost:hover .audiobox {
+    opacity: 0.9;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+}
+
+/*----- INFO -----*/
+
+.info svg {width: 1.25em; height: 1.25em;}
+.info a svg {fill: {color:link};}
+.info a:hover svg {fill: {color:accent};}
+
+.pin-post {text-align: center; margin-bottom: 1.5em; font-size: 1.15em;}
+
+.pin-post svg {
+    fill: {color:accent}; 
+    width: 1.5em; 
+    height: 1.5em;
+    margin-right: 0.5em;
+}
+
+/*----- MIDDLE INFO -----*/
+
+.mid-info {
+    margin-top: 1.5em;
+    border-bottom: 1px solid {color:borders};
+    padding-bottom: 1em;
+}
+
+.date {font-weight: bold; color: {color:title};}
+
+.notecount::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: {color:accent};
+    margin: auto 0.75em 0.15em 0.75em;
+}
+
+.info-controls {display: inline-block; line-height: 1em;}
+.info-controls a {vertical-align: middle; margin-left: 0.5em;}
+ 
+.info-controls svg:hover {
+    fill: {color:title};
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.info-button, .tag-button, .copy-button {cursor: help;}
+
+{block:ifCopyLinktoPost}
+.copy-button {display: inline-block;}
+
+.copy-message {
+    position: absolute;
+    background-color: {color:title};
+    color: {color:background};
+    border-radius: 3px;
+    padding: 0.25em 0.75em;
+    margin-left: calc({select:post width} - 7.5em - 130px);
+    display: none;
+}
+{/block:ifCopyLinktoPost}
+ 
+.like-wrap {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.25em;
+    height: 1.25em;
+    cursor: pointer;
+}
+ 
+.like_button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+}
+ 
+.new-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+ 
+.like_button iframe {width: 100% !important; height: 100% !important;}
+.like_button.liked + .new-button svg {fill: #d32f2f;}
+
+/*----- BOTTOM INFO -----*/
+
+.bottom-info {margin-top: 1em;}
+
+.bottom-info-left {
+    width: calc(100% - 7em);
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.bottom-info-left .upper {display: inline-block; margin-left: 1em; min-width: 0;}
+
+.bottom-info-left .upper a {font-weight: bold; color: {color:title};}
+.bottom-info-left .upper a:hover {color: {color:accent};}
+.bottom-info-left .icon {width: 2em; height: 2em;}
+
+.info-fade {display: inline-block;}
+.info-fade .icon:hover {opacity: 0.7;}
+
+.bottom-info-right .icon {width: 1.25em; height: 1.25em; padding: 1px;}
+.bottom-info-right a {margin-left: 0.5em;}
+
+/*---- TAGS -----*/
+
+.tags {margin-top: 0.5em;}
+.tags a {margin-right: 0.75em;}
+
+.tags svg {
+    width: 1.25em; 
+    height: 1.25em; 
+    fill: {color:accent};
+    margin-right: 0.25em;
+}
+
+.button-clicked svg {fill: {color:accent} !important;}
+
+/*---- POST NOTES -----*/
+
+.notes .subtitle {
+    font-size: 1.25em;
+    border-bottom: 1px solid {color:borders};
+    padding-bottom: 1em;
+}
+
+.notes {margin: 100px 0;}
+
+ol.notes {
+    list-style-type: none;
+    max-width: 100%;
+    padding: 0;
+    margin: 2em 0 0 0;
+}
+
+ol.notes li.note {padding: 0.5em 0; display: block;}
+ol.notes li.note a {border-bottom: none;}
+
+ol.notes li.note img.avatar {
+    border-radius: 50%;
+    margin-right: 1em;
+    vertical-align: middle;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    box-sizing: border-box;
+    border: 1px solid {color:borders};
+    padding: 2px;
+}
+
+a.more_notes_link {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: {color:title};
+}
+
+a.more_notes_link:hover {color: {color:accent};}
+
+/*---- PAGINATION -----*/
+
+#pg {text-align: center;}
+
+#pg .align-flex {border-bottom: 1px solid {color:borders}; padding-bottom: 1em;}
+#pg .title {font-size: 1em;}
+
+#pg-numbers {margin-top: 2em;}
+
+#pg-numbers a {
+    margin: 0 0.5em;
+    color: {color:title};
+    padding: 0.5em 0.75em;
+    border-radius: 3px;
+    background-color: {color:title};
+    color: {color:background};
+    box-sizing: border-box;
+}
+
+#pg-numbers a svg {fill: {color:background}; width: 1em; height: 1em;}
+ 
+.currentpg {margin: 0 0.5em;}
+ 
+#pg-numbers a:hover, .currentpg {
+    background-color: {color:accent};
+    color: {color:background};
+    padding: 0.5em 0.75em;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/*---- FOOTER -----*/
+
+footer {
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: {color:footer background};
+    color: {color:footer text};
+    box-sizing: border-box;
+    padding: 3em 4em;
+}
+
+footer a {color: {color:footer link};}
+footer .title {color: {color:footer title}; font-size: 1.15em;}
+
+#footer-content {
+    width: calc({select:post width} + 275px + 275px + 150px);
+    margin: auto;
+}
+
+#footer-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border-bottom: 1px solid {color:footer borders};
+    padding-bottom: 1.5em;
+}
+
+#footer-left, #footer-right {flex: initial; box-sizing: border-box;}
+
+#footer-left {
+    {block:ifSocialMediaLinks}width: 60%;{/block:ifSocialMediaLinks}
+    {block:ifNotSocialMediaLinks}width: 100%;{/block:ifNotSocialMediaLinks}
+}
+    
+#footer-right {width: 40%; padding-left: 3em;}
+
+.footer-text {margin-top: 0.5em;}
+.footer-text a .fab {font-size: 1.5em; margin-right: 0.75em;}
+
+#footer-bottom {
+    text-align: center;
+    {block:ifFooterContent}margin-top: 1.5em;{/block:ifFooterContent}
+}
+
+#footer-bottom li {list-style-type: none; display: inline-block;}
+
+#footer-bottom li::after {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin: auto 0.75em 0.15em 0.75em;
+    background-color: {color:accent};
+}
+
+#footer-bottom li:last-of-type::after {display: none;}
+
+#btop a {cursor: help;}
+
+/*---- RESPONSIVENESS -----*/
+
+@media only screen and (max-width: 1365px) and (min-width: 1279px) {
+    #secondary-bar, #container, #footer-content {
+        width: calc({select:post width} + 275px + 275px + 100px);
+    }
+    
+    {block:ifNotFullWidthBanner}
+    #banner {width: calc({select:post width} + 275px + 275px + 100px);}
+    {/block:ifNotFullWidthBanner}
+    
+    #container {
+        {block:ifShowBlogDetailsBar}margin: 50px auto auto auto;{/block:ifShowBlogDetailsBar}
+    }
+}
+
+@media only screen and (max-width: 1278px) {
+    #secondary-bar, #container, #footer-content {
+        width: calc(400px + 225px + 225px + 125px);
+    }
+    
+    {block:ifNotFullWidthBanner}
+    #banner {width: calc(400px + 225px + 225px + 125px);}
+    {/block:ifNotFullWidthBanner}
+    
+    aside {width: 225px;}
+    
+    #container {
+        {block:ifShowBlogDetailsBar}margin: 50px auto auto auto;{/block:ifShowBlogDetailsBar}
+    }
+    
+    #posts-wrap, article {max-width: 400px;}
+}
+
+{CustomCSS}
+
+</style>
+</head>
+
+<body class="load-in">
+
+<!----- HEADER NAVIGATION ----->
+
+<header id="top-bar">
+    <div id="header-flex">
+        <div class="top-bar-left">
+            
+        </div>
+        <nav class="upper">
+            {block:ifHomeLink}<li><a href="/">{text:Home Link}</a></li>{/block:ifHomeLink}
+            {block:ifAskLink}<li><a href="/ask">{text:Ask Link}</a></li>{/block:ifAskLink}
+            {block:ifArchiveLink}<li><a href="/archive">{text:Archive Link}</a></li>{/block:ifArchiveLink}
+            {block:ifHeaderLink1}<li><a href="{text:Header Link 1 URL}">{text:Header Link 1}</a></li>{/block:ifHeaderLink1}
+            {block:ifHeaderLink2}<li><a href="{text:Header Link 2 URL}">{text:Header Link 2}</a></li>{/block:ifHeaderLink2}
+            {block:ifHeaderLink3}<li><a href="{text:Header Link 3 URL}">{text:Header Link 3}</a></li>{/block:ifHeaderLink3}
+            {block:ifHeaderLink4}<li><a href="{text:Header Link 4 URL}">{text:Header Link 4}</a></li>{/block:ifHeaderLink4}
+        </nav>
+    </div>
+</header>
+
+<!----- BANNER ----->
+
+{block:ifHeaderImage}
+<header id="banner">
+    {block:ifShowBlogTitle}
+    <div id="banner-flex">
+        <div id="banner-title">{Title}</div>
+        {block:ifBlogSubtitle}<div id="banner-subtitle" class="upper">{text:Blog Subtitle}</div>{/block:ifBlogSubtitle}
+    </div>
+    {/block:ifShowBlogTitle}
+</header>
+{/block:ifHeaderImage}
+
+<!----- SEARCH AND BLOG DETAILS BAR ----->
+
+{block:ifShowBlogDetailsBar}
+<header id="secondary-bar" class="align-flex">
+    <div id="blog-details">
+        {block:ifBlogIcon}<img src="{PortraitURL-64}" class="icon">{/block:ifBlogIcon}
+        {block:ifBlogURL}<div class="subtitle" id="blogurl"><a href="/">{Name}</a></div>{/block:ifBlogURL}
+    </div>
+    {block:ifSearchBar}
+    <div id="search">
+        <form action="/search" method="get" class="find" name="sform">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M140,134.2c10.9-11.8,17.7-27.6,17.7-45c0-36.5-29.7-66.3-66.3-66.3S25.1,52.7,25.1,89.2s29.7,66.3,66.3,66.3c14.9,0,28.6-4.9,39.7-13.2l49.3,49.3c1.2,1.2,2.7,1.8,4.2,1.8c1.5,0,3.1-0.6,4.2-1.8c2.3-2.3,2.3-6.1,0-8.5L140,134.2z M37.1,89.2c0-29.9,24.3-54.3,54.3-54.3c29.9,0,54.3,24.3,54.3,54.3s-24.3,54.3-54.3,54.3C61.4,143.5,37.1,119.1,37.1,89.2z"/></svg>
+            <input type="text" name="q" placeholder="search this blog" value="{SearchQuery}" class="upper" value autocomplete="off"/>
+        </form>
+    </div>
+    {/block:ifSearchBar}
+</header>
+{/block:ifShowBlogDetailsBar}
+
+<!----- CONTAINER DIV. DON'T TOUCH ----->
+
+<section id="container">
+
+<!----- LEFT SIDE BOXES ----->
+
+<aside id="left-side">
+
+    <!----- ================================
+   
+         START EDITING LEFT SIDEBAR CONTENT HERE
+           
+    ====================================== ----->
+
+    <!----- 
+    
+    ABOUT SIDE BOX 
+    
+    The only thing you need to edit in the HTML is the title between <span></span>. Your description and sidebar image can be added in the customization panel.
+    
+    ----->
+    
+    {block:ifAboutBox}
+    <div class="side-wrap">
+        {block:ifSidebarImage}<img src="{image:Sidebar}" id="side-img"/></a>{/block:ifSidebarImage}
+        <div class="side-box" id="main-info">
+        
+            <div class="title">
+                <span>about</span> 
+            </div>
+                
+                <div class="side-content">
+                    {block:Description}<div id="description">{Description}</div>{/block:Description}
+                </div>
+        </div>
+    </div>
+    {/block:ifAboutBox}
+    
+    <!----- 
+    
+    UPDATES SIDE BOX 
+    
+    The basic structure for a new update looks like this:
+    
+    <li>
+        <div class="subtitle"><span>01</span>month</div>
+        <div class="upd-text">Add an update here.</div>
+    </li>
+    
+    Copy and paste this as many times as you need; you can have as many updates as you want.
+    
+    ----->
+    
+    {block:ifUpdatesBox}
+    <div class="side-box" id="updates-box">
+    
+        <div class="title">
+            <span>updates</span>
+        </div>
+        
+        <div class="side-content">
+        
+            <!--- stick new updates below this line --->
+        
+            <li>
+                <div class="subtitle"><span>01</span>month</div>
+                <div class="upd-text">Some update text here.</div>
+            </li>
+            
+            <!--- and make sure new updates go above this line --->
+            
+        </div>
+    </div>
+    {/block:ifUpdatesBox}
+    
+    <!----- 
+    
+    MEMBERS BOX
+    
+    If you are using this on a main blog rather than a sideblog and want to use the members section for something else, you need to:
+    
+    1. Delete everything between and including {block:GroupMembers} and {/block:GroupMembers}
+    2. Copy and paste this as many times as you need, and put it below where the content between {block:GroupMembers} and {/block:GroupMembers} used to be.
+    
+    <li class="blog-member">
+        <img src="URLHERE" class="icon">
+        <div class="member-details">
+            <a href="/" class="upper">username goes here</a>
+            <div class="member-title">blog title goes here</div>
+        </div>
+    </li>
+    
+    Fill in your content accordingly.
+    
+    ----->
+    
+    {block:ifMembersBox}
+    <div class="side-box" id="members-box">
+    
+        <div class="title">
+            <span>members</span>
+        </div>
+        
+        <div class="side-content">
+        
+            <!--- if manually adding blogs, stick new blogs below this line --->
+        
+            {block:GroupMembers}
+                {block:GroupMember}
+                    <li class="blog-member">
+                        <img src="{GroupMemberPortraitURL-96}" class="icon" alt="Blog member portrait">
+                        <div class="member-details">
+                            <a href="{GroupMemberURL}" class="upper">{GroupMemberName}</a>
+                            <div class="member-title">{GroupMemberTitle}</div>
+                        </div>
+                    </li>
+                {/block:GroupMember}
+            {/block:GroupMembers}
+            
+        <!--- blogs need to be added above this line --->
+            
+        </div>
+    </div>
+    {/block:ifMembersBox}
+    
+    <!----- 
+    
+    STATISTICS BOX 
+    
+    To add new statistics, copy and paste this as many times as needed:
+    
+    <li>
+        <span class="upper">statistic title</span> statistic content
+    </li>
+    
+    ----->
+    
+    {block:ifStatisticsBox}
+    <div class="side-box" id="stats-box">
+    
+        <div class="title">
+            <span>statistics</span>
+        </div>
+        
+        <div class="side-content">
+        
+            <!--- put new statistics below this line --->
+            
+            <li>
+                <span class="upper">established:</span>MM DD, Year
+                    
+            </li>
+            <li>
+                <span class="upper">about:</span>subject
+                    
+            </li>
+            <li>
+                <span class="upper">theme by:</span><a href="https://seyche.tumblr.com/">seyche</a>
+                    
+            </li>
+            
+            <!--- new statistics must go above here. do not remove my credit. --->
+            
+        </div>
+    </div>
+    {/block:ifStatisticsBox}
+
+    <!----- LEFT SIDEBAR CONTENT ENDS HERE. STOP EDITING ----->
+
+</aside>
+
+<!----- POSTS ----->
+
+<div id="posts-wrap">
+
+    {block:TagPage}
+    <div class="blackbox">
+        <div class="upper">Viewing posts filed under:</div>
+        <div class="title">#{Tag}</div>
+    </div>
+    {/block:TagPage}
+    
+    {block:DayPage}
+    <div class="blackbox">
+        <div class="upper">Viewing posts made on:</div>
+        <div class="subtitle">{Month} {DayOfMonth}, {Year}</div>
+    </div>
+    {/block:DayPage}
+    
+    {block:Posts}
+    <article class="posts" id="{PostID}">
+    
+    {block:IndexPage}
+        {block:PinnedPostLabel}<div class="pin-post subtitle"><a href="{Permalink}"><svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M134.1,11c-1.7-1.7-4.2-2.2-6.4-1.4c-2.2,0.8-3.7,2.9-3.9,5.3l-1.5,25.8L90.1,73.1l-39.2-4.7c-2.5-0.3-5,1-6.1,3.3c-1.1,2.3-0.7,5.1,1.2,6.9l28.8,28.8l-49.9,67.8c-1.7,2.3-1.5,5.6,0.5,7.7c1.2,1.2,2.7,1.8,4.3,1.8c1.2,0,2.3-0.3,3.3-1l70.6-47.4l29,29c1.2,1.2,2.7,1.8,4.2,1.8c0.9,0,1.8-0.2,2.6-0.6c2.3-1.1,3.7-3.5,3.4-6l-3.9-38.4l32.2-32.2l26.4-1.3c2.4-0.1,4.5-1.6,5.3-3.8c0.9-2.2,0.3-4.7-1.4-6.4L134.1,11z M55,154.5L83.3,116L95,127.6L55,154.5z M168.2,77.9c-1.5,0.1-2.9,0.7-4,1.8l-35.9,35.9c-1.3,1.3-1.9,3.1-1.7,4.9l2.5,24.5L66.7,82.3l24.9,3c1.8,0.2,3.7-0.4,5-1.7l36-36c1-1,1.7-2.4,1.7-3.9l0.8-14.7l48.2,48.2L168.2,77.9z"/></svg>{PinnedPostLabel}</a></div>{/block:PinnedPostLabel}
+    {/block:IndexPage}
+    
+    <!----- POST TYPES ----->
+    
+    {block:Text}
+    <div class="text-post" id="{PostID}">
+    {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+    {block:NotReblog}
+        <li class="caption ogcap body">
+            <div class="captext">{Body}</div>
+        </li>
+    {/block:NotReblog}
+    {block:RebloggedFrom}{block:Reblogs}
+        <li class="caption rbcap body">
+            <img src="{PortraitURL-64}" class="capicon icon">
+            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+            <div class="captext">{Body}</div>
+        </li>
+    {/block:Reblogs}{/block:RebloggedFrom}
+    </div>
+    {/block:Text}
+    
+    {block:Link}
+    <a href="{URL}"><div class="linkp">
+        {block:Thumbnail}<img src="{Thumbnail-HighRes}" class="thumbnail">{/block:Thumbnail}
+        <div class="link">
+            <div class="title">{Name}</div>
+            {block:Excerpt}<div class="link-txt">{Excerpt}</div>{/block:Excerpt}
+            {block:Host}<div class="link-host upper">by {Host}</div>{/block:Host}
+        </div>
+    </div></a>
+    {/block:Link}
+    
+    {block:Photo}
+    <div class="photo">
+        {LinkOpenTag}<a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>{LinkCloseTag}
+    </div>
+    {/block:Photo}
+    
+    {block:Photoset}
+    <div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" alt="{PhotoAlt}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>
+    {/block:Photoset}
+    
+    {block:Video}
+    <div class="video">{Video-500}</div>
+    {/block:Video}
+    
+    {block:Quote}
+    <div class="quote">{Quote}</div>
+    <div class="quote-mark">❝</div>
+    {block:Source}<div class="source upper">{Source}</div>{/block:Source}
+    {/block:Quote}
+    
+    {block:Chat}
+    {block:Title}<h1><a href="{Permalink}">{Title}</a></h1>{/block:Title}
+    <ul class="chat">
+        {block:Lines}
+        <li class="line">
+            {block:Label}<span class="subtitle chatter">{Label}</span>{/block:Label}
+            <div class="chattxt">{Line}</div>
+        </li>
+        {/block:Lines}
+    </ul>
+    {/block:Chat}
+    
+    {block:Answer}
+    <div class="askpost">
+        <div class="question">{Question}</div>
+        <div class="title">
+            <span>
+                <img src="{AskerPortraitURL-64}" class="icon">
+                {Asker}
+            </span>
+        </div>
+    </div>
+    {/block:Answer}
+    
+    {block:Audio}
+    <div class="audiopost">
+        <div class="audiobox"><div class="button">
+            {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
+        </div></div>
+        {block:AlbumArt}
+            <img src="{AlbumArtURL}" class="albumart">
+        {/block:AlbumArt}
+        <div class="audioinfo">
+            {block:TrackName}<li class="subtitle track">{TrackName}</li>{/block:TrackName}
+            {block:Artist}<li>{Artist}</li>{/block:Artist}
+            {block:Album}<li>{Album}</li>{/block:Album}
+        </div>
+    </div>
+    {/block:Audio}
+    
+    <!----- MIDDLE POST INFO ----->
+    
+    {block:Date}
+    <div class="info mid-info align-flex">
+        <div class="upper">
+        {block:IndexPage}
+            <a href="{Permalink}" class="date" title="{TimeAgo}">{Month} {DayOfMonth}, {Year}</a>{block:NoteCount}<a href="{Permalink}" class="notecount">{NoteCountWithLabel}</a>{/block:NoteCount}
+        {/block:IndexPage}
+        {block:PermalinkPage}
+            <div class="date">{TimeAgo} on {Month} {DayOfMonth}, {Year}</div>
+        {/block:PermalinkPage}
+        </div>
+        
+        {block:ifCopyLinktoPost}<div class="copy-message upper">link copied</div>{/block:ifCopyLinktoPost}
+        
+        <div class="info-controls">
+            {block:ifTagsOnClick}{block:IndexPage}{block:HasTags}<a class="tag-button" title="show tags">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M95.2,186C95.3,186,95.3,186,95.2,186c1.7,0,3.2-0.6,4.3-1.7l64.8-66.7c2.3-2.4,2.3-6.1-0.1-8.4L94.7,39.7c-1.1-1.1-2.7-1.7-4.2-1.7c0,0,0,0,0,0l-67.1,0.1c-3.3,0-6,2.6-6,5.9L17,109.9c0,1.6,0.6,3.2,1.8,4.3l72.3,70.2C92.2,185.5,93.7,186,95.2,186z M29.4,50L88,49.8l63.6,63.6l-56.5,58.2L29,107.4L29.4,50z M200.3,110.2c2.3,2.3,2.3,6,0,8.4l-64.8,66.8c-1.2,1.2-2.7,1.8-4.3,1.8c-1.5,0-3-0.6-4.2-1.7c-2.4-2.3-2.4-6.1-0.1-8.5l60.7-62.6L130.2,56c-2.3-2.4-2.3-6.2,0.1-8.5c2.4-2.3,6.2-2.3,8.5,0.1L200.3,110.2z M67.1,77.7c0,4.6-3.8,8.4-8.4,8.4s-8.4-3.8-8.4-8.4c0-4.6,3.8-8.4,8.4-8.4S67.1,73.1,67.1,77.7z"/></svg>
+            </a>{/block:HasTags}{/block:IndexPage}{/block:ifTagsOnClick}
+            {block:ifCopyLinktoPost}<div class="copy-button" data-clipboard-text="{Permalink}"><a title="copy link to post">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M155.5,71.8c0.5,0,1,0.1,1.5,0.1c0,0,0,0,0,0c13.8,0,25.3-10.9,26.1-24.7c0.8-14.4-10.2-26.8-24.6-27.7c-14.5-0.8-26.8,10.3-27.6,24.6c-0.2,3.5,0.3,6.8,1.3,9.9L70,91.1c-4.6-3.9-10.5-6.3-17-6.3c-14.4,0-26.1,11.7-26.1,26.1c0,14.4,11.7,26.1,26.1,26.1c6.1,0,11.8-2.1,16.2-5.7l60.7,33c-1.6,6.2-0.8,12.7,2.2,18.4c4.5,8.7,13.4,14.2,23.2,14.2c0,0,0,0,0,0c4.2,0,8.3-1.1,12-3.1c12.8-6.6,17.8-22.6,11.2-35.3c-4.5-8.7-13.4-14.1-23.2-14.1c-4.2,0-8.3,1-12,3c-3,1.6-5.7,3.7-7.8,6.2l-58.7-31.9c1.5-3.3,2.4-7,2.4-10.9c0-3.6-0.7-7-2-10.1l61.5-36.5C143,68.6,148.9,71.5,155.5,71.8z M142.9,44.9c0.4-7.5,6.6-13.3,14.1-13.3c0.3,0,0.6,0,0.8,0c7.8,0.5,13.7,7.1,13.3,14.9c-0.4,7.7-7.1,13.7-14.9,13.3C148.4,59.3,142.4,52.6,142.9,44.9z M38.9,110.9c0-7.8,6.3-14.1,14.1-14.1c7.8,0,14.1,6.3,14.1,14.1c0,7.8-6.3,14.1-14.1,14.1C45.2,125,38.9,118.7,38.9,110.9z M148.8,158.1c2-1.1,4.2-1.6,6.5-1.6c5.3,0,10.1,2.9,12.6,7.6c3.6,6.9,0.9,15.5-6,19c-2,1.1-4.2,1.6-6.5,1.6h0c-5.3,0-10.1-2.9-12.6-7.6c-1.7-3.3-2.1-7.2-0.9-10.8C142.9,162.8,145.4,159.8,148.8,158.1z"/></svg>
+            </a></div>{/block:ifCopyLinktoPost}
+            <a href="{ReblogURL}" target="_blank" title="reblog">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M36.7,39.9c-0.4-3.3,1.9-6.3,5.2-6.7c3.3-0.4,6.3,1.9,6.7,5.2l3.6,27.9c13.6-20.2,36.6-32.7,61.4-32.7c31.6,0,59.7,20.1,70,49.9c1.1,3.1-0.6,6.5-3.7,7.6c-0.6,0.2-1.3,0.3-2,0.3c-2.5,0-4.8-1.6-5.7-4c-8.6-25-32.2-41.8-58.6-41.8c-21.6,0-41.7,11.4-52.9,29.6l30-3.4c3.3-0.4,6.3,2,6.6,5.3s-2,6.3-5.3,6.6l-43.2,4.9c-0.2,0-0.5,0-0.7,0c-3,0-5.6-2.2-5.9-5.2L36.7,39.9z M185.3,120.2l-43.2,4.9c-3.3,0.4-5.7,3.3-5.3,6.6s3.3,5.7,6.6,5.3l26.1-2.9c-10.2,21.5-31.9,35.4-56,35.4c-27.1,0-51.5-18.1-59.3-44c-1-3.2-4.3-5-7.5-4c-3.2,1-5,4.3-4,7.5c4.5,14.9,13.9,28.3,26.3,37.7c12.9,9.7,28.3,14.9,44.5,14.9c29.6,0,56.1-17.6,67.8-44.3l4.2,33.3c0.4,3,3,5.2,5.9,5.2c0.3,0,0.5,0,0.8,0c3.3-0.4,5.6-3.4,5.2-6.7l-5.6-43.5C191.5,122.2,188.6,119.9,185.3,120.2z"/></svg>
+            </a>
+            <a class="like-wrap" title="like">{LikeButton}
+                <span class="new-button"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M148,37.8c-3.9,0-7.5,0.6-10.8,1.9c-15.1,5.7-24.6,17.8-29.8,26.7c-6-8.6-16.1-20.5-27.6-24.4c-3.8-1.3-8.1-2-12.3-2c-10.7,0-20.3,4.1-27,11.5c-5.7,6.2-12,18-10,38.8c4.1,42.6,71.5,87.1,74.3,88.9c1,0.7,2.1,1,3.3,1c1.1,0,2.3-0.3,3.3-1c2.7-1.8,66.5-43.6,73.7-86.1c3.7-21.8-2.7-34.9-8.8-42.1C169.2,42.7,158.6,37.8,148,37.8z M173.1,91c-2.6,15.2-15.1,33.4-36.1,52.7c-11.9,10.9-23.5,19.4-29,23.2c-5.7-4-17.9-12.9-30.3-24.3C56,122.5,43.8,104,42.3,89c-1.3-13,1.1-23.2,6.9-29.6c6-6.6,13.9-7.6,18.1-7.6c3,0,5.9,0.5,8.5,1.3c11.4,3.9,23.3,21.7,26.9,28.3c1.1,2.1,3.4,3.3,5.7,3.1c2.4-0.2,4.4-1.7,5.2-4c0.1-0.2,8.2-22.4,27.7-29.7c1.9-0.7,4.2-1.1,6.6-1.1c7.2,0,14.3,3.3,19,9C173.3,66.2,175.5,77.4,173.1,91z"/></svg></span>
+            </a>
+        </div>
+    </div>
+    {/block:Date}
+    
+    <!----- POST CAPTIONS ----->
+    
+    {block:Link}
+    {block:Description}
+        {block:NotReblog}
+            <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+                <div class="captext">{Description}</div>
+            </li>
+        {/block:NotReblog}
+    {/block:Description}
+    {block:RebloggedFrom}
+        {block:Reblogs}
+            <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+                <img src="{PortraitURL-64}" class="capicon icon">
+                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+                <div class="captext">{Body}</div>
+            </li>
+        {/block:Reblogs}
+    {/block:RebloggedFrom}
+    {/block:Link}
+    
+    {block:Photo}
+    {block:Caption}
+        {block:NotReblog}
+            <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+                <div class="captext">{Caption}</div>
+            </li>
+        {/block:NotReblog}
+        {block:Reblogs}
+            <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+                <img src="{PortraitURL-64}" class="capicon icon">
+                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+                <div class="captext">{Body}</div>
+            </li>
+        {/block:Reblogs}
+    {/block:Caption}
+    {/block:Photo}
+    
+    {block:Photoset}
+    {block:Caption}
+        {block:NotReblog}
+            <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+                <div class="captext">{Caption}</div>
+            </li>
+        {/block:NotReblog}
+        {block:Reblogs}
+            <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+                <img src="{PortraitURL-64}" class="capicon icon">
+                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+                <div class="captext">{Body}</div>
+            </li>
+        {/block:Reblogs}
+    {/block:Caption}
+    {/block:Photoset}
+    
+    {block:Video}
+    {block:Caption}
+        {block:NotReblog}
+            <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+                <div class="captext">{Caption}</div>
+            </li>
+        {/block:NotReblog}
+        {block:Reblogs}
+            <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+                <img src="{PortraitURL-64}" class="capicon icon">
+                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+                <div class="captext">{Body}</div>
+            </li>
+        {/block:Reblogs}
+    {/block:Caption}
+    {/block:Video}
+    
+    {block:Answer}
+    {block:Answerer}
+        <li class="caption rbcap">
+            <img src="{AnswererPortraitURL-64}" class="capicon icon">
+            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Answerer}</a></div>
+            <div class="captext">{Answer}</div>
+        </li>
+    {/block:Answerer}
+    {block:NotReblog}
+        <li class="caption ogcap">
+            <div class="captext">{Replies}</div>
+        </li>
+    {/block:NotReblog}
+    {block:RebloggedFrom}{block:Reblogs}
+        <li class="caption rbcap">
+            <img src="{PortraitURL-64}" class="capicon icon">
+            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+            <div class="captext">{Body}</div>
+        </li>
+    {/block:Reblogs}{/block:RebloggedFrom}
+    {/block:Answer}
+    
+    {block:Audio}
+    {block:Caption}
+        {block:NotReblog}
+            <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+                <div class="captext">{Caption}</div>
+            </li>
+        {/block:NotReblog}
+        {block:Reblogs}
+            <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+                <img src="{PortraitURL-64}" class="capicon icon">
+                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+                <div class="captext">{Body}</div>
+            </li>
+        {/block:Reblogs}
+    {/block:Caption}
+    {/block:Audio}
+    
+    <!----- BOTTOM INFO ----->
+    
+    {block:Date}
+    <div class="info bottom-info align-flex">
+        <div class="bottom-info-left">
+            {block:RebloggedFrom}
+                <img src="{ReblogRootPortraitURL-64}" class="icon"/>
+                <span class="upper">by <a href="{ReblogRootURL}" title="original poster">{ReblogRootName}</a></span>
+            {/block:RebloggedFrom}
+            {block:NotReblog}
+                <img src="{PortraitURL-64}" class="icon"/>
+                <div class="upper"><a href="{Permalink}">original post</a></div>
+            {/block:NotReblog}
+        </div>
+        <div class="bottom-info-right">
+            <div class="info-fade">
+                {block:RebloggedFrom}
+                    <a href="{ReblogParentURL}" title="reblogged via {ReblogParentName}"><img src="{ReblogParentPortraitURL-64}" class="icon"/></a>
+                    <a href="{PostAuthorURL}" title="reblogged by {PostAuthorName}"><img src="{PostAuthorPortraitURL-64}" class="icon"/></a>
+                {/block:RebloggedFrom}
+                {block:NotReblog}
+                    <a href="{PostAuthorURL}" title="posted by {PostAuthorName}"><img src="{PostAuthorPortraitURL-64}" class="icon"/></a>
+                {/block:NotReblog}
+            </div>
+            {block:ifReblogInfoOnClick}{block:IndexPage}
+                <a class="info-button" title="more info"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M57,114h45v45c0,3.3,2.7,6,6,6s6-2.7,6-6v-45h45c3.3,0,6-2.7,6-6s-2.7-6-6-6h-45V57c0-3.3-2.7-6-6-6s-6,2.7-6,6v45H57c-3.3,0-6,2.7-6,6S53.7,114,57,114z"/><path d="M108,196.1c48.6,0,88.1-39.5,88.1-88.1S156.6,19.9,108,19.9S19.9,59.4,19.9,108S59.4,196.1,108,196.1z M108,31.9c42,0,76.1,34.1,76.1,76.1S150,184.1,108,184.1S31.9,150,31.9,108S66,31.9,108,31.9z"/></svg></a>
+            {/block:IndexPage}{/block:ifReblogInfoOnClick}
+        </div>
+    </div>
+    {/block:Date}
+    
+    {block:HasTags}
+    <div class="tags {block:IndexPage}tag-click{/block:IndexPage}">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M95.2,186C95.3,186,95.3,186,95.2,186c1.7,0,3.2-0.6,4.3-1.7l64.8-66.7c2.3-2.4,2.3-6.1-0.1-8.4L94.7,39.7c-1.1-1.1-2.7-1.7-4.2-1.7c0,0,0,0,0,0l-67.1,0.1c-3.3,0-6,2.6-6,5.9L17,109.9c0,1.6,0.6,3.2,1.8,4.3l72.3,70.2C92.2,185.5,93.7,186,95.2,186z M29.4,50L88,49.8l63.6,63.6l-56.5,58.2L29,107.4L29.4,50z M200.3,110.2c2.3,2.3,2.3,6,0,8.4l-64.8,66.8c-1.2,1.2-2.7,1.8-4.3,1.8c-1.5,0-3-0.6-4.2-1.7c-2.4-2.3-2.4-6.1-0.1-8.5l60.7-62.6L130.2,56c-2.3-2.4-2.3-6.2,0.1-8.5c2.4-2.3,6.2-2.3,8.5,0.1L200.3,110.2z M67.1,77.7c0,4.6-3.8,8.4-8.4,8.4s-8.4-3.8-8.4-8.4c0-4.6,3.8-8.4,8.4-8.4S67.1,73.1,67.1,77.7z"/></svg>
+        {block:Tags}<a href="{TagURL}">#{Tag}</a>{/block:Tags}
+    </div>
+    {/block:HasTags}
+    
+    <!----- POST NOTES ----->
+    
+    {block:PermalinkPage}{block:Date}{block:PostNotes}
+    <div class="notes">
+        {block:NoteCount}<div class="subtitle">{NoteCountWithLabel}</div>{/block:NoteCount}
+        {PostNotes-64}
+    </div>
+    {/block:PostNotes}{/block:Date}{/block:PermalinkPage}
+    
+    <!----- SOURCE ----->
+     
+    <div class="postsource">
+        {block:ContentSource}<a href="{SourceURL}">{lang:Source}:{block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a>{/block:ContentSource}
+    </div>
+    
+    </article>
+    {/block:Posts}
+    
+    <!----- PAGINATION ----->
+    
+    {block:Pagination}
+    <article id="pg">
+        <div class="align-flex">
+            <div class="title">pagination</div>
+            <div class="upper">page {CurrentPage} of {TotalPages}</div>
+        </div>
+        
+        <div id="pg-numbers">
+            {block:PreviousPage}<a href="{PreviousPage}" title="back"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M34.9,103.6c-0.1,0.1-0.2,0.2-0.2,0.2c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.3c-0.1,0.1-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.3c0,0.1-0.1,0.1-0.1,0.2c-0.1,0.1-0.1,0.2-0.2,0.4c0,0.1-0.1,0.1-0.1,0.2c-0.1,0.1-0.1,0.3-0.2,0.4c0,0,0,0.1,0,0.1c-0.1,0.2-0.1,0.3-0.1,0.5c0,0,0,0.1,0,0.1c0,0.2-0.1,0.3-0.1,0.5c0,0,0,0.1,0,0.1c0,0.2,0,0.4,0,0.6s0,0.4,0,0.6c0,0,0,0.1,0,0.1c0,0.2,0,0.3,0.1,0.5c0,0,0,0.1,0,0.1c0,0.2,0.1,0.3,0.1,0.5c0,0,0,0.1,0,0.1c0.1,0.1,0.1,0.3,0.2,0.4c0,0.1,0.1,0.1,0.1,0.2c0.1,0.1,0.1,0.3,0.2,0.4c0,0.1,0.1,0.1,0.1,0.2c0.1,0.1,0.1,0.2,0.2,0.3c0,0.1,0.1,0.1,0.2,0.2c0.1,0.1,0.1,0.2,0.2,0.3c0.1,0.1,0.1,0.1,0.2,0.2c0.1,0.1,0.2,0.2,0.2,0.2c0,0,0.1,0.1,0.1,0.1l55.6,49.6c1.1,1,2.6,1.5,4,1.5c1.7,0,3.3-0.7,4.5-2c2.2-2.5,2-6.3-0.5-8.5L54.7,114H177c3.3,0,6-2.7,6-6s-2.7-6-6-6H54.7l43.8-39.1c2.5-2.2,2.7-6,0.5-8.5s-6-2.7-8.5-0.5L35,103.5C35,103.6,34.9,103.6,34.9,103.6z"/></svg></a>{/block:PreviousPage}
+                {block:JumpPagination length="5"}
+                    {block:CurrentPage}<span class="currentpg">{PageNumber}</span>{/block:CurrentPage}
+                    {block:JumpPage}<a class="jumppg" href="{URL}">{PageNumber}</a>{/block:JumpPage}
+                {/block:JumpPagination}
+            {block:NextPage}<a href="{NextPage}" title="next"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M181.1,103.5l-55.6-49.6c-2.5-2.2-6.3-2-8.5,0.5c-2.2,2.5-2,6.3,0.5,8.5l43.8,39.1H39c-3.3,0-6,2.7-6,6s2.7,6,6,6h122.3l-43.8,39.1c-2.5,2.2-2.7,6-0.5,8.5c1.2,1.3,2.8,2,4.5,2c1.4,0,2.8-0.5,4-1.5l55.6-49.6c1.3-1.1,2-2.8,2-4.5S182.3,104.7,181.1,103.5z"/></svg></a>{/block:NextPage}
+        </div>
+    </article>
+    {/block:Pagination}
+
+</div>
+
+<!----- RIGHT SIDE BOXES. START EDITING HERE ----->
+
+<aside id="right-side">
+    
+    <!----- 
+    
+    NAVIGATION BOX
+    
+    You can input the links from within the customization panel. If you want to have more than eight links, add copy and paste this:
+    
+    <li><a href="/"><span class="numbers">09</span>link name</a></li>
+    
+    alongside the links in between <div class="side-content upper"></div> and input your URL, link number, and link name.
+    
+    ----->
+    
+    {block:ifNavigationBox}
+    <div class="side-box" id="nav-box">
+    
+        <div class="title">
+            <span>navigation</span>
+        </div>
+        
+        <div class="side-content upper">
+            {block:ifSideLink1}<li><a href="{text:Side Link 1 URL}"><span class="numbers">01</span>{text:Side Link 1}</a></li>{/block:ifSideLink1}
+            {block:ifSideLink2}<li><a href="{text:Side Link 2 URL}"><span class="numbers">02</span>{text:Side Link 2}</a></li>{/block:ifSideLink2}
+            {block:ifSideLink3}<li><a href="{text:Side Link 3 URL}"><span class="numbers">03</span>{text:Side Link 3}</a></li>{/block:ifSideLink3}
+            {block:ifSideLink4}<li><a href="{text:Side Link 4 URL}"><span class="numbers">04</span>{text:Side Link 4}</a></li>{/block:ifSideLink4}
+            {block:ifSideLink5}<li><a href="{text:Side Link 5 URL}"><span class="numbers">05</span>{text:Side Link 5}</a></li>{/block:ifSideLink5}
+            {block:ifSideLink6}<li><a href="{text:Side Link 6 URL}"><span class="numbers">06</span>{text:Side Link 6}</a></li>{/block:ifSideLink6}
+            {block:ifSideLink7}<li><a href="{text:Side Link 7 URL}"><span class="numbers">07</span>{text:Side Link 7}</a></li>{/block:ifSideLink7}
+            {block:ifSideLink8}<li><a href="{text:Side Link 8 URL}"><span class="numbers">08</span>{text:Side Link 8}</a></li>{/block:ifSideLink8}
+        </div>
+        
+    </div>
+    {/block:ifNavigationBox}
+    
+    <!----- 
+    
+    PROJECTS BOX
+    
+    To add a new project, copy and paste this:
+    
+    <div class="project">
+        <img src="https://via.placeholder.com/230x150.png"/>
+        
+        <div class="project-text">
+            <div class="subtitle">project one</div>
+            <li><span class="upper">date:</span>MM DD, Year</li>
+            <li><span class="upper">status:</span>text</li>
+            <a href="/">project link</a>
+        </div>
+    </div>
+    
+    into the space below as many times as you need. Replace the image URL and details with your own. Be careful not to delete any important divs or place it in the wrong spot. The project image will automatically resize, so it can be of any height, width, or any ratio. The dimension in the dummy image is just a suggestion.
+    
+    If you don't want the project image to show, just remove the part that looks like <img src=""exampleurlhere.jpg"/> from the HTML.
+    
+    ----->
+    
+    {block:ifProjectsBox}
+    <div class="side-box" id="project-box">
+    
+        <div class="title">
+            <span>projects</span>
+        </div>
+        
+        <div class="side-content">
+        
+        <!--- put new projects below this line --->
+        
+            <div class="project">
+                <img src="https://via.placeholder.com/230x150.png"/>
+                <div class="project-text">
+                    <div class="subtitle">project one</div>
+                    <li><span class="upper">date:</span>MM DD, Year</li>
+                    <li><span class="upper">status:</span>text</li>
+                    <a href="/">project link</a>
+                </div>
+            </div>
+            
+            <!--- and make sure you add all new projects above this this line --->
+            
+        </div>
+    </div>
+    {/block:ifProjectsBox}
+    
+    <!----- 
+    
+    AFFILIATES BOX 
+    
+    To add new affiliates, copy and paste this:
+    
+    <a href="/" title="affiliate name">
+        <img src="https://via.placeholder.com/42x42.png"/>
+    </a>
+    
+    below as many times as you need; you can have as many as you want. Replace the image URL and affiliate name with your affiliate's information and icon. 
+    
+    There's also an apply link you can use to direct new affiliates to you application process. But if you don't want to the apply link, delete everything between and including <a href="/" class="apply-link" title="apply?">....</a>
+    
+    ----->
+    
+    {block:ifAffiliatesBox}
+    <div class="side-box" id="affiliates-box">
+    
+        <div class="title">
+            <span>affiliates</span>
+        </div>
+        
+        <div class="side-content">
+        
+        <!--- new affiliates go below this line --->
+        
+            <a href="/" title="affiliate">
+                <img src="https://via.placeholder.com/42x42.png"/>
+            </a>
+            <a href="/" title="affiliate">
+                <img src="https://via.placeholder.com/42x42.png"/>
+            </a>
+            <a href="/" title="affiliate">
+                <img src="https://via.placeholder.com/42x42.png"/>
+            </a>
+            
+            <a href="/" class="apply-link" title="apply?">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M57,114h45v45c0,3.3,2.7,6,6,6s6-2.7,6-6v-45h45c3.3,0,6-2.7,6-6s-2.7-6-6-6h-45V57c0-3.3-2.7-6-6-6s-6,2.7-6,6v45H57c-3.3,0-6,2.7-6,6S53.7,114,57,114z"/><path d="M108,196.1c48.6,0,88.1-39.5,88.1-88.1S156.6,19.9,108,19.9S19.9,59.4,19.9,108S59.4,196.1,108,196.1z M108,31.9c42,0,76.1,34.1,76.1,76.1S150,184.1,108,184.1S31.9,150,31.9,108S66,31.9,108,31.9z"/></svg>
+            </a>
+            
+            <!--- all new affiliates must go above this line --->
+            
+        </div>
+    </div>
+    {/block:ifAffiliatesBox}
+    
+    <!----- 
+    
+    STATUS BOX 
+    
+    To add a new status, copy and paste this as many times as you want and put it below:
+    
+    <div class="status-item">
+        <div class="upper">status one</div>
+        <div class="toggle-on"></div>
+    </div>
+    
+    For a switched-on toggle, use class="toggle-on"; for an off toggle, use class="toggle-off".
+    
+    ----->
+    
+    {block:ifBlogStatusBox}
+    <div class="side-box" id="status-box">
+    
+        <div class="title">
+            <span>blog status</span>
+        </div>
+        
+        <div class="side-content">
+        
+        <!--- new statuses go below this line --->
+        
+            <div class="status-item">
+                <div class="upper">status one</div>
+                <div class="toggle-on"></div>
+            </div>
+            
+            <div class="status-item">
+                <div class="upper">status two</div>
+                <div class="toggle-off"></div>
+            </div>
+            
+        <!--- and all statuses must be above this line --->
+            
+        </div>
+    </div>
+    {/block:ifBlogStatusBox}
+    
+</aside>
+
+<!----- END OF RIGHT SIDE BOXES. STOP EDITING ----->
+
+</section>
+
+<!----- FOOTER ----->
+
+<footer>
+<div id="footer-content">
+
+    {block:ifFooterContent}
+    <div id="footer-flex">
+    
+        <div id="footer-left">
+            {block:ifDisclaimerTitle}<div class="title">{text:Disclaimer Title}</div>{/block:ifDisclaimerTitle}
+            {block:ifDisclaimer}<div class="footer-text">{text:Disclaimer}</div>{/block:ifDisclaimer}
+        </div>
+        
+        {block:ifSocialMediaLinks}
+        <div id="footer-right">
+        
+            <!----- SOCIAL MEDIA LINKS: START EDITING HERE ----->
+        
+            <div class="title">social media</div>
+            
+            <!--- to change the icons, go to https://fontawesome.com/icons?d=gallery and replace the icon names below with your the new icon names. --->
+            
+            <div class="footer-text">
+                <a href="/" title="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="/" title="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="/" title="youtube"><i class="fab fa-youtube"></i></a>
+                <a href="/" title="instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+        </div>
+        {/block:ifSocialMediaLinks}
+        
+    </div>
+    {/block:ifFooterContent}
+    
+    <!--- do NOT touch anything after here. Leave my credit where it is. --->
+    
+    <div id="footer-bottom" class="upper">
+        <li>© {Name}, {CopyrightYears}.</li>
+        <li>All rights reserved.</li>
+        <li>Powered by Tumblr.</li>
+        <li>Nightshade theme by <a href="https://seyche.tumblr.com/">seyche</a>.</li>
+        
+        <div id="btop">
+            <a href="#top" target="_self">back to top?</a>
+        </div>
+    </div>
+    
+</div>
+</footer>
+
+<!----- PHOTOSETS ----->
+
+<script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
+
+<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
+
+<!----- TOOLTIPS ----->
+
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+
+<!----- VIDEO RESIZING ----->
+
+<script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+
+<!----- NOTECOUNT ----->
+
+<script type="text/javascript" src="https://static.tumblr.com/i5s2zks/9Acok8oo2/bct-timeago.min.js"></script>
+
+<!----- CLIPBOARD ----->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+ 
+<script>
+
+/// PHOTOSETS
+
+$(document).ready(function(){
+    undoPhotoset({
+        'posts': '.text-post', 
+        'text class': '', 
+        'photoset class': '' 
+    },true); 
+    
+   $('.photo-slideshow').pxuPhotoset({
+       lightbox: true,
+       rounded: false,
+       gutter: '{select:photoset gutter}px',
+       borderRadius: '0px',
+       photoset: '.photo-slideshow',
+       photoWrap: '.photo-data',
+       photo: '.pxu-photo'
+   });
+   
+    npfPhotosets(".posts", {
+       rowClass:"npf_row",
+       imageContainerClass:"tmblr-full",
+       generatedPhotosetContainerClass:"npf_photoset",
+       imageClass:"npf_image",
+       includeCommonPhotosets: false,
+       useTumblrLightbox: true,
+       insertGalleryIndicator: false,
+       galleryIndicatorClass: "npf_gallery_indicator",
+       galleryIndicatorContent: "<img src='image_url'>",
+       photosetMargins:"{select:photoset gutter}"
+    });
+   
+   /// TOOLTIPS
+
+    tippy('[title]', {
+        theme: 'custom',
+        arrow: false,
+        followCursor: true,
+        delay: 100,
+        placement: 'bottom-start',
+        zIndex: 9999999999,
+        maxWidth: 400,
+    
+        content(reference) {
+          const title = reference.getAttribute('title');
+          reference.removeAttribute('title');
+          return title;
+        },
+    });
+    
+});
+
+/// TAGS ON CLICK AND INFO DROPDOWN
+ 
+$(document).ready(function() {
+    {block:IndexPage}{block:ifTagsOnClick}
+    $('.tag-click').hide();
+    $('.tag-button').click(function(event) {
+        $(this).closest('.posts').find('.tag-click').slideToggle(500)
+        event.preventDefault();
+        $(this).toggleClass('button-clicked');
+    });
+    {/block:ifTagsOnClick}{/block:IndexPage}
+    
+    var clipboard = new ClipboardJS(".copy-button");
+    
+     $('.copy-button').click(function(event) {
+        $(this).closest('.posts').find('.copy-message').fadeIn(500)
+        event.preventDefault();
+       
+        setTimeout(function(){
+            $('.copy-message').fadeOut(500);}, 2000);
+            
+        $(this).toggleClass('button-clicked');
+    });
+    
+    {block:ifReblogInfoOnClick}{block:IndexPage}
+    $('.info-fade').hide();
+    $('.info-button').click(function(event) {
+        $(this).closest('.posts').find('.info-fade').fadeToggle(500)
+        event.preventDefault();
+        $(this).toggleClass('button-clicked');
+    });
+    {/block:IndexPage}{/block:ifReblogInfoOnClick}
+ });
+
+/// REMOVE REDIRECTS
+
+$(document).ready(function(){ 
+//remove tumblr redirects script by magnusthemes@tumblr 
+  $('a[href*="t.umblr.com/redirect"]').each(function(){
+      var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+      var replaceURL = decodeURIComponent(originalURL);
+      $(this).attr("href", replaceURL);
+  });
+});
+
+/// RESPONSIVE VIDEOS
+
+    function flexFrame() {
+   $(".caption").each(function() {
+        $(this).find("iframe").wrap("<div class='capframe'></div>"); 
+        flexibleFrames($(".capframe"));
+    });
+    flexibleFrames($(".video"));
+}
+$(document).ready(flexFrame);
+
+/// SCROLL TO TOP
+
+$(document).ready(function(){
+    $('#btop a').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+});
+
+</script> 
+
+</body>
+</html>
