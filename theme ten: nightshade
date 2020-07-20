@@ -376,6 +376,7 @@ li {max-width: 100%;}
     height: 100%;
     width: 75%;
     margin: auto;
+    text-align: center;
 }
 
 #banner-title {
