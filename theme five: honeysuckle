@@ -10,11 +10,11 @@
 
 <!---
    
-    THEME BY SEYCHE.TUMBLR.COM
+    HONEYSUCKLE THEME BY SEYCHE.TUMBLR.COM
    
     CREDITS:
     -outicons by Anton Saputro
-    -css photosets by annasthms and espoirthemes
+    -PXU photosets by pixelunion / modified by bychloethemes
     -npf photosets by codematurgy
     -npf photoset conversion by annasthms
     -tippy.js tooltips by atomiks
@@ -28,9 +28,9 @@
 
 <!----- PHOTOSETS ----->
 
+<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css"/>
+
 <link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
- 
-<link href="https://static.tumblr.com/0podkko/xIbplezmo/modified_photosets.css" rel="stylesheet">
  
 <!---- VARIABLES ----->
 
@@ -78,6 +78,8 @@
 <meta name="select:Font Size" content="13px" title="13px"/>
 <meta name="select:Font Size" content="15px" title="15px"/>
 <meta name="select:Font Size" content="16px" title="16px"/>
+<meta name="select:Font Size" content="17px" title="17px"/>
+<meta name="select:Font Size" content="18px" title="18px"/>
 
 <meta name="select:Post Width" content="450px" title="450px"/>
 <meta name="select:Post Width" content="500px" title="500px"/>
@@ -374,18 +376,17 @@ li {max-width: 100%;}
     position: fixed;
     height: 100vh;
     width: 30vw;
-    max-width: 100%;
     left: 0;
     top: 0;
     bottom: 0;
     background-color: {color:background};
-    padding: 70px 30px 0 80px;
+    padding: 60px 30px 0 60px;
     box-sizing: border-box;
     overflow-y: auto;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-wrap: no-wrap;
+    flex-direction: column;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;
@@ -442,15 +443,19 @@ input::-moz-placeholder {color: {color:text};}
 input:-moz-placeholder {color: {color:text};}
 input:-ms-input-placeholder {color: {color:text};}
 
-#flex-wrap {width: 100%;}
-.break {flex-basis: 100%; height: 0;}
+#flex-wrap {
+    flex: 1 1 30vw; 
+    order: 1;
+}
 
 nav {
     font-family: '{select:title font}', sans-serif;
     line-height: 200%;
-    margin-top: 8em;
     min-height: 0;
-    width: 100%;
+    flex: initial;
+    padding: 1.5em 0 60px 0;
+    box-sizing: border-box;
+    order: 2;
 }
 
 nav a {
@@ -525,7 +530,7 @@ nav a:hover {color: {color:link};}
     border-bottom: 1px solid {color:borders};
 }
 
-.posts:first-of-type {padding: 75px 0 {text:post margin}px 0;}
+.posts:first-of-type {padding: 70px 0 {text:post margin}px 0;}
 
 .tumblr_video_container {max-height: {select:post width}!important; overflow: hidden!important;
 }
@@ -579,7 +584,7 @@ nav a:hover {color: {color:link};}
     opacity: 0.8;
 }
 
-.tmblr-attribution {margin-top: 0.5em;}
+p.tmblr-attribution {margin-top: 1em !important;}
 
 /*----- TEXT -----*/
 
@@ -665,9 +670,10 @@ p.npf_quirky {font-family: Fairwater; font-size: 1.75em;}
     transition: all 0.3s;
 }
  
-.npf-link-block .poster .title {background-color: initial; padding: 30px;}
+.npf-link-block .poster .title {background-color: initial; padding: 1.5em;}
+.npf-link-block.no-poster .title {padding: 1.5em 1.5em 0 1.5em;}
 .npf-link-block .title {font-size: 1.25em; border-bottom: none;}
-.npf-link-block .bottom {padding: 30px !important; color: {color:text};}
+.npf-link-block .bottom {padding: 1.5em !important; color: {color:text};}
  
 .npf-link-block .bottom .site-name {
     font-size: 0.9em;
@@ -697,24 +703,6 @@ img {
 
 /*----- PHOTOSET -----*/
 
-[photoset-layout] {
-    grid-gap: {select:photoset gutter}px; 
-    border-radius: 4px;
-    overflow: hidden;
-	grid-template-columns: repeat(6, auto);
-}
-
-[photoset-layout] div {
-    padding: 0;
-    border: none; 
-    cursor: pointer;
-}
-
-[photoset-layout] img {
-    border: none; 
-    border-radius: 0;
-}
-
 .post-content div.npf_row, .post div.npf_row, body div.npf_row {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -726,7 +714,8 @@ img {
 .tmblr-full:hover {cursor: pointer;}
 .npf_image, .tmblr-full {border: none; outline: none;}
 
-.text-post [photoset-layout] {margin-bottom: 30px;}
+.photo-slideshow.processed {border-radius: 4px; overflow: hidden;}
+.text-post .photo-slideshow.processed {margin-bottom: 30px;}
 
 /*----- QUOTE -----*/
 
@@ -1057,14 +1046,12 @@ header .secondtitle {
 
 @media only screen and (min-width: 1600px) {
     .container {margin: auto auto auto 20vw;}
-}
-
-@media only screen and (min-height: 900px) {
-    nav {margin-top: 14em;}
+    nav {padding-bottom: 80px;}
 }
 
 @media only screen and (max-height: 768px) {
-    .sidebar {padding: 50px 30px 50px 70px;}
+    .sidebar {padding: 50px 30px 0 70px;}
+    nav {padding-bottom: 50px;}
     .posts:first-of-type {padding: 50px 0 {text:post margin}px 0;}
 }
 
@@ -1093,6 +1080,7 @@ header .secondtitle {
     }
     
     .sidebar.show {left: 0;}
+    nav {padding-bottom: 0;}
     
     .container {margin: auto;}
     
@@ -1141,8 +1129,6 @@ header .secondtitle {
         </form>
         {/block:ifSearch}
     </div>
-    
-    <div class="break"></div>
     
     <nav>
         {block:ifHomeLink}<a href="/"><span class="numbers">01</span>{text:Home Link}</a><br>{/block:ifHomeLink}
@@ -1238,7 +1224,7 @@ header .secondtitle {
 {/block:Photo}
 
 {block:Photoset}
-<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" /></div>{/block:Photos}</div>
+<div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" alt="{PhotoAlt}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>
 {block:Caption}
     {block:NotReblog}
         <li class="caption ogcap">
@@ -1415,7 +1401,7 @@ header .secondtitle {
 
 <!----- PHOTOSETS ----->
 
-<script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
+<script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
 
@@ -1436,9 +1422,17 @@ $(document).ready(function(){
         'posts': '.text-post', 
         'text class': '', 
         'photoset class': '' 
-    },false); 
+    },true); 
     
-   initPhotosets();
+   $('.photo-slideshow').pxuPhotoset({
+       lightbox: true,
+       rounded: false,
+       gutter: '{select:photoset gutter}px',
+       borderRadius: '4px',
+       photoset: '.photo-slideshow',
+       photoWrap: '.photo-data',
+       photo: '.pxu-photo'
+   });
    
     npfPhotosets(".posts", {
        rowClass:"npf_row",
