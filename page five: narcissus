@@ -491,6 +491,7 @@ article ul {margin: 0; padding: 0; display: inline-block;}
     overflow: hidden;
     margin-top: 0.5em;
     line-height: 160%;
+    display: none;
 }
 
 .dropdown a {
