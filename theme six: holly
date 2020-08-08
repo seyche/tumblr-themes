@@ -637,8 +637,6 @@ img {
 .tmblr-full:hover {cursor: pointer;}
 .npf_image, .tmblr-full {border: none; outline: none;}
 
-.text-post [photoset-layout] {padding-bottom: 20px;}
-
 /*----- QUOTE -----*/
 
 .quote, p.npf_quote {
