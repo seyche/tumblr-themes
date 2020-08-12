@@ -10,7 +10,7 @@
 
 <!---
     
-    THEME BY SEYCHE.TUMBLR.COM
+    LILAC THEME BY SEYCHE.TUMBLR.COM
     
     CREDITS:
     -feather icons by Cole Bemis
@@ -365,7 +365,7 @@ li {max-width: 100%; line-height: 160%;}
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: middle;
+    align-items: center;
     border-radius: 2em;
     padding: 0.75em 1em;
     box-sizing: border-box;
