@@ -20,6 +20,7 @@
     -responsive videos by nouvae
     -remove redirects by magnusthemes
     -Outicons by Anton Saputro
+    -copy link to post tutorial by glenthemes, with clipboard.js by Zeno Rocha
     (full list of credits @ seyche.tumblr.com/credits)
     
 --->
@@ -349,15 +350,21 @@ li {max-width: 100%;}
 
 /*----- BANNER -----*/
 
+#banner-container {
+    {block:ifFullWidthBanner}width: 100%;{/block:ifFullWidthBanner}
+    {block:ifNotFullWidthBanner}width: calc({select:post width} + 275px + 275px + 150px);{/block:ifNotFullWidthBanner}
+    position: relative;
+    margin: auto;
+    top: 4.15em;
+}
+
 #banner {
     position: relative;
-    {block:ifFullWidthBanner}width: 100%;{/block:ifFullWidthBanner}
+    width: 100%;
     {block:ifNotFullWidthBanner}
-    width: calc({select:post width} + 275px + 275px + 150px);
     margin: auto;
     {/block:ifNotFullWidthBanner}
     height: {text:banner height}px;
-    top: 4.1em;
     color: {color:banner title};
     overflow: hidden;
     {block:ifHeaderImage}
@@ -376,7 +383,7 @@ li {max-width: 100%;}
     height: 100%;
     width: 75%;
     margin: auto;
-    text-align: center;
+	text-align: center;
 }
 
 #banner-title {
@@ -403,8 +410,13 @@ li {max-width: 100%;}
 
 #secondary-bar {
     position: relative;
-    {block:ifHeaderImage}margin: 3em auto auto auto;{/block:ifHeaderImage}
-    {block:ifNotHeaderImage}margin: 4.1em auto auto auto;{/block:ifNotHeaderImage}
+    {block:ifHeaderImage}
+    {block:ifNotFullWidthBanner}margin: auto;{/block:ifNotFullWidthBanner}
+    {block:ifFullWidthBanner}margin: -1.5em auto auto auto;{/block:ifFullWidthBanner}
+    {/block:ifHeaderImage}
+    {block:ifNotHeaderImage}
+    margin: auto;
+    {/block:ifNotHeaderImage}
     z-index: 2;
     background-color: {color:blog details background};
     width: calc({select:post width} + 275px + 275px + 150px);
@@ -457,8 +469,8 @@ input:-ms-input-placeholder {color: {color:blog details text};}
 
 #container {
     width: calc({select:post width} + 275px + 275px + 150px);
-    {block:ifShowBlogDetailsBar}margin: 75px auto auto auto;{/block:ifShowBlogDetailsBar}
-    {block:ifNotShowBlogDetailsBar}margin: calc(4.1em + 50px) auto auto auto;{/block:ifNotShowBlogDetailsBar}
+    {block:ifShowBlogDetailsBar}margin: 125px auto auto auto;{/block:ifShowBlogDetailsBar}
+    {block:ifNotShowBlogDetailsBar}margin: 125px auto auto auto;{/block:ifNotShowBlogDetailsBar}
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1437,11 +1449,11 @@ footer .title {color: {color:footer title}; font-size: 1.15em;}
     }
     
     {block:ifNotFullWidthBanner}
-    #banner {width: calc({select:post width} + 275px + 275px + 100px);}
+    #banner-container, #banner {width: calc({select:post width} + 275px + 275px + 100px);}
     {/block:ifNotFullWidthBanner}
     
     #container {
-        {block:ifShowBlogDetailsBar}margin: 50px auto auto auto;{/block:ifShowBlogDetailsBar}
+        {block:ifShowBlogDetailsBar}margin: 125px auto auto auto;{/block:ifShowBlogDetailsBar}
     }
 }
 
@@ -1451,13 +1463,13 @@ footer .title {color: {color:footer title}; font-size: 1.15em;}
     }
     
     {block:ifNotFullWidthBanner}
-    #banner {width: calc(400px + 225px + 225px + 125px);}
+    #banner-container, #banner {width: calc(400px + 225px + 225px + 125px);}
     {/block:ifNotFullWidthBanner}
     
     aside {width: 225px;}
     
     #container {
-        {block:ifShowBlogDetailsBar}margin: 50px auto auto auto;{/block:ifShowBlogDetailsBar}
+        {block:ifShowBlogDetailsBar}margin: 125px auto auto auto;{/block:ifShowBlogDetailsBar}
     }
     
     #posts-wrap, article {max-width: 400px;}
@@ -1491,35 +1503,39 @@ footer .title {color: {color:footer title}; font-size: 1.15em;}
 
 <!----- BANNER ----->
 
-{block:ifHeaderImage}
-<header id="banner">
-    {block:ifShowBlogTitle}
-    <div id="banner-flex">
-        <div id="banner-title">{Title}</div>
-        {block:ifBlogSubtitle}<div id="banner-subtitle" class="upper">{text:Blog Subtitle}</div>{/block:ifBlogSubtitle}
-    </div>
-    {/block:ifShowBlogTitle}
-</header>
-{/block:ifHeaderImage}
+<div id="banner-container">
 
-<!----- SEARCH AND BLOG DETAILS BAR ----->
+    {block:ifHeaderImage}
+    <header id="banner">
+        {block:ifShowBlogTitle}
+        <div id="banner-flex">
+            <div id="banner-title">{Title}</div>
+            {block:ifBlogSubtitle}<div id="banner-subtitle" class="upper">{text:Blog Subtitle}</div>{/block:ifBlogSubtitle}
+        </div>
+        {/block:ifShowBlogTitle}
+    </header>
+    {/block:ifHeaderImage}
+    
+    <!----- SEARCH AND BLOG DETAILS BAR ----->
+    
+    {block:ifShowBlogDetailsBar}
+    <header id="secondary-bar" class="align-flex">
+        <div id="blog-details">
+            {block:ifBlogIcon}<img src="{PortraitURL-64}" class="icon">{/block:ifBlogIcon}
+            {block:ifBlogURL}<div class="subtitle" id="blogurl"><a href="/">{Name}</a></div>{/block:ifBlogURL}
+        </div>
+        {block:ifSearchBar}
+        <div id="search">
+            <form action="/search" method="get" class="find" name="sform">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M140,134.2c10.9-11.8,17.7-27.6,17.7-45c0-36.5-29.7-66.3-66.3-66.3S25.1,52.7,25.1,89.2s29.7,66.3,66.3,66.3c14.9,0,28.6-4.9,39.7-13.2l49.3,49.3c1.2,1.2,2.7,1.8,4.2,1.8c1.5,0,3.1-0.6,4.2-1.8c2.3-2.3,2.3-6.1,0-8.5L140,134.2z M37.1,89.2c0-29.9,24.3-54.3,54.3-54.3c29.9,0,54.3,24.3,54.3,54.3s-24.3,54.3-54.3,54.3C61.4,143.5,37.1,119.1,37.1,89.2z"/></svg>
+                <input type="text" name="q" placeholder="search this blog" value="{SearchQuery}" class="upper" value autocomplete="off"/>
+            </form>
+        </div>
+        {/block:ifSearchBar}
+    </header>
+    {/block:ifShowBlogDetailsBar}
 
-{block:ifShowBlogDetailsBar}
-<header id="secondary-bar" class="align-flex">
-    <div id="blog-details">
-        {block:ifBlogIcon}<img src="{PortraitURL-64}" class="icon">{/block:ifBlogIcon}
-        {block:ifBlogURL}<div class="subtitle" id="blogurl"><a href="/">{Name}</a></div>{/block:ifBlogURL}
-    </div>
-    {block:ifSearchBar}
-    <div id="search">
-        <form action="/search" method="get" class="find" name="sform">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M140,134.2c10.9-11.8,17.7-27.6,17.7-45c0-36.5-29.7-66.3-66.3-66.3S25.1,52.7,25.1,89.2s29.7,66.3,66.3,66.3c14.9,0,28.6-4.9,39.7-13.2l49.3,49.3c1.2,1.2,2.7,1.8,4.2,1.8c1.5,0,3.1-0.6,4.2-1.8c2.3-2.3,2.3-6.1,0-8.5L140,134.2z M37.1,89.2c0-29.9,24.3-54.3,54.3-54.3c29.9,0,54.3,24.3,54.3,54.3s-24.3,54.3-54.3,54.3C61.4,143.5,37.1,119.1,37.1,89.2z"/></svg>
-            <input type="text" name="q" placeholder="search this blog" value="{SearchQuery}" class="upper" value autocomplete="off"/>
-        </form>
-    </div>
-    {/block:ifSearchBar}
-</header>
-{/block:ifShowBlogDetailsBar}
+</div>
 
 <!----- CONTAINER DIV. DON'T TOUCH ----->
 
