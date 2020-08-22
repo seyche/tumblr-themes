@@ -1042,8 +1042,6 @@ img {
 .tmblr-full:hover {cursor: pointer;}
 .npf_image, .tmblr-full {border: none; outline: none;}
 
-.text-post .photo-slideshow.processed {padding-bottom: 2em;}
-
 /*----- QUOTE -----*/
 
 .quote, p.npf_quote {
