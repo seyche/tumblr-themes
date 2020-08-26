@@ -109,6 +109,7 @@
 <meta name="if:Reblog Info On Click" content="1"/>
 <meta name="if:Tags On Click" content="1"/>
 <meta name="if:Hide Caption" content="0"/>
+<meta name="if:Copy Link to Post" content="0"/>
 
 <meta name="if:Footer Content" content="1"/>
 <meta name="if:Social Media Links" content="1"/>
