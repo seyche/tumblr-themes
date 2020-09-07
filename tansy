@@ -1044,6 +1044,7 @@ $('#tabs li a').click(function(){
     $('.container').hide();
     $('#'+ t + 'C').fadeIn('slow');
     }
+    window.scrollTo(0, 0);
     });
 });
 
