@@ -810,6 +810,9 @@ p.npf_chat:last-of-type {border-bottom: none; padding-bottom: 0;}
 .a {float: right; margin-top: calc(1em + 30px);}
 .question .username {margin-bottom: 0.75em; text-transform: lowercase;}
 
+.question p:first-of-type {margin-top: 0;}
+.question p:last-of-type {margin-bottom: 0;}
+
 .question {
     padding: 30px;
     background-color: {color:caption};
