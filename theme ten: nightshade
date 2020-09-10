@@ -1207,8 +1207,16 @@ p.npf_chat b {
 .info-controls {display: inline-block; line-height: 1em;}
 .info-controls a {vertical-align: middle; margin-left: 0.5em;}
  
-.info-controls svg:hover {
-    fill: {color:title};
+.info-controls a svg, .info-button svg {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+ 
+.info-controls a:hover svg, .info-button svg:hover {
+    fill: {color:accent};
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
