@@ -356,7 +356,7 @@ li {max-width: 100%;}
     {block:ifNotFullWidthBanner}width: calc({select:post width} + 275px + 275px + 150px);{/block:ifNotFullWidthBanner}
     position: relative;
     margin: auto;
-    top: 4.15em;
+    top: 4.05em;
 }
 
 #banner {
