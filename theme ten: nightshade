@@ -1043,6 +1043,8 @@ img {
 .tmblr-full:hover {cursor: pointer;}
 .npf_image, .tmblr-full {border: none; outline: none;}
 
+.text-post .photo-slideshow.processed {padding-bottom: 2em;}
+
 /*----- QUOTE -----*/
 
 .quote, p.npf_quote {
@@ -2316,9 +2318,9 @@ footer .title {color: {color:footer title}; font-size: 1.15em;}
 
 $(document).ready(function(){
     undoPhotoset({
-        'posts': '.text-post', 
-        'text class': '', 
-        'photoset class': '' 
+        'posts': '.posts.text-post', 
+        'text class': '.text-post', 
+        'photoset class': '.photo-slideshow' 
     },true); 
     
    $('.photo-slideshow').pxuPhotoset({
