@@ -1180,9 +1180,9 @@ a.more_notes_link {
 <script>
 $(document).ready(function(){
     undoPhotoset({
-        'posts': '.text-post', 
-        'text class': '', 
-        'photoset class': '' 
+        'posts': '.posts.text-post', 
+        'text class': '.text-post', 
+        'photoset class': '.photo-slideshow' 
     },true); 
     
    $('.photo-slideshow').pxuPhotoset({
