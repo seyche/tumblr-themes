@@ -1362,9 +1362,9 @@ $(document).ready(function(){
     /// PHOTOSETS
     
     undoPhotoset({
-        'posts': '.text-post',
-        'text class': '',
-        'photoset class': ''
+        'posts': '.posts.text-post', 
+        'text class': '.text-post', 
+        'photoset class': '[photoset-layout]' 
     },false);
    
    initPhotosets();
