@@ -10,7 +10,7 @@
 
 <!---
     
-    THEME BY SEYCHE.TUMBLR.COM
+    BLUEBELL THEME BY SEYCHE.TUMBLR.COM
     
     CREDITS:
     -outicons by Anton Saputro
@@ -1531,10 +1531,10 @@ ol.notes li.note img.avatar {display: none;}
 
 $(document).ready(function(){
     undoPhotoset({
-        'posts': '.text-post', 
-        'text class': '', 
-        'photoset class': '' 
-    },false); 
+        'posts': '.posts.text-post', 
+        'text class': '.text-post', 
+        'photoset class': '[photoset-layout]' 
+    },false);
     
    initPhotosets();
    
