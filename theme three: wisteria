@@ -1287,17 +1287,18 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 <!----- SCRIPTS ----->
 
 <script>
+undoPhotoset({
+        'posts': '.posts .text-post', 
+        'text class': '.text-post', 
+        'photoset class': '[photoset-layout]' 
+    },false);
+</script>
+
+<script>
 
 /// PHOTOSETS
  
 $(document).ready(function(){
- 
-    undoPhotoset({
-        'posts': '.posts.text-post', 
-        'text class': '.text-post', 
-        'photoset class': '[photoset-layout]' 
-    },false);
-   
    initPhotosets();
    
     npfPhotosets(".posts", {
