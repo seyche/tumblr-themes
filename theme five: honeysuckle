@@ -1413,17 +1413,19 @@ header .secondtitle {
 
 <!----- SCRIPTS ----->
 
+<script>
+undoPhotoset({
+        'posts': '.posts .text-post', 
+        'text class': '.text-post', 
+        'photoset class': '.photo-slideshow' 
+    },true); 
+</script>
+
 <script type="text/javascript">
 
 /// PHOTOSETS 
 
 $(document).ready(function(){
-    undoPhotoset({
-        'posts': '.posts.text-post', 
-        'text class': '.text-post', 
-        'photoset class': '.photo-slideshow' 
-    },true); 
-    
    $('.photo-slideshow').pxuPhotoset({
        lightbox: true,
        rounded: false,
