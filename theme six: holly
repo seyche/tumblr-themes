@@ -1343,6 +1343,14 @@ ol.notes li.note img.avatar {display: none;}
 
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+<script>
+undoPhotoset({
+        'posts': '.posts .text-post', 
+        'text class': '.text-post', 
+        'photoset class': '[photoset-layout]' 
+    },false);
+</script>
  
 <script type="text/javascript">
 
@@ -1360,12 +1368,6 @@ $(document).ready(function(){
     });
     
     /// PHOTOSETS
-    
-    undoPhotoset({
-        'posts': '.posts.text-post', 
-        'text class': '.text-post', 
-        'photoset class': '[photoset-layout]' 
-    },false);
    
    initPhotosets();
    
