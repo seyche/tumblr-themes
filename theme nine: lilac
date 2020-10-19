@@ -29,14 +29,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Barlow:ital,wght@0,400;0,700;1,400;1,700&family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-<!----- PHOTOSETS ----->
-
-<link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
- 
-<link href="https://static.tumblr.com/0podkko/xIbplezmo/modified_photosets.css" rel="stylesheet">
-
-<script src="https://unpkg.com/feather-icons"></script>
-
 <!----- VARIABLES ----->
 
 <meta name="image:Sidebar" content=""/>
@@ -71,11 +63,14 @@
 <meta name="select:Font Size" content="13px" title="13px"/>
 <meta name="select:Font Size" content="15px" title="15px"/>
 <meta name="select:Font Size" content="16px" title="16px"/>
+<meta name="select:Font Size" content="17px" title="17px"/>
+<meta name="select:Font Size" content="18px" title="18px"/>
 
 <meta name="select:Post Width" content="540px" title="540px"/>
 <meta name="select:Post Width" content="400px" title="400px"/>
 <meta name="select:Post Width" content="450px" title="450px"/>
 <meta name="select:Post Width" content="500px" title="500px"/>
+<meta name="select:Post Width" content="600px" title="600px"/>
 
 <meta name="select:Photoset Gutter" content="1" title="1px"/>
 <meta name="select:Photoset Gutter" content="2" title="2px"/>
@@ -103,42 +98,52 @@
 <meta name="text:Ask Icon" content="mail"/>
 <meta name="text:Archive Link" content="archive"/>
 <meta name="text:Archive Icon" content="grid"/>
-<meta name="text:Link 1 URL" content=""/>
-<meta name="text:Link 1" content=""/>
-<meta name="text:Link 1 Icon" content="user"/>
-<meta name="text:Link 2 URL" content="" />
-<meta name="text:Link 2" content="" />
-<meta name="text:Link 2 Icon" content="menu" />
-<meta name="text:Link 3 URL" content="" />
-<meta name="text:Link 3" content="" />
-<meta name="text:Link 3 Icon" content="bookmark" />
+<meta name="text:Submit Icon" content="upload"/>
 
-<meta name="text:Link 4 URL" content="" />
-<meta name="text:Link 4" content="" />
-<meta name="text:Link 4 Icon" content="sun" />
-<meta name="text:Link 5 URL" content="" />
-<meta name="text:Link 5" content="" />
-<meta name="text:Link 5 Icon" content="zap" />
-<meta name="text:Link 6 URL" content="" />
-<meta name="text:Link 6" content="" />
-<meta name="text:Link 6 Icon" content="wind" />
-<meta name="text:Link 7 URL" content="" />
-<meta name="text:Link 7" content="" />
-<meta name="text:Link 7 Icon" content="star" />
-<meta name="text:Link 8 URL" content="" />
-<meta name="text:Link 8" content="" />
-<meta name="text:Link 8 Icon" content="map" />
-<meta name="text:Link 9 URL" content="" />
-<meta name="text:Link 9" content="" />
-<meta name="text:Link 9 Icon" content="calendar" />
-<meta name="text:Link 10 URL" content="" />
-<meta name="text:Link 10" content="" />
-<meta name="text:Link 10 Icon" content="tv" />
+<meta name="text:Sidebar Link 1 URL" content=""/>
+<meta name="text:Sidebar Link 1" content=""/>
+<meta name="text:Sidebar Link 1 Icon" content="user"/>
+<meta name="text:Sidebar Link 2 URL" content=""/>
+<meta name="text:Sidebar Link 2" content="" />
+<meta name="text:Sidebar Link 2 Icon" content="menu"/>
+<meta name="text:Sidebar Link 3 URL" content=""/>
+<meta name="text:Sidebar Link 3" content=""/>
+<meta name="text:Sidebar Link 3 Icon" content="bookmark"/>
+
+<meta name="text:Header Link 1 URL" content=""/>
+<meta name="text:Header Link 1" content=""/>
+<meta name="text:Header Link 1 Icon" content="sun"/>
+<meta name="text:Header Link 2 URL" content=""/>
+<meta name="text:Header Link 2" content=""/>
+<meta name="text:Header Link 2 Icon" content="zap"/>
+<meta name="text:Header Link 3 URL" content=""/>
+<meta name="text:Header Link 3" content=""/>
+<meta name="text:Header Link 3 Icon" content="wind"/>
+<meta name="text:Header Link 4 URL" content=""/>
+<meta name="text:Header Link 4" content=""/>
+<meta name="text:Header Link 4 Icon" content="star"/>
+<meta name="text:Header Link 5 URL" content=""/>
+<meta name="text:Header Link 5" content="" />
+<meta name="text:Header Link 5 Icon" content="map"/>
+<meta name="text:Header Link 6 URL" content=""/>
+<meta name="text:Header Link 6" content=""/>
+<meta name="text:Header Link 6 Icon" content="calendar"/>
+<meta name="text:Header Link 7 URL" content=""/>
+<meta name="text:Header Link 7" content=""/>
+<meta name="text:Header Link 7 Icon" content="tv"/>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<!----- LOAD IN ----->
+<!----- PHOTOSETS ----->
+
+<link href="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosetstyle.css" rel="stylesheet" type="text/css">
  
+<link href="https://static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css"/>
+
+<script src="https://unpkg.com/feather-icons"></script>
+
+<!----- LOAD IN ----->
+
 <script>
 $(document).ready(function(){
     $(function() {
@@ -419,7 +424,6 @@ article:first-of-type {margin-top: 0;}
 .tumblr_video_container {max-height: {select:post width}!important; overflow: hidden!important;
 }
 .posts li, .posts blockquote, .posts img, figure, video, iframe, .video, .video iframe {max-width: 100%;}
-.postsource {display: none;}
 
 /*----- EXTREA HEADER -----*/
 
@@ -480,7 +484,7 @@ input:-ms-input-placeholder {color: {color:text};}
 
 #header-nav {
     text-align: right;
-    {block:ifLink4}margin-top: 1.5em;{/block:ifLink4}
+    {block:ifHeaderLink1}margin-top: 1.5em;{/block:ifHeaderLink1}
 }
 
 #header-nav a {margin-left: 0.5em;}
@@ -763,22 +767,9 @@ img {
 
 /*----- PHOTOSET -----*/
 
-[photoset-layout] {
-    grid-gap: {select:photoset gutter}px; 
+.npf_photoset, .photo-slideshow {
     {block:ifRoundedPhotoCorners}border-radius: 10px;{/block:ifRoundedPhotoCorners}
     overflow: hidden;
-	grid-template-columns: repeat(6, auto);
-}
-
-[photoset-layout] div {
-    padding: 0;
-    border: none; 
-    cursor: pointer;
-}
-
-[photoset-layout] img {
-    border: none; 
-    border-radius: 0;
 }
 
 .post-content div.npf_row, .post div.npf_row, body div.npf_row {
@@ -792,7 +783,7 @@ img {
 .tmblr-full:hover {cursor: pointer;}
 .npf_image, .tmblr-full {border: none; outline: none;}
 
-.text-post [photoset-layout] {margin-bottom: 2.5em;}
+.text-post .photo-slideshow.processed {margin-bottom: 2.5em;}
 
 /*----- QUOTE -----*/
 
@@ -1063,6 +1054,7 @@ p.npf_chat b {
     z-index: 10;
     position: absolute;
     padding: 0.25em 0.75em;
+    display: none;
     {block:ifRoundedPostCorners}border-radius: 4px;{/block:ifRoundedPostCorners}
     margin: -1em auto auto calc({select:post width} - 150px);
 }
@@ -1363,7 +1355,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 
 /*---- RESPONSIVENESS -----*/
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
     #mobile-header, .close {display: block;}
     
     #sidebar {
@@ -1382,8 +1374,6 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         width: 100%;
         margin: 150px auto 50px auto;
     }
-    
-    .tmblr-iframe-compact .tmblr-iframe--unified-controls {display: none;}
     
     .info-dropdown {margin-left: calc({select:post width} - 200px);}
 }
@@ -1407,6 +1397,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
     #sidebar {width: 80vw; left: -80vw;}
     
     .info-dropdown {margin-left: calc(100vw - 260px);}
+    #btop {display: none;}
 }
 
 {CustomCSS}
@@ -1421,14 +1412,14 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 <header id="mobile-header">
     <div id="mobile-flex">
         <div id="mobile-left">
-            <div class="menu-button" title="open menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div>
+            <div class="menu-button" title="open menu"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div>
             <div class="subtitle">navigation</div>
         </div>
         <div class="mobile-controls">
-            <a href="https://www.tumblr.com/follow/{Name}" title="follow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></a>
+            <a href="https://www.tumblr.com/follow/{Name}" title="follow"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></a>
             <a href="https://www.tumblr.com/message/{Name}" title="message">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></a>
-            <a href="https://www.tumblr.com/dashboard" title="dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-compass"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></a>
+<svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></a>
+            <a href="https://www.tumblr.com/dashboard" title="dashboard"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-compass"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></a>
         </div>
     </div>
 </header>
@@ -1437,40 +1428,56 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 
 <aside id="sidebar">
     <div id="side-content">
-        <div class="close"><a title="close menu"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a></div>
+        <div class="close"><a title="close menu"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></a></div>
         
         {block:ifSidebarImage}<div id="side-icon">
             <img src="{image:Sidebar}" class="icon"/>
             <div class="ui-icon" id="status-icon"><i data-feather="{text:Sidebar Icon}" aria-hidden="true"></i></div>
         </div>{/block:ifSidebarImage}
+        
         <div class="title"><a href="/">{Title}</a></div>
         {block:ifSidebarSubtitle}<div class="sub-ital">{text:Sidebar Subtitle}</div>{/block:ifSidebarSubtitle}
+        
         <div id="description">{Description}</div>
+        
         <nav class="upper" id="side-nav">
             {block:ifHomeLink}<li><a href="/">
                 <i data-feather="{text:Home Icon}" aria-hidden="true"></i>
                 <span class="nav-txt">{text:Home Link}</span>    
             </a></li>{/block:ifHomeLink}
-            {block:ifAskLink}<li><a href="/ask">
+            {block:AskEnabled}{block:ifAskLink}<li><a href="/ask">
                 <i data-feather="{text:Ask Icon}" aria-hidden="true"></i>
                 <span class="nav-txt">{text:Ask Link}</span>    
-            </a></li>{/block:ifAskLink}
+            </a></li>{/block:ifAskLink}{/block:AskEnabled}
             {block:ifArchiveLink}<li><a href="/archive">
                 <i data-feather="{text:Archive Icon}" aria-hidden="true"></i>
                 <span class="nav-txt">{text:Archive Link}</span>
             </a></li>{/block:ifArchiveLink}
-            {block:ifLink1}<li><a href="{text:Link 1 URL}">
-                <i data-feather="{text:Link 1 Icon}" aria-hidden="true"></i>
-                <span class="nav-txt">{text:Link 1}</span>
-            </a></li>{/block:ifLink1}
-            {block:ifLink2}<li><a href="{text:Link 2 URL}">
-                <i data-feather="{text:Link 2 Icon}" aria-hidden="true"></i>
-                <span class="nav-txt">{text:Link 2}</span>
-            </a></li>{/block:ifLink2}
-            {block:ifLink3}<li><a href="{text:Link 3 URL}">
-                <i data-feather="{text:Link 3 Icon}" aria-hidden="true"></i>
-                <span class="nav-txt">{text:Link 3}</span>
-            </a></li>{/block:ifLink3}
+            {block:SubmissionsEnabled}<li><a href="/submit">
+                <i data-feather="{text:Submit Icon}" aria-hidden="true"></i>
+                <span class="nav-txt">submit</span>
+            </a></li>{/block:SubmissionsEnabled}
+            
+            {block:ifSidebarLink1}<li><a href="{text:Sidebar Link 1 URL}">
+                <i data-feather="{text:Sidebar Link 1 Icon}" aria-hidden="true"></i>
+                <span class="nav-txt">{text:Sidebar Link 1}</span>
+            </a></li>{/block:ifSidebarLink1}
+            {block:ifSidebarLink2}<li><a href="{text:Sidebar Link 2 URL}">
+                <i data-feather="{text:Sidebar Link 2 Icon}" aria-hidden="true"></i>
+                <span class="nav-txt">{text:Sidebar Link 2}</span>
+            </a></li>{/block:ifSidebarLink2}
+            {block:ifSidebarLink3}<li><a href="{text:Sidebar Link 3 URL}">
+                <i data-feather="{text:Sidebar Link 3 Icon}" aria-hidden="true"></i>
+                <span class="nav-txt">{text:Sidebar Link 3}</span>
+            </a></li>{/block:ifSidebarLink3}
+            {block:HasPages}
+                {block:Pages}
+                    <li><a href="{URL}">
+                        <i data-feather="link" aria-hidden="true"></i>
+                        <span class="nav-txt">{Label}</span>
+                    </a></li>
+                {/block:Pages}
+            {/block:HasPages}
         </nav>
     </div>
 </aside>
@@ -1487,17 +1494,17 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
     <div class="icon-gradient"><img src="{PortraitURL-64}" class="icon"/></div>
     <form action="/search" method="get" class="find" name="sform">
         <input type="text" name="q" placeholder="{text:search placeholder}" value="{SearchQuery}" value autocomplete="off"/>
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
     </form>
     
     <nav id="header-nav">
-        {block:ifLink4}<a href="{text:Link 4 URL}" title="{text:Link 4}"><i data-feather="{text:Link 4 Icon}"></i></a>{/block:ifLink4}
-        {block:ifLink5}<a href="{text:Link 5 URL}" title="{text:Link 5}"><i data-feather="{text:Link 5 Icon}"></i></a>{/block:ifLink5}
-        {block:ifLink6}<a href="{text:Link 6 URL}" title="{text:Link 6}"><i data-feather="{text:Link 6 Icon}"></i></a>{/block:ifLink6}
-        {block:ifLink7}<a href="{text:Link 7 URL}" title="{text:Link 7}"><i data-feather="{text:Link 7 Icon}"></i></a>{/block:ifLink7}
-        {block:ifLink8}<a href="{text:Link 8 URL}" title="{text:Link 8}"><i data-feather="{text:Link 8 Icon}"></i></a>{/block:ifLink8}
-        {block:ifLink9}<a href="{text:Link 9 URL}" title="{text:Link 9}"><i data-feather="{text:Link 9 Icon}"></i></a>{/block:ifLink9}
-        {block:ifLink10}<a href="{text:Link 10 URL}" title="{text:Link 10}"><i data-feather="{text:Link 10 Icon}"></i></a>{/block:ifLink10}
+        {block:ifHeaderLink1}<a href="{text:Header Link 1 URL}" title="{text:Header Link 1}"><i data-feather="{text:Header Link 1 Icon}"></i></a>{/block:ifHeaderLink1}
+        {block:ifHeaderLink2}<a href="{text:Header Link 2 URL}" title="{text:Header Link 2}"><i data-feather="{text:Header Link 2 Icon}"></i></a>{/block:ifHeaderLink2}
+        {block:ifHeaderLink3}<a href="{text:Header Link 3 URL}" title="{text:Header Link 3}"><i data-feather="{text:Header Link 3 Icon}"></i></a>{/block:ifHeaderLink3}
+        {block:ifHeaderLink4}<a href="{text:Header Link 4 URL}" title="{text:Header Link 4}"><i data-feather="{text:Header Link 4 Icon}"></i></a>{/block:ifHeaderLink4}
+        {block:ifHeaderLink5}<a href="{text:Header Link 5 URL}" title="{text:Header Link 5}"><i data-feather="{text:Header Link 5 Icon}"></i></a>{/block:ifHeaderLink5}
+        {block:ifHeaderLink6}<a href="{text:Header Link 6 URL}" title="{text:Header Link 6}"><i data-feather="{text:Header Link 6 Icon}"></i></a>{/block:ifHeaderLink6}
+        {block:ifHeaderLink7}<a href="{text:Header Link 7 URL}" title="{text:Header Link 7}"><i data-feather="{text:Header Link 7 Icon}"></i></a>{/block:ifHeaderLink7}
     </nav>
 </article>
 {/block:ifHeaderAbovePosts}
@@ -1510,14 +1517,19 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 </article>
 {/block:TagPage}
 
+{block:SearchPage}
+<article class="tag-page upper">
+    {lang:Found SearchResultCount results for SearchQuery}
+</article>
+{/block:SearchPage}
 
 {block:DayPage}
 <article class="tag-page">
     <div class="upper">Viewing posts made on <span class="subtitle">{DayOfMonth} {Month} {Year}</span></div>
     {block:DayPagination} 
         <div class="day-pagination">
-            {block:PreviousDayPage}<a href="{PreviousDayPage}"><div class="dec-icon ar-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></div>previous day</a>{/block:PreviousDayPage}
-            {block:NextDayPage}<a href="{NextDayPage}">next day<div class="dec-icon ar-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></a>{/block:NextDayPage}
+            {block:PreviousDayPage}<a href="{PreviousDayPage}"><div class="dec-icon ar-1"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></div>previous day</a>{/block:PreviousDayPage}
+            {block:NextDayPage}<a href="{NextDayPage}">next day<div class="dec-icon ar-2"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></a>{/block:NextDayPage}
         </div>
     {/block:DayPagination}
 </article>
@@ -1543,6 +1555,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
             {block:Text}<i data-feather="type" aria-hidden="true"></i>{/block:Text}
             {block:Link}<i data-feather="link" aria-hidden="true"></i>{/block:Link}
             {block:Photo}<i data-feather="camera" aria-hidden="true"></i>{/block:Photo}
+            {block:Panorama}<i data-feather="camera" aria-hidden="true"></i>{/block:Panorama}
             {block:Photoset}<i data-feather="image" aria-hidden="true"></i>{/block:Photoset}
             {block:Video}<i data-feather="tv" aria-hidden="true"></i>{/block:Video}
             {block:Quote}<i data-feather="bookmark" aria-hidden="true"></i>{/block:Quote}
@@ -1570,15 +1583,16 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </div>
     
     {block:ifPostInfoDropdown}{block:IndexPage}
-    <a class="info-button" title="more info"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></a>
+    <a class="info-button" title="more info"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></a>
     
     <div class="info-dropdown upper">
-        <a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>{DayOfMonth} {Month} {Year}</a>
+        <a href="/day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>{DayOfMonth} {Month} {Year}</a>
         {block:RebloggedFrom}
-            <a href="{ReblogParentURL}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>reblogged from</a>
+            <a href="{ReblogParentURL}"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-cw"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>reblogged from</a>
         {/block:RebloggedFrom}
-        <div class="copy-button" data-clipboard-text="{Permalink}"><a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>copy link to post</a></div>
-        <a href="{Permalink}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link-2"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg>permalink</a>
+        {block:ContentSource}<a href="{SourceURL}"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>{lang:Source}</a>{/block:ContentSource}
+        <div class="copy-button" data-clipboard-text="{Permalink}"><a><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>copy link to post</a></div>
+        <a href="{Permalink}"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link-2"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg>permalink</a>
     </div>
     
     <div class="copy-message upper">link copied</div>
@@ -1658,8 +1672,29 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 {/block:Caption}
 {/block:Photo}
 
+{block:Panorama}
+<div class="photo">
+    {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">{LinkCloseTag}
+</div>
+{block:Caption}
+    {block:NotReblog}
+        <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+            <div class="captext">{Caption}</div>
+        </li>
+    {/block:NotReblog}
+    {block:Reblogs}
+        <li class="caption rbcap twit-cap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+            <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
+            <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
+            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+            <div class="captext">{Body}</div>
+        </li>
+    {/block:Reblogs}
+{/block:Caption}
+{/block:Panorama}
+
 {block:Photoset}
-<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" /></div>{/block:Photos}</div>
+<div class="photo-slideshow" id="photoset_{PostID}" data-layout="{PhotosetLayout}">{block:Photos}<div class="photo-data"><div class="pxu-photo"><img src="{PhotoURL-500}" width="{PhotoWidth-500}" height="{PhotoHeight-500}" data-highres="{PhotoURL-HighRes}" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" alt="{PhotoAlt}"></div><a class="tumblr-box" rel="post-{PostID}" href="{PhotoURL-HighRes}"></a></div>{/block:Photos}</div>
 {block:Caption}
     {block:NotReblog}
         <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
@@ -1678,7 +1713,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 {/block:Photoset}
 
 {block:Video}
-<div class="video">{Video-500}</div>
+<div class="video">{Video-700}</div>
 {block:Caption}
     {block:NotReblog}
         <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
@@ -1798,14 +1833,17 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
             {/block:RebloggedFrom}
                 
             {block:NotReblog}<svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>original post{/block:NotReblog}
+            
+            {block:ContentSource}<div class="postsource"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>content source at <a href="{SourceURL}">{SourceTitle}</a></div>{/block:ContentSource}
+            
         </div>
         {/block:PermalinkPage}
     
     {block:IndexPage}
         <span class="lirb">
-            {block:ifTagsOnClick}{block:HasTags}<a class="tag-button" title="show tags"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></a>{/block:HasTags}{/block:ifTagsOnClick}
-            <a href="{ReblogURL}" title="reblog" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></a>
-            <a class="like-b" href="#" title="like">{LikeButton}<span class="b"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span></a>
+            {block:ifTagsOnClick}{block:HasTags}<a class="tag-button" title="show tags"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></a>{/block:HasTags}{/block:ifTagsOnClick}
+            <a href="{ReblogURL}" title="reblog" target="_blank"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></a>
+            <a class="like-b" href="#" title="like">{LikeButton}<span class="b"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span></a>
         </span>
     {/block:IndexPage}
 </div>
@@ -1813,29 +1851,21 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 
 {block:HasTags}
 <div class="tags {block:IndexPage}{block:ifTagsOnClick}tag-click{/block:ifTagsOnClick}{/block:IndexPage}">
-    {block:PermalinkPage}<div class="dec-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></div>{/block:PermalinkPage}
+    {block:PermalinkPage}<div class="dec-icon"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></div>{/block:PermalinkPage}
     {block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}
 </div>
 {/block:HasTags}
-
-<!----- SOURCE ----->
- 
-<div class="postsource">
-    {block:ContentSource}<a href="{SourceURL}">{lang:Source}:{block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a>{/block:ContentSource}
-</div>
 
 </article>
 
 <!----- POST NOTES ----->
 
-{block:PermalinkPage}{block:Date}
+{block:PermalinkPage}{block:Date}{block:PostNotes}
 <article class="notes">
     {block:NoteCount}<div class="title" id="notetitle">{NoteCountWithLabel}</div>{/block:NoteCount}
-    {block:PostNotes}
         {PostNotes-64}
-    {/block:PostNotes}
 </article>
-{/block:Date}{/block:PermalinkPage}
+{/block:PostNotes}{/block:Date}{/block:PermalinkPage}
 
 {/block:Posts}
 
@@ -1843,12 +1873,12 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 
 {block:Pagination}
 <article id="pg">
-    {block:PreviousPage}<a href="{PreviousPage}" title="go back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></a>{/block:PreviousPage}
+    {block:PreviousPage}<a href="{PreviousPage}" title="go back"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></a>{/block:PreviousPage}
         {block:JumpPagination length="5"}
             {block:CurrentPage}<span class="currentpg">{PageNumber}</span>{/block:CurrentPage}
             {block:JumpPage}<a class="jumppg" href="{URL}">{PageNumber}</a>{/block:JumpPage}
         {/block:JumpPagination}
-    {block:NextPage}<a href="{NextPage}" title="go forward"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>{/block:NextPage}
+    {block:NextPage}<a href="{NextPage}" title="go forward"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>{/block:NextPage}
 </article>
 {/block:Pagination}
 
@@ -1864,7 +1894,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 
 <!----- PHOTOSETS ----->
 
-<script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
+<script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
 
@@ -1886,19 +1916,36 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 
 <!----- JQUERY ----->
+
+<script>
+
+    /// photoset fix by @annasthms
+    
+    undoPhotoset({
+        'posts': '.posts .text-post', 
+        'text class': '.text-post', 
+        'photoset class': '.photo-slideshow' 
+    },true); 
+</script>
  
 <script>
 
-/// PHOTOSETS
-
 $(document).ready(function(){
-    undoPhotoset({
-        'posts': '.posts.text-post', 
-        'text class': '.text-post', 
-        'photoset class': '[photoset-layout]' 
-    },false);
     
-   initPhotosets();
+    /// PHOTOSETS 
+    
+    /// pxu photosets by pixelunion
+    
+   $('.photo-slideshow').pxuPhotoset({
+       lightbox: true,
+       rounded: false,
+       gutter: '{select:photoset gutter}px',
+       photoset: '.photo-slideshow',
+       photoWrap: '.photo-data',
+       photo: '.pxu-photo'
+   });
+   
+   /// npfPhotosets by @codematurgy
    
     npfPhotosets(".posts", {
        rowClass:"npf_row",
@@ -1913,7 +1960,7 @@ $(document).ready(function(){
        photosetMargins:"{select:photoset gutter}"
     });
     
-    /// NOTECOUNT 
+    /// NOTECOUNT by @shythemes
     
     $('article').find('.notecount').each(function(){
        var n = $(this).html().split(' ')[0].replace(/,/g, '');
@@ -1923,7 +1970,7 @@ $(document).ready(function(){
        }
    });
    
-   /// TOOLTIPS
+   /// TOOLTIPS by atomiks @ atomiks.github.io
 
     tippy('[title]', {
         theme: 'custom',
@@ -1941,12 +1988,10 @@ $(document).ready(function(){
         },
     });
     
-});
+    /// TAGS ON CLICK AND INFO DROPDOWN
 
-/// TAGS ON CLICK AND INFO DROPDOWN
-
-{block:IndexPage}
- $(document).ready(function() {
+    {block:IndexPage}
+    
     {block:ifTagsOnClick}
     $('.tag-click').hide();
     $('.tag-button').click(function(event) {
@@ -1975,30 +2020,44 @@ $(document).ready(function(){
         setTimeout(function(){
             $('.copy-message').fadeOut(500);}, 2000);
     });
- });
- {/block:IndexPage}
-
-/// TIME AGO
-
-$(document).ready(function() {
+    
+    {/block:IndexPage}
+    
+    /// TIME AGO by @bychloethemes
+    
     $(".time-ago").timeAgo({
-    time: "letter",
-    spaces: true, 
-    words: false, 
-    prefix: "", 
-    suffix: "ago", 
+        time: "letter",
+        spaces: true, 
+        words: false, 
+        prefix: "", 
+        suffix: "ago", 
     });
-});
-
-/// REMOVE REDIRECTS
-
-$(document).ready(function(){ 
-//remove tumblr redirects script by magnusthemes@tumblr 
-  $('a[href*="t.umblr.com/redirect"]').each(function(){
+    
+    /// REDIRECTS by @magnusthemes
+    
+    $('a[href*="t.umblr.com/redirect"]').each(function(){
       var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
       var replaceURL = decodeURIComponent(originalURL);
       $(this).attr("href", replaceURL);
   });
+  
+    /// SLIDE MOBILE NAV
+    
+    $('.menu-button').click(function(){
+        $('#sidebar').addClass('show');
+    });
+   
+    $('.close').click(function(){
+        $('#sidebar').removeClass('show');
+    });
+    
+    /// SCROLL TO TOP
+    
+     $('#btop').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+    
 });
 
 /// RESPONSIVE VIDEOS
@@ -2012,26 +2071,7 @@ $(document).ready(function(){
 }
 $(document).ready(flexFrame);
 
-/// SLIDE MOBILE NAV
- 
-$(document).ready(function() {
-    $('.menu-button').click(function(){
-        $('#sidebar').addClass('show', 1000);
-    });
-   
-    $('.close').click(function(){
-        $('#sidebar').removeClass('show', 1000);
-    });
-});
-
 feather.replace()
-
-$(document).ready(function(){
-    $('#btop').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
-        return false;
-    });
-});
 
 </script> 
 
