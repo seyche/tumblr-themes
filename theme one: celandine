@@ -1178,13 +1178,15 @@ a.more_notes_link {
 <!----- JQUERY ----->
 
 <script>
-$(document).ready(function(){
-    undoPhotoset({
-        'posts': '.posts.text-post', 
+undoPhotoset({
+        'posts': '.posts .text-post', 
         'text class': '.text-post', 
         'photoset class': '.photo-slideshow' 
     },true); 
-    
+</script>
+
+<script>
+$(document).ready(function(){
    $('.photo-slideshow').pxuPhotoset({
        lightbox: true,
        rounded: false,
