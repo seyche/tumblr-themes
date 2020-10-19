@@ -2311,18 +2311,20 @@ footer .title {color: {color:footer title}; font-size: 1.15em;}
 <!----- CLIPBOARD ----->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
+<script>
+undoPhotoset({
+        'posts': '.posts .text-post', 
+        'text class': '.text-post', 
+        'photoset class': '.photo-slideshow' 
+    },true); 
+</script>
  
 <script>
 
 /// PHOTOSETS
 
 $(document).ready(function(){
-    undoPhotoset({
-        'posts': '.posts.text-post', 
-        'text class': '.text-post', 
-        'photoset class': '.photo-slideshow' 
-    },true); 
-    
    $('.photo-slideshow').pxuPhotoset({
        lightbox: true,
        rounded: false,
