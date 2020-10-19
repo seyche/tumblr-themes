@@ -1526,16 +1526,18 @@ ol.notes li.note img.avatar {display: none;}
 <script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 
 <script>
+undoPhotoset({
+        'posts': '.posts .text-post', 
+        'text class': '.text-post', 
+        'photoset class': '[photoset-layout]' 
+    },false);
+</script>
+
+<script>
 
 /// PHOTOSETS
 
 $(document).ready(function(){
-    undoPhotoset({
-        'posts': '.posts.text-post', 
-        'text class': '.text-post', 
-        'photoset class': '[photoset-layout]' 
-    },false);
-    
    initPhotosets();
    
     npfPhotosets(".posts", {
