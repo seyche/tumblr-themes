@@ -1688,18 +1688,20 @@ ol.notes li.note img.avatar {
 <!----- VIDEO RESIZING ----->
 
 <script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+
+<script>
+undoPhotoset({
+        'posts': '.posts .text-post', 
+        'text class': '.text-post', 
+        'photoset class': '[photoset-layout]' 
+    },false);
+</script>
  
 <script>
 
 /// PHOTOSETS
 
 $(document).ready(function(){
-    undoPhotoset({
-        'posts': '.posts.text-post', 
-        'text class': '.text-post', 
-        'photoset class': '[photoset-layout]' 
-    },false);
-    
    initPhotosets();
    
     npfPhotosets(".posts", {
