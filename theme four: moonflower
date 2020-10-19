@@ -1500,16 +1500,18 @@ footer {
 <!----- SCRIPTS ----->
 
 <script>
-
-/// photosets
-
-$(document).ready(function(){
-   undoPhotoset({
-        'posts': '.posts.text-post', 
+undoPhotoset({
+        'posts': '.posts .text-post', 
         'text class': '.text-post', 
         'photoset class': '.photo-slideshow' 
     },true); 
-    
+</script>
+
+<script>
+
+/// photosets
+
+$(document).ready(function(){    
    $('.photo-slideshow').pxuPhotoset({
        lightbox: true,
        rounded: false,
