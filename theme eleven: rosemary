@@ -129,27 +129,17 @@
 
 <script src="https://unpkg.com/feather-icons"></script>
 
-<style type="text/css">
+<!----- LOAD IN ----->
+ 
+<script>
+$(document).ready(function(){
+    $(function() {
+        $('body').removeClass('load-in');
+    });
+});
+</script>
 
-@keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
- 
-@-webkit-keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
- 
-@-moz-keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
- 
-@-o-keyframes lazyload {
-    0%   {opacity: 0;}
-    100% {opacity: 1;}
-}
+<style type="text/css">
 
 body {
     font-family: '{select:body font}', sans-serif;
@@ -164,10 +154,20 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    -webkit-animation: lazyload 2s;
-    -moz-animation: lazyload 2s;
-    -o-animation: lazyload 2s;
-    animation: lazyload 2s;
+    -webkit-transition: 2s opacity;
+    -moz-transition: 2s opacity;
+    -ms-transition: 2s opacity;
+    -o-transition: 2s opacity;
+    transition: 2s opacity;
+}
+
+body.load-in {
+    opacity: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
 }
 
 a {
@@ -880,8 +880,10 @@ p.npf_quirky {font-family: Fairwater; font-size: 1.75em;}
     -o-transition: all 0.5s;
     transition: all 0.5s;
 }
- 
+
+.npf-link-block {background-color: initial;}
 .npf-link-block .poster .title {background-color: initial; padding: 1.5em;}
+.npf-link-block.no-poster .title {padding: 1.5em 1.5em 0 1.5em;}
 .npf-link-block .title {font-size: 1.25em; border-bottom: none;}
 .npf-link-block .bottom {padding: 1.5em !important; color: {color:text};}
  
