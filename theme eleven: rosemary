@@ -446,7 +446,7 @@ aside {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    margin: 5px auto 10px auto;
+    margin: 5px auto 10px auto !important;
     z-index: -1;
 }
 
@@ -464,7 +464,7 @@ aside {
 .dots.menu-dots span {
     width: 6px;
     height: 6px;
-    margin: auto 5px auto auto;
+    margin: auto 5px auto auto !important;
 }
 
 #btop a svg {
@@ -673,7 +673,7 @@ article:first-of-type {margin-top: 0;}
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    margin: auto 0.5px;
+    margin: auto 0.5px !important;
     display: inline-block;
 }
 
