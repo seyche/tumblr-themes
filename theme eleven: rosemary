@@ -1978,7 +1978,7 @@ tippy('[title]', {
 
     function flexFrame() {
    $(".caption").each(function() {
-        $(this).find("iframe").wrap("<div class='capframe'></div>"); 
+        $(this).find(".embed_iframe").wrap("<div class='capframe'></div>"); 
         flexibleFrames($(".capframe"));
     });
     flexibleFrames($(".video"));
