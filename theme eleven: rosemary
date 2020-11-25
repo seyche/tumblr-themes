@@ -464,7 +464,7 @@ aside {
 .dots.menu-dots span {
     width: 6px;
     height: 6px;
-    margin: auto 5px auto auto !important;
+    margin: auto 10px auto auto !important;
 }
 
 #btop a svg {
@@ -673,7 +673,7 @@ article:first-of-type {margin-top: 0;}
     width: 4px;
     height: 4px;
     border-radius: 50%;
-    margin: auto 0.5px !important;
+    margin: auto 2px !important;
     display: inline-block;
 }
 
@@ -1188,6 +1188,7 @@ p.npf_chat b {
 }
 
 .tags .dots {margin: 0.5em auto 0.75em auto;}
+.tags .dots span {margin: 0 3px !important;}
 
 .tags a {margin-right: 1em; opacity: 0.9;}
 
@@ -1321,6 +1322,7 @@ ol.notes li.note.more_notes_link_container {display: block; margin-top: 0.75em;}
 }
 
 #pg .dots {margin: 0.5em auto 1em auto;}
+#pg .dots span {margin: 0 3px !important;}
 
 .td-page .subtitle {color: {color:accent};}
 .td-page .upper {color: {color:title};}
@@ -1428,9 +1430,7 @@ ol.notes li.note.more_notes_link_container {display: block; margin-top: 0.75em;}
 <!----- NAV MENU SIDEBAR ----->
 
 <div class="dots menu-dots">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
 </div>
 
 <div id="button-wrap">
@@ -1508,13 +1508,7 @@ ol.notes li.note.more_notes_link_container {display: block; margin-top: 0.75em;}
         </div>
         
         <div class="dots">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
         <div id="description">{Description}</div>
     </div>
@@ -1815,9 +1809,7 @@ ol.notes li.note.more_notes_link_container {display: block; margin-top: 0.75em;}
 {block:HasTags}
 <div class="tags {block:IndexPage}{select:tags}{/block:IndexPage}">
     <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </div>
     {block:Tags}<a href="{TagURL}"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-hash"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>{Tag}</a>{/block:Tags}
 </div>
@@ -1843,9 +1835,7 @@ ol.notes li.note.more_notes_link_container {display: block; margin-top: 0.75em;}
         {block:PreviousPage}<div class="slash">/</div>{/block:PreviousPage}
         {block:NextPage}<a href="{NextPage}" title="next page"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>{/block:NextPage}
         <div class="dots">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
         <div class="upper">
             on page {CurrentPage} of {TotalPages}
