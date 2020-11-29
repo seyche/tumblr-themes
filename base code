@@ -383,6 +383,7 @@ p.npf_chat b {color: {color:title}; font-family: inherit;}
     position: relative;
     display: inline-block;
     height: 1.6em;
+    margin-bottom: -1px;
 }
  
 .likeb .like_button iframe {
