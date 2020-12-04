@@ -206,12 +206,7 @@ h1.post-title {margin-top: 0;}
 
 /*----- LINK -----*/
 
-a.link-wrap {
-    display: block;
-    color: {color:text};
-    border: 1px solid {color:borders};
-}
-
+a.link-wrap {display: block; border: 1px solid {color:borders};}
 .link {padding: 2em;}
 .link-host, .link-txt {margin-top: 1.5em;}
 
