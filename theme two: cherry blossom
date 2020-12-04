@@ -94,6 +94,7 @@
 
 <meta name="text:Home Link" content="home"/>
 <meta name="text:Ask Link" content="ask"/>
+<meta name="text:Archive Link" content="archive"/>
 <meta name="text:Link 1 URL" content="" />
 <meta name="text:Link 1" content="" />
 <meta name="text:Link 2 URL" content="" />
@@ -1040,7 +1041,7 @@ ol.notes li.note img.avatar {display: none;}
     {/block:ifSearchBar}
     
     <nav class="bullet">
-        {block:ifHomeLink}<a href="/">{text:Home Link}</a>{/block:ifHomeLink}{block:ifAskLink}<a href="/ask">{text:Ask Link}</a>{/block:ifAskLink}{block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}{block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}{block:ifLink3}<a href="{text:Link 3 URL}">{text:Link 3}</a>{/block:ifLink3}{block:ifLink4}<a href="{text:Link 4 URL}">{text:Link 4}</a>{/block:ifLink4}{block:ifLink5}<a href="{text:Link 5 URL}">{text:Link 5}</a>{/block:ifLink5}{block:ifLink6}<a href="{text:Link 6 URL}">{text:Link 6}</a>{/block:ifLink6}
+        {block:ifHomeLink}<a href="/">{text:Home Link}</a>{/block:ifHomeLink}{block:ifAskLink}<a href="/ask">{text:Ask Link}</a>{/block:ifAskLink}{block:ifArchiveLink}<a href="/archive">{text:Archive Link}</a>{/block:ifArchiveLink}{block:ifLink1}<a href="{text:Link 1 URL}">{text:Link 1}</a>{/block:ifLink1}{block:ifLink2}<a href="{text:Link 2 URL}">{text:Link 2}</a>{/block:ifLink2}{block:ifLink3}<a href="{text:Link 3 URL}">{text:Link 3}</a>{/block:ifLink3}{block:ifLink4}<a href="{text:Link 4 URL}">{text:Link 4}</a>{/block:ifLink4}{block:ifLink5}<a href="{text:Link 5 URL}">{text:Link 5}</a>{/block:ifLink5}{block:ifLink6}<a href="{text:Link 6 URL}">{text:Link 6}</a>{/block:ifLink6}
     </nav>
 </aside>
 
