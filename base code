@@ -23,12 +23,11 @@
 
 <meta name="image:Sidebar" content=""/>
 
-<meta name="color:Background" content="#626262"/>
+<meta name="color:Background" content="#ffffff"/>
 <meta name="color:Text" content="#707070"/>
-<meta name="color:Link" content="#9a9a9a"/>
+<meta name="color:Link" content="#313131"/>
 <meta name="color:Accent" content="#71d3d7"/>
 <meta name="color:Borders" content="#dcdcdc"/>
-<meta name="color:Title" content="#121212"/>
 
 <meta name="select:Post Width" content="400px" title="400px"/>
 <meta name="select:Post Width" content="500px" title="500px"/>
@@ -85,8 +84,6 @@ a:hover {
     transition: all 0.3s;
 }
 
-p a {border-bottom: 1px solid {color:borders};}
-
 blockquote {
     padding: 0 0 0 1.5em;
     border-left: 1px solid {color:borders};
@@ -94,14 +91,11 @@ blockquote {
 }
 
 h1, h2, h3, h4, h5, .title {
-    color: {color:title};
     letter-spacing: 0.06em;
     line-height: 145%;
     font-weight: bold;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, .title a {color: {color:title};}
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, .title a:hover {color: {color:accent}}
 h1, .title {font-size: 1.5em;}
 h2 {font-size: 1.3em;}
 h3 {font-size: 1.25em;}
@@ -110,8 +104,6 @@ h5 {font-size: 1em;}
 
 small {font-size: 0.9em;}
 big {font-size: 1.1em;}
-b, bold, strong {color: {color:title};}
-b a:hover, bold a:hover, strong a:hover {color: {color:accent};}
 
 hr {
     height: 1px;
@@ -199,9 +191,6 @@ article {
     font-weight: bold;
 }
 
-.username a {color: {color:title};}
-.username a:hover {color: {color:accent};}
-
 .deactive::after {
     content: '(deactivated)';
     margin-left: 1em;
@@ -215,8 +204,6 @@ p.tmblr-attribution {margin-top: 1em !important;}
 
 h1.post-title {margin-top: 0;}
 
-a.read_more {font-weight: bold;}
-
 /*----- LINK -----*/
 
 a.link-wrap {
@@ -225,9 +212,8 @@ a.link-wrap {
     border: 1px solid {color:borders};
 }
 
-a.link-wrap img {max-width: 100%;}
 .link {padding: 2em;}
-.link-host, .link-txt {color: {color:text}; margin-top: 1.5em;}
+.link-host, .link-txt {margin-top: 1.5em;}
 
 .npf-link-block {
     margin-top: 1.5em; 
@@ -238,9 +224,7 @@ a.link-wrap img {max-width: 100%;}
 .npf-link-block .poster .title {padding: 1.5em;}
 .npf-link-block.no-poster .title {padding: 1.5em 1.5em 0 1.5em;}
 .npf-link-block .title {font-size: 1.25em; border-bottom: none;}
-.npf-link-block .bottom {padding: 1.5em !important; color: {color:text};}
- 
-.npf-link-block .bottom .site-name {color: {color:text};}
+.npf-link-block .bottom {padding: 1.5em !important;}
 
 /*----- PHOTO -----*/
 
@@ -276,11 +260,7 @@ img {
 
 /*----- QUOTE -----*/
 
-.quote, p.npf_quote {
-    line-height: 160%;
-    font-size: 1.25em;
-    color: {color:title};
-}
+.quote, p.npf_quote {line-height: 160%; font-size: 1.25em;}
 
 .quote p:first-of-type {margin-top: 0;}
 .quote p:last-of-type {margin-bottom: 0;}
@@ -293,10 +273,10 @@ p.npf_quote {font-family: inherit; margin-bottom: 1em;}
 .chat {padding: 0; margin: 0;}
 .chat li {list-style-type: none; margin-top: 1em;}
 .chat li:first-of-type {margin-top: 0;}
-.chatter {font-weight: bold; color: {color:title};}
+.chatter {font-weight: bold;}
 
 p.npf_chat {font-family: inherit; margin-top: 1em;}
-p.npf_chat b {color: {color:title}; font-family: inherit;}
+p.npf_chat b {font-family: inherit;}
 
 /*----- ANSWER -----*/
 
@@ -314,11 +294,7 @@ p.npf_chat b {color: {color:title}; font-family: inherit;}
     display: inline-block; 
     margin-left: 1em;
     font-weight: bold;
-    color: {color:title};
 }
-
-.ask-wrap .asking a {color: {color:title};}
-.ask-wrap .asking a:hover {color: {color: title};}
 
 .question {margin-top: 1em;}
 .question p:first-of-type {margin-top: 0;}
@@ -365,8 +341,8 @@ p.npf_chat b {color: {color:title}; font-family: inherit;}
 }
 
 .audioinfo li {list-style-type: none;}
-.track {font-weight: bold; color: {color:title};}
- 
+.track {font-weight: bold;}
+
 /*----- INFO -----*/
 
 .info {
@@ -407,7 +383,7 @@ p.npf_chat b {color: {color:title}; font-family: inherit;}
 
 a.pinned-post {font-weight: bold; color: {color:accent};}
 
-.tag-day {font-weight: bold; color: {color:accent};}
+.tag-day {font-weight: bold;}
 
 /*---- POST NOTES -----*/
 
@@ -430,8 +406,6 @@ ol.notes li.note img.avatar {
     height: 1.25em;
 }
 
-a.more_notes_link {font-weight: bold;}
-
 /*---- PAGINATION -----*/
 
 #page-navigation {text-align: center;}
@@ -450,12 +424,7 @@ a.more_notes_link {font-weight: bold;}
     bottom: 20px;
     right: 20px;
     font-size: 15px;
-    background-color: {color:background};
-    padding: 5px 10px;
-    border-radius: 3px;
 }
-
-#credit:hover {background-color: {color:accent}; color: {color:background};}
 
 /*---- 
 
@@ -783,7 +752,6 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 {block:PermalinkPage}{block:Date}
 {block:NoteCount}{block:PostNotes}
 <div class="notes">
-    <div class="title">{NoteCountWithLabel}</div>
     {PostNotes-64}
 </div>
 {/block:PostNotes}{/block:NoteCount}
