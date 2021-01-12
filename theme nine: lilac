@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 <title>{Title} {block:TagPage}/ #{Tag}{/block:TagPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
  
@@ -98,6 +99,7 @@
 <meta name="text:Ask Icon" content="mail"/>
 <meta name="text:Archive Link" content="archive"/>
 <meta name="text:Archive Icon" content="grid"/>
+<meta name="text:Submit Link" content="submit"/>
 <meta name="text:Submit Icon" content="upload"/>
 
 <meta name="text:Sidebar Link 1 URL" content=""/>
@@ -1400,6 +1402,15 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
     #btop {display: none;}
 }
 
+iframe#submit_form {
+    position: relative !important;
+    height: auto !important;
+    min-height: 383px !important;
+}
+
+iframe#submit_form html.submit-form-context {min-height: 470px !important;}
+form.regular_post.submission_form {min-height: 468px !important;}
+
 {CustomCSS}
 
 </style>
@@ -1453,10 +1464,10 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
                 <i data-feather="{text:Archive Icon}" aria-hidden="true"></i>
                 <span class="nav-txt">{text:Archive Link}</span>
             </a></li>{/block:ifArchiveLink}
-            {block:SubmissionsEnabled}<li><a href="/submit">
+            {block:SubmissionsEnabled}{block:ifSubmitLink}<li><a href="/submit">
                 <i data-feather="{text:Submit Icon}" aria-hidden="true"></i>
-                <span class="nav-txt">submit</span>
-            </a></li>{/block:SubmissionsEnabled}
+                <span class="nav-txt">{text:Submit Link}</span>
+            </a></li>{/block:ifSubmitLink}{/block:SubmissionsEnabled}
             
             {block:ifSidebarLink1}<li><a href="{text:Sidebar Link 1 URL}">
                 <i data-feather="{text:Sidebar Link 1 Icon}" aria-hidden="true"></i>
