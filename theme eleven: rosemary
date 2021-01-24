@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 <title>{Title} {block:TagPage}/ #{Tag}{/block:TagPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
  
@@ -112,6 +113,7 @@
 <meta name="text:Home Link" content="home"/>
 <meta name="text:Ask Link" content="ask"/>
 <meta name="text:Archive Link" content="archive"/>
+<meta name="text:Submit Link" content=""/>
 <meta name="text:Link 1 URL" content=""/>
 <meta name="text:Link 1" content=""/>
 <meta name="text:Link 2 URL" content=""/>
@@ -337,7 +339,7 @@ aside {
     {block:ifProfileImage}
     margin: -34px auto 1em auto;
     {block:ifPhotoBorder}
-    margin-top: -40px;
+    margin: -40px auto 1em 14px;
     {/block:ifPhotoBorder}
     {/block:ifProfileImage}
 }
@@ -1470,8 +1472,9 @@ ol.notes li.note.more_notes_link_container {display: block; margin-top: 0.75em;}
     <div id="menu-content">
         <nav>
             {block:ifHomeLink}<li><a href="/">{text:Home Link}</a></li>{/block:ifHomeLink}
-            {block:ifAskLink}<li><a href="/ask">{text:Ask Link}</a></li>{/block:ifAskLink}
+            {block:AskEnabled}{block:ifAskLink}<li><a href="/ask">{text:Ask Link}</a></li>{/block:ifAskLink}{/block:AskEnabled}
             {block:ifArchiveLink}<li><a href="/archive">{text:Archive Link}</li></a>{/block:ifArchiveLink}
+            {block:SubmissionsEnabled}{block:ifSubmitLink}<li><a href="/submit">{text:Submit Link}</a></li>{/block:ifSubmitLink}{/block:SubmissionsEnabled}
             {block:ifLink1}<li><a href="{text:Link 1 URL}">{text:Link 1}</a></li>{/block:ifLink1}
             {block:ifLink2}<li><a href="{text:Link 2 URL}">{text:Link 2}</a></li>{/block:ifLink2}
             {block:ifLink3}<li><a href="{text:Link 3 URL}">{text:Link 3}</a></li>{/block:ifLink3}
@@ -1510,7 +1513,7 @@ ol.notes li.note.more_notes_link_container {display: block; margin-top: 0.75em;}
         <div class="dots">
             <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
-        <div id="description">{Description}</div>
+        {block:Description}<div id="description">{Description}</div>{/block:Description}
     </div>
     
 </aside>
