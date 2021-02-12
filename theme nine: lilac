@@ -1402,6 +1402,10 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
     #btop {display: none;}
 }
 
+@media only screen and (max-width: 400px) {
+	#mobile-header .subtitle {display: none;} 
+}
+
 iframe#submit_form {
     position: relative !important;
     height: auto !important;
