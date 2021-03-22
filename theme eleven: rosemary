@@ -1510,7 +1510,7 @@ form.regular_post.submission_form {min-height: 468px !important;}
 <aside>
     
     <div id="blog-info">
-        {block:ifProfileImage}<img src="{image:Profile}" id="side-img"></a>{/block:ifProfileImage}
+        {block:ifProfileImage}<a href="/"><img src="{image:Profile}" id="side-img"></a>{/block:ifProfileImage}
         {block:ifShowBlogIcon}<img src="{PortraitURL-64}" class="icon">{/block:ifShowBlogIcon}
         <div class="title"><a href="/">{Title}</a></div>
         
