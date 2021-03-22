@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{Title} / Media</title>
+
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!---
+ 
+    POPPY MEDIA PAGE BY SEYCHE.TUMBLR.COM
+ 
+    CREDITS:
+    -feather icons by Cole Bemis
+    -tippy.js tooltips by atomiks
+    -isotope filtering by metafizzy / tutorial by @magnusthemes
+    (full list of credits @ seyche.tumblr.com/credits)
+ 
+--->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://unpkg.com/feather-icons"></script>
+
+<style type="text/css">
+
+/*----- VARIABLES: EDIT THIS SECTION!!!! -----*/
+
+:root {
+    
+    /*----- colours -----*/
+    
+    --background: #f0f0f0;
+    --content-background: #fff;
+    --text: #525252;
+    --links: #8c8c8c;
+    --accent: #c9183f;
+    --title: #212121;
+    --drop-shadow: #e7e7e7;
+    --rating-star: #fad21e;
+    --favourite-heart: #de2121;
+    --popup-background: #3a3a3a;
+    --popup-text: #fafafa;
+    
+    --filter-title: #212121;
+    --filter-text: #5a5a5a;
+    --filter-link: #8c8c8c;
+    
+    /*--- images / item widths are 250px in width and can't be changed without making the page non-responsive for small screens. however, feel free to change image heights. default image ratio is 2 : 3 and images will resize automatically. ---*/
+    
+    --media-image-height: 375px;
+    
+    /*----- font styling -----*/
+    
+    --body-font: 'Fira Sans', sans-serif;
+    --title-font: 'Montserrat', sans-serif;
+    --font-size: 15px;
+
+}
+
+/*----- END VARIABLES: you don't need to edit the css after here -----*/
+
+
+</style>
+
+<link rel="stylesheet" href="https://seyche.github.io/external-files-hosting/pages/poppy.css">
+
+</head>
+<body>
+
+<!----- HEADER ----->
+
+<header>
+    <div class="header-left">
+    
+        <!----- ================================
+ 
+         START EDITING HERE: fill in your title here
+ 
+        ================================= ----->
+        
+        <!-- this is your blog icon. if you want a different image to show up, replace {PortraitURL-128} with the image URL of your choice. -->
+        
+        <img src="{PortraitURL-128}" class="icon"/>
+        
+        <div class="title-details">
+            <div class="title">Media</div>
+        </div>
+        
+    </div>
+    
+    <!-- nav links. icons are from feathericons.com; if you want to change them or add more links, go to the site, fint the name of the new icon you want, and replace it below. -->
+    
+    <nav>
+        <a href="/" title="return home"><i data-feather="home"></i></a>
+        <a href="/ask" title="ask"><i data-feather="mail"></i></a>
+        <a href="/archive" title="archive"><i data-feather="grid"></i></a>
+        <a href="https://tumblr.com/dashboard" title="dashboard"><i data-feather="compass"></i></a>
+    </nav>
+    
+</header>
+
+<!----- END OF HEADER ----->
+
+<!----- MAIN CONTENT ----->
+
+<main>
+
+    <!----- ================================
+ 
+         START EDITING FILTERS HERE:
+ 
+    ================================= ----->
+
+    <div id="filters">
+    
+        <!---  
+        
+        start editing filter title and description here. if you want to include a description after the title, copy:
+        <div class="filter-desc">Optional description.</div>
+        
+        and paste it right AFTER <div class="title">Filter</div>.
+        
+        --->
+        
+        <div class="title">Filter</div>
+        
+        <!--
+        
+        ADDING MORE FILTER GROUPS:
+        
+        a filter group looks like this:
+        
+        <div class="filter-wrap">
+            <ul class="filter option-set" data-filter-group="GROUP1">
+                <li class="subtitle">TITLE:</li>
+                <li><a href="#" data-filter-value=".FILTER">FILTER</a></li>
+            </ul>
+        </div>
+        
+        copy and paste that to add additional filter groups. you can have multiple groups. 
+        
+        the values in CAPITALS are where you need to edit. data-filter-group MUST be "groupX" where X = the number of the group. so for a third group, it would be "group3", a fourth would be "group4", etc.
+        
+        if you add the class "exclusive" to <ul></ul>, the filters in that group will be exclusive, meaning you won't be able to select multiple filters in that group.
+       
+       ===================================
+       
+        ADDING FILTERS WITHIN GROUPS:
+        
+        every filter looks like this:
+            
+        <li><a href="#" data-filter-value=".FILTER">FILTER NAME</a></li>
+            
+        the spots above in capital letters are where you need to edit. don't change the other parts. data-filter-value is where you enter the filter in the filtering system, and "FILTER NAME" is the filter link that actually shows up in the header. the value of data-filter-value must have a "." in front of it. 
+        
+        to apply the filters on the items, add the name of the new filter as a class to <article></article>. it must match exactly the value you gave to your filter in the new group, MINUS the ".", so it should look like: <article class="FILTER">. as long as you adhere to both of those conditions, you can name data-filter-value whatever you want, and you can have as many filters as you want on <article>.
+        
+        if you add the filter ".fave" to an item, it will add a heart to it. 
+        
+        -->
+        
+        <!-- filter group one -->
+        
+        <div class="filter-wrap">
+                    
+            <ul class="filter option-set exclusive" data-filter-group="group1">
+                <li class="subtitle">Type:</li>
+                <li><a href="#" data-filter-value="" class="selected">All media</a></li>
+                <li><a href="#" data-filter-value=".film">Films</a></li>
+                <li><a href="#" data-filter-value=".tv">TV Shows</a></li>
+                <li><a href="#" data-filter-value=".book">Books</a></li>
+                
+                <!-- make sure any filters you add in this group go above this line -->
+                
+            </ul>
+               
+        </div>
+        
+        <!-- filter group two -->
+        
+        <div class="filter-wrap">
+                    
+            <ul class="filter option-set" data-filter-group="group2">
+                <li class="subtitle">Rating:</li>
+                <li><a href="#" data-filter-value=".one">One</a></li>
+                <li><a href="#" data-filter-value=".two">Two</a></li>
+                <li><a href="#" data-filter-value=".three">Three</a></li>
+                <li><a href="#" data-filter-value=".four">Four</a></li>
+                <li><a href="#" data-filter-value=".five">Five</a></li>
+            </ul>
+               
+        </div>
+        
+        <!-- any additional filters groups must go above this line -->
+        
+    </div>
+    
+    <!----- END OF FILTERS ----->
+    
+    <!----- MEDIA GRID ----->
+
+    <section>
+    
+        <!----- ================================
+ 
+         START EDITING MEDIA ITEMS HERE:
+         
+         every media item looks like this:
+         
+         <article>
+            <img src="https://via.placeholder.com/250x375.png">
+            
+            <div class="popup">
+                Description here. 
+                <nav>
+                    <a href="/">link</a>
+                </nav>        
+            </div>
+            <a class="more" title="more info"><i data-feather="plus"></i></a>
+            
+            <div class="item-desc">
+                <div class="subtitle">Media Title</div>
+                <i>Subtitle</i>
+                <div class="rating">
+                    <i data-feather="star"></i>
+                </div>
+            </div>
+        </article>
+        
+        copy and paste it as many times as you want, and don't forget to add filters on <article>.
+        
+        if you don't want the popup, delete everything between and including <div class="popup"></div> AND <a class="more" title="more info"><i data-feather="plus"></i></a>.
+        
+        if you want to use the popup, you CAN'T delete the images.
+ 
+        ================================= ----->
+        
+        <!-- item one -->
+        
+        <article class="tv five">
+            <img src="https://via.placeholder.com/250x375.png">
+            
+            <div class="popup">
+                Slide-in description goes here. 
+                <nav>
+                    <a href="/">link</a>
+                </nav>        
+            </div>
+            <a class="more" title="more info"><i data-feather="plus"></i></a>
+            
+            <div class="item-desc">
+                <div class="subtitle">Title</div>
+                <i>Subtitle</i>
+                <div class="rating">
+                    <i data-feather="star"></i>
+                    <i data-feather="star"></i>
+                    <i data-feather="star"></i>
+                    <i data-feather="star"></i>
+                    <i data-feather="star"></i>
+                </div>
+            </div>
+        </article>
+        
+        <!-- item two -->
+        
+        <article class="film one">
+            <img src="https://via.placeholder.com/250x375.png">
+            
+            <div class="popup">
+                <p>
+                    Slide-in description goes here. 
+                </p>
+                <p>
+                    You can even write multiple paragraphs, separated by < p > and < /p >, if you want.
+                </p>
+                <nav>
+                    <a href="/">link</a>
+                </nav>        
+            </div>
+            <a class="more" title="more info"><i data-feather="plus"></i></a>
+            
+            <div class="item-desc">
+                <div class="subtitle">Title</div>
+                <i>Subtitle</i>
+                <div class="rating">
+                    <i data-feather="star"></i>
+                </div>
+            </div>
+        </article>
+        
+    <!-- ALL NEW MEDIA ITEMS MUST BE ADDED ABOVE THIS LINE -->
+    
+    </section>
+    
+    <!----- END OF MEDIA GRID ----->
+    
+    <div id="k"><a href="https://seyche.tumblr.com/">poppy page by seyche</a></div>
+    
+</main>
+
+<!----- ================================
+ 
+    STOP EDITING HERE
+ 
+ ================================= ----->
+ 
+ <!----- JQUERY, DON'T TOUCH ----->
+
+<!----- ISOTOPE FILTERS, LICENSED UNDER A GPLV3 LICENSE ----->
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<!----- TOOLTIPS ----->
+ 
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+
+<script src="https://seyche.github.io/external-files-hosting/pages/poppy.js"></script>
+
+<script>feather.replace()</script>
+
+</body>
+</html>
