@@ -65,10 +65,9 @@
 
 /*----- END VARIABLES: you don't need to edit the css after here -----*/
 
-
 </style>
 
-<link rel="stylesheet" href="https://seyche.github.io/external-files-hosting/pages/poppy.css">
+<link rel="stylesheet" href="https://seyche.github.io/external-files-hosting/pages/poppymedia.css">
 
 </head>
 <body>
@@ -86,7 +85,7 @@
         
         <!-- this is your blog icon. if you want a different image to show up, replace {PortraitURL-128} with the image URL of your choice. -->
         
-        <img src="{PortraitURL-128}" class="icon"/>
+        <img src="{PortraitURL-128}" class="icon" alt="blog avatar icon"/>
         
         <div class="title-details">
             <div class="title">Media</div>
@@ -214,7 +213,7 @@
          every media item looks like this:
          
          <article>
-            <img src="https://via.placeholder.com/250x375.png">
+            <img src="https://via.placeholder.com/250x375.png" alt="media image">
             
             <div class="popup">
                 Description here. 
@@ -222,9 +221,10 @@
                     <a href="/">link</a>
                 </nav>        
             </div>
-            <a class="more" title="more info"><i data-feather="plus"></i></a>
             
             <div class="item-desc">
+                <a class="more"><i data-feather="plus"></i></a>
+                
                 <div class="subtitle">Media Title</div>
                 <i>Subtitle</i>
                 <div class="rating">
@@ -244,7 +244,7 @@
         <!-- item one -->
         
         <article class="tv five">
-            <img src="https://via.placeholder.com/250x375.png">
+            <img src="https://via.placeholder.com/250x375.png" alt="media image">
             
             <div class="popup">
                 Slide-in description goes here. 
@@ -252,9 +252,10 @@
                     <a href="/">link</a>
                 </nav>        
             </div>
-            <a class="more" title="more info"><i data-feather="plus"></i></a>
             
             <div class="item-desc">
+                <a class="more"><i data-feather="plus"></i></a>
+                
                 <div class="subtitle">Title</div>
                 <i>Subtitle</i>
                 <div class="rating">
@@ -270,22 +271,23 @@
         <!-- item two -->
         
         <article class="film one">
-            <img src="https://via.placeholder.com/250x375.png">
+            <img src="https://via.placeholder.com/250x375.png" alt="media image">
             
             <div class="popup">
                 <p>
                     Slide-in description goes here. 
                 </p>
                 <p>
-                    You can even write multiple paragraphs, separated by < p > and < /p >, if you want.
+                    You can even write multiple paragraphs, separated by < p > and < /p >, if you want, and add fancy text styles, like <b>bold</b>, <i>italic</i>, and <u>underlined</u>.
                 </p>
                 <nav>
                     <a href="/">link</a>
                 </nav>        
             </div>
-            <a class="more" title="more info"><i data-feather="plus"></i></a>
             
             <div class="item-desc">
+                <a class="more"><i data-feather="plus"></i></a>
+                
                 <div class="subtitle">Title</div>
                 <i>Subtitle</i>
                 <div class="rating">
@@ -298,17 +300,15 @@
     
     </section>
     
-    <!----- END OF MEDIA GRID ----->
+    <!----- ================================
+ 
+    END OF MEDIA GRID. STOP EDITING HERE.
+ 
+    ================================= ----->
     
     <div id="k"><a href="https://seyche.tumblr.com/">poppy page by seyche</a></div>
     
 </main>
-
-<!----- ================================
- 
-    STOP EDITING HERE
- 
- ================================= ----->
  
  <!----- JQUERY, DON'T TOUCH ----->
 
