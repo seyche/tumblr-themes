@@ -1029,7 +1029,12 @@ p.npf_chat b {
  
 .audio-wrap {border: 1px solid {color:borders}; text-align: left;}
 
-.album-art {float: left;}
+.album-art {
+    float: left;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
  
 .album-art img {
     z-index: 1;
