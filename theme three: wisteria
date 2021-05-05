@@ -1007,7 +1007,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 </article>
 {/block:TagPage}
 
-{block:Posts}
+{block:Posts inlineMediaWidth="1280"}
 <article class="posts" id="{PostID}">
 
 {block:Date}
@@ -1281,7 +1281,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 
 <!----- VIDEO RESIZING ----->
 
-<script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+<script src="https://seyche.github.io/external-files-hosting/plugins/flexframes-modified.js"></script>
 
 <!----- TOOLTIPS ----->
  
@@ -1289,14 +1289,6 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
 
 <!----- SCRIPTS ----->
-
-<script>
-undoPhotoset({
-        'posts': '.posts .text-post', 
-        'text class': '.text-post', 
-        'photoset class': '[photoset-layout]' 
-    },false);
-</script>
 
 <script>
 
