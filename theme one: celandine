@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 <title>{Title} {block:TagPage}/ #{Tag}{/block:TagPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
  
