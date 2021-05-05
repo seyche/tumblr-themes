@@ -916,7 +916,7 @@ a.more_notes_link {
 
 <!----- POSTS ----->
 
-{block:Posts}
+{block:Posts inlineMediaWidth="1280"}
 <article class="posts" id="{PostID}">
 
 {block:PinnedPostLabel}
@@ -1161,10 +1161,7 @@ a.more_notes_link {
 <!----- PHOTOSETS ----->
 
 <script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
-
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 
 <!----- MASONRY ----->
 
@@ -1173,17 +1170,9 @@ a.more_notes_link {
 
 <!----- VIDEO RESIZING ----->
 
-<script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+<script src="https://seyche.github.io/external-files-hosting/plugins/flexframes-modified.js"></script>
 
 <!----- JQUERY ----->
-
-<script>
-undoPhotoset({
-        'posts': '.posts .text-post', 
-        'text class': '.text-post', 
-        'photoset class': '.photo-slideshow' 
-    },true); 
-</script>
 
 <script>
 $(document).ready(function(){
