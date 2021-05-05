@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 <title>{Title} {block:TagPage}/ #{Tag}{/block:TagPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
  
@@ -115,8 +116,6 @@
 <script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
  
 <script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
-
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 
 <!----- LOAD IN ----->
 
@@ -1053,7 +1052,7 @@ ol.notes li.note img.avatar {display: none;}
 </article>
 {/block:TagPage}
 
-{block:Posts}
+{block:Posts inlineMediaWidth="1280"}
 <article class="posts" id="{PostID}">
 
 {block:IndexPage}
@@ -1299,7 +1298,7 @@ ol.notes li.note img.avatar {display: none;}
 
 <!----- VIDEO RESIZING ----->
 
-<script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+<script src="https://seyche.github.io/external-files-hosting/plugins/flexframes-modified.js"></script>
 
 <!----- TOOLTIPS ----->
 
@@ -1307,14 +1306,6 @@ ol.notes li.note img.avatar {display: none;}
 <script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
 
 <!----- SCRIPTS ----->
-
-<script>
-undoPhotoset({
-        'posts': '.posts .text-post', 
-        'text class': '.text-post', 
-        'photoset class': '[photoset-layout]' 
-    },false);
-</script>
 
 <script>
 
