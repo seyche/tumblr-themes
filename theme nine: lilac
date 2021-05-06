@@ -84,7 +84,6 @@
 <meta name="if:Post Info Dropdown" content="1"/>
 <meta name="if:Tags On Click" content="1"/>
 <meta name="if:Drop Shadows" content="1"/>
-<meta name="if:Hide First Caption Username" content="0"/>
 
 <meta name="text:Post Margin" content="100"/>
 <meta name="text:Search Placeholder" content="What are you looking for?"/>
@@ -615,17 +614,6 @@ p.tmblr-attribution {margin-top: 1em;}
 {block:ifHideCaption}{block:IndexPage}
 .hide-cap {display: none;}
 {/block:IndexPage}{/block:ifHideCaption}
-
-{block:ifHideFirstCaptionUsername}
-.twit-cap:first-of-type .username, 
-.twit-cap:first-of-type .capicon,
-.twit-cap:first-of-type .comment-icon,
-.twit-cap:first-of-type .icon-gradient {
-    display: none;
-}
-
-.twit-cap:first-of-type p {margin: 0 0 1em 0;}
-{/block:ifHideFirstCaptionUsername}
 
 /*----- TEXT -----*/
 
@@ -1618,10 +1606,12 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
     </li>
 {/block:NotReblog}
 {block:RebloggedFrom}{block:Reblogs}
-    <li class="caption rbcap og-text twit-cap">
-		<div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
-		<div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
-		<div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+    <li class="caption rbcap og-text">
+        {block:IsNotOriginalEntry}
+    		<div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
+    		<div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
+    		<div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+		{/block:IsNotOriginalEntry}
         <div class="captext">{Body}</div>
     </li>
 {/block:Reblogs}{/block:RebloggedFrom}
@@ -1639,7 +1629,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 </div></a>
 {block:Description}
     {block:NotReblog}
-        <li class="caption ogcap twit-cap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+        <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
             <div class="captext">{Description}</div>
         </li>
     {/block:NotReblog}
@@ -1647,9 +1637,11 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 {block:RebloggedFrom}
     {block:Reblogs}
         <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-		<div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
-		<div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
-		<div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+            {block:IsNotOriginalEntry}
+        		<div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
+        		<div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
+        		<div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+		    {/block:IsNotOriginalEntry}
             <div class="captext">{Body}</div>
         </li>
     {/block:Reblogs}
@@ -1667,10 +1659,12 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </li>
     {/block:NotReblog}
     {block:Reblogs}
-        <li class="caption rbcap twit-cap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
-            <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
-            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+            {block:IsNotOriginalEntry}
+                <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
+                <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
+                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+            {/block:IsNotOriginalEntry}
             <div class="captext">{Body}</div>
         </li>
     {/block:Reblogs}
@@ -1688,10 +1682,12 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </li>
     {/block:NotReblog}
     {block:Reblogs}
-        <li class="caption rbcap twit-cap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
-            <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
-            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+            {block:IsNotOriginalEntry}
+                <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
+                <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
+                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+            {/block:IsNotOriginalEntry}
             <div class="captext">{Body}</div>
         </li>
     {/block:Reblogs}
@@ -1707,10 +1703,12 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </li>
     {/block:NotReblog}
     {block:Reblogs}
-        <li class="caption rbcap twit-cap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
-            <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
-            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+            {block:IsNotOriginalEntry}
+                <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
+                <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
+                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+            {/block:IsNotOriginalEntry}
             <div class="captext">{Body}</div>
         </li>
     {/block:Reblogs}
@@ -1726,10 +1724,12 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </li>
     {/block:NotReblog}
     {block:Reblogs}
-        <li class="caption rbcap twit-cap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
-            <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
-            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+            {block:IsNotOriginalEntry}
+                <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
+                <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
+                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+            {/block:IsNotOriginalEntry}
             <div class="captext">{Body}</div>
         </li>
     {/block:Reblogs}
@@ -1807,10 +1807,12 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </li>
     {/block:NotReblog}
     {block:Reblogs}
-        <li class="caption rbcap twit-cap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
-            <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
-            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+            {block:IsNotOriginalEntry}
+                <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
+                <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
+                <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+            {/block:IsNotOriginalEntry}
             <div class="captext">{Body}</div>
         </li>
     {/block:Reblogs}
