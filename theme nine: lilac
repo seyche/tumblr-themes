@@ -571,7 +571,7 @@ a:hover .feather {
 
 .caption p {margin: 1em 0;}
 .caption p:last-of-type {margin-bottom: 0;}
-.ogcap p:first-of-type {margin: 0 0 1em 0;}
+.caption p:first-of-type {margin: 0 0 1em 0;}
 .caption iframe, .caption img {max-width: 100%;}
 
 .capicon {
