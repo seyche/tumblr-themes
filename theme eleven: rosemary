@@ -16,7 +16,6 @@
     CREDITS:
     -PXU photosets by pixelunion
     -npf photosets by codematurgy
-    -photoset conversion by annasthms
     -tippy.js tooltips by atomiks
     -notecount shortening by shythemes
     -responsive videos by nouvae
@@ -1554,7 +1553,7 @@ form.regular_post.submission_form {min-height: 468px !important;}
 </article>
 {/block:SearchPage}
 
-{block:Posts}
+{block:Posts inlineMediaWidth="1280"}
 <article class="posts {block:Audio}audiopost{/block:Audio}" id="{PostID}">
 
 {block:PinnedPostLabel}
@@ -1871,10 +1870,7 @@ form.regular_post.submission_form {min-height: 468px !important;}
 <!----- PHOTOSETS ----->
 
 <script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
-
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 
 <!----- TOOLTIPS ----->
 
@@ -1883,34 +1879,13 @@ form.regular_post.submission_form {min-height: 468px !important;}
 
 <!----- VIDEO RESIZING ----->
 
-<script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+<script src="https://seyche.github.io/external-files-hosting/plugins/flexframes-modified.js"></script>
 
 <!----- NOTECOUNT ----->
 
 <script type="text/javascript" src="https://static.tumblr.com/i5s2zks/9Acok8oo2/bct-timeago.min.js"></script>
 
 <!----- SCRIPTS ----->
-
-<script>
-    undoPhotoset({
-        'posts': '.posts .text-post', 
-        'text class': '.text-post', 
-        'photoset class': '.photo-slideshow' 
-    },true); 
-    
-     npfPhotosets(".posts", {
-       rowClass:"npf_row",
-       imageContainerClass:"tmblr-full",
-       generatedPhotosetContainerClass:"npf_photoset",
-       imageClass:"npf_image",
-       includeCommonPhotosets: false,
-       useTumblrLightbox: true,
-       insertGalleryIndicator: false,
-       galleryIndicatorClass: "npf_gallery_indicator",
-       galleryIndicatorContent: "<img src='image_url'>",
-       photosetMargins:"{select:photoset gutter}"
-    });
-</script>
  
 <script>
 
@@ -1925,6 +1900,19 @@ $(document).ready(function(){
        photoWrap: '.photo-data',
        photo: '.pxu-photo'
    });
+   
+   npfPhotosets(".posts", {
+       rowClass:"npf_row",
+       imageContainerClass:"tmblr-full",
+       generatedPhotosetContainerClass:"npf_photoset",
+       imageClass:"npf_image",
+       includeCommonPhotosets: false,
+       useTumblrLightbox: true,
+       insertGalleryIndicator: false,
+       galleryIndicatorClass: "npf_gallery_indicator",
+       galleryIndicatorContent: "<img src='image_url'>",
+       photosetMargins:"{select:photoset gutter}"
+    });
     
     /// SLIDE-IN NAV 
     
