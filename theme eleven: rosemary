@@ -1416,19 +1416,6 @@ ol.notes li.note.more_notes_link_container {display: block; margin-top: 0.75em;}
     #m {display: block;}
 }
 
-@media only screen and (min-width: 851px) {
-    .mobile-controls {display: none;}
-}
-
-iframe#submit_form {
-    position: relative !important;
-    height: auto !important;
-    min-height: 383px !important;
-}
- 
-iframe#submit_form html.submit-form-context {min-height: 470px !important;}
-form.regular_post.submission_form {min-height: 468px !important;}
-
 {CustomCSS}
 
 </style>
