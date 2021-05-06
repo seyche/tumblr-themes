@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 <title>{Title} {block:TagPage}/ #{Tag}{/block:TagPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
  
@@ -15,7 +16,6 @@
     CREDITS:
     -Pxu photosets by Pixelunion / modified by bychloethemes
     -npf photosets by codematurgy
-    -npf photoset fix by annasthms
     -Tippy.js tooltips by atomiks
     -responsive videos by nouvae
     -remove redirects by magnusthemes
@@ -1735,7 +1735,7 @@ footer .title {color: {color:footer title}; font-size: 1.15em;}
     </div>
     {/block:DayPage}
     
-    {block:Posts}
+    {block:Posts inlineMediaWidth="1280"}
     <article class="posts" id="{PostID}">
     
     {block:IndexPage}
@@ -2290,10 +2290,7 @@ footer .title {color: {color:footer title}; font-size: 1.15em;}
 <!----- PHOTOSETS ----->
 
 <script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
-
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 
 <!----- TOOLTIPS ----->
 
@@ -2302,7 +2299,7 @@ footer .title {color: {color:footer title}; font-size: 1.15em;}
 
 <!----- VIDEO RESIZING ----->
 
-<script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+<script src="https://seyche.github.io/external-files-hosting/plugins/flexframes-modified.js"></script>
 
 <!----- NOTECOUNT ----->
 
@@ -2312,14 +2309,8 @@ footer .title {color: {color:footer title}; font-size: 1.15em;}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 
-<script>
-undoPhotoset({
-        'posts': '.posts .text-post', 
-        'text class': '.text-post', 
-        'photoset class': '.photo-slideshow' 
-    },true); 
-</script>
- 
+<!----- JQUERY ----->
+
 <script>
 
 /// PHOTOSETS
