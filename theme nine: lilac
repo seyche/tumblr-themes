@@ -21,7 +21,6 @@
     -responsive videos by nouvae
     -remove redirects by magnusthemes
     -npf photosets by codematurgy
-    -npf photoset conversion by annasthms
     -copy link to post tutorial by glenthemes, with clipboard.js by Zeno Rocha
     -time ago plugin by bychloethemes
     (full list of credits @ seyche.tumblr.com/credits)
@@ -1406,15 +1405,6 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 	#mobile-header .subtitle {display: none;} 
 }
 
-iframe#submit_form {
-    position: relative !important;
-    height: auto !important;
-    min-height: 383px !important;
-}
-
-iframe#submit_form html.submit-form-context {min-height: 470px !important;}
-form.regular_post.submission_form {min-height: 468px !important;}
-
 {CustomCSS}
 
 </style>
@@ -1550,7 +1540,7 @@ form.regular_post.submission_form {min-height: 468px !important;}
 </article>
 {/block:DayPage}
 
-{block:Posts}
+{block:Posts inlineMediaWidth="1280"}
 <article class="posts" id="{PostID}">
 
 <!----- TOP INFO ----->
@@ -1629,9 +1619,9 @@ form.regular_post.submission_form {min-height: 468px !important;}
 {/block:NotReblog}
 {block:RebloggedFrom}{block:Reblogs}
     <li class="caption rbcap og-text twit-cap">
-        <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
-        <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
-        <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+		<div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
+		<div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
+		<div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
         <div class="captext">{Body}</div>
     </li>
 {/block:Reblogs}{/block:RebloggedFrom}
@@ -1649,17 +1639,17 @@ form.regular_post.submission_form {min-height: 468px !important;}
 </div></a>
 {block:Description}
     {block:NotReblog}
-        <li class="caption ogcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+        <li class="caption ogcap twit-cap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
             <div class="captext">{Description}</div>
         </li>
     {/block:NotReblog}
 {/block:Description}
 {block:RebloggedFrom}
     {block:Reblogs}
-        <li class="caption rbcap twit-cap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
-            <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
-            <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
-            <div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
+        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+		<div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
+		<div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
+		<div class="username subtitle {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
             <div class="captext">{Body}</div>
         </li>
     {/block:Reblogs}
@@ -1910,10 +1900,7 @@ form.regular_post.submission_form {min-height: 468px !important;}
 <!----- PHOTOSETS ----->
 
 <script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
-
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 
 <!----- TOOLTIPS ----->
 
@@ -1922,7 +1909,7 @@ form.regular_post.submission_form {min-height: 468px !important;}
 
 <!----- VIDEO RESIZING ----->
 
-<script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+<script src="https://seyche.github.io/external-files-hosting/plugins/flexframes-modified.js"></script>
 
 <!----- NOTECOUNT ----->
 
@@ -1931,17 +1918,6 @@ form.regular_post.submission_form {min-height: 468px !important;}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 
 <!----- JQUERY ----->
-
-<script>
-
-    /// photoset fix by @annasthms
-    
-    undoPhotoset({
-        'posts': '.posts .text-post', 
-        'text class': '.text-post', 
-        'photoset class': '.photo-slideshow' 
-    },true); 
-</script>
  
 <script>
 
