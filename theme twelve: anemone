@@ -21,6 +21,7 @@
     -responsive videos by nouvae
     -customizing audio player tutorial by johnny shi
     -feathericons by cole bemis
+    -NPF photosets by codematurgy
     (full list of credits @ seyche.tumblr.com/credits)
     
 --->
@@ -1324,17 +1325,6 @@ input:-ms-input-placeholder {color: {color:footer text};}
     vertical-align: middle;
 }
 
-/*----- FORM FIX -----*/
-
-iframe#submit_form {
-    position: relative !important;
-    height: auto !important;
-    min-height: 383px !important;
-}
- 
-iframe#submit_form html.submit-form-context {min-height: 470px !important;}
-form.regular_post.submission_form {min-height: 468px !important;}
-
 /*----- MEDIA QUERIES -----*/
 
 @media only screen and (max-width: 850px) {
@@ -1459,7 +1449,7 @@ form.regular_post.submission_form {min-height: 468px !important;}
 
 <!----- POSTS ----->
 
-{block:Posts}
+{block:Posts inlineMediaWidth="1280"}
 <article class="posts" id="{PostID}">
 
 <div class="main-post-content">
@@ -1822,7 +1812,6 @@ form.regular_post.submission_form {min-height: 468px !important;}
 
 <script src="https://static.tumblr.com/yxfeliq/hHwojmt8m/bctphotoset.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/boscoxvi/npfphotosets/npfphotosets.js"></script>
-<script src="https://static.tumblr.com/0podkko/qWqq8va08/photosets.js"></script>
 
 <!----- TOOLTIPS ----->
 
@@ -1831,21 +1820,13 @@ form.regular_post.submission_form {min-height: 468px !important;}
 
 <!----- VIDEO RESIZING ----->
 
-<script src="https://rawgit.com/robinpx/tumblr/master/scripts/flexibleFrames/flexibleFrames.min.js"></script>
+<script src="https://seyche.github.io/external-files-hosting/plugins/flexframes-modified.js"></script>
 
 <!----- TIME AGO ----->
 
 <script type="text/javascript" src="https://static.tumblr.com/i5s2zks/9Acok8oo2/bct-timeago.min.js"></script>
 
 <!----- JQUERY ----->
-
-<script>
-    undoPhotoset({
-        'posts': '.posts .text-post', 
-        'text class': '.text-post', 
-        'photoset class': '.photo-slideshow' 
-    },true); 
-</script>
  
 <script>
 
