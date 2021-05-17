@@ -571,7 +571,7 @@ a:hover .feather {
 
 .caption p {margin: 1em 0;}
 .caption p:last-of-type {margin-bottom: 0;}
-.caption p:first-of-type {margin: 0 0 1em 0;}
+.is-og p, .ogcap p:first-of-type {margin: 0 0 1em 0;}
 .caption iframe, .caption img {max-width: 100%;}
 
 .capicon {
@@ -1636,7 +1636,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
 {/block:Description}
 {block:RebloggedFrom}
     {block:Reblogs}
-        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+        <li class="caption rbcap {block:IsOriginalEntry}is-og{/block:IsOriginalEntry} {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
             {block:IsNotOriginalEntry}
         		<div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
         		<div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
@@ -1659,7 +1659,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </li>
     {/block:NotReblog}
     {block:Reblogs}
-        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+        <li class="caption rbcap {block:IsOriginalEntry}is-og{/block:IsOriginalEntry} {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
             {block:IsNotOriginalEntry}
                 <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
                 <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
@@ -1682,7 +1682,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </li>
     {/block:NotReblog}
     {block:Reblogs}
-        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+        <li class="caption rbcap {block:IsOriginalEntry}is-og{/block:IsOriginalEntry} {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
             {block:IsNotOriginalEntry}
                 <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
                 <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
@@ -1703,7 +1703,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </li>
     {/block:NotReblog}
     {block:Reblogs}
-        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+        <li class="caption rbcap {block:IsOriginalEntry}is-og{/block:IsOriginalEntry} {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
             {block:IsNotOriginalEntry}
                 <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
                 <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
@@ -1724,7 +1724,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </li>
     {/block:NotReblog}
     {block:Reblogs}
-        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+        <li class="caption rbcap {block:IsOriginalEntry}is-og{/block:IsOriginalEntry} {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
             {block:IsNotOriginalEntry}
                 <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
                 <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
@@ -1807,7 +1807,7 @@ a.more_notes_link {font-weight: bold; color: {color:title};}
         </li>
     {/block:NotReblog}
     {block:Reblogs}
-        <li class="caption rbcap {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
+        <li class="caption rbcap {block:IsOriginalEntry}is-og{/block:IsOriginalEntry} {block:ifHideCaption}hide-cap{/block:ifHideCaption}">
             {block:IsNotOriginalEntry}
                 <div class="icon-gradient"><img src="{PortraitURL-64}" class="capicon icon"></div>
                 <div class="ui-icon comment-icon"><i data-feather="message-circle" aria-hidden="true"></i></div>
