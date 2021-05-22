@@ -54,11 +54,10 @@
 /*----- BASIC STYLING -----*/
 
 body {
-    font-family: trebuchet ms, sans-serif;
+    font-family: sans-serif;
     font-size: 15px;
     color: {color:text};
     background-color: {color:background};
-    text-align: left;
     line-height: 160%;
     word-wrap: break-word;
     letter-spacing: 0.04em;
@@ -123,22 +122,19 @@ pre {
     word-wrap: break-word;
 }
 
-li {max-width: 100%; list-style-type: circle;}
-
 .tmblr-iframe-compact .tmblr-iframe--unified-controls {z-index: 999999999!important;}
 
 /*----- SIDEBAR -----*/
 
 #sidebar {
     width: 250px;
-    height: auto;
     position: fixed;
     top: {text:post margin}px;
     text-align: center;
 }
 
 {block:ifSidebarImage}
-#side-img {max-width: 100%; margin-bottom: 1.5em;}
+#side-img {margin-bottom: 1.5em;}
 {/block:ifSidebarImage}
 
 #description, nav {margin-top: 1.25em;}
@@ -164,23 +160,16 @@ article {
     margin: {text:post margin}px auto;
 }
 
-.tumblr_video_container {max-height: {select:post width} !important; overflow: hidden !important;}
-.posts li, .posts blockquote, figure, video, iframe, .video, .video iframe, figure.tmblr-embed.tmblr-full, figure.tmblr-embed.tmblr-full iframe {max-width: 100%;}
+.posts li, .posts blockquote, figure, video, iframe, .video, .video iframe, figure.tmblr-embed.tmblr-full, figure.tmblr-embed.tmblr-full iframe, .caption iframe {max-width: 100%;}
 
 /*----- CAPTIONS -----*/
 
 .caption {margin-top: 2em; list-style-type: none;}
-.caption p {margin: 1em 0;}
-.caption p:last-of-type {margin-bottom: 0;}
-
-.original-caption p:first-of-type {margin-top: 0;}
 .text-caption:first-of-type {margin-top: 0;}
-.caption iframe, .caption img {max-width: 100%;}
 
-.user-icon {
+.user-icon, .ask-icon {
     display: inline-block;
     vertical-align: middle;
-    border-radius: 50%;
     width: 2em;
     height: 2em;
     margin-right: 1em;
@@ -213,14 +202,10 @@ a.link-wrap {display: block; border: 1px solid {color:borders};}
 
 .npf-link-block {
     margin-top: 1.5em; 
-    border-radius: 0;
-    background-color: initial;
+    background-color: inherit;
+    border: 1px solid inherit;
+    color: inherit;
 }
- 
-.npf-link-block .poster .title {padding: 1.5em;}
-.npf-link-block.no-poster .title {padding: 1.5em 1.5em 0 1.5em;}
-.npf-link-block .title {font-size: 1.25em; border-bottom: none;}
-.npf-link-block .bottom {padding: 1.5em !important;}
 
 /*----- PHOTO -----*/
 
@@ -256,11 +241,10 @@ img {
 
 /*----- QUOTE -----*/
 
-.quote, p.npf_quote {line-height: 160%; font-size: 1.25em;}
+.quote {line-height: 160%; font-size: 1.25em;}
 
 .quote p:first-of-type {margin-top: 0;}
 .quote p:last-of-type {margin-bottom: 0;}
-p.npf_quote {font-family: inherit; margin-bottom: 1em;}
 
 .source {margin-top: 1.5em;}
 
@@ -271,20 +255,11 @@ p.npf_quote {font-family: inherit; margin-bottom: 1em;}
 .chat li:first-of-type {margin-top: 0;}
 .chatter {font-weight: bold;}
 
-p.npf_chat {font-family: inherit; margin-top: 1em;}
-p.npf_chat b {font-family: inherit;}
+p.npf_chat, p.npf_chat b {font-family: inherit;}
 
 /*----- ANSWER -----*/
 
 .ask-wrap {border-bottom: 1px solid {color:borders}; padding-bottom: 2em;}
-
-.ask-wrap .askicon {
-    width: 2em;
-    height: 2em;
-    display: inline-block;
-    vertical-align: middle;
-    border-radius: 50%;
-}
 
 .ask-wrap .asking {
     display: inline-block; 
@@ -308,6 +283,12 @@ p.npf_chat b {font-family: inherit;}
     width: 100px;
     height: 100px;
 }
+
+.audio-player-wrap {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
  
 .button {
     width: 30px;
@@ -329,6 +310,8 @@ p.npf_chat b {font-family: inherit;}
 .audioinfo {
     display: inline-block;
     height: 100px;
+    max-width: calc(100% - 100px);
+    margin-left: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -341,14 +324,7 @@ p.npf_chat b {font-family: inherit;}
 
 /*----- INFO -----*/
 
-.info {
-    margin-top: 2em;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
+.info {margin-top: 2em;}
 .info a {display: inline-block; vertical-align: middle;}
 
 .likeb {
@@ -372,14 +348,9 @@ p.npf_chat b {font-family: inherit;}
 .likeb .liked + .actual-button {color: red;}
 .likeb .liked + .actual-button:after {content: 'd';}
 
-.info-left a, .tags a {margin-right: 0.75em;}
-.post-controls a {margin-left: 0.75em;}
-
-.source-info li {list-style-type: none;}
+.info a, .tags a {margin-right: 0.75em;}
 
 a.pinned-post {font-weight: bold; color: {color:accent};}
-
-.tag-day {font-weight: bold;}
 
 /*---- POST NOTES -----*/
 
@@ -394,7 +365,6 @@ ol.notes {
 ol.notes li.note {padding: 0.5em 0; list-style-type: none;}
 
 ol.notes li.note img.avatar {
-    border-radius: 50%;
     margin-right: 1em;
     vertical-align: middle;
     display: inline-block;
@@ -405,13 +375,8 @@ ol.notes li.note img.avatar {
 /*---- PAGINATION -----*/
 
 #page-navigation {text-align: center;}
-#page-navigation a {margin: 0 0.5em;}
-
-.current-page {
-    color: {color:accent}; 
-    font-weight: bold;
-    margin: 0 0.5em;
-}
+#page-navigation a, .current-page {margin: 0 0.5em;}
+.current-page {font-weight: bold; color: {color:accent};}
 
 /*---- CREDIT -----*/
 
@@ -486,19 +451,19 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 
 <!----- TAG AND DAY PAGES ----->
 
-<!-- section = your post container -->
+<!-- section = post container -->
 
 <section>
 
 {block:TagPage}
-<article class="tagday-page">
-    Viewing posts filed under <span class="tag-day">#{Tag}</span>
+<article>
+    Viewing posts filed under #{Tag}
 </article>
 {/block:TagPage}
 
 {block:DayPage}
-<article class="tagday-page">
-    Viewing posts made on <span class="tag-day">{Month} {DayOfMonth}, {Year}</span>
+<article>
+    Viewing posts made on {Month} {DayOfMonth}, {Year}
 </article>
 {/block:DayPage}
 
@@ -510,20 +475,18 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 {block:Text}
 {block:Title}<h1 class="post-title"><a href="{Permalink}">{Title}</a></h1>{/block:Title}
 {block:NotReblog}
-    <li class="caption original-caption text-caption">
-        <div class="caption-text">{Body}</div>
+    <li class="caption text-caption">
+        {Body}
     </li>
 {/block:NotReblog}
 {block:RebloggedFrom}
-    <div class="reblog-wrap">
     {block:Reblogs}
         <li class="caption text-caption">
             <img src="{PortraitURL-64}" class="user-icon">
             <div class="username {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            <div class="caption-text">{Body}</div>
+            {Body}
         </li>
     {/block:Reblogs}
-    </div>
 {/block:RebloggedFrom}
 {/block:Text}
 
@@ -538,21 +501,19 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 </a>
 {block:Description}
     {block:NotReblog}
-        <li class="caption original-caption">
-            <div class="caption-text">{Description}</div>
+        <li class="caption">
+            {Description}
         </li>
     {/block:NotReblog}
 {/block:Description}
 {block:RebloggedFrom}
-    <div class="reblog-wrap">
     {block:Reblogs}
         <li class="caption">
             <img src="{PortraitURL-64}" class="user-icon">
             <div class="username {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            <div class="caption-text">{Body}</div>
+            {Body}
         </li>
     {/block:Reblogs}
-    </div>
 {/block:RebloggedFrom}
 {/block:Link}
 
@@ -562,20 +523,18 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 </div>
 {block:Caption}
     {block:NotReblog}
-        <li class="caption original-caption">
-            <div class="caption-text">{Caption}</div>
+        <li class="caption">
+            {Caption}
         </li>
     {/block:NotReblog}
     {block:RebloggedFrom}
-        <div class="reblog-wrap">
         {block:Reblogs}
             <li class="caption">
                 <img src="{PortraitURL-64}" class="user-icon">
                 <div class="username {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-                <div class="caption-text">{Body}</div>
+                {Body}
             </li>
         {/block:Reblogs}
-        </div>
     {/block:RebloggedFrom}
 {/block:Caption}
 {/block:Photo}
@@ -584,20 +543,18 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 <div class="photo">{Photoset-700}</div>
 {block:Caption}
     {block:NotReblog}
-        <li class="caption original-caption">
-            <div class="caption-text">{Caption}</div>
+        <li class="caption">
+            {Caption}
         </li>
     {/block:NotReblog}
     {block:RebloggedFrom}
-        <div class="reblog-wrap">
         {block:Reblogs}
             <li class="caption">
                 <img src="{PortraitURL-64}" class="user-icon">
                 <div class="username {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-                <div class="caption-text">{Body}</div>
+                {Body}
             </li>
         {/block:Reblogs}
-        </div>
     {/block:RebloggedFrom}
 {/block:Caption}
 {/block:Photoset}
@@ -606,20 +563,18 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 <div class="video">{Video-500}</div>
 {block:Caption}
     {block:NotReblog}
-        <li class="caption original-caption">
-            <div class="caption-text">{Caption}</div>
+        <li class="caption">
+            {Caption}
         </li>
     {/block:NotReblog}
     {block:RebloggedFrom}
-        <div class="reblog-wrap">
         {block:Reblogs}
             <li class="caption">
                 <img src="{PortraitURL-64}" class="user-icon">
                 <div class="username {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-                <div class="caption-text">{Body}</div>
+                {Body}
             </li>
         {/block:Reblogs}
-        </div>
     {/block:RebloggedFrom}
 {/block:Caption}
 {/block:Video}
@@ -634,14 +589,14 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 <ul class="chat">{block:Lines}
     <li>
         {block:Label}<div class="chatter">{Label}</div>{/block:Label}
-        <div class="chattxt">{Line}</div>
+        {Line}
     </li>
 {/block:Lines}</ul>
 {/block:Chat}
 
 {block:Answer}
 <div class="ask-wrap">
-    <img src="{AskerPortraitURL-64}" class="askicon">
+    <img src="{AskerPortraitURL-64}" class="ask-icon">
     <div class="asking">{Asker} asked</div>
     <div class="question">{Question}</div>
 </div>
@@ -649,32 +604,32 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
     <li class="caption">
         <img src="{AnswererPortraitURL-64}" class="user-icon">
         <div class="username {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Answerer}</a></div>
-        <div class="caption-text">{Answer}</div>
+        {Answer}
     </li>
 {/block:Answerer}
 {block:NotReblog}
-    <li class="caption original-caption">
-        <div class="caption-text">{Replies}</div>
+    <li class="caption">
+        {Replies}
     </li>
 {/block:NotReblog}
 {block:RebloggedFrom}
-    <div class="reblog-wrap">
     {block:Reblogs}
         <li class="caption">
             <img src="{PortraitURL-64}" class="user-icon">
             <div class="username {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-            <div class="caption-text">{Body}</div>
+            {Body}
         </li>
     {/block:Reblogs}
-    </div>
 {/block:RebloggedFrom}
 {/block:Answer}
 
 {block:Audio}
 <div class="audiopost">
-    <div class="audiobox"><div class="button">
-        {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
-    </div></div>
+    <div class="audiobox">
+        <div class="button">
+            {block:AudioPlayer}{AudioPlayer}{/block:AudioPlayer}
+        </div>
+    </div>
     {block:AlbumArt}
         <img src="{AlbumArtURL}" class="album-art">
     {/block:AlbumArt}
@@ -686,20 +641,18 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 </div>
 {block:Caption}
     {block:NotReblog}
-        <li class="caption original-caption">
-            <div class="caption-text">{Caption}</div>
+        <li class="caption">
+            {Caption}
         </li>
     {/block:NotReblog}
     {block:RebloggedFrom}
-        <div class="reblog-wrap">
         {block:Reblogs}
             <li class="caption">
                 <img src="{PortraitURL-64}" class="user-icon">
                 <div class="username {block:IsDeactivated}deactive{/block:IsDeactivated}"><a href="{Permalink}">{Username}</a></div>
-                <div class="caption-text">{Body}</div>
+                {Body}
             </li>
         {/block:Reblogs}
-        </div>
     {/block:RebloggedFrom}
 {/block:Caption}
 {/block:Audio}
@@ -708,30 +661,27 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 
 {block:Date}
 <div class="info">
-    <div class="info-left">
-        {block:PinnedPostLabel}<a href="{Permalink}" class="pinned-post">{PinnedPostLabel}</a>{/block:PinnedPostLabel}
-        <a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a>
-        {block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+    {block:PinnedPostLabel}<a href="{Permalink}" class="pinned-post">{PinnedPostLabel}</a>{/block:PinnedPostLabel}
+    <a href="{Permalink}">{Month} {DayOfMonth}, {Year}</a>
+    {block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
         
-        <!-- reblog info and content source on permalink pages -->
-        
+    <!-- reblog info and content source on permalink pages -->
+    
         {block:PermalinkPage}
-            <div class="source-info">
-                {block:RebloggedFrom}
-                    <li>Reblogged via: <a href="{ReblogParentURL}">{ReblogParentName}</a></li>
-                    <li>Originally from: <a href="{ReblogRootURL}">{ReblogRootName}</a></li>
-                {/block:RebloggedFrom}
-                {block:ContentSource}<li>{lang:Source}: <a href="{SourceURL}">{SourceTitle}</a></li>{/block:ContentSource}
-            </div>
+
+            {block:RebloggedFrom}
+                <a href="{ReblogParentURL}">via</a>
+                <a href="{ReblogRootURL}">originally</a>
+            {/block:RebloggedFrom}
+            {block:ContentSource}<a href="{SourceURL}">{lang:Source}</a>{/block:ContentSource}
+        
         {/block:PermalinkPage}
-    </div>
     
     <!-- like and reblog buttons -->
     
-    <div class="post-controls">
         <a href="{ReblogURL}" target="_blank">reblog</a>
         <a class="likeb" href="#">{LikeButton}<span class="actual-button">like</span></a>
-    </div>
+    
 </div>
 {/block:Date}
 
@@ -780,7 +730,6 @@ if you change the basic layout (i.e. sidebar to header), you MUST modify     or 
 <!----- CREDIT: if you make significant modifications, feel free to replace with your own. if you use this as a theme without changes, leave in place. ----->
 
 <a href="https://seyche.tumblr.com" title="base code by seyche" id="credit">&.</a>
-
 
 </body>
 </html>
