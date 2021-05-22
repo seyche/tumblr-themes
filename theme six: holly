@@ -384,6 +384,22 @@ article {
     {block:IndexPage}width: {select:post width};{/block:IndexPage}
     {block:PermalinkPage}width: 540px;{/block:PermalinkPage}
     margin: {text:post margin}px 0;
+    opacity: 1.0;
+    -webkit-transition: 0.5s opacity;
+    -moz-transition: 0.5s opacity;
+    -ms-transition: 0.5s opacity;
+    -o-transition: 0.5s opacity;
+    transition: 0.5s opacity;
+}
+
+.masonry-load {
+    opacity: 0;
+    z-index: -1;
+    -webkit-transition: 0.5s opacity;
+    -moz-transition: 0.5s opacity;
+    -ms-transition: 0.5s opacity;
+    -o-transition: 0.5s opacity;
+    transition: 0.5s opacity;
 }
 
 {block:ifHeader}
@@ -1048,7 +1064,7 @@ ol.notes li.note img.avatar {display: none;}
 <div id="container">
 
 {block:Posts inlineMediaWidth="1280"}
-<article class="posts" id="{PostID}">
+<article class="posts masonry-load" id="{PostID}">
 
 {block:IndexPage}
 {block:PinnedPostLabel}<a href="{Permalink}" class="pin-post" title="{PinnedPostLabel}"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></a>{/block:PinnedPostLabel}
@@ -1350,10 +1366,12 @@ $(document).ready(function(){
     var $container = $('#container');
         $container.masonry({
             itemSelector: '.posts',
-            gutter: 100
+            gutter: 100,
+            horizontalOrder: true
         });
         $container.imagesLoaded(function(){
             $container.masonry();
+            $container.find('article').removeClass('masonry-load');
     });
     
     /// PHOTOSETS
