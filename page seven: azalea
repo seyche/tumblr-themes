@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{Title} / About</title>
+
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!---
+ 
+    AZALEA PAGE BY SEYCHE.TUMBLR.COM
+ 
+    CREDITS:
+    -feathericons by Cole Bemis
+    -icons by fontawesome
+    -customizing audio player tutorial by johnny shi
+    -tippy.js tooltips by atomiks
+ 
+--->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+<script src="https://unpkg.com/feather-icons"></script>
+
+<script src="https://kit.fontawesome.com/6ac5c36b23.js"></script>
+
+<style type="text/css">
+ 
+/*----- VARIABLES: EDIT THIS SECTION!!!! -----*/
+ 
+:root {
+ 
+    /*----- colours -----*/
+ 
+    --background: #191414;
+    --content-background: #282828;
+    --text: #c9c9c9;
+    --links: #a0a0a0;
+    --title: #fff;
+    --borders: #4b4b4b;
+    --accent-1: #f1a5c0;
+    --accent-2: #f09769; 
+    --gradient-1: #facade;
+    --gradient-2: #e8a989;
+    --drop-shadow: #111; 
+    
+    --sidebar-text: #c9c9c9;
+    --sidebar-icons: #fff;
+    --sidebar-title: #fff;
+    
+    --nav-links-text: #fff;
+    
+    --footer-background: #212121;
+    --footer-title: #fff;
+    --footer-text: #c9c9c9;
+    --footer-links: #a0a0a0;
+    --search-background: #333;
+ 
+    /*----- font styling -----*/
+ 
+    --body-font: 'Nunito Sans', sans-serif;
+    --font-size: 15px;
+    
+    /*----- music player: change "block" to "none" to hide it -----*/
+    
+    --music-player-visibility: block; 
+ 
+}
+
+@keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+ 
+@-webkit-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+ 
+@-moz-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+ 
+@-o-keyframes lazyload {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--font-size);
+    color: var(--text);
+    background-color: var(--background);
+    text-align: left;
+    line-height: 160%;
+    word-wrap: break-word;
+    letter-spacing: 0.04em;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-animation: lazyload 2s;
+    -moz-animation: lazyload 2s;
+    -o-animation: lazyload 2s;
+    animation: lazyload 2s;
+}
+ 
+</style>
+
+<link rel="stylesheet" href="https://seyche.github.io/external-files-hosting/pages/azaleacss.css">
+
+</head>
+<body>
+
+<!----- CONTAINER ----->
+
+<main>
+    
+    <!----- ================================
+ 
+    USER STATS
+ 
+    ================================= ----->
+    
+    <aside id="left-content">
+        <div class="sidebar-section">
+        
+            <!----- 
+            
+            START EDITING LEFT CONTENT HERE:
+            
+            every stat looks like this:
+            
+            <li>
+                <i data-feather="user"></i>
+                content
+            </li>
+            
+            copy and paste it as many times as you want and fill in the content. all icons (not just in this section, but throughout this page) are from https://feathericons.com/. if you want to change the icons, go to the site, find the name of the new icon you want, and put the name of the icon where it says data-feater="NAMEGOESHERE".
+            
+            ----->
+        
+            <div class="title">Info</div>
+            
+            <li>
+                <i data-feather="user"></i>
+                name
+            </li>
+            
+            <li>
+                <i data-feather="calendar"></i>
+                age
+            </li>
+            
+            <li>
+                <i data-feather="map-pin"></i>
+                location
+            </li>
+            
+            <li>
+                <i data-feather="user-check"></i>
+                pronouns
+            </li>
+            
+            <!-- end of stats. any new stats must go above this line. -->
+            
+        </div>
+        
+        <!----- ================================
+ 
+        FAVOURITES
+     
+        ================================= ----->
+            
+        <div id="faves" class="sidebar-section">
+        
+            <!-- START EDITING FAVES HERE. fill in the content just as you did with the content above -->
+        
+            <div class="title">Favourites</div>
+            
+            <li>
+                <i data-feather="heart"></i>
+                like
+            </li>
+            
+            <!-- end faves. any new faves must go above this line -->
+            
+        </div>
+        
+    </aside>
+    
+    <!----- END LEFT CONTENT ----->
+    
+    <!----- ================================
+ 
+    MAIN CONTENT
+ 
+    ================================= ----->
+    
+    <section>
+    
+        <article id="about">
+        
+             <!----- ABOUT TITLE ----->
+        
+            <div class="top-wrap">
+            
+                <!--
+                     this is your blog icon. to replace it with a different image, replace {PortraitURL-128} with the image url of your new image
+                -->
+            
+                <img src="{PortraitURL-128}" alt="icon image">
+                
+                <div class="align-flex">
+                    <div class="title-wrap">
+                        <div class="title">About</div>
+                        @{Name}
+                    </div>
+                    <i data-feather="heart"></i>
+                </div>
+                
+            </div>
+            
+            <div class="padding">
+            
+                <!----- 
+                
+                PUT YOUR MAIN CONTENT ABOUT YOURSELF HERE. don't forget to separate paragraphs with <p></p>, use <b></b> for bold, <i></i> for italics, and <u></u> for underlines.
+                
+                ----->
+            
+                <p>
+                    This is where you write stuff about yourself.
+                </p>
+                
+                <!-- all of your main about content needs to go above this line -->
+            
+            </div>
+            
+        </article>
+        
+        <!----- END ABOUT SECTION ----->
+        
+        <!----- ================================
+ 
+        NAVIGATION SECTION
+     
+        ================================= ----->
+        
+        <article class="links">
+            
+            <!-- navigation title -->
+        
+            <div class="title-wrap align-flex">
+                <div class="title">Navigation</div>
+                <i data-feather="list"></i>
+            </div>
+            
+            <!----- 
+            
+            ADDING LINKS:
+            all new link sections MUST be wrapped with <nav></nav>. see below for exambples. use <div class="title"></div> for titles, and <div class="subtitle"></div> for subtitles.
+            ----->
+            
+            <!----- LINKS SECTION ONE ----->
+            
+            <nav>
+                <div class="title">Heading</div>
+                <a href="URL-HERE">link</a>
+                <a href="/">link</a>
+                <div class="subtitle">Sub-heading</div>
+                <a href="/">link</a>
+            </nav>
+            
+            <!----- LINKS SECTION TWO ----->
+            
+            <nav>
+                <div class="title">Heading</div>
+                <a href="/">link</a>
+            </nav>
+            
+            <!-- all new link blocks must go above this line -->
+            
+        </article>
+        
+        <!----- END NAVIGATION SECTION ----->
+        
+    </section>
+    
+    <!----- END MAIN CONTENT ----->
+    
+    <!----- ================================
+ 
+    RIGHT CONTENT
+ 
+    ================================= ----->
+    
+    <aside id="right-content">
+    
+        <!----- SOCIAL MEDIA ----->
+    
+        <div id="social-links" class="sidebar-section">
+        
+            <!--
+                add new social media links here. you can use icons from feathericons OR the free version of https://fontawesome.com/icons?d=gallery&p=2. if you add font awesome icons, go to the site, click the icon you want, copy the icon HTML, and put it in the spots below. a social link looks like: 
+                
+                <li>
+                    <a href="/">
+                        <i data-feather="twitter"></i>
+                        @username
+                    </a>
+                </li>
+                
+                copy and paste that as many times as you need.
+            -->
+        
+            <div class="title">Social</div>
+    
+            <li>
+                <a href="https://url.com">
+                    <i data-feather="twitter"></i>
+                    @twitter
+                </a>
+            </li>
+            
+            <li>
+                <a href="/">
+                    <i data-feather="instagram"></i>
+                    @instagram
+                </a>
+            </li>
+            
+            <li>
+                <a href="/">
+                    <i class="fab fa-spotify"></i>
+                    @spotify
+                </a>
+            </li>
+            
+            <!-- end social; any new social links must go above this line -->
+        
+        </div>
+        
+        <!----- SIDEBLOGS ----->
+        
+        <div id="sideblogs" class="sidebar-section">
+        
+            <div class="title">Sideblogs</div>
+            
+            <!-- put as many sideblogs as you want below. if you don't want the image, delete it in the html below. -->
+            
+            <li>
+                <img src="https://via.placeholder.com/45x45.png">
+                <a href="https://username.tumblr.com">
+                    <div class="subtitle">@username</div>
+                    description
+                </a>
+            </li>
+            
+            <!-- any new sideblogs must go above this line -->
+            
+        </div>
+        
+    </aside>
+    
+    <!----- END RIGHT CONTENT ----->
+    
+</main>
+
+<!----- END MAIN CONTAINER ----->
+
+<a href="https://seyche.tumblr.com" id="m" class="upper">azalea page by seyche</a>
+
+<!----- ================================
+ 
+    FOOTER
+ 
+================================= ----->
+ 
+<footer>
+    <div id="footer-padding" class="align-flex">
+ 
+    <!----- SONG INFO ----->
+ 
+    <div class="player-wrap">
+        <div class="song">
+        
+            <!-- put your song art, title, and artist below: -->
+        
+            <div class="song-art"><img src="https://via.placeholder.com/50x50.png" alt="album cover"></div>
+            <div class="song-info">
+                <div class="subtitle">Song Title</div>
+                Artist
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- end of song info -->
+        
+        <!----- AUDIO PLAYER AND HOME LINKS: you don't need to edit the links, just the player below ----->
+ 
+        <div id="pg">
+            <a href="/" title="return home"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></a>
+            
+            <!----- ================================
+ 
+            AUDIO PLAYER: FOLLOW THE INSTRUCTIONS AT https://seyche.tumblr.com/addmusic. you need to add the audio URL on the audio element below in the src="URL-GOES-HERE" part.
+             
+            ================================= ----->
+            
+            <audio src="URL-GOES-HERE" controls="controls"></audio>
+            
+            <!-- do not touch ANYTHING after here. STOP EDITING -->
+            
+            <div class="player-controls">
+                <div class="play-icon play-pause icon-play"></div>
+            </div>
+            
+          <a href="/random" title="random post"><svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shuffle"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg></a>
+        </div>
+ 
+        <!-- search bar -->
+ 
+        <div id="search-wrap" class="align-flex">
+            <form action="/search" method="get" class="find" name="sform">
+                <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" name="q" placeholder="Search" value="{SearchQuery}" value autocomplete="off"/>
+            </form>
+            <div id="hold"></div>
+        </div>
+ 
+      </div>
+</footer>
+
+<a href="https://seyche.tumblr.com" title="azalea page by seyche" id="k">&.</a>
+
+<!----- END FOOTER ----->
+
+<!----- TOOLTIPS ----->
+ 
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+
+
+<!----- JQUERY ----->
+
+<script>
+feather.replace()
+    
+$(document).ready(function(){
+    var music = $('audio')[0];
+ 
+    $('.play-pause').click(function(){
+        if (music.paused) {
+          music.play();
+          $('.play-pause').removeClass('icon-play');
+          $('.play-pause').addClass('icon-pause');
+        } else {
+          music.pause();
+          $('.play-pause').removeClass('icon-pause');
+          $('.play-pause').addClass('icon-play');
+        }
+    });
+ 
+    music.onended = function(){
+        $('.play-pause').removeClass('icon-pause');
+        $('.play-pause').addClass('icon-play');
+    };
+});
+
+/// TOOLTIPS
+ 
+tippy('[title]', {
+    theme: 'custom',
+    arrow: false,
+    followCursor: true,
+    delay: 100,
+    placement: 'bottom-start',
+    zIndex: 9999999999,
+    maxWidth: 400,
+ 
+    content(reference) {
+        const title = reference.getAttribute('title');
+        reference.removeAttribute('title');
+        return title;
+    },
+});
+
+</script>
+
+</body>
+</html>
