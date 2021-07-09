@@ -1416,6 +1416,10 @@ ol.notes li.note.more_notes_link_container {display: block; margin-top: 0.75em;}
     #m {display: block;}
 }
 
+@media only screen and (min-width: 851px) {
+    .mobile-controls {display: none;}
+}
+
 {CustomCSS}
 
 </style>
