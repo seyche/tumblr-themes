@@ -160,8 +160,6 @@
         
         to apply the filters on the items, add the name of the new filter as a class to <article></article>. it must match exactly the value you gave to your filter in the new group, MINUS the ".", so it should look like: <article class="FILTER">. as long as you adhere to both of those conditions, you can name data-filter-value whatever you want, and you can have as many filters as you want on <article>.
         
-        if you add the filter ".fave" to an item, it will add a heart to it. 
-        
         -->
         
         <!-- filter group one -->
