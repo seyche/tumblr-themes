@@ -915,6 +915,7 @@ img {
 .npf_image, .tmblr-full {border: none; outline: none;}
 
 figure.tmblr-full a, figure.tmblr-full a:hover {border-bottom: none;}
+figure.tmblr-full a::before, figure.tmblr-full a:hover::before {display: none;}
 
 /*----- QUOTE -----*/
 
