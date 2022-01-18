@@ -682,7 +682,7 @@ article {
     overflow: hidden;
     {/block:ifRoundedCorners}
     box-shadow: 0 0 20px rgba({RGBcolor:drop shadow}, 0.75);
-    display: inline-block;
+    display: block;
     -webkit-backdrop-filter: blur(15px);
     -moz-backdrop-filter: blur(15px);
     -ms-backdrop-filter: blur(15px);
@@ -1931,7 +1931,7 @@ $(document).ready(function(){
     
     /// MASONRY
 
-    var $container = $('#posts-container');
+    var $container = $('.two-col #posts-container, .three-col #posts-container');
         $container.masonry({
             itemSelector: 'article',
             gutter: 100,
