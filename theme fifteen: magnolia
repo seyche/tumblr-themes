@@ -40,14 +40,14 @@
 <meta name="color:Background" content="#ffffff"/>
 <meta name="color:Text" content="#4c4c4c"/>
 <meta name="color:Link" content="#8c8c8c"/>
-<meta name="color:Accent 1" content="#da8da9"/>
-<meta name="color:Accent 2" content="#da8da9"/>
+<meta name="color:Accent 1" content="#fcb8b6"/>
+<meta name="color:Accent 2" content="#e5db86"/>
 <meta name="color:Borders" content="#e0e0e0"/>
 <meta name="color:Title" content="#212121"/>
-<meta name="color:Icon Background" content="#f5f5f5"/>
+<meta name="color:Icon Background" content="#f0f0f0"/>
 <meta name="color:Nav Links" content="#8c8c8c"/>
-<meta name="color:Nav Links Background" content="#f5f5f5"/>
-<meta name="color:Content Background" content="#f5f5f5"/>
+<meta name="color:Nav Links Background" content="#f0f0f0"/>
+<meta name="color:Content Background" content="#f0f0f0"/>
 <meta name="color:Content Text" content="#3c3c3c"/>
 <meta name="color:Reblog Icon" content="#79c986"/>
 <meta name="color:Like Icon" content="#d32f2f"/>
@@ -465,7 +465,7 @@ input:-ms-input-placeholder {color: {color:text};}
     height: 0; 
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-top: 15px solid {color:content background};
+    border-top: 15px solid {color:icon background};
     position: absolute;
     display: block;
     margin: -20px auto 0 calc(50% - 15px);
