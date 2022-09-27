@@ -1420,10 +1420,10 @@ a.page-buttons:hover i {color: {color:accent}; background-color: {color:posts};}
         </nav>
         {/block:ifMenuNavigationSection}
         
-        <div class="find">
+        <form action="/search" method="get" class="find" name="sform">
             <i class="ph-magnifying-glass"></i>
             <input type="text" name="q" placeholder="Type here to search" value="{SearchQuery}" value autocomplete="off"/>
-        </div>
+        </form>
     </div>
 </aside>
 
