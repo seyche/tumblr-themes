@@ -312,6 +312,8 @@ li {max-width: 100%; line-height: 160%;}
     {block:ifDropShadows}box-shadow: 1px 1px 3px {color:borders};{/block:ifDropShadows}
     overflow-y: auto;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: {color:borders} {color:background};
 }
 
 #side-content {
